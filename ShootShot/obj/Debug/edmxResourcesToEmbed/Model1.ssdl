@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbShootShotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tAlbumPhoto' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tAlbumPhoto">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fAlbId" Type="int" />
+    <Property Name="fName" Type="nvarchar" MaxLength="20" />
+    <Property Name="fDes" Type="nvarchar" MaxLength="100" />
+    <Property Name="fCover" Type="bit" />
+    <Property Name="fLike" Type="int" />
+    <Property Name="fView" Type="int" />
+  </EntityType>
+  <EntityType Name="tCMsg">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="fMsgTime" Type="smalldatetime" />
+    <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
+    <Property Name="fState" Type="bit" />
+    <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tKeyword' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tKeyword">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fPhoId" Type="int" />
+    <Property Name="fKeyword" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tMember">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fName" Type="nvarchar" MaxLength="30" />
+    <Property Name="fPhoto" Type="nvarchar" MaxLength="50" />
+    <Property Name="fBday" Type="date" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fTel" Type="nvarchar" MaxLength="20" />
+    <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+    <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="fGender" Type="bit" />
+    <Property Name="fCode" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tMemberPhot' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tMemberPhot">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fName" Type="nvarchar" MaxLength="30" />
+    <Property Name="fIntro" Type="nvarchar" MaxLength="100" />
+    <Property Name="fStudioName" Type="nvarchar" MaxLength="20" />
+    <Property Name="fStuidioAdd" Type="nvarchar" MaxLength="100" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fOther" Type="nvarchar" MaxLength="100" />
+    <Property Name="fFB" Type="nvarchar" MaxLength="100" />
+    <Property Name="fIns" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tPhotAlbum' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tPhotAlbum">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fName" Type="nvarchar" MaxLength="20" />
+    <Property Name="FState" Type="bit" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tPhotArea' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tPhotArea">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tPhotStyle' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tPhotStyle">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fStyle" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tPjtDetailType' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tPjtDetailType">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="fFilmType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'dbShootShot.dbo.tPjtDetailUpload' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="tPjtDetailUpload">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'dbShootShot.dbo.tPMsg' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="tPMsg">
+          <Property Name="fId" Type="int" />
+          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fMsgTime" Type="smalldatetime" />
+          <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+  <EntityType Name="tProject">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="fPjtDate" Type="datetime" />
+    <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fContact" Type="nvarchar" MaxLength="30" />
+    <Property Name="fContactTel" Type="nvarchar" MaxLength="20" />
+    <Property Name="fWkdyTime" Type="nvarchar" MaxLength="10" />
+    <Property Name="fWkndTime" Type="nvarchar" MaxLength="10" />
+    <Property Name="fCity" Type="nvarchar" MaxLength="10" />
+    <Property Name="fLoc" Type="nvarchar" MaxLength="10" />
+    <Property Name="fFilmDate" Type="date" />
+    <Property Name="fFilmTime" Type="time" Precision="0" />
+    <Property Name="fBudget" Type="int" />
+    <Property Name="fPrintQty" Type="int" />
+    <Property Name="fPjtTopic" Type="nvarchar" MaxLength="20" />
+    <Property Name="fReq" Type="nvarchar" MaxLength="100" />
+    <Property Name="fStyle" Type="nvarchar" MaxLength="100" />
+    <Property Name="fPjtState" Type="bit" />
+    <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tRoles">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fCode" Type="int" />
+    <Property Name="fRole" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="dbShootShotModelStoreContainer">
+    <EntitySet Name="tCMsg" EntityType="Self.tCMsg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tProject" EntityType="Self.tProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tRoles" EntityType="Self.tRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tAlbumPhoto].[fId] AS [fId], 
+    [tAlbumPhoto].[fAlbId] AS [fAlbId], 
+    [tAlbumPhoto].[fName] AS [fName], 
+    [tAlbumPhoto].[fDes] AS [fDes], 
+    [tAlbumPhoto].[fCover] AS [fCover], 
+    [tAlbumPhoto].[fLike] AS [fLike], 
+    [tAlbumPhoto].[fView] AS [fView]
+    FROM [dbo].[tAlbumPhoto] AS [tAlbumPhoto]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tKeyword" EntityType="Self.tKeyword" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tKeyword].[fId] AS [fId], 
+    [tKeyword].[fPhoId] AS [fPhoId], 
+    [tKeyword].[fKeyword] AS [fKeyword]
+    FROM [dbo].[tKeyword] AS [tKeyword]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tMemberPhot].[fId] AS [fId], 
+    [tMemberPhot].[fName] AS [fName], 
+    [tMemberPhot].[fIntro] AS [fIntro], 
+    [tMemberPhot].[fStudioName] AS [fStudioName], 
+    [tMemberPhot].[fStuidioAdd] AS [fStuidioAdd], 
+    [tMemberPhot].[fEmail] AS [fEmail], 
+    [tMemberPhot].[fOther] AS [fOther], 
+    [tMemberPhot].[fFB] AS [fFB], 
+    [tMemberPhot].[fIns] AS [fIns]
+    FROM [dbo].[tMemberPhot] AS [tMemberPhot]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tPhotAlbum].[fId] AS [fId], 
+    [tPhotAlbum].[fEmail] AS [fEmail], 
+    [tPhotAlbum].[fName] AS [fName], 
+    [tPhotAlbum].[FState] AS [FState]
+    FROM [dbo].[tPhotAlbum] AS [tPhotAlbum]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tPhotArea].[fId] AS [fId], 
+    [tPhotArea].[fEmail] AS [fEmail], 
+    [tPhotArea].[fArea] AS [fArea]
+    FROM [dbo].[tPhotArea] AS [tPhotArea]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tPhotStyle].[fId] AS [fId], 
+    [tPhotStyle].[fEmail] AS [fEmail], 
+    [tPhotStyle].[fStyle] AS [fStyle]
+    FROM [dbo].[tPhotStyle] AS [tPhotStyle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tPjtDetailType].[fId] AS [fId], 
+    [tPjtDetailType].[fOrderNum] AS [fOrderNum], 
+    [tPjtDetailType].[fFilmType] AS [fFilmType]
+    FROM [dbo].[tPjtDetailType] AS [tPjtDetailType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tPjtDetailUpload].[fId] AS [fId], 
+    [tPjtDetailUpload].[fOrderNum] AS [fOrderNum], 
+    [tPjtDetailUpload].[fPicUpload] AS [fPicUpload]
+    FROM [dbo].[tPjtDetailUpload] AS [tPjtDetailUpload]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

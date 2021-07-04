@@ -4,3 +4,7 @@
     [fArea]  NVARCHAR (10) NULL
 );
 
+
+
+
+

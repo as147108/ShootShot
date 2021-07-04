@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="552a0e17a14640c19b7fac9066ce3bb4" Name="Diagram1">
+        <EntityTypeShape EntityType="dbShootShotModel.tCMsg" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tMember" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tProject" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tRoles" Width="1.5" PointX="0.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tAlbumPhoto" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tKeyword" Width="1.5" PointX="2.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tMemberPhot" Width="1.5" PointX="8.375" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPhotAlbum" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPhotArea" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPhotStyle" Width="1.5" PointX="11.125" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPjtDetailType" Width="1.5" PointX="6.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPjtDetailUpload" Width="1.5" PointX="4.625" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbShootShotModel.tPMsg" Width="1.5" PointX="0.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
