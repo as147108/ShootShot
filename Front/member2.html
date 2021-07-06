@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region meta請勿更改 -->
+    <meta charset="utf-8">
+    <title>SHOOTSHOT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SHOOTSHOT" name="keywords">
+    <meta content="SHOOTSHOT" name="description">
+    <!-- #endregion -->
+    <!-- #region Icon請勿更改 -->
+    <link href="/img/logo.PNG" rel="icon">
+    <!-- #endregion -->
+    <!-- #region 共用googleFont請勿更改 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- #endregion -->
+    <!-- #region 共用cssLink請勿更改 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/nav/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/member2.css">
+    <!-- #endregion -->
+</head>
+
+<body>
+    <!-- #region navbar請勿更改 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto align-items-center">
+                    
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
+                        <img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                            style="width: 80px;height: 80px;border-radius: 50px;">
+                        <div class="dropdown-menu">
+                            <a href="index.html" class="dropdown-item">登入</a>
+                            <a href="./member.html" class="dropdown-item">設定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region 妳的html -->
+    <div class="divnavbar"></div>
+
+    
+    <!-- #article 左側欄按鈕區塊 -->
+    <article id="member_artForbtn" name="member_artForbtn">
+        <div class="leftbutton">
+            <br />
+        <button class="pageone" id="member_btnMInfo" name="member_btnMInfo">
+          <a href="./member2.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
+        </button>
+        <br />
+        <button id="member_btnPjtManage" name="member_btnPjtManage">
+          <a href="./prjMgmt.html">專案管理</a>
+        </button>
+        <br />
+        <button id="member_btnPOpen" name="member_btnPOpen">
+          <a href="#" id="member_alinkPOpen" name="member_alinkPOpen">攝影師</a>
+        </button>
+        <br />
+        <button id="member_btnBackIndex" name="member_btnBackIndex">
+          <a href="#">回首頁</a>
+        </button>
+        </div>
+
+    </article>
+
+    <!-- #article 右側欄內容：會員資料更新區塊 -->
+    <article >
+        <div class="editmemberform">
+            <form action="">
+                 <!-- 照片區塊 -->
+                 <div class="photo">
+                     <label for="">相片</label>
+                     <div class="image">
+                         <img class="pic" src="./img/login_pic.svg" alt="">
+                     </div>
+                     <a class="image" href="">修改</a>
+                 </div>
+                 
+
+                <!-- 姓名生日 -->
+                <div >
+                  <div class="namebirth">
+                    <label for="">姓名 </label>
+                    <input type="text" value="Aron David" />
+                    <a href="">修改</a>
+                  </div>
+                 <br>
+                  <div class="namebirth">
+                    <label for="">生日 </label>
+                    <input
+                      type="date"
+                      name="userbirth"
+                      id="userbirth"
+                      value="1990/07/01"
+                    />
+                    <a href="">修改</a>
+                  </div>
+                </div>
+                <br>
+                
+      
+                <!-- email -->
+                <div class="email">
+                  <label for="">電子郵件 </label>
+                  <input type="email" value="aron_david@gmail.com" />
+                  <a href="">修改</a>
+                </div>
+                <br />
+      
+                <!-- 並排 p 電話、地區 -->
+                <div class="inline">
+                  <div class="phone">
+                    <label for="">電話 </label>
+                    <input type="tel" value="0988-229288" />
+                    <a href="">修改</a>
+                  </div>
+                  
+                  <div class="region">
+                    <label for="">地區 </label>
+                    <select class="city" name="city" id="city">
+                      <option value=""></option>
+                      <option value="基隆市">基隆市</option>
+                      <option value="台北市">台北市</option>
+                      <option value="新北市">新北市</option>
+                      <option value="桃園市">桃園市</option>
+                      <option value="新竹市">新竹市</option>
+                      <option value="苗栗縣">苗栗縣</option>
+                      <option value="新竹縣">新竹縣</option>
+                      <option value="台中市">台中市</option>
+                      <option value="彰化縣">彰化縣</option>
+                      <option value="南投縣">南投縣</option>
+                      <option value="雲林縣">雲林縣</option>
+                      <option value="嘉義市">嘉義市</option>
+                      <option value="嘉義縣">嘉義縣</option>
+                      <option value="台南市">台南市</option>
+                      <option value="高雄市">高雄市</option>
+                      <option value="屏東縣">屏東縣</option>
+                      <option value="宜蘭縣">宜蘭縣</option>
+                      <option value="花蓮縣">花蓮縣</option>
+                      <option value="台東縣">台東縣</option>
+                    </select>
+                    <a href="">修改</a>
+                  </div>
+                </div>
+                <br>
+      
+                <!-- 並排 p 密碼、性別 -->
+                <div class="inline">
+                  <div class="password">
+                    <label for="">密碼 </label>
+                    <input type="password" name="userpass" id="userpass" />
+                    <a href="">修改</a>
+                  </div>
+                  <br>
+                  <div class="sex">
+                    <label for="">性別 </label>
+                    <select class="sex" name="sex" id="sex">
+                      <option value="male">男性</option>
+                      <option value="female">女性</option>
+                      <option value="other">其他</option>
+                    </select>
+                    <a href="">修改</a>
+                  </div>
+                </div>
+                <div >
+                    
+                </div>
+              </form>
+        </div>
+
+    </article>
+
+    <!-- #region footer請勿更改 -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>保留</h2>
+                        <a href="">保留</a>
+                        <a href="">保留</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">&#169; copyright ©
+        2021 | ShootShot. All Rights Reserved</div>
+    <!-- endregion -->
+    <!-- #region backToUp請勿更改 -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- $endregion -->
+    <!-- #region js請勿更改 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="js/main.js"></script>
+    <!-- #endregion -->
+</body>
+
+</html>

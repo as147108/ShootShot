@@ -1,0 +1,188 @@
+/* navbar空白div */
+.divnavbar {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+
+/* *********************** */
+/* *********************** */
+/* article 左側欄按鈕區塊css */
+/* *********************** */
+/* *********************** */
+
+article div.leftbutton {
+  width: 410px;
+  padding: 20px 0px;
+  position: fixed;
+}
+
+article button.pageone {
+  background-color: #7dffd1;
+}
+
+article button {
+  border: solid 1px #7dffd1;
+  border-radius: 30px;
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  margin: 22px 80px;
+  color: #242424;
+}
+
+article button:hover {
+  background-color: #7dffd1;
+}
+
+article button a {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #242424;
+  font-size: 12px;
+}
+
+/* ************************************ */
+/* ************************************ */
+/* article 右側文章區塊：會員資料修改區塊css */
+/* ************************************ */
+/* ************************************ */
+
+article div.editmemberform {
+  /* border: solid black; */
+  width: 900px;
+  height: 600px;
+  position: relative;
+  left: 410px;
+  padding: 20px 0px;
+}
+
+article form {
+  padding: 50px 100px;
+}
+article form input {
+  border: none;
+  font-size: 14px;
+}
+
+article form a.image {
+  font-size: 12px;
+  color: #7dffd1;
+  margin: 0px auto;
+}
+
+article form a {
+  font-size: 12px;
+  color: #7dffd1;
+  margin: 0px 0px 0px 20px;
+}
+
+/* 照片 */
+form div.photo {
+  clear: both;
+  /* background-color: black; */
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 550px;
+  padding: 5px;
+  text-align: center;
+}
+
+form div.photo label {
+  margin: 0px;
+  padding: 5px;
+}
+
+form div img.pic {
+  width: 80px;
+  height: 80px;
+}
+
+/* 姓名生日 */
+form div.namebirth {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 320px;
+  height: 52px;
+  vertical-align: middle;
+}
+
+form div label {
+  padding: 12px;
+  font-size: 12px;
+}
+
+/* Email */
+form div.email {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 625px;
+  height: 52px;
+  vertical-align: middle;
+}
+
+form div.email input {
+  width: 400px;
+}
+
+/* 電話 */
+form div.phone {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 0px 25px 26px 0px;
+  width: 320px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+}
+
+/* 地區 */
+form div.region {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 280px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+}
+
+form div select.city {
+  border: none;
+  width: 120px;
+  font-size: 14px;
+}
+
+/* 密碼 */
+form div.password {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 0px 25px 26px 0px;
+  width: 320px;
+  height: 52px;
+  vertical-align: middle;
+  clear: both;
+  float: left;
+}
+
+/* 性別 */
+form div.sex {
+  border: solid 1px #7dffd1;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 280px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+}
+
+form div select.sex {
+  border: none;
+  width: 120px;
+  font-size: 14px;
+}
