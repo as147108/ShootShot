@@ -11,10 +11,12 @@
 /* *********************** */
 /* *********************** */
 
+
 article div.leftbutton {
   width: 410px;
   padding: 20px 0px;
   position: fixed;
+  
 }
 
 article button.pageone {
@@ -42,6 +44,92 @@ article button a {
   font-size: 12px;
 }
 
+@media screen and (max-width: 990px) {
+ 
+.divnavbar {
+    background-color: white;
+    width: 100%;
+    height: 0px;
+  }
+  
+article div.leftbutton {
+  width: 300px;
+  padding: 10px;
+  position: fixed;
+  
+}
+
+article button.pageone {
+  background-color: #7dffd1;
+}
+
+article button {
+  border: solid 1px #7dffd1;
+  border-radius: 30px;
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  margin: 10px 10px;
+  color: #242424;
+}
+
+article button:hover {
+  background-color: #7dffd1;
+}
+
+article button a {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #242424;
+  font-size: 12px;
+}
+}
+@media screen and (max-width:770px) {
+  
+.divnavbar {
+  background-color: white;
+  width: 100%;
+  height: 0px;
+}
+
+article div.leftbutton {
+width: 100%;
+height: 120px;
+padding: 10px;
+position: relative;
+background-color: #d4d4d4;
+
+}
+
+article button.pageone {
+background-color: #7dffd1;
+}
+
+article button {
+border: none;
+border-radius: 30px;
+width: 178px;
+height: 40px;
+background-color: white;
+margin: 5px ;
+color: #242424;
+float: left;
+}
+
+article button:hover {
+background-color: #7dffd1;
+}
+
+article button a {
+padding: 10px 40px;
+text-decoration: none;
+color: #242424;
+font-size: 12px;
+}
+}
+
+
+
 /* ************************************ */
 /* ************************************ */
 /* article 右側文章區塊：會員資料修改區塊css */
@@ -55,10 +143,11 @@ article div.editmemberform {
   position: relative;
   left: 410px;
   padding: 20px 0px;
+  
 }
 
 article form {
-  padding: 50px 100px;
+  padding: 50px 80px;
 }
 article form input {
   border: none;
@@ -185,4 +274,462 @@ form div select.sex {
   border: none;
   width: 120px;
   font-size: 14px;
+}
+
+
+@media screen and (max-width: 1135px) {
+  article div.editmemberform {
+    /* border: solid black; */
+    width: 900px;
+    height: 600px;
+    position: relative;
+    left: 410px;
+    padding: 20px 0px;
+    
+  }
+  
+  article form {
+    padding: 50px 0px;
+  }
+  article form input {
+    border: none;
+    font-size: 14px;
+  }
+  
+  article form a.image {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px auto;
+  }
+  
+  article form a {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px 0px 0px 20px;
+  }
+  
+  /* 照片 */
+  form div.photo {
+    clear: both;
+    /* background-color: black; */
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 380px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  form div.photo label {
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  form div img.pic {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* 姓名生日 */
+  form div.namebirth {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 300px;
+    height: 52px;
+    vertical-align: middle;
+  }
+  
+  form div label {
+    padding: 12px;
+    font-size: 12px;
+  }
+  form div.namebirth input{
+    width: 150px;
+  }
+  
+  /* Email */
+  form div.email {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 550px;
+    height: 52px;
+    vertical-align: middle;
+  }
+  
+  form div.email input {
+    width: 350px;
+  }
+  
+  /* 電話 */
+  form div.phone {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 0px 20px 26px 0px;
+    width: 300px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  form div.phone input{
+    width: 150px;
+  }
+  
+  /* 地區 */
+  form div.region {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 230px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.city {
+    border: none;
+    width: 80px;
+    font-size: 14px;
+  }
+  
+  /* 密碼 */
+  form div.password {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 0px 20px 26px 0px;
+    width: 300px;
+    height: 52px;
+    vertical-align: middle;
+    clear: both;
+    float: left;
+  }
+
+  form div.password input{
+    width: 150px;
+  }
+  
+  /* 性別 */
+  form div.sex {
+    border: solid 1px #7dffd1;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 230px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.sex {
+    border: none;
+    width: 80px;
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 990px) {
+  article div.editmemberform {
+    /* border: solid black; */
+    width: 600px;
+    height: 600px;
+    position: relative;
+    left: 300px;
+    padding: 0px;
+    
+  }
+  
+  article form {
+    padding: 45px 0px;
+  }
+  article form input {
+    border: none;
+    font-size: 14px;
+  }
+  
+  article form a.image {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px auto;
+  }
+  
+  article form a {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px 0px 0px 10px;
+  }
+  
+  /* 照片 */
+  form div.photo {
+    clear: both;
+    /* background-color: black; */
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 300px;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  form div.photo label {
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  form div img.pic {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* 姓名生日 */
+  form div.namebirth {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 240px;
+    height: 45px;
+    vertical-align: middle;
+  }
+  
+  form div label {
+    padding: 8px;
+    font-size: 12px;
+  }
+  form div.namebirth input{
+    width: 100px;
+  }
+  
+  /* Email */
+  form div.email {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 450px;
+    height: 45px;
+    vertical-align: middle;
+  }
+  
+  form div.email input {
+    width: 300px;
+  }
+  
+  /* 電話 */
+  form div.phone {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin: 0px 10px 26px 0px;
+    width: 240px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  form div.phone input{
+    width: 100px;
+  }
+  
+  /* 地區 */
+  form div.region {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 200px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.city {
+    border: none;
+    width: 65px;
+    font-size: 12px;
+  }
+  
+  /* 密碼 */
+  form div.password {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin: 0px 10px 26px 0px;
+    width: 240px;
+    height: 45px;
+    vertical-align: middle;
+    clear: both;
+    float: left;
+  }
+
+  form div.password input{
+    width: 100px;
+  }
+  
+  /* 性別 */
+  form div.sex {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 200px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.sex {
+    border: none;
+    width: 65px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:770px) {
+  article div.editmemberform {
+    /* border: solid black; */
+    width: 600px;
+    height: 380px;
+    position: relative;
+    left: 10px;
+    padding: 0px;
+    
+  }
+  
+  article form {
+    padding: 30px 0px;
+  }
+  article form input {
+    border: none;
+    font-size: 14px;
+  }
+  
+  article form a.image {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px auto;
+  }
+  
+  article form a {
+    font-size: 12px;
+    color: #7dffd1;
+    margin: 0px 0px 0px 2px;
+  }
+  
+  /* 照片 */
+  form div.photo {
+    clear: both;
+    /* background-color: black; */
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 280px;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  form div.photo label {
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  form div img.pic {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* 姓名生日 */
+  form div.namebirth {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 220px;
+    height: 45px;
+    vertical-align: middle;
+  }
+  
+  form div label {
+    padding: 8px 2px;
+    font-size: 12px;
+  }
+  form div.namebirth input{
+    width: 130px;
+  }
+  
+  /* Email */
+  form div.email {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 380px;
+    height: 45px;
+    vertical-align: middle;
+  }
+  
+  form div.email input {
+    width: 260px;
+  }
+  
+  /* 電話 */
+  form div.phone {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0px 10px 26px 0px;
+    width: 220px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  form div.phone input{
+    width: 130px;
+  }
+  
+  /* 地區 */
+  form div.region {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 150px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.city {
+    border: none;
+    width: 65px;
+    font-size: 12px;
+  }
+  
+  /* 密碼 */
+  form div.password {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0px 10px 26px 0px;
+    width: 220px;
+    height: 45px;
+    vertical-align: middle;
+    clear: both;
+    float: left;
+  }
+
+  form div.password input{
+    width: 130px;
+  }
+  
+  /* 性別 */
+  form div.sex {
+    border: solid 1px #7dffd1;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 150px;
+    height: 45px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div select.sex {
+    border: none;
+    width: 65px;
+    font-size: 12px;
+  }
 }
