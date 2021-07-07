@@ -28,29 +28,43 @@ namespace ShootShot.Controllers
 		// 自動產生訂單編號fOrderNum nvarchar(50) 10碼
 		public ActionResult CreatePrj()
 		{
-			CProjectViewModel x = new CProjectViewModel();
-			//dbShootShotEntities db = new dbShootShotEntities();
 
-			//tProject photog = db.tProject.FirstOrDefault(p => p.fPEmail == email);
-			//if (photog == null)
-			// return Content("<script language='javascript' type='text/javascript'>alert('請選擇攝影師');</script>"); 
-			//return View(photog);
+			dbShootShotEntities db = new dbShootShotEntities();
+			List<tProject> prj = db.tProject.ToList();
+			List<tMemberPhot> photog = db.tMemberPhot.ToList();
+			ViewBag.PhotogList = new SelectList(photog, "fEmail", "fName");
+
+			ViewModels.CPrjMemberViewModel cPrj = new CPrjMemberViewModel();
+			
+
 			return View();
 		}
 		[HttpPost]
 		public ActionResult CreatePrj(CProjectViewModel p)
 		{
-			CProjectViewModel item = new CProjectViewModel();
-			string PhotoName = Guid.NewGuid().ToString() + ".jpg";
-			p.photo.SaveAs(Server.MapPath("~/Content/") + PhotoName);
-			p.fPicUpload = "/" + PhotoName;
+			try
+			{
+				// 攝影師資料
+				dbShootShotEntities db = new dbShootShotEntities();
+				List<tMemberPhot> photog = db.tMemberPhot.ToList();
+				ViewBag.PhotogList = new SelectList(photog, "fEmail", "fName");
+				tMemberPhot item = new tMemberPhot();
+				item.fEmail = p.fEmail;
+				item.fName = p.fName;
+				db.tMemberPhot.Add(item);
+				// project表單
 
-			dbShootShotEntities db = new dbShootShotEntities();
-			db.tProject.Add(p.project);
-			db.tPjtDetailType.Add(p.prjtype);
-			db.tPjtDetailUpload.Add(p.prjphoto);
-			db.SaveChanges();
-			return View();
+
+
+				db.SaveChanges();
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+
+			return View(p);
 		}
 	//攝影師
 	public ActionResult Listphotog() 

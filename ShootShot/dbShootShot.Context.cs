@@ -38,5 +38,6 @@ namespace ShootShot
         public virtual DbSet<tPjtDetailType> tPjtDetailType { get; set; }
         public virtual DbSet<tPjtDetailUpload> tPjtDetailUpload { get; set; }
         public virtual DbSet<tPMsg> tPMsg { get; set; }
-    }
+		public object CProjectViewModel { get; internal set; }
+	}
 }

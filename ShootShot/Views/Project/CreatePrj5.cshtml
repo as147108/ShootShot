@@ -3,11 +3,6 @@
 	ViewBag.Title = "CreatePrj";
 }
 
-@*<html>
-	<body>*@
-
-
-@*#region 妳的html*@
 <main>
 	@*形象圖片start*@
 	<section class="cProject_sec1">
@@ -20,7 +15,7 @@
 	</section>
 	@*形象圖片End
 		表單區域start*@
-	@using (Html.BeginForm("CreatePrj", "Project",FormMethod.Post,new { enctype = "multipart/form-data" }))
+	@using (Html.BeginForm())
 	{
 		@Html.AntiForgeryToken()
 		@*<form method="post" action="" enctype="multipart/form-data">*@
