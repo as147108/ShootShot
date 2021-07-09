@@ -192,10 +192,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GoogleAPIController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\MemberController.cs" />
-    <Compile Include="Controllers\PhotogController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="dbShootShot.Context.cs">
       <AutoGen>True</AutoGen>
@@ -215,6 +211,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CProject.cs" />
     <Compile Include="Models\CProjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAlbumPhoto.cs">
@@ -257,7 +254,6 @@
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CProjectViewModel.cs" />
-    <Compile Include="ViewModels\CPrjMemberViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -288,11 +284,6 @@
     <Content Include="Web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Project\IdxProject.cshtml" />
-    <Content Include="Views\Project\ViewTest.cshtml" />
-    <Content Include="Views\Project\Cprjtab.cshtml" />
-    <Content Include="Views\Project\CreatePrj5.cshtml" />
-    <Content Include="Views\Project\Listphotog.cshtml" />
-    <Content Include="Views\Project\CreatePrj__.cshtml" />
     <Content Include="Views\Project\CreatePrj.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -326,15 +317,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\GoogleAPI\" />
-    <Folder Include="Views\Login\" />
-    <Folder Include="Views\Photog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

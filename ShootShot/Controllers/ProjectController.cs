@@ -6,63 +6,90 @@ using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Dynamic;
 using ShootShot.ViewModels;
+using ShootShot.Models;
 
 namespace ShootShot.Controllers
 {
     public class ProjectController : Controller
     {
-        // GET: Projrct
-        public ActionResult IdxProject()
+
+		// GET: Projrct
+		public ActionResult IdxProject()
         {
             return View();
         }
 
-		// test
-		public ActionResult CreatePrj__()
+		public ActionResult fileUploadDemo()
 		{
 			return View();
 		}
-
-
-		// 專案表格id
-		// 自動產生訂單編號fOrderNum nvarchar(50) 10碼
-		public ActionResult CreatePrj()
+		[HttpPost]
+		public ActionResult fileUploadDemo(HttpPostedFileBase photo)
 		{
+			photo.SaveAs(@"C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\Content");
+			return View();
+		}
 
+		public ActionResult CreatePrj(string email)
+		{
 			dbShootShotEntities db = new dbShootShotEntities();
+			CProject p = new CProject();
+			tMember cust = db.tMember.SingleOrDefault(c => c.fEmail == email);
+			if (cust!=null)
+			{
+				ViewBag["CEmail"] = cust.fEmail;
+				ViewBag["CPhone"] = cust.fPhoto;
+				ViewBag["CName"] = cust.fName;
+			}
 			List<tProject> prj = db.tProject.ToList();
 			List<tMemberPhot> photog = db.tMemberPhot.ToList();
 			ViewBag.PhotogList = new SelectList(photog, "fEmail", "fName");
 
-			ViewModels.CPrjMemberViewModel cPrj = new CPrjMemberViewModel();
+			//ViewModels.CPrjMemberViewModel cPrj = new CPrjMemberViewModel();
 			
 
 			return View();
 		}
 		[HttpPost]
-		public ActionResult CreatePrj(CProjectViewModel p)
+		public ActionResult CreatePrj(CProject p)
 		{
-			try
-			{
-				// 攝影師資料
-				dbShootShotEntities db = new dbShootShotEntities();
-				List<tMemberPhot> photog = db.tMemberPhot.ToList();
-				ViewBag.PhotogList = new SelectList(photog, "fEmail", "fName");
-				tMemberPhot item = new tMemberPhot();
-				item.fEmail = p.fEmail;
-				item.fName = p.fName;
-				db.tMemberPhot.Add(item);
-				// project表單
+			
+			tProject tp = new tProject();
+			tPjtDetailType tpdt = new tPjtDetailType();
+			tPjtDetailUpload tpdp = new tPjtDetailUpload();
+			Random rnd = new Random();
+			int x = rnd.Next(10, 99);
+			p.txtOrderNum = DateTime.Now.ToString("yyyyMMdd") + x.ToString();
+			p.txtPjtDate = DateTime.Now;
+			//p.txtCEmail =; // 由系統帶入
+			tp.fOrderNum = p.txtOrderNum;
+			tp.fPjtDate = p.txtPjtDate;
+			tp.fCEmail = p.txtCEmail;
+			tp.fContact = p.txtContact;
+			tp.fContactTel = p.txtContactTel;
+			tp.fWkdyTime = p.txtWkdyTime;
+			tp.fWkndTime = p.txtWkndTime;
+			tp.fCity = p.txtCity;
+			tp.fLoc = p.txtLoc;
+			tp.fFilmDate = p.txtFilmDate;
+			tp.fFilmTime = p.txtFilmTime;
+			tp.fBudget = p.txtBudget;
+			tp.fPrintQty = p.txtPrintQty;
+			tp.fPjtTopic = p.txtPjtTopic;
+			tp.fReq = p.txtReq;
+			tp.fStyle = p.txtStyle;
+			tp.fPjtState = p.txtPjtState;
+			tp.fPEmail = p.txtPEmail;
+			tpdt.fOrderNum = p.txtOrderNum1;
+			tpdt.fFilmType = p.txtFilmType;
+			tpdp.fOrderNum = p.txtOrderNum2;
+			tpdp.fPicUpload = p.txtPicUpload;
 
-
-
-				db.SaveChanges();
-			}
-			catch (Exception ex)
-			{
-
-				throw ex;
-			}
+			dbShootShotEntities db = new dbShootShotEntities();
+			db.tProject.Add(tp);
+			db.tPjtDetailType.Add(tpdt);
+			db.tPjtDetailUpload.Add(tpdp);
+			db.SaveChanges();
 
 			return View(p);
 		}

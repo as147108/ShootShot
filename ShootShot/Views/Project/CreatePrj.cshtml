@@ -1,4 +1,4 @@
-﻿@model ShootShot.ViewModels.CProjectViewModel
+﻿@model ShootShot.Models.CProject
 @{
 	ViewBag.Title = "CreatePrj";
 
@@ -21,10 +21,8 @@
 	</section>
 	@*形象圖片End
 		表單區域start*@
-	@*@using (Html.BeginForm())
-	{*@
 		
-		<form method="post" action="~/Project/Create" enctype="multipart/form-data">
+		<form method="post" action="Project/CreatePrj" enctype="multipart/form-data">
 		<section>
 			@*<form method="post">*@
 			@*選定預約攝影師*@
@@ -48,11 +46,11 @@
 					@Html.TextBoxFor(model => model.fName, new { @class = "form-control", @placeholder = "Name" })
 					@Html.ValidationMessageFor(model => model.fName, "", new { @class = "error" })
 					}*@
-					<input id="cProject_txtId1" type="text" readonly="true" value="@Model.fPEmail" name="cProject_txtId1 fPEmail">
+					<input id="cProject_txtId1" type="text" readonly="true" value="@Model.txtPEmail" name="cProject_txtId1 txtPEmail">
 					@*Random rnd = new Random();
 					int x = rnd.Next(10, 99);
 					@Model.fOrderNum=DateTime.Now.ToString("yyyyMMdd")+x.ToString()*@
-					<input type="hidden" name="txtOrderNum" value="" />
+					<input type="hidden" name="txtOrderNum" value="@Model.txtOrderNum" />
 				</div>
 				</div>
 			</div>
@@ -93,16 +91,16 @@
 								<div class=" row">
 									<div class="col">
 										<input class="cProject_txt1" type="text" class="form-control"
-											   placeholder="姓名" aria-label="姓名" value="">
+											   placeholder="姓名" aria-label="姓名" value="@ViewBag["CName"]">
 									</div>
 									<div class="col">
 										<input class="cProject_txt1" type="tel" class="form-control"
-											   placeholder="聯絡電話" aria-label="聯絡電話" value="">
+											   placeholder="聯絡電話" aria-label="聯絡電話" value="@ViewBag["CPhone"]">
 									</div>
 								</div>
 								<div>
-									<input class="cProject_txt1" type="email" class="form-control" id="Email"
-										   placeholder="電子郵件" value="" name="txtEmail">
+									<input class="cProject_txt1" type="email" class="form-control" id="txtCEmail"
+										   placeholder="電子郵件" value="@ViewBag["CEmail"]" name="txtCEmail">
 								</div>
 
 								<br />
@@ -113,11 +111,11 @@
 								<div class=" row">
 									<div class="col">
 										<input class="cProject_txt1" type="text" class="form-control"
-											   placeholder="指定聯絡人" aria-label="指定聯絡人" value="">
+											   placeholder="指定聯絡人" aria-label="指定聯絡人" value="@Model.txtContact" name="txtContact">
 									</div>
 									<div class="col">
 										<input class="cProject_txt1" type="tel" class="form-control"
-											   placeholder="聯絡人電話" aria-label="聯絡人電話" value="">
+											   placeholder="聯絡人電話" aria-label="聯絡人電話" value="@Model.txtContactTel" name="txtContactTel">
 									</div>
 								</div>
 								<br />
@@ -136,7 +134,7 @@
 											</h6>
 										</div>
 										<input type="text" class="form-control"
-											   placeholder="請填寫24小時制方便聯繫時間;如填寫14~17," aria-label="平日聯繫時間" value="">
+											   placeholder="請填寫24小時制方便聯繫時間;如填寫14~17," aria-label="平日聯繫時間" value="@Model.txtWkdyTime" name="txtWkdyTime">
 									</div>
 									<div class="col">
 										<div class="form-check">
@@ -147,7 +145,7 @@
 											</h6>
 										</div>
 										<input type="text" class="form-control" placeholder=" 攝影師將於假日下午2~5點與您聯繫"
-											   aria-label="假日聯繫時間" value="">
+											   aria-label="假日聯繫時間" value="@Model.txtWkndTime" name="txtWkndTime">
 									</div>
 								</div>
 
@@ -194,31 +192,31 @@
 									<div class="col">
 										@*資料庫要帶入攝影師可接案城市*@
 										<input class="cProject_txt2" type="text" placeholder="拍攝城市"
-											   aria-label="拍攝城市" id="city" value="">
+											   aria-label="拍攝城市" id="city" value="@Model.txtCity" name="txtCity">
 										<div class="col">
 											<input class="cProject_txt2" type="text" placeholder="拍攝地點"
-												   aria-label="拍攝地點" value="">
+												   aria-label="拍攝地點" value="@Model.txtLoc" name="txtLoc">
 										</div>
 									</div>
 									<div class=" row">
 										<div class="col">
 											@*資料庫要帶入攝影師可接案城市*@
 											<input type="date" class="cProject_txt2" placeholder="拍攝日期"
-												   aria-label="拍攝日期" value="">
+												   aria-label="拍攝日期" value="@Model.txtFilmDate" name="txtFilmDate">
 										</div>
 										<div class="col">
 											<input class="cProject_txt2" type="time" placeholder="拍攝時間"
-												   aria-label="拍攝時間" value="">
+												   aria-label="拍攝時間" value="@Model.txtFilmTime" name="txtFilmTime">
 										</div>
 									</div>
 									<div class=" row">
 										<div class="col">
 											<input class="cProject_txt2" type="number" placeholder="我的預算"
-												   aria-label="我的預算" min="1" value="">
+												   aria-label="我的預算" min="1" value="@Model.txtBudget" name="txtBudget">
 										</div>
 										<div class="col">
 											<input class="cProject_txt2" type="number" placeholder="出圖張數"
-												   aria-label="出圖張數" min="1" max="10" value="">
+												   aria-label="出圖張數" min="1" max="10" value="@Model.txtPrintQty" name="txtPrintQty">
 										</div>
 									</div>
 									<br />
@@ -226,9 +224,9 @@
 									<div>
 										<h3 class="formLab" for="">拍攝類型</h3>
 									</div>
-									<div class="cProject_conForchkgroup" role="group" value="">
+									<div class="cProject_conForchkgroup" role="group" >
 										<label class="cProject_lbl3">
-											<input type="checkbox" value="寵物" />
+											<input type="checkbox" value="寵物" value="@Model.txtFilmType" name="txtFilmType"/>
 											<span>寵物</span>
 										</label>
 										<label class="cProject_lbl3">
@@ -308,7 +306,7 @@
 									</div>
 									<div class="row">
 										<input class="cProject_txt3" type="text" class="col-sm-8" placeholder="專案主題"
-											   id="prjName" value="">
+											   id="prjName" value="@Model.txtPjtTopic" name="txtPjtTopic">
 									</div>
 									<div class="row">
 										<div class="col-md-6">
@@ -318,13 +316,13 @@
 #網路用途
 #電商用途
 #個人收藏
-#印刷用途" id="floatingTextarea2" value=""></textarea>
+#印刷用途" id="floatingTextarea2" value="@Model.txtReq" name="txtReq"></textarea>
 
 										</div>
 										<div class="col-md-6">
 											@*要用上傳彈跳視窗嗎?*@
 											<input class="cProject_url1" type="url" placeholder="風格參考（請提供參考網址）"
-												   value="">
+												   value="@Model.txtStyle" name="txtStyle">
 											<div class="conForpic1">
 												​<picture>
 													<source srcset="" type="image/svg+xml" value="">
@@ -354,7 +352,6 @@
 		</button>
 		</form>
 		@*表單區域end*@
-	}
 </main>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
