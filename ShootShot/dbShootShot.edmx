@@ -91,22 +91,6 @@
           <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
           <Property Name="fStyle" Type="nvarchar" MaxLength="10" />
         </EntityType>
-        <EntityType Name="tPjtDetailType">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-          <Property Name="fFilmType" Type="nvarchar" MaxLength="20" />
-        </EntityType>
-        <EntityType Name="tPjtDetailUpload">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-          <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="tPMsg">
           <Key>
             <PropertyRef Name="fId" />
@@ -141,6 +125,7 @@
           <Property Name="fStyle" Type="nvarchar" MaxLength="100" />
           <Property Name="fPjtState" Type="bit" />
           <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tRoles">
           <Key>
@@ -159,8 +144,6 @@
           <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPMsg" EntityType="Self.tPMsg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tProject" EntityType="Self.tProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tRoles" EntityType="Self.tRoles" Schema="dbo" store:Type="Tables" />
@@ -219,6 +202,7 @@
           <Property Name="fStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="fPjtState" Type="Boolean" />
           <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tRoles">
           <Key>
@@ -367,6 +351,7 @@
           <EntitySetMapping Name="tProject">
             <EntityTypeMapping TypeName="dbShootShotModel.tProject">
               <MappingFragment StoreEntitySet="tProject">
+                <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
                 <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
                 <ScalarProperty Name="fPjtDate" ColumnName="fPjtDate" />
@@ -460,24 +445,6 @@
                 <ScalarProperty Name="fId" ColumnName="fId" />
                 <ScalarProperty Name="fEmail" ColumnName="fEmail" />
                 <ScalarProperty Name="fStyle" ColumnName="fStyle" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tPjtDetailType">
-            <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailType">
-              <MappingFragment StoreEntitySet="tPjtDetailType">
-                <ScalarProperty Name="fId" ColumnName="fId" />
-                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-                <ScalarProperty Name="fFilmType" ColumnName="fFilmType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tPjtDetailUpload">
-            <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailUpload">
-              <MappingFragment StoreEntitySet="tPjtDetailUpload">
-                <ScalarProperty Name="fId" ColumnName="fId" />
-                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-                <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

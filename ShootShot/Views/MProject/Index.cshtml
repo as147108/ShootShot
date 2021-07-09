@@ -1,0 +1,409 @@
+﻿@model IEnumerable<ShootShot.tProject>
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+</head>
+<body>
+	<p>
+		@Html.ActionLink("Create New", "Create")
+	</p>
+	<table class="table">
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.fId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fOrderNum)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPjtDate)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fCEmail)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fContact)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fContactTel)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fWkdyTime)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fWkndTime)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fCity)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fLoc)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fFilmDate)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fFilmTime)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fBudget)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPrintQty)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPjtTopic)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fReq)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fStyle)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPjtState)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPEmail)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.fPicUpload)
+			</th>
+			<th></th>
+		</tr>
+
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.fId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fOrderNum)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPjtDate)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fCEmail)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fContact)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fContactTel)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fWkdyTime)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fWkndTime)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fCity)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fLoc)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fFilmDate)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fFilmTime)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fBudget)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPrintQty)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPjtTopic)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fReq)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fStyle)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPjtState)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPEmail)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.fPicUpload)
+				</td>
+				<td>
+					@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+					@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+					@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+				</td>
+			</tr>
+		}
+
+	</table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- #region meta請勿更改 -->
+	<meta charset="utf-8">
+	<title>SHOOTSHOT</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="SHOOTSHOT" name="keywords">
+	<meta content="SHOOTSHOT" name="description">
+	<!-- #endregion -->
+	<!-- #region Icon請勿更改 -->
+	<link href="/img/logo.PNG" rel="icon">
+	<!-- #endregion -->
+	<!-- #region 共用googleFont請勿更改 -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+		  rel="stylesheet">
+	<!-- #endregion -->
+	<!-- #region 共用cssLink請勿更改 -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+	<link href="css/nav/style.css" rel="stylesheet">
+	<!-- #endregion -->
+	<!-- #pryMgmt頁面 -->
+	<link rel="stylesheet" href="./css/prjMgmt.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+	<!-- #pryMgmt頁面 end -->
+
+
+
+
+</head>
+
+<body>
+	<!-- #region navbar請勿更改 -->
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+		<div class="container-fluid">
+			<a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+				<div class="navbar-nav ml-auto align-items-center">
+
+					<div class="nav-item dropdown">
+						<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
+						<img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+							 style="width: 70px;height: 70px;border-radius: 50px;">
+						<div class="dropdown-menu">
+							<a href="index.html" class="dropdown-item">登入</a>
+							<a href="./member.html" class="dropdown-item">設定</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- #endregion -->
+	<!-- #region 妳的html -->
+	<div class="divnavbar"></div>
+	<!-- #article 左側欄按鈕區塊 -->
+	<article>
+		<div class="leftbutton">
+
+			<button id="member_btnMInfo" name="member_btnMInfo">
+				<a href="./member2.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
+			</button>
+
+			<button class="pageone" id="member_btnPjtManage" name="member_btnPjtManage">
+				<a href="./prjMgmt.html">專案管理</a>
+			</button>
+
+			<button id="member_btnPOpen" name="member_btnPOpen">
+				<a href="./phoVerif.html" id="member_alinkPOpen" name="member_alinkPOpen">攝影師</a>
+			</button>
+
+			<button id="member_btnBackIndex" name="member_btnBackIndex">
+				<a href="#">回首頁</a>
+			</button>
+		</div>
+
+	</article>
+	<!-------------------------------------->
+	<!-- #article 右側欄內容：專案卡片區塊 -->
+	<article>
+
+
+		<!-- #article 右側欄內容：專案卡片區塊 -->
+		<!-------------------------------------->
+		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="10000">
+					<div class="card" style="width: 18rem;">
+						<img src="./img/cat05.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="./img/girl.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="./img/light.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<div class="card" style="width: 18rem;">
+						<img src="./img/baby.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="./img/man.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="./img/product.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">小B沙龍照</h5>
+							<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+							<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+				<span "><img src="./img/left_arrows.svg" alt=""></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+				<span "><img src="./img/double-right-arrows.svg" alt=""></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!----------------------------------->
+		<!-- #article 右側欄內容：專案內容區塊 -->
+		<div class="prjMain">
+			<div class="container">
+				<div class="project">
+					<p>專案主題</p>
+					<h2>小Ｂ沙龍照</h2> <p class="time">專案建立日期：2021/06/08</p>
+					<p>預約攝影師：Aaron David</p>
+					<br>
+					<p>
+						拍攝日期：2021/06/12 (星期六)<br>
+						拍攝開始時間：10:00am<br>
+						拍攝地點：高雄市/ 高雄市立美術館園區<br>
+						出圖張數：50張<br>
+						拍攝類型：寵物
+					</p>
+					<br>
+					<p>
+						指定聯絡人：小Ｂ媽<br>
+						聯絡人電話：0988802265<br>
+						可聯繫時間：平日20:00~22:00pm
+					</p>
+					<br>
+					<p>
+						其他需求描述：<br>
+						希望可以帶寵物在室外攝影但不要使用閃光燈，<br>
+						預約時間若天氣不好希望可以擇她日安排或再與攝影師討論改為室內拍攝，<br>
+						專案是個人收藏用，<br>
+						但希望可以之後用做印刷用途可以輸出高畫質的檔案！
+					</p>
+					<br>
+					<p>風格參考</p>
+					<div class="row picture">
+						<div class="col"><img src="./img/cat01.jpg" alt=""></div>
+						<div class="col"><img src="./img/cat02.jpg" alt=""></div>
+						<div class="col"><img src="./img/cat03.jpg" alt=""></div>
+						<div class="col"><img src="./img/cat04.jpg" alt=""></div>
+						<div class="col"><img src="./img/cat05.jpg" alt=""></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- #article 右側欄內容：專案內容區塊 -->
+		<!----------------------------------->
+		</div>
+
+		<!--------------------------------->
+		<!-- #article 右側欄內容：留言板區塊 -->
+		<div class="container chat">
+			<p>與攝影師聊聊</p>
+			<br>
+			<div class="chattext">
+				<textarea name="chattext" id="chattext" cols="80" rows="5" aria-valuemax="150">聊聊吧...</textarea>
+				<br>
+				<button class="reply">
+					<a href="#">回覆</a>
+				</button>
+			</div>
+
+		</div>
+
+
+		<!-- #article 右側欄內容：留言板區塊 -->
+		<!--------------------------------->
+
+	</article>
+
+	<!-- #region backToUp請勿更改 -->
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	<!-- $endregion -->
+	<!-- #region js請勿更改 -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="lib/lightbox/js/lightbox.min.js"></script>
+	<script src="mail/jqBootstrapValidation.min.js"></script>
+	<script src="mail/contact.js"></script>
+	<script src="js/main.js"></script>
+	<!-- #endregion -->
+</body>
+
+</html>

@@ -33,6 +33,7 @@
     <EntitySetMapping Name="tProject">
       <EntityTypeMapping TypeName="dbShootShotModel.tProject">
         <MappingFragment StoreEntitySet="tProject">
+          <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
           <ScalarProperty Name="fId" ColumnName="fId" />
           <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
           <ScalarProperty Name="fPjtDate" ColumnName="fPjtDate" />
@@ -126,24 +127,6 @@
           <ScalarProperty Name="fId" ColumnName="fId" />
           <ScalarProperty Name="fEmail" ColumnName="fEmail" />
           <ScalarProperty Name="fStyle" ColumnName="fStyle" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tPjtDetailType">
-      <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailType">
-        <MappingFragment StoreEntitySet="tPjtDetailType">
-          <ScalarProperty Name="fId" ColumnName="fId" />
-          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-          <ScalarProperty Name="fFilmType" ColumnName="fFilmType" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tPjtDetailUpload">
-      <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailUpload">
-        <MappingFragment StoreEntitySet="tPjtDetailUpload">
-          <ScalarProperty Name="fId" ColumnName="fId" />
-          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-          <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

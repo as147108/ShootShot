@@ -84,7 +84,6 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.Razor
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPages.resources.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
-C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.AssemblyReference.cache
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CoreCompileInputs.cache
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CopyComplete
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.dll
@@ -107,3 +106,4 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Diagnostics.Diagn
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Memory.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Numerics.Vectors.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.AssemblyReference.cache

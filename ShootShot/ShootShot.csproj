@@ -192,7 +192,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\CProjectController.cs" />
+    <Compile Include="Controllers\MProjectController.cs" />
     <Compile Include="dbShootShot.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -212,7 +213,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CProject.cs" />
-    <Compile Include="Models\CProjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAlbumPhoto.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
@@ -283,8 +283,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Project\IdxProject.cshtml" />
-    <Content Include="Views\Project\CreatePrj.cshtml" />
+    <Content Include="Views\CProject\Create.cshtml" />
+    <Content Include="Views\CProject\Index.cshtml" />
+    <Content Include="Views\MProject\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -50,6 +50,7 @@
     <Property Name="fStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="fPjtState" Type="Boolean" />
     <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tRoles">
     <Key>

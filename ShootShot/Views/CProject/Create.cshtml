@@ -1,0 +1,276 @@
+﻿@model ShootShot.tProject
+
+@{
+	ViewBag.Title = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+	<section class="cProject_sec1">
+		<div>
+			<img src="~/Content/images/預約專案形象圖.png" />
+		</div>
+		<div class="filter">
+
+		</div>
+	</section>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+		<form>
+			<section>
+				<div class="cProject_conForform1">
+					<div class="row">
+						<div class="col-md-6">
+							<label id="cProject_lblForalink1" class="cProject_lblFortxt1"
+								   for="">預約您的專案．．．．．．</label>
+						</div>
+						<div class="col-md-6">
+							<label for="cProject_txtId1"
+								   class="cProject_lblFortxt1">您所預約攝影師為：</label>
+							@*未完成*@
+							@*@Html.DropDownList("Id", ViewBag.CompaniesSelectList as SelectList,"Select Company",new { @class="form-control"})*@
+							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1" })
+							@{
+								Random rnd = new Random();
+								int x = rnd.Next(10, 99);
+								var x_ = DateTime.Now.ToString("yyyyMMdd") + x.ToString();
+							}
+							@Html.TextBoxFor(m => m.fOrderNum, new { type = "hidden", @Value = x_ })
+						</div>
+					</div>
+				</div>
+				<div class="cProject_conForform2">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="cProject_btn2">
+									<a class="cProject_alink1 active" href="#cProject_conForform1">
+										<label class="cProject_lbl1" for="cProject_alink2">step1</label>
+										<label class="cProject_lbl2" for="cProject_alink2">用戶資料</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId2">
+										<label class="cProject_lbl1" for="cProject_alink2">step2</label>
+										<label class="cProject_lbl2" for="cProject_alink2">專案內容</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId3">
+										<label class="cProject_lbl1" for="cProject_alink2">step3</label>
+										<label class="cProject_lbl2" for="cProject_alink2">其他需求</label>
+									</a>
+								</div>
+							</div>
+							@*container-right用戶資料表單;這邊要用前端數據帶入後建立專案再寫入資料庫;所以要建立name?????*@
+							<div class="col-md-9">
+								<div id="cProject_conForformId1">
+									<div>
+										<h3 for="">開始創建我的專案</h3>
+									</div>
+									<div class=" row">
+										@*未完成*@
+										<div class="col">
+											@Html.TextBox("姓名", null, new { @class = "cProject_txt1", @readonly = "true", Type = "text", name = "txtCName", @Value = ViewBag.txtCName })
+										</div>
+										@*未完成*@
+										<div class="col">
+											@Html.TextBox("電話", null, new { @class = "cProject_txt1", @readonly = "true", Type = "tel", name = "txtCTel", @Value = ViewBag.txtCTel })
+										</div>
+									</div>
+									@*未完成*@
+									<div>
+										@Html.TextBoxFor(m => m.fCEmail, new { @class = "form-control", Type = "email", name = "txtCEmail", @Value = ViewBag.txtCEmail })
+									</div>
+									<br />
+									<br />
+									<div>
+										<h3 class="formLab">專案創建後，將由攝影師與您聯繫，請提供方便與您聯繫的時間與聯絡電話</h3>
+									</div>
+									<div class=" row">
+										<div class="col">
+											@Html.TextBoxFor(m => m.fContact, new { @class = "cProject_txt1", placeholder = "指定聯絡人", required = "required" })
+										</div>
+										<div class="col">
+											@Html.TextBoxFor(m => m.fContactTel, new { @class = "cProject_txt1", placeholder = "聯絡人電話", required = "required" })
+										</div>
+									</div>
+									<br />
+									<br />
+									<div>
+										<h3 class="formLab">可聯繫時間</h3>
+									</div>
+									<div class=" row">
+										<div class="col">
+											@*用前端語法勾選後input才可填寫*@
+											<div class="form-check">
+												<h6 class="form-check-label" for="flexCheckIndeterminate">
+													平日 (週一至週五)
+												</h6>
+											</div>
+											@Html.TextBoxFor(m => m.fWkdyTime, null, new { @class = "form-control", placeholder = "請填寫24小時制方便聯繫時間;如填寫14~17," })
+										</div>
+										<div class="col">
+											<div class="form-check">
+												<h6 class="form-check-label" for="flexCheckIndeterminate">
+													假日 (每週六日及國定假日)
+												</h6>
+											</div>
+											@Html.TextBoxFor(m => m.fWkndTime, null, new { @class = "form-control", placeholder = " 攝影師將於假日下午2~5點與您聯繫" })
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cProject_conForform3">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId1">
+										<label class="cProject_lbl1" for="cProject_alink2">step1</label>
+										<label class="cProject_lbl2" for="cProject_alink2">用戶資料</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId2">
+										<label class="cProject_lbl1" for="cProject_alink2">step2</label>
+										<label class="cProject_lbl2" for="cProject_alink2">專案內容</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId3">
+										<label class="cProject_lbl1" for="cProject_alink2">step3</label>
+										<label class="cProject_lbl2" for="cProject_alink2">其他需求</label>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div id="cProject_conForformId2">
+									<div>
+										<h3 class="formLab" for="">專案內容與拍攝細節</h3>
+									</div>
+									<div class=" row">
+										<div class="col">
+											@*資料庫要帶入*@
+											@Html.TextBoxFor(m => m.fCity, null, new { @class = "cProject_txt2", placeholder = "拍攝城市", id = "city", name = "txtCity", required = "required" })
+										</div>
+										<div class="col">
+											@Html.TextBoxFor(m => m.fLoc, null, new { @class = "cProject_txt2", placeholder = "拍攝地點", id = "Loc", name = "txtLoc", required = "required" })
+										</div>
+									</div>
+									<div class=" row">
+										<div class="col">
+											@Html.TextBoxFor(m => m.fFilmDate, null, new { @class = "cProject_txt2", placeholder = "拍攝日期", type = "date", name = "txtFilmDate", required = "required" })
+										</div>
+										<div class="col">
+											@Html.TextBoxFor(m => m.fFilmTime, null, new { @class = "cProject_txt2", placeholder = "拍攝時間", type = "time", name = "txtFilmTime", required = "required" })
+										</div>
+									</div>
+									<div class=" row">
+										<div class="col">
+											@Html.TextBoxFor(m => m.fBudget, null, new { @class = "cProject_txt2", placeholder = "我的預算", type = "number", name = "txtBudget", min = "1", required = "required" })
+										</div>
+										<div class="col">
+											@Html.TextBoxFor(m => m.fPrintQty, null, new { @class = "cProject_txt2", placeholder = "出圖張數", type = "number", name = "txtPrintQty", min = "1", max = "20", required = "required" })
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cProject_conForform4">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId1">
+										<label class="cProject_lbl1" for="cProject_alink2">step1</label>
+										<label class="cProject_lbl2" for="cProject_alink2">用戶資料</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId2">
+										<label class="cProject_lbl1" for="cProject_alink2">step2</label>
+										<label class="cProject_lbl2" for="cProject_alink2">專案內容</label>
+									</a>
+								</div>
+								<br />
+								<div class="cProject_btn2">
+									<a class="cProject_alink1" href="#cProject_conForformId3">
+										<label class="cProject_lbl1" for="cProject_alink2">step3</label>
+										<label class="cProject_lbl2" for="cProject_alink2">其他需求</label>
+									</a>
+								</div>
+							</div>
+							@*container-right其他需求表單*@
+							<div class="col-md-9">
+								<div id="cProject_conForformId3">
+									<div>
+										<h3 for="">讓攝影師更了解您想拍攝的專案吧！</h3>
+									</div>
+									<div class="row">
+										@Html.TextBoxFor(m => m.fPjtTopic, null, new
+								   {
+									   @class = "cProject_txt3",
+									   placeholder = "專案主題",
+									   type = "text",
+									   id = "prjName",
+									   name = "txtPjtTopic"
+										,
+									   required = "required"
+								   })
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											@Html.TextAreaFor(m => m.fReq, new { @class = "cProject_txtbox1", placeholder = "需求描述(協助攝影師更加精準掌握您的需求)# 室內# 戶外# 網路用途# 電商用途# 個人收藏# 印刷用途", name = "txtReq", required = "required" })
+										</div>
+										<div class="col-md-6">
+											@Html.TextBoxFor(m => m.fStyle, null, new { @class = "cProject_url1", placeholder = "風格參考（請提供參考網址）", id = "style", name = "txtStyle", type = "url" })
+											<div class="conForpic1">
+												@Html.TextBoxFor(m => m.fPicUpload, null, new { @class = "cProject_url1", placeholder = "請上傳參考照片", id = "picUpload", name = "photo", type = "file", accept = "image/gif,image/jpeg,image/png" })
+												<img id="previewPicUpload" src="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<button type="submit"
+					style="font-size: 1.5rem;width: 15%;margin-left:40%;margin-top: 5%;margin-bottom: 5%;background-color:white;border-radius: 20px;border: 1rem;">
+				確認建立專案
+			</button>
+		</form>
+	}
+</main>
+
+
+@*<script>
+		$(function)(){
+			$("#picUpload").on("change", function () {
+				var file = this.files[0];
+				if (this.files && file) {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+						$('#previewPicUpload').attr('src', e.target.result);
+					}
+					reader.readAsDataURL(file);
+				}
+			});
+		}
+	</script>*@
+@*@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+	}*@
