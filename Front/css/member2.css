@@ -136,16 +136,16 @@ font-size: 12px;
 
 
 
-/* ************************************ */
-/* ************************************ */
+/* *************************************** */
+/* *************************************** */
 /* article 右側文章區塊：會員資料修改區塊css */
-/* ************************************ */
-/* ************************************ */
+/* *************************************** */
+/* *************************************** */
 
 article div.editmemberform {
   /* border: solid black; */
   width: 900px;
-  height: 600px;
+  height: 800px;
   position: relative;
   left: 410px;
   padding: 20px 0px;
@@ -177,10 +177,10 @@ article form a {
 form div.photo {
   clear: both;
   /* background-color: black; */
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   position: absolute;
-  left: 550px;
+  left: 500px;
   padding: 5px;
   text-align: center;
 }
@@ -191,8 +191,8 @@ form div.photo label {
 }
 
 form div img.pic {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 /* 姓名生日 */
@@ -210,30 +210,20 @@ form div label {
   font-size: 12px;
 }
 
-/* Email */
-form div.email {
-  border: solid 1px #7dffd1;
-  border-radius: 20px;
-  padding: 5px 20px;
-  width: 625px;
-  height: 52px;
-  vertical-align: middle;
+form div input.date{
+  width: 162px;
 }
 
-form div.email input {
-  width: 400px;
-}
+
 
 /* 電話 */
 form div.phone {
   border: solid 1px #7dffd1;
   border-radius: 20px;
   padding: 5px 20px;
-  margin: 0px 25px 26px 0px;
   width: 320px;
   height: 52px;
   vertical-align: middle;
-  float: left;
 }
 
 /* 地區 */
@@ -241,7 +231,8 @@ form div.region {
   border: solid 1px #7dffd1;
   border-radius: 20px;
   padding: 5px 20px;
-  width: 280px;
+  margin: 0px 20px 26px 0px;
+  width: 320px;
   height: 52px;
   vertical-align: middle;
   float: left;
@@ -249,29 +240,18 @@ form div.region {
 
 form div select.city {
   border: none;
-  width: 120px;
+  width: 162px;
   font-size: 14px;
 }
 
-/* 密碼 */
-form div.password {
-  border: solid 1px #7dffd1;
-  border-radius: 20px;
-  padding: 5px 20px;
-  margin: 0px 25px 26px 0px;
-  width: 320px;
-  height: 52px;
-  vertical-align: middle;
-  clear: both;
-  float: left;
-}
 
 /* 性別 */
 form div.sex {
   border: solid 1px #7dffd1;
   border-radius: 20px;
   padding: 5px 20px;
-  width: 280px;
+  margin: 0px 0px 26px 0px;
+  width:280px;
   height: 52px;
   vertical-align: middle;
   float: left;
@@ -286,7 +266,6 @@ form div select.sex {
 /* 確認送出 */
 form div.submit{
   clear: both;
-  float: left;
   left: 200px;
   vertical-align: middle;
 }
@@ -314,24 +293,96 @@ article form input.submit {
   
 }
 
+/* 密碼 */
+form div.member_divForpass{
+  border: solid #7dffd1;
+  background-color: #7dffd1;
+  border-radius: 15px;
+  width: 624px;
+  height: 170px;
+}
+
+form div.member_divForpass p{
+  padding: 10px 20px 0px 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+form div.oldpassword {
+  padding: 10px 20px;
+  height: 52px;
+  vertical-align: middle;
+}
+
+form div.oldpassword label{
+  padding: 0px;
+  margin: 0px;
+}
+
+form div.oldpassword input{
+  width: 185px;
+  border-radius: 10px;
+  height: 30px;
+  margin: 0px 5px;
+}
+
+form div.newpassword {
+  padding: 10px 20px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+}
+
+form div.newpassword label{
+  padding: 0px;
+  margin: 0px;
+}
+
+form div.newpassword input{
+  width: 185px;
+  border-radius: 10px;
+  height: 30px;
+  margin: 0px 5px;
+}
+form div.newpassword2 {
+  padding: 10px 20px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+}
+
+form div.newpassword2 label{
+  padding: 0px;
+  margin: 0px;
+}
+
+form div.newpassword2 input{
+  width: 185px;
+  border-radius: 10px;
+  height: 30px;
+  margin: 0px 5px;
+}
+
+
 
 @media screen and (max-width: 1135px) {
   article div.editmemberform {
     /* border: solid black; */
     width: 900px;
-    height: 600px;
+    height: 800px;
     position: relative;
-    left: 410px;
+    left: 300px;
     padding: 20px 0px;
     
   }
   
   article form {
-    padding: 50px 0px;
+    padding: 50px 80px;
   }
   article form input {
     border: none;
     font-size: 14px;
+    background-color: #ffffff;
   }
   
   article form a.image {
@@ -350,10 +401,10 @@ article form input.submit {
   form div.photo {
     clear: both;
     /* background-color: black; */
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: absolute;
-    left: 380px;
+    left: 500px;
     padding: 5px;
     text-align: center;
   }
@@ -364,8 +415,8 @@ article form input.submit {
   }
   
   form div img.pic {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
   
   /* 姓名生日 */
@@ -373,7 +424,7 @@ article form input.submit {
     border: solid 1px #7dffd1;
     border-radius: 20px;
     padding: 5px 20px;
-    width: 300px;
+    width: 320px;
     height: 52px;
     vertical-align: middle;
   }
@@ -382,37 +433,21 @@ article form input.submit {
     padding: 12px;
     font-size: 12px;
   }
-  form div.namebirth input{
-    width: 150px;
+  
+  form div input.date{
+    width: 162px;
   }
   
-  /* Email */
-  form div.email {
-    border: solid 1px #7dffd1;
-    border-radius: 20px;
-    padding: 5px 20px;
-    width: 550px;
-    height: 52px;
-    vertical-align: middle;
-  }
   
-  form div.email input {
-    width: 350px;
-  }
   
   /* 電話 */
   form div.phone {
     border: solid 1px #7dffd1;
     border-radius: 20px;
     padding: 5px 20px;
-    margin: 0px 20px 26px 0px;
-    width: 300px;
+    width: 320px;
     height: 52px;
     vertical-align: middle;
-    float: left;
-  }
-  form div.phone input{
-    width: 150px;
   }
   
   /* 地區 */
@@ -420,7 +455,8 @@ article form input.submit {
     border: solid 1px #7dffd1;
     border-radius: 20px;
     padding: 5px 20px;
-    width: 230px;
+    margin: 0px 20px 26px 0px;
+    width: 320px;
     height: 52px;
     vertical-align: middle;
     float: left;
@@ -428,33 +464,18 @@ article form input.submit {
   
   form div select.city {
     border: none;
-    width: 80px;
+    width: 162px;
     font-size: 14px;
   }
   
-  /* 密碼 */
-  form div.password {
-    border: solid 1px #7dffd1;
-    border-radius: 20px;
-    padding: 5px 20px;
-    margin: 0px 20px 26px 0px;
-    width: 300px;
-    height: 52px;
-    vertical-align: middle;
-    clear: both;
-    float: left;
-  }
-
-  form div.password input{
-    width: 150px;
-  }
   
   /* 性別 */
   form div.sex {
     border: solid 1px #7dffd1;
     border-radius: 20px;
     padding: 5px 20px;
-    width: 230px;
+    margin: 0px 0px 26px 0px;
+    width:280px;
     height: 52px;
     vertical-align: middle;
     float: left;
@@ -462,40 +483,110 @@ article form input.submit {
   
   form div select.sex {
     border: none;
-    width: 80px;
+    width: 120px;
     font-size: 14px;
   }
-
-  /* 確認送出 */
-form div.submit{
-  clear: both;
-  float: left;
-  left: 200px;
-  vertical-align: middle;
-}
-
-article form img.submit{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 350px;
-  margin: 2px;
-}
-
-article form input.submit {
-  border: none;
-  font-size: 14px;
-  border: solid 1px #0e0e0e;
-  border-radius: 400px;
-  background-color: #0e0e0e;
-  color: white;
-  padding: 5px 20px;
-  margin: 0px 0px 0px 405px;
-  width: 140px;
-  height: 35px;
-  vertical-align: middle;
   
-}
+  /* 確認送出 */
+  form div.submit{
+    clear: both;
+    left: 200px;
+    vertical-align: middle;
+  }
+  
+  article form img.submit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 500px;
+    margin: 2px;
+  }
+  
+  article form input.submit {
+    border: none;
+    font-size: 14px;
+    border: solid 1px #0e0e0e;
+    border-radius: 400px;
+    background-color: #0e0e0e;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 0px 0px 480px;
+    width: 140px;
+    height: 35px;
+    vertical-align: middle;
+    
+  }
+  
+  /* 密碼 */
+  form div.member_divForpass{
+    border: solid #7dffd1;
+    background-color: #7dffd1;
+    border-radius: 15px;
+    width: 624px;
+    height: 170px;
+  }
+  
+  form div.member_divForpass p{
+    padding: 10px 20px 0px 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  form div.oldpassword {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+  }
+  
+  form div.oldpassword label{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  form div.oldpassword input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
+  }
+  
+  form div.newpassword {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div.newpassword label{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  form div.newpassword input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
+  }
+
+  form div.newpassword2 {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div.newpassword2 label{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  form div.newpassword2 input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
+  }
 }
 
 
@@ -503,19 +594,20 @@ article form input.submit {
   article div.editmemberform {
     /* border: solid black; */
     width: 600px;
-    height: 600px;
+    height: 800px;
     position: relative;
-    left: 300px;
-    padding: 0px;
+    left: 220px;
+    padding: 0px 0px;
     
   }
   
   article form {
-    padding: 45px 0px;
+    padding: 46px 80px;
   }
   article form input {
     border: none;
     font-size: 14px;
+    background-color: #ffffff;
   }
   
   article form a.image {
@@ -534,11 +626,11 @@ article form input.submit {
   form div.photo {
     clear: both;
     /* background-color: black; */
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: absolute;
-    left: 300px;
-    padding: 0px;
+    left: 400px;
+    padding: 5px;
     text-align: center;
   }
   
@@ -548,157 +640,198 @@ article form input.submit {
   }
   
   form div img.pic {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
   
   /* 姓名生日 */
   form div.namebirth {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 5px 20px;
-    width: 240px;
-    height: 45px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
   }
   
   form div label {
-    padding: 8px;
+    padding: 12px 0px;
     font-size: 12px;
   }
-  form div.namebirth input{
-    width: 100px;
+  
+  
+  form div input.date{
+    width: 162px;
   }
   
-  /* Email */
-  form div.email {
-    border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 20px;
-    width: 450px;
-    height: 45px;
-    vertical-align: middle;
-  }
   
-  form div.email input {
-    width: 300px;
-  }
   
   /* 電話 */
   form div.phone {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 5px 20px;
-    margin: 0px 10px 26px 0px;
-    width: 240px;
-    height: 45px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
-    float: left;
-  }
-  form div.phone input{
-    width: 100px;
   }
   
   /* 地區 */
   form div.region {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 5px 20px;
-    width: 200px;
-    height: 45px;
+    margin: 0px 20px 26px 0px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
     float: left;
   }
   
   form div select.city {
     border: none;
-    width: 65px;
-    font-size: 12px;
+    width: 162px;
+    font-size: 14px;
   }
   
-  /* 密碼 */
-  form div.password {
-    border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 20px;
-    margin: 0px 10px 26px 0px;
-    width: 240px;
-    height: 45px;
-    vertical-align: middle;
-    clear: both;
-    float: left;
-  }
-
-  form div.password input{
-    width: 100px;
-  }
   
   /* 性別 */
   form div.sex {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 5px 20px;
-    width: 200px;
-    height: 45px;
+    margin: 0px 0px 26px 0px;
+    width:280px;
+    height: 52px;
     vertical-align: middle;
     float: left;
   }
   
   form div select.sex {
     border: none;
-    width: 65px;
-    font-size: 12px;
+    width: 162px;
+    font-size: 14px;
+  }
+  
+  /* 確認送出 */
+  form div.submit{
+    clear: both;
+    vertical-align: middle;
+  }
+  
+  article form img.submit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 320px;
+    margin: 2px;
+  }
+  
+  article form input.submit {
+    border: none;
+    font-size: 14px;
+    border: solid 1px #0e0e0e;
+    border-radius: 400px;
+    background-color: #0e0e0e;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 0px 0px 300px;
+    width: 140px;
+    height: 35px;
+    vertical-align: middle;
+    
+  }
+  
+  /* 密碼 */
+  form div.member_divForpass{
+    border: solid #7dffd1;
+    background-color: #7dffd1;
+    border-radius: 15px;
+    width: 445px;
+    height: 220px;
+  }
+  
+  form div.member_divForpass p{
+    padding: 10px 20px 0px 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  form div.oldpassword {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+  }
+  
+  form div.oldpassword label{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  form div.oldpassword input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
+  }
+  
+  form div.newpassword {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  form div.newpassword label{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  form div.newpassword input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
   }
 
-  /* 確認送出 */
-form div.submit{
-  clear: both;
-  float: left;
-  left: 200px;
-  vertical-align: middle;
-}
-
-article form img.submit{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 240px;
-  margin: 2px;
-}
-
-article form input.submit {
-  border: none;
-  font-size: 14px;
-  border: solid 1px #0e0e0e;
-  border-radius: 400px;
-  background-color: #0e0e0e;
-  color: white;
-  padding: 5px 20px;
-  margin: 0px 0px 0px 305px;
-  width: 140px;
-  height: 35px;
-  vertical-align: middle;
+  form div.newpassword2 {
+    padding: 10px 20px;
+    height: 52px;
+    vertical-align: middle;
+    float: left;
+  }
   
-}
+  form div.newpassword2 label{
+    padding: 0px 12px 0px 0px;
+    margin: 0px;
+  }
+  
+  form div.newpassword2 input{
+    width: 185px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0px 5px;
+  }
 }
 
 @media screen and (max-width:770px) {
   article div.editmemberform {
     /* border: solid black; */
-    width: 600px;
-    height: 380px;
+    width: 400px;
+    height: 1000px;
     position: relative;
-    left: 10px;
+    left: 40px;
     padding: 0px;
     
   }
   
   article form {
-    padding: 30px 0px;
+    padding: 10px 20px;
   }
   article form input {
     border: none;
     font-size: 14px;
+    background-color: #ffffff;
   }
   
   article form a.image {
@@ -710,19 +843,21 @@ article form input.submit {
   article form a {
     font-size: 12px;
     color: #7dffd1;
-    margin: 0px 0px 0px 2px;
+    margin: 0px 0px 0px 10px;
   }
   
   /* 照片 */
   form div.photo {
     clear: both;
     /* background-color: black; */
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    left: 280px;
+    width: 140px;
+    height: 140px;
+    position: relative;
+    left: 70px;
     padding: 0px;
+    margin-bottom: 20px;
     text-align: center;
+    
   }
   
   form div.photo label {
@@ -731,136 +866,172 @@ article form input.submit {
   }
   
   form div img.pic {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
   
   /* 姓名生日 */
   form div.namebirth {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 220px;
-    height: 45px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
   }
   
   form div label {
-    padding: 8px 2px;
+    padding: 12px 0px;
     font-size: 12px;
   }
-  form div.namebirth input{
-    width: 130px;
+  
+  
+  form div input.date{
+    width: 162px;
   }
   
-  /* Email */
-  form div.email {
-    border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 380px;
-    height: 45px;
-    vertical-align: middle;
-  }
   
-  form div.email input {
-    width: 260px;
-  }
   
   /* 電話 */
   form div.phone {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin: 0px 10px 26px 0px;
-    width: 220px;
-    height: 45px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
-    float: left;
-  }
-  form div.phone input{
-    width: 130px;
   }
   
   /* 地區 */
   form div.region {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 150px;
-    height: 45px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 0px 20px 26px 0px;
+    width: 280px;
+    height: 52px;
     vertical-align: middle;
     float: left;
   }
   
   form div select.city {
     border: none;
-    width: 65px;
-    font-size: 12px;
+    width: 162px;
+    font-size: 14px;
   }
   
-  /* 密碼 */
-  form div.password {
-    border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin: 0px 10px 26px 0px;
-    width: 220px;
-    height: 45px;
-    vertical-align: middle;
-    clear: both;
-    float: left;
-  }
-
-  form div.password input{
-    width: 130px;
-  }
   
   /* 性別 */
   form div.sex {
     border: solid 1px #7dffd1;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 150px;
-    height: 45px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 0px 0px 26px 0px;
+    width:280px;
+    height: 52px;
     vertical-align: middle;
     float: left;
   }
   
   form div select.sex {
     border: none;
-    width: 65px;
-    font-size: 12px;
+    width: 162px;
+    font-size: 14px;
   }
-
-   /* 確認送出 */
-form div.submit{
-  clear: both;
-  float: left;
   
-  vertical-align: middle;
-}
-
-article form img.submit{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 180px;
-  margin: 2px;
-}
-
-article form input.submit {
-  border: none;
-  font-size: 14px;
-  border: solid 1px #0e0e0e;
-  border-radius: 400px;
-  background-color: #0e0e0e;
-  color: white;
-  padding: 5px 20px;
-  margin: 0px 0px 0px 240px;
-  width: 140px;
-  height: 35px;
-  vertical-align: middle;
+  /* 確認送出 */
+  form div.submit{
+    clear: both;
+    vertical-align: middle;
+  }
   
+  article form img.submit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50px;
+    margin: 2px;
+  }
+  
+  article form input.submit {
+    border: none;
+    font-size: 14px;
+    border: solid 1px #0e0e0e;
+    border-radius: 400px;
+    background-color: #0e0e0e;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 0px 0px 95px;
+    width: 140px;
+    height: 35px;
+    vertical-align: middle;
+    
+  }
+  
+  /* 密碼 */
+  form div.member_divForpass{
+    border: solid #7dffd1;
+    background-color: #7dffd1;
+    border-radius: 15px;
+    width: 280px;
+    height: 250px;
+  
+  }
+  
+  form div.member_divForpass p{
+    padding: 0px 100px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  form div.oldpassword {
+    padding: 0px 20px;
+    height: 60px;
+    vertical-align: middle;
+  }
+  
+  form div.oldpassword label{
+    margin: 0px 80px ;
+  }
+  
+  form div.oldpassword input{
+    width: 225px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 5px 5px;
+  }
+  
+  form div.newpassword {
+    padding: 0px 20px;
+    height: 60px;
+    vertical-align: middle;
+  }
+  
+  form div.newpassword label{
+    margin: 0px 80px ;
+  }
+  
+  form div.newpassword input{
+    width: 225px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 5px 5px;
+  }
+  form div.newpassword2 {
+      padding: 0px 20px;
+      height: 60px;
+      vertical-align: middle;
+    }
+    
+    form div.newpassword2 label{
+      margin: 0px 80px ;
+    }
+    
+    form div.newpassword2 input{
+      width: 225px;
+      border-radius: 10px;
+      height: 30px;
+      margin: 5px 5px;
 }
 }

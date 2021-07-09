@@ -98,13 +98,13 @@
                 <div >
                   <div class="namebirth">
                     <label for="">姓名 </label>
-                    <input type="text" value="Aron David" />
+                    <input class="name" type="text" value="Aron David" />
                     <a href="">修改</a>
                   </div>
                  <br>
                   <div class="namebirth">
                     <label for="">生日 </label>
-                    <input
+                    <input class="date"
                       type="date"
                       name="userbirth"
                       id="userbirth"
@@ -116,23 +116,16 @@
                 <br>
                 
       
-                <!-- email -->
-                <div class="email">
-                  <label for="">電子郵件 </label>
-                  <input type="email" value="aron_david@gmail.com" />
-                  <a href="">修改</a>
-                </div>
-                <br />
-      
-                <!-- 並排 p 電話、地區 -->
-                <div class="inline">
-                  <div class="phone">
+                <!-- 電話 -->
+                
+                <div class="phone">
                     <label for="">電話 </label>
                     <input type="tel" value="0988-229288" />
                     <a href="">修改</a>
-                  </div>
-                
-                  <div class="region">
+                </div>
+                <br>
+                <!-- 地區 -->
+                <div class="region">
                     <label for="">地區 </label>
                     <select class="city" name="selCity" id="selCity">
                       <option value=""></option>
@@ -157,19 +150,10 @@
                       <option value="台東縣">台東縣</option>
                     </select>
                     <a href="">修改</a>
-                  </div>
                 </div>
-                <br>
-      
-                <!-- 並排 p 密碼、性別 -->
-                <div class="inline">
-                  <div class="password">
-                    <label for="">密碼 </label>
-                    <input type="password" name="userpass" id="userpass" />
-                    <a href="">修改</a>
-                  </div>
-                  <br>
-                  <div class="sex">
+                
+                <!-- 性別 -->
+                <div class="sex">
                     <label for="">性別 </label>
                     <select class="sex" name="sex" id="sex">
                       <option value="male">男性</option>
@@ -177,13 +161,46 @@
                       <option value="other">其他</option>
                     </select>
                     <a href="">修改</a>
-                  </div>
                 </div>
+                
 
                 <div class="submit">
                   <img class="submit" src="./img/arrows.svg" alt="">
-                  <input class="submit" type="submit" value="確認修改">
+                  <input class="submit" type="submit" value="資料修改">
                 </div>
+                <br>
+                <br>
+                <br>
+
+
+                <!-- 密碼修改 -->
+                <div class="member_divForpass">
+                <p class="passqord">修改密碼</p>
+          
+                <div class="oldpassword">
+                  <label for="">請輸入舊密碼 </label>
+                  <input class="password" type="password" name="userpass" id="userpass" />
+                </div>
+
+                <div class="newpassword">
+                  <label for="">請輸入新密碼 </label>
+                  <input class="password" type="password" name="userpass" id="userpass" />
+                  
+                </div>
+                <div class="newpassword2">
+                  <label for="">確認新密碼 </label>
+                  <input class="password" type="password" name="userpass" id="userpass" />
+                </div>
+
+              </div>
+              <br>
+              <div class="submit">
+                <img class="submit" src="./img/arrows.svg" alt="">
+                <input class="submit" type="submit" value="密碼修改">
+              </div>
+
+
+              
               </form>
         </div>
 
