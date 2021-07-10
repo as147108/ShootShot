@@ -212,7 +212,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CProject.cs" />
+    <Compile Include="Models\CProjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAlbumPhoto.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
@@ -238,12 +238,6 @@
     <Compile Include="tPhotStyle.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
-    <Compile Include="tPjtDetailType.cs">
-      <DependentUpon>dbShootShot.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tPjtDetailUpload.cs">
-      <DependentUpon>dbShootShot.tt</DependentUpon>
-    </Compile>
     <Compile Include="tPMsg.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
@@ -260,6 +254,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\prjMgmt.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="dbShootShot.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>dbShootShot.Context.cs</LastGenOutput>
@@ -285,7 +281,8 @@
     <None Include="packages.config" />
     <Content Include="Views\CProject\Create.cshtml" />
     <Content Include="Views\CProject\Index.cshtml" />
-    <Content Include="Views\MProject\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutForPrj.cshtml" />
+    <Content Include="Views\MProject\PrjList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

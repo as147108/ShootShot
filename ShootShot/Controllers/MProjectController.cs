@@ -9,7 +9,13 @@ namespace ShootShot.Controllers
     public class MProjectController : Controller
     {
         // GET: MProject
-        public ActionResult Index()
+        public ActionResult List()
+        {
+            var table = from p in (new dbShootShotEntities()).tProject
+                        select p;
+            return View(table);
+        }
+        public ActionResult PrjList()
         {
             return View();
         }
@@ -64,26 +70,6 @@ namespace ShootShot.Controllers
             }
         }
 
-        // GET: MProject/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: MProject/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

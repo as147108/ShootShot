@@ -35,8 +35,6 @@ namespace ShootShot
         public virtual DbSet<tPhotAlbum> tPhotAlbum { get; set; }
         public virtual DbSet<tPhotArea> tPhotArea { get; set; }
         public virtual DbSet<tPhotStyle> tPhotStyle { get; set; }
-        public virtual DbSet<tPjtDetailType> tPjtDetailType { get; set; }
-        public virtual DbSet<tPjtDetailUpload> tPjtDetailUpload { get; set; }
         public virtual DbSet<tPMsg> tPMsg { get; set; }
     }
 }

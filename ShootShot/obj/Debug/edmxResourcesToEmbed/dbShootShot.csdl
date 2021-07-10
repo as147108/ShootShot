@@ -119,22 +119,6 @@
     <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fStyle" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="tPjtDetailType">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fFilmType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="tPjtDetailUpload">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
     <EntitySet Name="tMember" EntityType="Self.tMember" />
@@ -146,8 +130,6 @@
     <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
     <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
     <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
-    <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" />
-    <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" />
     <EntitySet Name="tPMsg" EntityType="dbShootShotModel.tPMsg" />
   </EntityContainer>
   <EntityType Name="tPMsg">

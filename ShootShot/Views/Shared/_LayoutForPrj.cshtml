@@ -1,0 +1,113 @@
+﻿
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@*#region meta請勿更改*@
+	<meta charset="utf-8">
+	<title>SHOOTSHOT</title>
+	@*@Styles.Render("~/Content/css/style.css")*@
+	@Styles.Render("~/Content")
+	@Scripts.Render("~/bundles/modernizr")
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="SHOOTSHOT" name="keywords">
+	<meta content="SHOOTSHOT" name="description">
+	@*#endregion
+		#region Icon請勿更改*@
+	<link href="/img/logo.PNG" rel="icon">
+	@*#endregion
+		#region 共用googleFont請勿更改*@
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+		  rel="stylesheet">
+	@*#endregion
+		#region 共用cssLink請勿更改*@
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+	<link href="css/nav/style.css" rel="stylesheet">
+	@*#endregion*@
+	@*#pryMgmt頁面*@
+	@Styles.Render("~/Content/css/prjMgmt.css")
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+	@*#pryMgmt頁面 end*@
+
+</head>
+
+<body>
+	@*#region navbar請勿更改*@
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+		<div class="container-fluid">
+			<a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+				<div class="navbar-nav ml-auto align-items-center">
+
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+						<img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+							 style="width: 70px;height: 70px;border-radius: 50px;">
+						<div class="dropdown-menu">
+							<a href="index.html" class="dropdown-item">登入</a>
+							<a href="./member.html" class="dropdown-item">設定</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	@*#endregion*@
+	@*#region 妳的html*@
+	<div class="divnavbar"></div>
+	@*#article 左側欄按鈕區塊*@
+	<article>
+		<div class="leftbutton">
+
+			<button id="member_btnMInfo" name="member_btnMInfo">
+				<a href="./member2.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
+			</button>
+
+			<button class="pageone" id="member_btnPjtManage" name="member_btnPjtManage">
+				<a href="./prjMgmt.html">專案管理</a>
+			</button>
+
+			<button id="member_btnPOpen" name="member_btnPOpen">
+				<a href="./phoVerif.html" id="member_alinkPOpen" name="member_alinkPOpen">攝影師</a>
+			</button>
+
+			<button id="member_btnBackIndex" name="member_btnBackIndex">
+				<a href="#">回首頁</a>
+			</button>
+		</div>
+
+	</article>
+	@RenderBody()
+
+
+	@*#region backToUp請勿更改*@
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	@*$endregion*@
+	@*#region js請勿更改*@
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	@Scripts.Render("~/Content/lib")
+	<script src="mail/jqBootstrapValidation.min.js"></script>
+	<script src="mail/contact.js"></script>
+	<script src="js/main.js"></script>
+	@*#endregion*@
+
+
+</body>
+@Scripts.Render("~/Content/lib")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+</html>

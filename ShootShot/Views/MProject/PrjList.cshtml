@@ -1,0 +1,151 @@
+﻿
+@{
+	ViewBag.Title = "PrjList";
+	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
+}
+
+@*----------------------------------
+	#article 右側欄內容：專案卡片區塊*@
+<article>
+	@*#article 右側欄內容：專案卡片區塊
+		----------------------------------*@
+	<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="10000">
+				<div class="card" style="width: 18rem;">
+					<img src="./img/cat05.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="./img/girl.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="./img/light.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="carousel-item" data-bs-interval="2000">
+				<div class="card" style="width: 18rem;">
+					<img src="./img/baby.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="./img/man.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="./img/product.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">小B沙龍照</h5>
+						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			<span "><img src="./img/left_arrows.svg" alt=""></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+			<span "><img src="./img/double-right-arrows.svg" alt=""></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+	@*-------------------------------
+		#article 右側欄內容：專案內容區塊*@
+	<div class="prjMain">
+		<div class="container">
+			<div class="project">
+				<p>專案主題</p>
+				<h2>小Ｂ沙龍照</h2> <p class="time">專案建立日期：2021/06/08</p>
+				<p>預約攝影師：Aaron David</p>
+				<br>
+				<p>
+					拍攝日期：2021/06/12 (星期六)<br>
+					拍攝開始時間：10:00am<br>
+					拍攝地點：高雄市/ 高雄市立美術館園區<br>
+					出圖張數：50張<br>
+					拍攝類型：寵物
+				</p>
+				<br>
+				<p>
+					指定聯絡人：小Ｂ媽<br>
+					聯絡人電話：0988802265<br>
+					可聯繫時間：平日20:00~22:00pm
+				</p>
+				<br>
+				<p>
+					其他需求描述：<br>
+					希望可以帶寵物在室外攝影但不要使用閃光燈，<br>
+					預約時間若天氣不好希望可以擇她日安排或再與攝影師討論改為室內拍攝，<br>
+					專案是個人收藏用，<br>
+					但希望可以之後用做印刷用途可以輸出高畫質的檔案！
+				</p>
+				<br>
+				<p>風格參考</p>
+				<div class="row picture">
+					<div class="col"><img src="./img/cat01.jpg" alt=""></div>
+					<div class="col"><img src="./img/cat02.jpg" alt=""></div>
+					<div class="col"><img src="./img/cat03.jpg" alt=""></div>
+					<div class="col"><img src="./img/cat04.jpg" alt=""></div>
+					<div class="col"><img src="./img/cat05.jpg" alt=""></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	@*#article 右側欄內容：專案內容區塊
+		-------------------------------*@
+	</div>
+
+	@*-----------------------------
+		#article 右側欄內容：留言板區塊*@
+	<div class="container chat">
+		<p>與攝影師聊聊</p>
+		<br>
+		<div class="chattext">
+			<textarea name="chattext" id="chattext" cols="80" rows="5" aria-valuemax="150">聊聊吧...</textarea>
+			<br>
+			<button class="reply">
+				<a href="#">回覆</a>
+			</button>
+		</div>
+
+	</div>
+
+
+	@*#article 右側欄內容：留言板區塊
+		-----------------------------*@
+
+</article>
+

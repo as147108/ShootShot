@@ -14,7 +14,7 @@
 
 		</div>
 	</section>
-	@using (Html.BeginForm())
+	@using (Html.BeginForm("Create", "CProject", FormMethod.Post, new { enctype = "multipart/form-data" }))
 	{
 		@Html.AntiForgeryToken()
 		<form>
@@ -35,8 +35,10 @@
 								Random rnd = new Random();
 								int x = rnd.Next(10, 99);
 								var x_ = DateTime.Now.ToString("yyyyMMdd") + x.ToString();
+								var x1_ = DateTime.Now;
 							}
 							@Html.TextBoxFor(m => m.fOrderNum, new { type = "hidden", @Value = x_ })
+							@Html.TextBoxFor(m => m.fPjtDate, new { type = "hidden", @Value = x1_ })
 						</div>
 					</div>
 				</div>
@@ -219,6 +221,7 @@
 										<h3 for="">讓攝影師更了解您想拍攝的專案吧！</h3>
 									</div>
 									<div class="row">
+										@Html.TextBoxFor(m => m.fPjtState, new {type = "hidden", @Value =false })
 										@Html.TextBoxFor(m => m.fPjtTopic, null, new
 								   {
 									   @class = "cProject_txt3",
@@ -237,7 +240,7 @@
 										<div class="col-md-6">
 											@Html.TextBoxFor(m => m.fStyle, null, new { @class = "cProject_url1", placeholder = "風格參考（請提供參考網址）", id = "style", name = "txtStyle", type = "url" })
 											<div class="conForpic1">
-												@Html.TextBoxFor(m => m.fPicUpload, null, new { @class = "cProject_url1", placeholder = "請上傳參考照片", id = "picUpload", name = "photo", type = "file", accept = "image/gif,image/jpeg,image/png" })
+												<input id = "picUpload" type="file" name="photo" class="" accept="image/gif,image/jpeg,image/png"/>
 												<img id="previewPicUpload" src="" />
 											</div>
 										</div>
