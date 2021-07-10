@@ -12,21 +12,6 @@
     <Property Name="fState" Type="Boolean" />
     <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="tMember">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fBday" Type="DateTime" Precision="0" />
-    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fGender" Type="Boolean" />
-    <Property Name="fCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="tProject">
     <Key>
       <PropertyRef Name="fId" />
@@ -121,7 +106,6 @@
   </EntityType>
   <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
-    <EntitySet Name="tMember" EntityType="Self.tMember" />
     <EntitySet Name="tProject" EntityType="Self.tProject" />
     <EntitySet Name="tRoles" EntityType="Self.tRoles" />
     <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
@@ -131,6 +115,7 @@
     <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
     <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
     <EntitySet Name="tPMsg" EntityType="dbShootShotModel.tPMsg" />
+    <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
   </EntityContainer>
   <EntityType Name="tPMsg">
     <Key>
@@ -142,5 +127,20 @@
     <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fMsgTime" Type="DateTime" Precision="0" />
     <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tMember">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fBday" Type="DateTime" Precision="0" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fGender" Type="Boolean" />
+    <Property Name="fCode" Type="Int32" />
   </EntityType>
 </Schema>

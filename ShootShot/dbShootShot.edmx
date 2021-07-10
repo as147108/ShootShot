@@ -50,7 +50,7 @@
           <Property Name="fArea" Type="nvarchar" MaxLength="10" />
           <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
           <Property Name="fGender" Type="bit" />
-          <Property Name="fCode" Type="varchar" MaxLength="1" />
+          <Property Name="fCode" Type="int" />
         </EntityType>
         <EntityType Name="tMemberPhot">
           <Key>
@@ -164,21 +164,6 @@
           <Property Name="fState" Type="Boolean" />
           <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="tMember">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fBday" Type="DateTime" Precision="0" />
-          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fGender" Type="Boolean" />
-          <Property Name="fCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="tProject">
           <Key>
             <PropertyRef Name="fId" />
@@ -273,7 +258,6 @@
         </EntityType>
         <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
-          <EntitySet Name="tMember" EntityType="Self.tMember" />
           <EntitySet Name="tProject" EntityType="Self.tProject" />
           <EntitySet Name="tRoles" EntityType="Self.tRoles" />
           <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
@@ -283,6 +267,7 @@
           <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
           <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
           <EntitySet Name="tPMsg" EntityType="dbShootShotModel.tPMsg" />
+          <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
         </EntityContainer>
         <EntityType Name="tPMsg">
           <Key>
@@ -294,6 +279,21 @@
           <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fMsgTime" Type="DateTime" Precision="0" />
           <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tMember">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fBday" Type="DateTime" Precision="0" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fGender" Type="Boolean" />
+          <Property Name="fCode" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -311,22 +311,6 @@
                 <ScalarProperty Name="fMsg" ColumnName="fMsg" />
                 <ScalarProperty Name="fState" ColumnName="fState" />
                 <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tMember">
-            <EntityTypeMapping TypeName="dbShootShotModel.tMember">
-              <MappingFragment StoreEntitySet="tMember">
-                <ScalarProperty Name="fId" ColumnName="fId" />
-                <ScalarProperty Name="fName" ColumnName="fName" />
-                <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
-                <ScalarProperty Name="fBday" ColumnName="fBday" />
-                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
-                <ScalarProperty Name="fTel" ColumnName="fTel" />
-                <ScalarProperty Name="fArea" ColumnName="fArea" />
-                <ScalarProperty Name="fPassword" ColumnName="fPassword" />
-                <ScalarProperty Name="fGender" ColumnName="fGender" />
-                <ScalarProperty Name="fCode" ColumnName="fCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -438,6 +422,22 @@
                 <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
                 <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
                 <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMember">
+            <EntityTypeMapping TypeName="dbShootShotModel.tMember">
+              <MappingFragment StoreEntitySet="tMember">
+                <ScalarProperty Name="fCode" ColumnName="fCode" />
+                <ScalarProperty Name="fGender" ColumnName="fGender" />
+                <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+                <ScalarProperty Name="fArea" ColumnName="fArea" />
+                <ScalarProperty Name="fTel" ColumnName="fTel" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fBday" ColumnName="fBday" />
+                <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
               </MappingFragment>
             </EntityTypeMapping>

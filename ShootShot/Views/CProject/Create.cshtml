@@ -28,9 +28,9 @@
 						<div class="col-md-6">
 							<label for="cProject_txtId1"
 								   class="cProject_lblFortxt1">您所預約攝影師為：</label>
-							@*未完成*@
-							@*@Html.DropDownList("Id", ViewBag.CompaniesSelectList as SelectList,"Select Company",new { @class="form-control"})*@
-							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1" })
+		@*未完成*@
+							@*@Html.DropDownList("SelPhotog",null,new { @class="form-control"})*@
+							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1",id="txtPEmail",name="txtPEmail"})
 							@{
 								Random rnd = new Random();
 								int x = rnd.Next(10, 99);
@@ -74,18 +74,15 @@
 										<h3 for="">開始創建我的專案</h3>
 									</div>
 									<div class=" row">
-										@*未完成*@
 										<div class="col">
-											@Html.TextBox("姓名", null, new { @class = "cProject_txt1", @readonly = "true", Type = "text", name = "txtCName", @Value = ViewBag.txtCName })
+											@Html.TextBox("姓名", null, new { @class = "cProject_txt1", @readonly = "true", Type = "text", name = "txtCName", @Value =ViewBag.txtCName })
 										</div>
-										@*未完成*@
 										<div class="col">
 											@Html.TextBox("電話", null, new { @class = "cProject_txt1", @readonly = "true", Type = "tel", name = "txtCTel", @Value = ViewBag.txtCTel })
 										</div>
 									</div>
-									@*未完成*@
 									<div>
-										@Html.TextBoxFor(m => m.fCEmail, new { @class = "form-control", Type = "email", name = "txtCEmail", @Value = ViewBag.txtCEmail })
+										@Html.TextBoxFor(m => m.fCEmail, new { @class = "form-control", @readonly = "true", Type = "email", name = "txtCEmail", @Value = ViewBag.txtCEmail})
 									</div>
 									<br />
 									<br />
@@ -161,7 +158,7 @@
 									</div>
 									<div class=" row">
 										<div class="col">
-											@*資料庫要帶入*@
+	@*未完成資料庫帶入,對應所選攝影師*@
 											@Html.TextBoxFor(m => m.fCity, null, new { @class = "cProject_txt2", placeholder = "拍攝城市", id = "city", name = "txtCity", required = "required" })
 										</div>
 										<div class="col">

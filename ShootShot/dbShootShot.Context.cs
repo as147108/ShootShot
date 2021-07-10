@@ -26,7 +26,6 @@ namespace ShootShot
         }
     
         public virtual DbSet<tCMsg> tCMsg { get; set; }
-        public virtual DbSet<tMember> tMember { get; set; }
         public virtual DbSet<tProject> tProject { get; set; }
         public virtual DbSet<tRoles> tRoles { get; set; }
         public virtual DbSet<tAlbumPhoto> tAlbumPhoto { get; set; }
@@ -36,5 +35,6 @@ namespace ShootShot
         public virtual DbSet<tPhotArea> tPhotArea { get; set; }
         public virtual DbSet<tPhotStyle> tPhotStyle { get; set; }
         public virtual DbSet<tPMsg> tPMsg { get; set; }
+        public virtual DbSet<tMember> tMember { get; set; }
     }
 }

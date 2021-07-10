@@ -277,12 +277,18 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\idx.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\member.js" />
+    <Content Include="Scripts\phoVerif.js" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
     <Content Include="Views\CProject\Create.cshtml" />
     <Content Include="Views\CProject\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutForPrj.cshtml" />
     <Content Include="Views\MProject\PrjList.cshtml" />
+    <Content Include="Views\Shared\_ColPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

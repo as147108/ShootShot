@@ -45,7 +45,7 @@
     <Property Name="fArea" Type="nvarchar" MaxLength="10" />
     <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
     <Property Name="fGender" Type="bit" />
-    <Property Name="fCode" Type="varchar" MaxLength="1" />
+    <Property Name="fCode" Type="int" />
   </EntityType>
   <EntityType Name="tMemberPhot">
     <Key>

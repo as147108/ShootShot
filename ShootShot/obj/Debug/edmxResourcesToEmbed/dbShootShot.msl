@@ -14,22 +14,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tMember">
-      <EntityTypeMapping TypeName="dbShootShotModel.tMember">
-        <MappingFragment StoreEntitySet="tMember">
-          <ScalarProperty Name="fId" ColumnName="fId" />
-          <ScalarProperty Name="fName" ColumnName="fName" />
-          <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
-          <ScalarProperty Name="fBday" ColumnName="fBday" />
-          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
-          <ScalarProperty Name="fTel" ColumnName="fTel" />
-          <ScalarProperty Name="fArea" ColumnName="fArea" />
-          <ScalarProperty Name="fPassword" ColumnName="fPassword" />
-          <ScalarProperty Name="fGender" ColumnName="fGender" />
-          <ScalarProperty Name="fCode" ColumnName="fCode" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tProject">
       <EntityTypeMapping TypeName="dbShootShotModel.tProject">
         <MappingFragment StoreEntitySet="tProject">
@@ -138,6 +122,22 @@
           <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
           <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
           <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMember">
+      <EntityTypeMapping TypeName="dbShootShotModel.tMember">
+        <MappingFragment StoreEntitySet="tMember">
+          <ScalarProperty Name="fCode" ColumnName="fCode" />
+          <ScalarProperty Name="fGender" ColumnName="fGender" />
+          <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+          <ScalarProperty Name="fArea" ColumnName="fArea" />
+          <ScalarProperty Name="fTel" ColumnName="fTel" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fBday" ColumnName="fBday" />
+          <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
           <ScalarProperty Name="fId" ColumnName="fId" />
         </MappingFragment>
       </EntityTypeMapping>
