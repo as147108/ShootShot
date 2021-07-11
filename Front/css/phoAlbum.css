@@ -22,13 +22,12 @@ body {
     width: 410px;
     padding: 45px 0px;
     position: fixed;
-    
   }
   
   article button.pageone {
     background-color: #7dffd1;
   }
-  
+
   article button {
     border: solid 1px #7dffd1;
     border-radius: 30px;
@@ -49,6 +48,26 @@ body {
     color: #242424;
     font-size: 12px;
   }
+
+  /* 開通攝影師功能按鈕start */
+  article button.photographer{
+    border: solid 1px #c4c4c4;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    margin: 5px 125px;
+    color: #242424;
+  }
+
+  article button.photographer:hover {
+    background-color:#c4c4c4;
+  }
+
+  article button.pagetwo {
+    background-color: #c4c4c4;
+  }
+   /* 開通攝影師功能按鈕 end */
   
   @media screen and (max-width: 990px) {
    
@@ -143,7 +162,7 @@ body {
 article.phoAlbum_artForAlbum {
     /* border: solid black; */
     width: 948px;
-    height: 2000px;
+    height: 1200px;
     position: relative;
     left: 400px;
     padding: 20px 0px;
@@ -282,8 +301,9 @@ article div.card a:hover{
   /* article 右側欄內容：相簿按鈕區塊 */
   article div.phoAlbum_divForbtnPhoto{
     position: relative;
-    left: 0px;
+    left: 20px;
     margin-top: 25px;
+    float: left;
   }
 
   article div.phoAlbum_divForbtnPhoto button{
@@ -295,6 +315,7 @@ article div.card a:hover{
     font-size: 12px;
     margin: 0px;
     margin-left: 20px;
+    float: left;
   }
 
   article div.phoAlbum_divForbtnPhoto button.cover{
@@ -305,6 +326,8 @@ article div.card a:hover{
     height: 35px;
     font-size: 12px;
     margin-left: 20px;
+    float: left;
+
   }
 
   article div.phoAlbum_divForbtnPhoto button.white{
@@ -315,4 +338,29 @@ article div.card a:hover{
     height: 35px;
     font-size: 12px;
     margin-left: 20px;
+    float: left;
+
+  }
+
+  article div.phoAlbum_artForPhoto h1{
+    margin-left: 800px;
+    margin-top: 40px;
+    color: #ffffff;
+    
+  }
+  article div.phoAlbum_divForPhoto{
+   padding: 10px 30px;
+  }
+
+  article div.phoAlbum_divForPhoto div.col{
+    width: 150px;
+    margin: 12px;
+    flex-grow: 0;
+  }
+
+  article div.phoAlbum_divForPhoto img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    
   }
