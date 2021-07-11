@@ -1,307 +1,244 @@
 body {
-    color: #ffffff;
-    background: #ffffff;
-    font-family: "Open Sans", sans-serif;
-  }
+  color: #ffffff;
+  background: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
 
 /* navbar空白div */
 .divnavbar {
-    background-color: white;
-    width: 100%;
-    height: 60px;
-  }
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+
+/* *********************** */
+/* *********************** */
+/* article 左側欄按鈕區塊css */
+/* *********************** */
+/* *********************** */
+
+
+article div.leftbutton {
+  width: 410px;
+  padding: 45px 0px;
+  position: fixed;
   
-  /* *********************** */
-  /* *********************** */
-  /* article 左側欄按鈕區塊css */
-  /* *********************** */
-  /* *********************** */
-  
-  
-  article div.leftbutton {
-    width: 410px;
-    padding: 45px 0px;
-    position: fixed;
-    
-  }
-  
-  article button.pageone {
-    background-color: #7dffd1;
-  }
-  
-  article button {
-    border: solid 1px #7dffd1;
-    border-radius: 30px;
-    width: 250px;
-    height: 40px;
-    background-color: white;
-    margin: 22px 80px;
-    color: #242424;
-  }
-  
-  article button:hover {
-    background-color: #7dffd1;
-  }
-  
-  article button a {
-    padding: 10px 40px;
-    text-decoration: none;
-    color: #242424;
-    font-size: 12px;
-  }
-  
-  @media screen and (max-width: 990px) {
-   
-  .divnavbar {
-      background-color: white;
-      width: 100%;
-      height: 0px;
-    }
-    
-  article div.leftbutton {
-    width: 300px;
-    padding: 35px 0px;
-    position: fixed;
-    
-  }
-  
-  article button.pageone {
-    background-color: #7dffd1;
-  }
-  
-  article button {
-    border: solid 1px #7dffd1;
-    border-radius: 30px;
-    width: 250px;
-    height: 40px;
-    background-color: white;
-    margin: 10px 10px;
-    color: #242424;
-  }
-  
-  article button:hover {
-    background-color: #7dffd1;
-  }
-  
-  article button a {
-    padding: 10px 40px;
-    text-decoration: none;
-    color: #242424;
-    font-size: 12px;
-  }
-  }
-  @media screen and (max-width:770px) {
-    
-  .divnavbar {
+}
+
+article button.pageone {
+  background-color: #7dffd1;
+}
+
+article button {
+  border: solid 1px #7dffd1;
+  border-radius: 30px;
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  margin: 22px 80px;
+  color: #242424;
+}
+
+article button:hover {
+  background-color: #7dffd1;
+}
+
+article button a {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #242424;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 990px) {
+ 
+.divnavbar {
     background-color: white;
     width: 100%;
     height: 0px;
   }
   
-  article div.leftbutton {
-  width: 100%;
-  height: 120px;
-  padding: 10px;
-  position: relative;
-  background-color: #d4d4d4;
+article div.leftbutton {
+  width: 300px;
+  padding: 35px 0px;
+  position: fixed;
   
-  }
-  
-  article button.pageone {
+}
+
+article button.pageone {
   background-color: #7dffd1;
-  }
-  
-  article button {
-  border: none;
+}
+
+article button {
+  border: solid 1px #7dffd1;
   border-radius: 30px;
-  width: 178px;
+  width: 250px;
   height: 40px;
   background-color: white;
-  margin: 5px ;
+  margin: 10px 10px;
   color: #242424;
-  float: left;
-  }
-  
-  article button:hover {
+}
+
+article button:hover {
   background-color: #7dffd1;
-  }
-  
-  article button a {
+}
+
+article button a {
   padding: 10px 40px;
   text-decoration: none;
   color: #242424;
   font-size: 12px;
-  }
-  }
+}
+}
+@media screen and (max-width:770px) {
   
+.divnavbar {
+  background-color: white;
+  width: 100%;
+  height: 0px;
+}
 
-  /* ********************** */
-  /* ********************** */
-  /* article 右側表單區塊css */
-  /* ********************** */
-  /* ********************** */
-    
-  article div.intro{
-   color:#242424;
-   width: 700px;
-   position: relative;
-   left: 410px;
-   text-align: center;
-   margin-top: 60px;
-  }
+article div.leftbutton {
+width: 100%;
+height: 120px;
+padding: 10px;
+position: relative;
+background-color: #d4d4d4;
 
-  article div.editPhoForm {
-    border: solid #242424;
-    border-radius: 10px;
-    background-color: #242424;
-    width: 700px;
-    height: 1050px;
-    position: relative;
-    left: 410px;
-    padding: 20px 40px;
-    margin-top: 20px;
-    margin-bottom: 200px;
-       
-  }
+}
+
+article button.pageone {
+background-color: #7dffd1;
+}
+
+article button {
+border: none;
+border-radius: 30px;
+width: 178px;
+height: 40px;
+background-color: white;
+margin: 5px ;
+color: #242424;
+float: left;
+}
+
+article button:hover {
+background-color: #7dffd1;
+}
+
+article button a {
+padding: 10px 40px;
+text-decoration: none;
+color: #242424;
+font-size: 12px;
+}
+}
+
+
+/* ********************** */
+/* ********************** */
+/* article 右側表單區塊css */
+/* ********************** */
+/* ********************** */
+  
+article div.intro{
+ color:#242424;
+ width: 700px;
+ position: relative;
+ left: 410px;
+ text-align: center;
+ margin-top: 60px;
+}
+
+article div.editPhoForm {
+  border: solid #242424;
+  border-radius: 10px;
+  background-color: #242424;
+  width: 700px;
+  height: 1050px;
+  position: relative;
+  left: 410px;
+  padding: 20px 40px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+     
+}
 
 article form p{
-    color: white;
+  color: white;
 }
 
 article form input {
-    background-color: #242424;
-    border: none;
-    font-size: 14px;
-    color: #ffffff;
-  }
+  background-color: #242424;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+}
 
 article form label{
-    color: #ffffff;
-    font-size: 12px;
-    padding: 10px 6px;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 6px;
 }
 
 article form a {
-    font-size: 12px;
-    color: #7dffd1;
-    margin: 0px;
-  }
+  font-size: 12px;
+  color: #7dffd1;
+  margin: 0px;
+}
 
-  /* 工作室 */
+/* 工作室 */
 article form div.phoVerif_divForName{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 320px;
-  height: 50px;
-  vertical-align: middle;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 320px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
 }
 
 article form div.phoVerif_divForName input{
-  width: 150px;
+width: 150px;
 }
 
-  /* 自我介紹 */
+/* 自我介紹 */
 article form div.phoVerif_divForIntro{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 610px;
-  height: 180px;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 610px;
+height: 180px;
+margin-bottom: 20px;
 }
 
 article form textarea{
-    background-color: #242424;
-    border: none;
-    margin: 0px 10px;
-    font-size: 14px;
-    color: #ffffff;
+  background-color: #242424;
+  border: none;
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 /* 工作室 */
 article form div.phoVerif_divForStu{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 320px;
-  height: 50px;
-  vertical-align: middle;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 320px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
 
 }
 
 article form div.phoVerif_divForStu input{
-  width: 200px;
+width: 200px;
 }
 
 
 /* 工作室地址 */
 article form div.phoVerif_divForAdd{
-    border: solid 1px #7dffd1;
-    border-radius:15px;
-    padding: 5px 20px;
-    width: 610px;
-    height: 50px;
-    vertical-align: middle;
-    margin-bottom: 20px;
-}
-
-article form div.phoVerif_divForAdd select{
-  background-color: #242424;
-  color: #ffffff;
-  border: none;
-  width: 100px;
-  font-size: 14px;
-  margin: 0px 10px;
-  
-}
-
-article form div.phoVerif_divForAdd input{
-  width: 230px;
-  margin: 0px 5px;
-  text-align: center;
-}
-
-/* 可接受攝影地區 */
-article form div.phoVerif_divForArea{
-  border: solid 1px #7dffd1;
-  border-radius:15px;
-  padding: 5px 20px;
-  width: 610px;
-  height: 160px;
-  vertical-align: middle;
-  margin-bottom: 20px;
-}
-
-article form div.phoVerif_divForArea label{
-  margin: 8px 420px 0px 0px;
-}
-
-article form div.phoVerif_divForArea label.chkArea{
-  margin: 2px;
-}
-
-article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
-  
-  display: none;
-  
-}
-
-article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
-  color: black;
-  border: solid #7dffd1;
-  background-color: #7DFFD1;
-  border-radius: 20px;
-  width: 50px;
-  text-align: center;
-  display: block;
-  
-}
-
-/* 網站連結 */
-article form div.phoVerif_divForWeb{
   border: solid 1px #7dffd1;
   border-radius:15px;
   padding: 5px 20px;
@@ -311,211 +248,211 @@ article form div.phoVerif_divForWeb{
   margin-bottom: 20px;
 }
 
+article form div.phoVerif_divForAdd select{
+background-color: #242424;
+color: #ffffff;
+border: none;
+width: 100px;
+font-size: 14px;
+margin: 0px 10px;
+
+}
+
+article form div.phoVerif_divForAdd input{
+width: 230px;
+margin: 0px 5px;
+text-align: center;
+}
+
+/* 可接受攝影地區 */
+article form div.phoVerif_divForArea{
+border: solid 1px #7dffd1;
+border-radius:15px;
+padding: 5px 20px;
+width: 610px;
+height: 160px;
+vertical-align: middle;
+margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForArea label{
+margin: 8px 420px 0px 0px;
+}
+
+article form div.phoVerif_divForArea label.chkArea{
+margin: 2px;
+}
+
+article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
+
+display: none;
+
+}
+
+article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
+color: black;
+border: solid #7dffd1;
+background-color: #7DFFD1;
+border-radius: 20px;
+width: 50px;
+text-align: center;
+display: block;
+
+}
+
+/* 網站連結 */
+article form div.phoVerif_divForWeb{
+border: solid 1px #7dffd1;
+border-radius:15px;
+padding: 5px 20px;
+width: 610px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
+}
+
 article form div.phoVerif_divForWeb svg{
-  width: 36px;
-  height: 36px;
-  
-  
+width: 36px;
+height: 36px;
+
+
 }
 
 article form div.phoVerif_divForWeb input{
-  margin: 5px 20px;
-  width: 460px;
-  color: #7dffd1;
+margin: 5px 20px;
+width: 460px;
+color: #7dffd1;
 }
 
 
 /* 確認送出 */
 article form div.phoVerif_divForSub{
-  clear: both;
-  float: left;
-  left: 200px;
-  vertical-align: middle;
+clear: both;
+float: left;
+left: 200px;
+vertical-align: middle;
 }
 article form div.phoVerif_divForSub img{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 450px;
-  margin: 2px;
+width: 30px;
+height: 30px;
+position: absolute;
+left: 450px;
+margin: 2px;
 }
 
 article form div.phoVerif_divForSub input {
-  border: none;
-  font-size: 14px;
-  border: solid 1px #7dffd1;
-  border-radius: 400px;
-  background-color: #7dffd1;
-  color: #242424;
-  padding: 5px 20px;
-  margin: 0px 0px 0px 468px;
-  width: 140px;
-  height: 35px;
-  vertical-align: middle;
-  
+border: none;
+font-size: 14px;
+border: solid 1px #7dffd1;
+border-radius: 400px;
+background-color: #7dffd1;
+color: #242424;
+padding: 5px 20px;
+margin: 0px 0px 0px 468px;
+width: 140px;
+height: 35px;
+vertical-align: middle;
+
 }
 
 @media screen and (max-width: 1135px) {
-  article div.intro{
-    color:#242424;
-    width: 700px;
-    position: relative;
-    left: 350px;
-    text-align: center;
-    margin-top: 60px;
-   }
- 
-   article div.editPhoForm {
-     border: solid #242424;
-     border-radius: 10px;
-     background-color: #242424;
-     width: 690px;
-     height: 1050px;
-     position: relative;
-     left: 350px;
-     padding: 20px 40px;
-     margin-top: 20px;
-     margin-bottom: 200px;
-        
-   }
- 
- article form p{
-     color: white;
+article div.intro{
+  color:#242424;
+  width: 700px;
+  position: relative;
+  left: 350px;
+  text-align: center;
+  margin-top: 60px;
  }
- 
- article form input {
-     background-color: #242424;
-     border: none;
-     font-size: 14px;
-     color: #ffffff;
-   }
- 
- article form label{
-     color: #ffffff;
-     font-size: 12px;
-     padding: 10px 6px;
+
+ article div.editPhoForm {
+   border: solid #242424;
+   border-radius: 10px;
+   background-color: #242424;
+   width: 690px;
+   height: 1050px;
+   position: relative;
+   left: 350px;
+   padding: 20px 40px;
+   margin-top: 20px;
+   margin-bottom: 200px;
+      
  }
- 
- article form a {
-     font-size: 12px;
-     color: #7dffd1;
-     margin: 0px;
-   }
+
+article form p{
+   color: white;
+}
+
+article form input {
+   background-color: #242424;
+   border: none;
+   font-size: 14px;
+   color: #ffffff;
+ }
+
+article form label{
+   color: #ffffff;
+   font-size: 12px;
+   padding: 10px 6px;
+}
+
+article form a {
+   font-size: 12px;
+   color: #7dffd1;
+   margin: 0px;
+ }
 /* 工作室 */
 article form div.phoVerif_divForName{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 320px;
-  height: 50px;
-  vertical-align: middle;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 320px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
 }
 
 article form div.phoVerif_divForName input{
-  width: 150px;
+width: 150px;
 }
 
-  /* 自我介紹 */
+/* 自我介紹 */
 article form div.phoVerif_divForIntro{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 610px;
-  height: 180px;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 610px;
+height: 180px;
+margin-bottom: 20px;
 }
 
 article form textarea{
-    background-color: #242424;
-    border: none;
-    margin: 0px 10px;
-    font-size: 14px;
-    color: #ffffff;
+  background-color: #242424;
+  border: none;
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 /* 工作室 */
 article form div.phoVerif_divForStu{
-  border: solid 1px #7dffd1;
-  border-radius: 15px;
-  padding: 5px 20px;
-  width: 320px;
-  height: 50px;
-  vertical-align: middle;
-  margin-bottom: 20px;
+border: solid 1px #7dffd1;
+border-radius: 15px;
+padding: 5px 20px;
+width: 320px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
 
 }
 
 article form div.phoVerif_divForStu input{
-  width: 200px;
+width: 200px;
 }
 
 
 /* 工作室地址 */
 article form div.phoVerif_divForAdd{
-    border: solid 1px #7dffd1;
-    border-radius:15px;
-    padding: 5px 20px;
-    width: 610px;
-    height: 50px;
-    vertical-align: middle;
-    margin-bottom: 20px;
-}
-
-article form div.phoVerif_divForAdd select{
-  background-color: #242424;
-  color: #ffffff;
-  border: none;
-  width: 100px;
-  font-size: 14px;
-  margin: 0px 10px;
-  
-}
-
-article form div.phoVerif_divForAdd input{
-  width: 230px;
-  margin: 0px 5px;
-  text-align: center;
-}
-
-/* 可接受攝影地區 */
-article form div.phoVerif_divForArea{
-  border: solid 1px #7dffd1;
-  border-radius:15px;
-  padding: 5px 20px;
-  width: 610px;
-  height: 160px;
-  vertical-align: middle;
-  margin-bottom: 20px;
-}
-
-article form div.phoVerif_divForArea label{
-  margin: 8px 420px 0px 0px;
-}
-
-article form div.phoVerif_divForArea label.chkArea{
-  margin: 2px;
-}
-
-article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
-  
-  display: none;
-  
-}
-
-article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
-  color: black;
-  border: solid #7dffd1;
-  background-color: #7DFFD1;
-  border-radius: 20px;
-  width: 50px;
-  text-align: center;
-  display: block;
-  
-}
-
-/* 網站連結 */
-article form div.phoVerif_divForWeb{
   border: solid 1px #7dffd1;
   border-radius:15px;
   padding: 5px 20px;
@@ -525,487 +462,550 @@ article form div.phoVerif_divForWeb{
   margin-bottom: 20px;
 }
 
+article form div.phoVerif_divForAdd select{
+background-color: #242424;
+color: #ffffff;
+border: none;
+width: 100px;
+font-size: 14px;
+margin: 0px 10px;
+
+}
+
+article form div.phoVerif_divForAdd input{
+width: 230px;
+margin: 0px 5px;
+text-align: center;
+}
+
+/* 可接受攝影地區 */
+article form div.phoVerif_divForArea{
+border: solid 1px #7dffd1;
+border-radius:15px;
+padding: 5px 20px;
+width: 610px;
+height: 160px;
+vertical-align: middle;
+margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForArea label{
+margin: 8px 420px 0px 0px;
+}
+
+article form div.phoVerif_divForArea label.chkArea{
+margin: 2px;
+}
+
+article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
+
+display: none;
+
+}
+
+article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
+color: black;
+border: solid #7dffd1;
+background-color: #7DFFD1;
+border-radius: 20px;
+width: 50px;
+text-align: center;
+display: block;
+
+}
+
+/* 網站連結 */
+article form div.phoVerif_divForWeb{
+border: solid 1px #7dffd1;
+border-radius:15px;
+padding: 5px 20px;
+width: 610px;
+height: 50px;
+vertical-align: middle;
+margin-bottom: 20px;
+}
+
 article form div.phoVerif_divForWeb svg{
-  width: 36px;
-  height: 36px;
-  
-  
+width: 36px;
+height: 36px;
+
+
 }
 
 article form div.phoVerif_divForWeb input{
-  margin: 5px 20px;
-  width: 460px;
-  color: #7dffd1;
+margin: 5px 20px;
+width: 460px;
+color: #7dffd1;
 }
 
 
 /* 確認送出 */
 article form div.phoVerif_divForSub{
-  clear: both;
-  float: left;
-  left: 200px;
-  vertical-align: middle;
+clear: both;
+float: left;
+left: 200px;
+vertical-align: middle;
 }
 article form div.phoVerif_divForSub img{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 450px;
-  margin: 2px;
+width: 30px;
+height: 30px;
+position: absolute;
+left: 450px;
+margin: 2px;
 }
 
 article form div.phoVerif_divForSub input {
-  border: none;
-  font-size: 14px;
-  border: solid 1px #7dffd1;
-  border-radius: 400px;
-  background-color: #7dffd1;
-  color: #242424;
-  padding: 5px 20px;
-  margin: 0px 0px 0px 468px;
-  width: 140px;
-  height: 35px;
-  vertical-align: middle;
-  
+border: none;
+font-size: 14px;
+border: solid 1px #7dffd1;
+border-radius: 400px;
+background-color: #7dffd1;
+color: #242424;
+padding: 5px 20px;
+margin: 0px 0px 0px 468px;
+width: 140px;
+height: 35px;
+vertical-align: middle;
+
 }
 
 }
 
 @media screen and (max-width: 990px) {
-   
-  article div.intro{
-    color:#242424;
-    width: 700px;
-    position: relative;
-    left: 190px;
-    text-align: center;
-    margin-top: 60px;
-   }
  
-   article div.editPhoForm {
-     border: solid #242424;
-     border-radius: 10px;
-     background-color: #242424;
-     width: 470px;
-     height: 1200px;
-     position: relative;
-     left: 290px;
-     padding: 20px 40px;
-     margin-top: 20px;
-     margin-bottom: 200px;
-        
-   }
- 
- article form p{
-     color: white;
- }
- 
- article form input {
-     background-color: #242424;
-     border: none;
-     font-size: 14px;
-     color: #ffffff;
-   }
- 
- article form label{
-     color: #ffffff;
-     font-size: 12px;
-     padding: 10px 6px;
- }
- 
- article form a {
-     font-size: 12px;
-     color: #7dffd1;
-     margin: 0px;
-   }
- 
-   /* 工作室 */
- article form div.phoVerif_divForName{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 320px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForName input{
-   width: 150px;
- }
- 
-   /* 自我介紹 */
- article form div.phoVerif_divForIntro{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 390px;
-   height: 180px;
-   margin-bottom: 20px;
- }
- 
- article form textarea{
-     background-color: #242424;
-     border: none;
-     margin: 0px 10px;
-     font-size: 14px;
-     color: #ffffff;
-     width: 330px;
- }
- 
- /* 工作室名稱 */
- article form div.phoVerif_divForStu{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 320px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- 
- }
- 
- article form div.phoVerif_divForStu input{
-   width: 200px;
- }
- 
- 
- /* 工作室地址 */
- article form div.phoVerif_divForAdd{
-     border: solid 1px #7dffd1;
-     border-radius:15px;
-     padding: 5px 20px;
-     width: 390px;
-     height: 100px;
-     vertical-align: middle;
-     margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForAdd select{
-   background-color: #242424;
-   color: #ffffff;
-   border: none;
-   width: 90px;
-   font-size: 14px;
-   margin: 0px 15px;
-   
- }
- 
- article form div.phoVerif_divForAdd input{
-   width: 250px;
-   margin-left: 40px;
-   text-align: center;
- }
- 
- /* 可接受攝影地區 */
- article form div.phoVerif_divForArea{
-   border: solid 1px #7dffd1;
-   border-radius:15px;
-   padding: 5px 20px;
-   width: 390px;
-   height: 220px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForArea label{
-   margin: 8px 420px 0px 0px;
- }
- 
- article form div.phoVerif_divForArea label.chkArea{
-   margin: 2px;
- }
- 
- article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
-   
-   display: none;
-   
- }
- 
- article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
-   color: black;
-   border: solid #7dffd1;
-   background-color: #7DFFD1;
-   border-radius: 20px;
-   width: 50px;
-   text-align: center;
-   display: block;
-   
- }
- 
- /* 網站連結 */
- article form div.phoVerif_divForWeb{
-   border: solid 1px #7dffd1;
-   border-radius:15px;
-   padding: 5px 20px;
-   width: 390px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForWeb svg{
-   width: 36px;
-   height: 36px;
-   
-   
- }
- 
- article form div.phoVerif_divForWeb input{
-   margin: 6px 20px;
-   width: 265px;
-   color: #7dffd1;
- }
- 
- 
- /* 確認送出 */
- article form div.phoVerif_divForSub{
-   clear: both;
-   float: left;
-   left: 200px;
-   vertical-align: middle;
-   margin-top: 20px;
- }
- article form div.phoVerif_divForSub img{
-   width: 30px;
-   height: 30px;
-   position: absolute;
-   left: 240px;
-   margin: 2px;
- }
- 
- article form div.phoVerif_divForSub input {
-   border: none;
-   font-size: 14px;
-   border: solid 1px #7dffd1;
-   border-radius: 400px;
-   background-color: #7dffd1;
-   color: #242424;
-   padding: 5px 20px;
-   margin: 0px 0px 0px 248px;
-   width: 140px;
-   height: 35px;
-   vertical-align: middle;
-   
+article div.intro{
+  color:#242424;
+  width: 700px;
+  position: relative;
+  left: 190px;
+  text-align: center;
+  margin-top: 60px;
  }
 
-  }
+ article div.editPhoForm {
+   border: solid #242424;
+   border-radius: 10px;
+   background-color: #242424;
+   width: 470px;
+   height: 1200px;
+   position: relative;
+   left: 290px;
+   padding: 20px 40px;
+   margin-top: 20px;
+   margin-bottom: 200px;
+      
+ }
+
+article form p{
+   color: white;
+}
+
+article form input {
+   background-color: #242424;
+   border: none;
+   font-size: 14px;
+   color: #ffffff;
+ }
+
+article form label{
+   color: #ffffff;
+   font-size: 12px;
+   padding: 10px 6px;
+}
+
+article form a {
+   font-size: 12px;
+   color: #7dffd1;
+   margin: 0px;
+ }
+
+ /* 工作室 */
+article form div.phoVerif_divForName{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 320px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForName input{
+ width: 150px;
+}
+
+ /* 自我介紹 */
+article form div.phoVerif_divForIntro{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 390px;
+ height: 180px;
+ margin-bottom: 20px;
+}
+
+article form textarea{
+   background-color: #242424;
+   border: none;
+   margin: 0px 10px;
+   font-size: 14px;
+   color: #ffffff;
+   width: 330px;
+}
+
+/* 工作室名稱 */
+article form div.phoVerif_divForStu{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 320px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+
+}
+
+article form div.phoVerif_divForStu input{
+ width: 200px;
+}
+
+
+/* 工作室地址 */
+article form div.phoVerif_divForAdd{
+   border: solid 1px #7dffd1;
+   border-radius:15px;
+   padding: 5px 20px;
+   width: 390px;
+   height: 100px;
+   vertical-align: middle;
+   margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForAdd select{
+ background-color: #242424;
+ color: #ffffff;
+ border: none;
+ width: 90px;
+ font-size: 14px;
+ margin: 0px 15px;
+ 
+}
+
+article form div.phoVerif_divForAdd input{
+ width: 250px;
+ margin-left: 40px;
+ text-align: center;
+}
+
+/* 可接受攝影地區 */
+article form div.phoVerif_divForArea{
+ border: solid 1px #7dffd1;
+ border-radius:15px;
+ padding: 5px 20px;
+ width: 390px;
+ height: 220px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForArea label{
+ margin: 8px 420px 0px 0px;
+}
+
+article form div.phoVerif_divForArea label.chkArea{
+ margin: 2px;
+}
+
+article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
+ 
+ display: none;
+ 
+}
+
+article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
+ color: black;
+ border: solid #7dffd1;
+ background-color: #7DFFD1;
+ border-radius: 20px;
+ width: 50px;
+ text-align: center;
+ display: block;
+ 
+}
+
+/* 網站連結 */
+article form div.phoVerif_divForWeb{
+ border: solid 1px #7dffd1;
+ border-radius:15px;
+ padding: 5px 20px;
+ width: 390px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForWeb svg{
+ width: 36px;
+ height: 36px;
+ 
+ 
+}
+
+article form div.phoVerif_divForWeb input{
+ margin: 6px 20px;
+ width: 265px;
+ color: #7dffd1;
+}
+
+
+/* 確認送出 */
+article form div.phoVerif_divForSub{
+ clear: both;
+ float: left;
+ left: 200px;
+ vertical-align: middle;
+ margin-top: 20px;
+}
+article form div.phoVerif_divForSub img{
+ width: 30px;
+ height: 30px;
+ position: absolute;
+ left: 240px;
+ margin: 2px;
+}
+
+article form div.phoVerif_divForSub input {
+ border: none;
+ font-size: 14px;
+ border: solid 1px #7dffd1;
+ border-radius: 400px;
+ background-color: #7dffd1;
+ color: #242424;
+ padding: 5px 20px;
+ margin: 0px 0px 0px 248px;
+ width: 140px;
+ height: 35px;
+ vertical-align: middle;
+ 
+}
+
+}
 
 @media screen and (max-width:770px) {
-  article div.intro{
-    color:#242424;
-    width: 414px;
-    position: relative;
-    left: 0px;
-    text-align: center;
-    margin-top: 20px;
-   }
- 
-   article div.editPhoForm {
-     border: solid #242424;
-     border-radius: 10px;
-     background-color: #242424;
-     width: 414px;
-     height: 1200px;
-     position: relative;
-     left: 0px;
-     padding: 20px 15px;
-     margin-top: 20px;
-     margin-bottom: 60px;
-        
-   }
- 
- article form p{
-     color: white;
+article div.intro{
+  color:#242424;
+  width: 414px;
+  position: relative;
+  left: 0px;
+  text-align: center;
+  margin-top: 20px;
  }
- 
- article form input {
-     background-color: #242424;
-     border: none;
-     font-size: 14px;
-     color: #ffffff;
-   }
- 
- article form label{
-     color: #ffffff;
-     font-size: 12px;
-     padding: 10px 6px;
- }
- 
- article form a {
-     font-size: 12px;
-     color: #7dffd1;
-     margin: 0px;
-   }
- 
-   /* 工作室 */
- article form div.phoVerif_divForName{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 320px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForName input{
-   width: 150px;
- }
- 
-   /* 自我介紹 */
- article form div.phoVerif_divForIntro{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 380px;
-   height: 180px;
-   margin-bottom: 20px;
- }
- 
- article form textarea{
-     background-color: #242424;
-     border: none;
-     margin: 0px 10px;
-     font-size: 14px;
-     color: #ffffff;
-     width: 320px;
- }
- 
- /* 工作室名稱 */
- article form div.phoVerif_divForStu{
-   border: solid 1px #7dffd1;
-   border-radius: 15px;
-   padding: 5px 20px;
-   width: 320px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- 
- }
- 
- article form div.phoVerif_divForStu input{
-   width: 200px;
- }
- 
- 
- /* 工作室地址 */
- article form div.phoVerif_divForAdd{
-     border: solid 1px #7dffd1;
-     border-radius:15px;
-     padding: 5px 20px;
-     width: 380px;
-     height: 100px;
-     vertical-align: middle;
-     margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForAdd select{
+
+ article div.editPhoForm {
+   border: solid #242424;
+   border-radius: 10px;
    background-color: #242424;
-   color: #ffffff;
-   border: none;
-   width: 90px;
-   font-size: 14px;
-   margin: 0px 15px;
-   
- }
- 
- article form div.phoVerif_divForAdd input{
-   width: 250px;
-   margin-left: 40px;
-   text-align: center;
- }
- 
- /* 可接受攝影地區 */
- article form div.phoVerif_divForArea{
-   border: solid 1px #7dffd1;
-   border-radius:15px;
-   padding: 5px 20px;
-   width: 380px;
-   height: 220px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForArea label{
-   margin: 8px 420px 0px 0px;
- }
- 
- article form div.phoVerif_divForArea label.chkArea{
-   margin: 2px;
- }
- 
- article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
-   
-   display: none;
-   
- }
- 
- article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
-   color: black;
-   border: solid #7dffd1;
-   background-color: #7DFFD1;
-   border-radius: 20px;
-   width: 50px;
-   text-align: center;
-   display: block;
-   
- }
- 
- /* 網站連結 */
- article form div.phoVerif_divForWeb{
-   border: solid 1px #7dffd1;
-   border-radius:15px;
-   padding: 5px 20px;
-   width: 380px;
-   height: 50px;
-   vertical-align: middle;
-   margin-bottom: 20px;
- }
- 
- article form div.phoVerif_divForWeb svg{
-   width: 36px;
-   height: 36px;
-   
-   
- }
- 
- article form div.phoVerif_divForWeb input{
-   margin: 6px 10px;
-   width: 270px;
-   color: #7dffd1;
- }
- 
- 
- /* 確認送出 */
- article form div.phoVerif_divForSub{
-   clear: both;
-   float: left;
-   left: 200px;
-   vertical-align: middle;
+   width: 414px;
+   height: 1200px;
+   position: relative;
+   left: 0px;
+   padding: 20px 15px;
    margin-top: 20px;
+   margin-bottom: 60px;
+      
  }
- article form div.phoVerif_divForSub img{
-   width: 30px;
-   height: 30px;
-   position: absolute;
-   left: 200px;
-   margin: 2px;
- }
- 
- article form div.phoVerif_divForSub input {
+
+article form p{
+   color: white;
+}
+
+article form input {
+   background-color: #242424;
    border: none;
    font-size: 14px;
-   border: solid 1px #7dffd1;
-   border-radius: 400px;
-   background-color: #7dffd1;
-   color: #242424;
-   padding: 5px 20px;
-   margin: 0px 0px 0px 238px;
-   width: 140px;
-   height: 35px;
-   vertical-align: middle;
-   
+   color: #ffffff;
  }
+
+article form label{
+   color: #ffffff;
+   font-size: 12px;
+   padding: 10px 6px;
+}
+
+article form a {
+   font-size: 12px;
+   color: #7dffd1;
+   margin: 0px;
+ }
+
+ /* 工作室 */
+article form div.phoVerif_divForName{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 320px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForName input{
+ width: 150px;
+}
+
+ /* 自我介紹 */
+article form div.phoVerif_divForIntro{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 380px;
+ height: 180px;
+ margin-bottom: 20px;
+}
+
+article form textarea{
+   background-color: #242424;
+   border: none;
+   margin: 0px 10px;
+   font-size: 14px;
+   color: #ffffff;
+   width: 320px;
+}
+
+/* 工作室名稱 */
+article form div.phoVerif_divForStu{
+ border: solid 1px #7dffd1;
+ border-radius: 15px;
+ padding: 5px 20px;
+ width: 320px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+
+}
+
+article form div.phoVerif_divForStu input{
+ width: 200px;
+}
+
+
+/* 工作室地址 */
+article form div.phoVerif_divForAdd{
+   border: solid 1px #7dffd1;
+   border-radius:15px;
+   padding: 5px 20px;
+   width: 380px;
+   height: 100px;
+   vertical-align: middle;
+   margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForAdd select{
+ background-color: #242424;
+ color: #ffffff;
+ border: none;
+ width: 90px;
+ font-size: 14px;
+ margin: 0px 15px;
+ 
+}
+
+article form div.phoVerif_divForAdd input{
+ width: 250px;
+ margin-left: 40px;
+ text-align: center;
+}
+
+/* 可接受攝影地區 */
+article form div.phoVerif_divForArea{
+ border: solid 1px #7dffd1;
+ border-radius:15px;
+ padding: 5px 20px;
+ width: 380px;
+ height: 220px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForArea label{
+ margin: 8px 420px 0px 0px;
+}
+
+article form div.phoVerif_divForArea label.chkArea{
+ margin: 2px;
+}
+
+article form div.phoVerif_divForArea label.chkArea input[type="checkbox"] {
+ 
+ display: none;
+ 
+}
+
+article form div.phoVerif_divForArea input[type="checkbox"]:checked + span {
+ color: black;
+ border: solid #7dffd1;
+ background-color: #7DFFD1;
+ border-radius: 20px;
+ width: 50px;
+ text-align: center;
+ display: block;
+ 
+}
+
+/* 網站連結 */
+article form div.phoVerif_divForWeb{
+ border: solid 1px #7dffd1;
+ border-radius:15px;
+ padding: 5px 20px;
+ width: 380px;
+ height: 50px;
+ vertical-align: middle;
+ margin-bottom: 20px;
+}
+
+article form div.phoVerif_divForWeb svg{
+ width: 36px;
+ height: 36px;
+ 
+ 
+}
+
+article form div.phoVerif_divForWeb input{
+ margin: 6px 10px;
+ width: 270px;
+ color: #7dffd1;
+}
+
+
+/* 確認送出 */
+article form div.phoVerif_divForSub{
+ clear: both;
+ float: left;
+ left: 200px;
+ vertical-align: middle;
+ margin-top: 20px;
+}
+article form div.phoVerif_divForSub img{
+ width: 30px;
+ height: 30px;
+ position: absolute;
+ left: 200px;
+ margin: 2px;
+}
+
+article form div.phoVerif_divForSub input {
+ border: none;
+ font-size: 14px;
+ border: solid 1px #7dffd1;
+ border-radius: 400px;
+ background-color: #7dffd1;
+ color: #242424;
+ padding: 5px 20px;
+ margin: 0px 0px 0px 238px;
+ width: 140px;
+ height: 35px;
+ vertical-align: middle;
+ 
+}
 
 }
