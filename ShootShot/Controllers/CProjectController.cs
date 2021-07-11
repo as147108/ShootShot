@@ -32,25 +32,25 @@ namespace ShootShot.Controllers
         {
             dbShootShotEntities db = new dbShootShotEntities();
             var cemail = "nina1982@gmail.com";
-            tMember cust = db.tMember.FirstOrDefault(c => c.fEmail == cemail);
-            //tMember cust = db.tMember.FirstOrDefault(c =>c.fEmail==cemail);
-            if (cust != null)
-            {
-                ViewBag.txtCEmail = cemail;
-                ViewBag.txtCTel =cust.fTel;
-                ViewBag.txtCName =cust.fName;
-            }
+            tMember cust = db.tMember.Where(t=>t.fEmail.ToString()==cemail).FirstOrDefault();
+            tPhotArea area
+            CProjectViewModel cprj = new CProjectViewModel();
+            cprj.fCName = cust.fName;
+
+
             var photoglist = from m in db.tMemberPhot select m;
             ViewBag.SelPhotog = new SelectList(photoglist, "fName").ToList();
             //攝影師清單由資料庫產生及拍攝地點
-  
+
             //var data = from g in (new dbShootShotEntities()).tMemberPhot select g; //假設從資料庫撈出資料。
             //tMemberPhot item = new tMemberPhot();
 
-                //預約者姓名電話email帶入
+            //預約者姓名電話email帶入
 
-                //return RedirectToAction("Create");
-            return View();
+            //return RedirectToAction("Create");
+            
+
+            return View(cprj);
         }
 
         // POST: CProject/Create

@@ -256,6 +256,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\prjMgmt.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\project default picture.jpg" />
     <Content Include="dbShootShot.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>dbShootShot.Context.cs</LastGenOutput>

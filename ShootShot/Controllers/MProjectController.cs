@@ -11,8 +11,14 @@ namespace ShootShot.Controllers
         // GET: MProject
         public ActionResult List()
         {
-            var table = from p in (new dbShootShotEntities()).tProject
+            IEnumerable<tProject> table = null;
+            dbShootShotEntities db = new dbShootShotEntities();
+            var email = "jack1990@gmail.com"; // 登入email
+            table = from p in db.tProject where p.fCEmail==email
                         select p;
+            ViewBag.fPName= from p in db.tProject
+                            join m in db.tMember on p.fPEmail equals m.fEmail
+                            select m.fName;
             return View(table);
         }
         public ActionResult PrjList()

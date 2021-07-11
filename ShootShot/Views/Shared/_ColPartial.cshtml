@@ -1,28 +1,31 @@
 ﻿@model ShootShot.tProject
 @{
-	Layout = null;
-	var email = ""; // 登入email
-	tProject list = (new dbShootShotEntities()).tProject.FirstOrDefault(i => i.fCEmail == email);
-	string img = list.fPicUpload + ".jpg";
+	//無上傳照片
+	//string photo = "project default picture.jpg";
+	string photo = Model.fPicUpload + ".jpg";
+	//if (!string.IsNullOrEmpty(item.fPicUpload))
+	//{
+	//	photo = item.fPicUpload;
+	//}
 }
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+@*<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 	<div class="carousel-indicators">
 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
 	</div>
 
 	<div class="carousel-inner">
-		<div class="carousel-item active" data-bs-interval="10000">
+		<div class="carousel-item active" data-bs-interval="10000">*@
 			<div class="card" style="width: 18rem;">
-				<img src="~/Content/images/@img" class="card-img-top" alt="...">
+				<img src="~/Content/images/@photo" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">@Model.fPjtTopic</h5>
-					<p class="card-text">建立日期:@Model.fPjtDate.ToString().Substring(0,10)<br>預約攝影師:@Model</p>
+					<p class="card-text">建立日期:@Model.fPjtDate.ToString().Substring(0,10)<br>預約攝影師:@ViewBag.fPName</p>
 					<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
 				</div>
 			</div>
-			<div class="card" style="width: 18rem;">
+			@*<div class="card" style="width: 18rem;">
 				<img src="~/Content/images/irl.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">小B沙龍照</h5>
@@ -37,37 +40,21 @@
 					<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
 					<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
 				</div>
-			</div>
+			</div>*@
 
-		</div>
-		<div class="carousel-item" data-bs-interval="2000">
+		@*</div>*@
+		@*<div class="carousel-item" data-bs-interval="2000">*@
 			<div class="card" style="width: 18rem;">
-				<img src="~/Content/images/baby.jpg" class="card-img-top" alt="...">
+				<img src="~/Content/images/@photo" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h5 class="card-title">小B沙龍照</h5>
-					<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+					<h5 class="card-title">@Model.fPjtTopic</h5>
+					<p class="card-text">建立日期:@Model.fPjtDate.ToString().Substring(0, 10)<br>預約攝影師:@ViewBag.fPName</p>
 					<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
 				</div>
 			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="~/Content/images/man.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">小B沙龍照</h5>
-					<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-					<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="~/Content/images/product.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">小B沙龍照</h5>
-					<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-					<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+		@*</div>*@
+	@*</div>*@
+	@*<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
 		<span><img src="~/Content/images/left_arrows.svg" alt=""></span>
 		<span class="visually-hidden">Previous</span>
 	</button>
@@ -75,4 +62,4 @@
 		<span><img src="~/Content/images/double-right-arrows.svg" alt=""></span>
 		<span class="visually-hidden">Next</span>
 	</button>
-</div>
+</div>*@

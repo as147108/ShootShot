@@ -1,7 +1,11 @@
-﻿
+﻿@model IEnumerable<ShootShot.tProject>
 @{
 	ViewBag.Title = "PrjList";
 	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
+
+	//var email = ""; // 登入email
+	//tProject list = (new dbShootShotEntities()).tProject.FirstOrDefault(i => i.fCEmail == email);
+	//string img = list.fPicUpload + ".jpg";
 }
 
 @*----------------------------------
@@ -15,63 +19,63 @@
 			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
 
 		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active" data-bs-interval="10000">
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/cat05.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="10000">
+						@*@for*@
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/irl.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:
+								<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/irl.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/light.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item" data-bs-interval="2000">
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/baby.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/man.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
+						<div class="card" style="width: 18rem;">
+							<img src="~/Content/images/product.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">小B沙龍照</h5>
+								<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
+								<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/irl.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-					</div>
-				</div>
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/light.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-					</div>
-				</div>
-
-			</div>
-			<div class="carousel-item" data-bs-interval="2000">
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/baby.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-					</div>
-				</div>
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/man.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-					</div>
-				</div>
-				<div class="card" style="width: 18rem;">
-					<img src="~/Content/images/product.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">小B沙龍照</h5>
-						<p class="card-text">建立日期:2021/06/08<br>預約攝影師:Aron David</p>
-						<a href="#" class="btn btn-outline-secondary">Go somewhere</a>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
+			@*} }*@
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
 			<span><img src="~/Content/images/left_arrows.svg" alt=""></span>
 			<span class="visually-hidden">Previous</span>

@@ -1,4 +1,4 @@
-﻿@model ShootShot.tProject
+﻿@model ShootShot.ViewModels.CProjectViewModel
 
 @{
 	ViewBag.Title = "Create";
@@ -30,7 +30,7 @@
 								   class="cProject_lblFortxt1">您所預約攝影師為：</label>
 		@*未完成*@
 							@*@Html.DropDownList("SelPhotog",null,new { @class="form-control"})*@
-							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1",id="txtPEmail",name="txtPEmail"})
+							@*@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1",id="txtPEmail",name="txtPEmail"})*@
 							@{
 								Random rnd = new Random();
 								int x = rnd.Next(10, 99);
@@ -74,15 +74,16 @@
 										<h3 for="">開始創建我的專案</h3>
 									</div>
 									<div class=" row">
+                                        <div class="col">
+                                            @Html.TextBoxFor(model => model.fCName, "", new { @class = "form-control" })
+                                            @*@Html.TextBox("姓名", null, new { @class = "cProject_txt1", @readonly = "true", Type = "text", name = "txtCName", @Value =ViewBag.txtCName })*@
+                                        </div>
 										<div class="col">
-											@Html.TextBox("姓名", null, new { @class = "cProject_txt1", @readonly = "true", Type = "text", name = "txtCName", @Value =ViewBag.txtCName })
-										</div>
-										<div class="col">
-											@Html.TextBox("電話", null, new { @class = "cProject_txt1", @readonly = "true", Type = "tel", name = "txtCTel", @Value = ViewBag.txtCTel })
+											@*@Html.TextBox("電話", null, new { @class = "cProject_txt1", @readonly = "true", Type = "tel", name = "txtCTel", @Value = ViewBag.txtCTel })*@
 										</div>
 									</div>
 									<div>
-										@Html.TextBoxFor(m => m.fCEmail, new { @class = "form-control", @readonly = "true", Type = "email", name = "txtCEmail", @Value = ViewBag.txtCEmail})
+										@*@Html.TextBoxFor(m => m.fCEmail, new { @class = "form-control", @readonly = "true", Type = "email", name = "txtCEmail", @Value = ViewBag.txtCEmail})*@
 									</div>
 									<br />
 									<br />
@@ -91,10 +92,10 @@
 									</div>
 									<div class=" row">
 										<div class="col">
-											@Html.TextBoxFor(m => m.fContact, new { @class = "cProject_txt1", placeholder = "指定聯絡人", required = "required" })
+											@*@Html.TextBoxFor(m => m.fContact, new { @class = "cProject_txt1", placeholder = "指定聯絡人", required = "required" })*@
 										</div>
 										<div class="col">
-											@Html.TextBoxFor(m => m.fContactTel, new { @class = "cProject_txt1", placeholder = "聯絡人電話", required = "required" })
+											@*@Html.TextBoxFor(m => m.fContactTel, new { @class = "cProject_txt1", placeholder = "聯絡人電話", required = "required" })*@
 										</div>
 									</div>
 									<br />

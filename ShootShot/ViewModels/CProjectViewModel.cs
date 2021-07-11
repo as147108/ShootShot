@@ -37,9 +37,11 @@ namespace ShootShot.ViewModels
 			set { this.project.fCEmail = value; }
 		}
 		// 藉由fCEmail傳回電話姓名
-		public string fCName {
-			get { return this.member.fName; }
-		}
+		//public string fCName {
+		//	get { return this.member.fName; }
+		//	set { }
+		//}
+		public string fCName { get; set; }
 		public string fCTel
 		{
 			get { return this.member.fTel; }
@@ -120,7 +122,7 @@ namespace ShootShot.ViewModels
 
 
 
-		
+
 
 		[DisplayName("參考風格")]
 		public string fStyle
@@ -129,15 +131,15 @@ namespace ShootShot.ViewModels
 			set { this.project.fStyle = value; }
 		}
 		[DisplayName("專案狀態")]
-		public Nullable<bool> fPjtState 
+		public Nullable<bool> fPjtState
 		{
-			get {return this.project.fPjtState; }
-			set {this.project.fPjtState=value; }
+			get { return this.project.fPjtState; }
+			set { this.project.fPjtState = value; }
 		}
 		[DisplayName("攝影師Email")]
 		public string fPEmail
 		{
-			//get { return this.member.fEmail; }
+			get { return this.member.fEmail; }
 			set { this.project.fPEmail = value; }
 		}
 		[DisplayName("參考照片")]
