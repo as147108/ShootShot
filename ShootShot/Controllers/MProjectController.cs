@@ -1,30 +1,64 @@
-﻿using System;
+﻿using ShootShot.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ShootShot.Controllers
 {
     public class MProjectController : Controller
     {
+ 
+        public ActionResult _ListData(string orderNo=null) 
+        {
+            IEnumerable<tProject> prj;
+
+            string OrderNo = Request.Form["txtOrderNum"];
+            if (orderNo!= null)
+            {
+                prj = (from p in (new dbShootShotEntities()).tProject
+                      where p.fOrderNum == orderNo
+                      select p).Take(1).ToList();
+            }
+            return View("List");
+        }
+
         // GET: MProject
         public ActionResult List()
         {
-            IEnumerable<tProject> table = null;
             dbShootShotEntities db = new dbShootShotEntities();
-            var email = "jack1990@gmail.com"; // 登入email
-            table = from p in db.tProject where p.fCEmail==email
+
+            IEnumerable<tProject> table = null;
+            string OrderNo = Request.Form["txtOrderNum"];
+            if (string.IsNullOrEmpty(OrderNo))
+            {
+                table = null;
+            }
+            else 
+            { 
+                table = from p in (new dbShootShotEntities()).tProject
+                        where p.fOrderNum == OrderNo
                         select p;
-            ViewBag.fPName= from p in db.tProject
-                            join m in db.tMember on p.fPEmail equals m.fEmail
-                            select m.fName;
-            return View(table);
-        }
-        public ActionResult PrjList()
-        {
+            }
             return View();
+
         }
+
+
+
+		//public ActionResult PrjDetails(string email)
+  //      {
+  //          dbShootShotEntities db = new dbShootShotEntities();
+  //          tProject orderdetail = new tProject();
+  //          string OrderNo = "2021071215";
+  //          //string OrderNo = Request.Form["txtOrderNum"];
+  //          orderdetail = db.tProject.FirstOrDefault(m => m.fOrderNum== OrderNo);
+  //          ViewBag.topic = orderdetail.fPjtTopic;
+            
+  //          return View("List");
+  //      }
 
         // GET: MProject/Details/5
         public ActionResult Details(int id)

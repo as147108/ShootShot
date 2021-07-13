@@ -193,6 +193,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CProjectController.cs" />
+    <Compile Include="Controllers\MProject1Controller.cs" />
+    <Compile Include="Controllers\MProject2Controller.cs" />
     <Compile Include="Controllers\MProjectController.cs" />
     <Compile Include="dbShootShot.Context.cs">
       <AutoGen>True</AutoGen>
@@ -212,7 +214,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CProjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAlbumPhoto.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
@@ -248,6 +249,7 @@
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CProjectViewModel.cs" />
+    <Compile Include="ViewModels\MProjectViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -256,7 +258,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\prjMgmt.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\pexels-jonathan-borba-2878764.jpg" />
     <Content Include="Content\project default picture.jpg" />
+    <Content Include="Content\逢甲美食-1-825x510.jpg" />
     <Content Include="dbShootShot.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>dbShootShot.Context.cs</LastGenOutput>
@@ -271,25 +275,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Model1.tt">
-      <DependentUpon>ShootShot.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\idx.js" />
-    <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\member.js" />
-    <Content Include="Scripts\phoVerif.js" />
     <Content Include="Web.config" />
+    <Content Include="Areas\ShowPrjDeatil\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\CProject\Create.cshtml" />
     <Content Include="Views\CProject\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutForPrj.cshtml" />
-    <Content Include="Views\MProject\PrjList.cshtml" />
-    <Content Include="Views\Shared\_ColPartial.cshtml" />
+    <Content Include="Views\Shared\_ListData.cshtml" />
+    <Content Include="Views\MProject\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -299,10 +294,6 @@
     <EntityDeploy Include="dbShootShot.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>dbShootShot.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="ShootShot.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShootShot.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="dbShootShot.edmx.diagram">
       <DependentUpon>dbShootShot.edmx</DependentUpon>
@@ -325,6 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ShowPrjDeatil\Controllers\" />
+    <Folder Include="Areas\ShowPrjDeatil\Data\" />
+    <Folder Include="Areas\ShowPrjDeatil\Views\Shared\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\MProject1\" />
+    <Folder Include="Views\MProject2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

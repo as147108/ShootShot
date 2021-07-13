@@ -1,44 +1,40 @@
 ﻿
 @{
 	Layout = null;
+	IEnumerable<tProject> custprj = null;
+
+	dbShootShotEntities db = new dbShootShotEntities();
+	var email = "nina1982@gmail.com"; // 登入email
+	custprj =from p in db.tProject where p.fCEmail==email select p;
+	
+
 }
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	@*#region meta請勿更改*@
+	<!-- #region meta請勿更改 -->
 	<meta charset="utf-8">
 	<title>SHOOTSHOT</title>
-	@*@Styles.Render("~/Content/css/style.css")*@
-	@Styles.Render("~/Content")
-	@Scripts.Render("~/bundles/modernizr")
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="SHOOTSHOT" name="keywords">
 	<meta content="SHOOTSHOT" name="description">
-	@*#endregion
-		#region Icon請勿更改*@
-	<link href="/img/logo.PNG" rel="icon">
-	@*#endregion
-		#region 共用googleFont請勿更改*@
+	<!-- #endregion -->
+	<!-- #region Icon請勿更改 -->
+	<link href="~/Content/images/logo.PNG" rel="icon">
+	<!-- #endregion -->
+	<!-- #region 共用googleFont請勿更改 -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
 		  rel="stylesheet">
-	@*#endregion
-		#region 共用cssLink請勿更改*@
+	<!-- #endregion -->
+	<!-- #region 共用cssLink請勿更改 -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-	<link href="css/nav/style.css" rel="stylesheet">
-	@*#endregion*@
-	@*#pryMgmt頁面*@
+	@Styles.Render("~/Content/lib/animate/animate.min.css")
+	@Styles.Render("~/Content/lib/owlcarousel/assets/owl.carousel.min.css")
+	@Styles.Render("~/Content/lib/lightbox/css/lightbox.min.css")
+	@Styles.Render("~/Content/css/style.css")
 	@Styles.Render("~/Content/css/prjMgmt.css")
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-	@*#pryMgmt頁面 end*@
-
 </head>
 
 <body>
@@ -53,8 +49,7 @@
 				<div class="navbar-nav ml-auto align-items-center">
 
 					<div class="nav-item dropdown">
-						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-						<img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+						<img src="~/Content/images/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
 							 style="width: 70px;height: 70px;border-radius: 50px;">
 						<div class="dropdown-menu">
 							<a href="index.html" class="dropdown-item">登入</a>
@@ -66,14 +61,15 @@
 		</div>
 	</nav>
 	@*#endregion*@
+
 	@*#region 妳的html*@
 	<div class="divnavbar"></div>
 	@*#article 左側欄按鈕區塊*@
-	<article>
+	<article id="member_artForbtn" name="member_artForbtn" class="member_artForbtn">
 		<div class="leftbutton">
 
 			<button id="member_btnMInfo" name="member_btnMInfo">
-				<a href="./member2.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
+				<a href="./member.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
 			</button>
 
 			<button class="pageone" id="member_btnPjtManage" name="member_btnPjtManage">
@@ -85,29 +81,141 @@
 			</button>
 
 			<button id="member_btnBackIndex" name="member_btnBackIndex">
-				<a href="#">回首頁</a>
+				<a href="./index.html">回首頁</a>
 			</button>
 		</div>
-
 	</article>
-	@RenderBody()
+	<article>
 
+		<!--------------------------------------------------->
+		<!-- #article 右側欄內容：專案卡片carousel效果 start -->
+		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
-	@*#region backToUp請勿更改*@
+			<!------------------------------------->
+			<!-- #article 右側欄內容：滑動頁面按鈕 -->
+			<div class="carousel-indicators prjMgmt_divForslide ">
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+						aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			</div>
+
+			<!------------------------------------------------>
+			<!-- #article 右側欄內容：卡片區塊slide區塊 start -->
+			<div class="carousel-inner prjMgmt_divForCard">
+				<div class="carousel-item active" data-bs-interval="10000">
+					@foreach (var item in custprj)
+					{
+						string photo = item.fPicUpload;
+						<div class="card">
+							<img src="~/Content/@photo" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">@item.fPjtTopic</h5>
+								<p class="card-text">
+									建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+
+									<br>預約攝影師:@ViewBag.fPName
+								</p>
+								@using (Html.BeginForm())
+								{
+									<a class="btn btn-outline-secondary"><div style="display:none;"><input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit"></div>前往專案訊息</a>
+								}
+							</div>
+						</div>
+					}
+				</div>
+
+				<div class="carousel-item" data-bs-interval="2000">
+					@foreach (var item in custprj)
+					{
+						string photo = item.fPicUpload;
+						<div class="card">
+							<img src="~/Content/@photo" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">@item.fPjtTopic</h5>
+								<p class="card-text">
+									建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+									<br>預約攝影師:@*@ViewBag.fPName*@
+								</p>
+								<a href="" class="btn btn-outline-secondary"><div style="display:none;"><input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit"></div>前往專案訊息</a>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+			<div class="prjMgmt_divForArrow">
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+					<span><img src="~/Content/images/left_arrows.svg" alt=""></span>
+					<span class="visually-hidden"></span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+					<span><img src="~/Content/images/double-right-arrows.svg" alt=""></span>
+					<span class="visually-hidden"></span>
+				</button>
+			</div>
+		</div>
+		@RenderBody()
+	</article>
+
+	<!-- #region footer請勿更改 -->
+	<div class="footer ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<div class="footer-link">
+						<h2>保留</h2>
+						<a href="">保留</a>
+						<a href="">保留</a>
+					</div>
+				</div>
+				<div class="col-md-4 text-center">
+					<div class="footer-newsletter">
+						<h2>Give it a shot !</h2>
+						<a>拍一張照 ・ 分享一張照片</a>
+					</div>
+					<div class="footer-social">
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-facebook-f"></i></a>
+						<a href=""><i class="fab fa-youtube"></i></a>
+						<a href=""><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4 text-center">
+					<div class="footer-contact">
+						<h2>Contact Us !</h2>
+						<p>
+							<i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+						</p>
+						<p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+						<p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">
+		&#169; copyright ©
+		2021 | ShootShot. All Rights Reserved
+	</div>
+	<!-- endregion -->
+	<!-- #region backToUp請勿更改 -->
 	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-	@*$endregion*@
-	@*#region js請勿更改*@
+	<!-- $endregion -->
+	<!-- #region js請勿更改 -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-	@Scripts.Render("~/Content/lib")
+	@Scripts.Render("~/Content/lib/easing/easing.min.js")
+	@Scripts.Render("~/Content/lib/owlcarousel/owl.carousel.min.js")
+	@Scripts.Render("~/Content/lib/isotope/isotope.pkgd.min.js")
+	@Scripts.Render("~/Content/lib/lightbox/js/lightbox.min.js")
 	<script src="mail/jqBootstrapValidation.min.js"></script>
 	<script src="mail/contact.js"></script>
+	@Scripts.Render("~/Scripts/main.js")
 	<script src="js/main.js"></script>
-	@*#endregion*@
-
+	<!-- #endregion -->
 
 </body>
-@Scripts.Render("~/Content/lib")
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
 </html>

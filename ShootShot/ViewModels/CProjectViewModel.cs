@@ -11,9 +11,10 @@ namespace ShootShot.ViewModels
 		public CProjectViewModel()
 		{
 			this.project = new tProject();
+			this.member = new tMember();
 		}
 		public tProject project { get; set; }
-		public tMember member { get; }
+		public tMember member { get; set; }
 		public int fId
 		{
 			get { return this.project.fId; }
@@ -33,7 +34,7 @@ namespace ShootShot.ViewModels
 		[DisplayName("一般會員Email")]
 		public string fCEmail
 		{
-			
+			get { return this.project.fCEmail; }
 			set { this.project.fCEmail = value; }
 		}
 		// 藉由fCEmail傳回電話姓名
@@ -41,11 +42,8 @@ namespace ShootShot.ViewModels
 		//	get { return this.member.fName; }
 		//	set { }
 		//}
-		public string fCName { get; set; }
-		public string fCTel
-		{
-			get { return this.member.fTel; }
-		}
+		//public string fCName { get; set; }
+		//public string fCTel { get; set; }
 
 		[DisplayName("專案聯繫人")]
 		public string fContact
@@ -136,6 +134,12 @@ namespace ShootShot.ViewModels
 			get { return this.project.fPjtState; }
 			set { this.project.fPjtState = value; }
 		}
+		//public string fPName { get; set; }
+		//public string fEmail
+		//{
+		//	get { return this.member.fEmail; }
+	
+		//}
 		[DisplayName("攝影師Email")]
 		public string fPEmail
 		{

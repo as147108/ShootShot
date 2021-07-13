@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ShootShot.tProject>
+@{
+	//無上傳照片
+	//string photo = "project default picture.jpg";
+	string OrderNo = Request.Form["txtOrderNum"];
+	if (string.IsNullOrEmpty(OrderNo))
+	{
+		tProject project = (new dbShootShotEntities()).tProject.FirstOrDefault(p => p.fOrderNum == OrderNo);
+	}
+}
+@foreach(var item in Model)
+	{
+<div class="prjMain">
+	<div class="container">
+		<div class="project">
+			<p>專案主題</p>
+			<h2>@item.fPjtTopic</h2> <p class="time">專案建立日期：@item.fPjtDate.ToString().Substring(0, 10)</p>
+									  <p>預約攝影師：@ViewBag.fPName</p>
+			<br>
+			<p>
+				拍攝日期：@item.fFilmDate<br>
+				拍攝開始時間：@item.fFilmTime<br>
+				拍攝地點：@item.fCity/ @item.fLoc<br>
+				出圖張數：@item.fPrintQty 張<br>
+				拍攝參考：@item.fStyle
+			</p>
+			<br>
+			<p>
+				指定聯絡人：@item.fContact<br>
+				聯絡人電話：@item.fContactTel<br>
+				可聯繫時間：@item.fWkdyTime | @item.fWkndTime
+			</p>
+			<br>
+			<p>
+				其他需求描述：<br />
+				@item.fReq
+			</p>
+			<br>
+			<p>風格參考</p>
+			<div class="row picture">
+				<div class="col"><img src="./img/cat01.jpg" alt=""></div>
+				<div class="col"><img src="./img/cat02.jpg" alt=""></div>
+				<div class="col"><img src="./img/cat03.jpg" alt=""></div>
+				<div class="col"><img src="./img/cat04.jpg" alt=""></div>
+				<div class="col"><img src="./img/cat05.jpg" alt=""></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+}
