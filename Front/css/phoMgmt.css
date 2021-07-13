@@ -162,12 +162,12 @@ body {
     
     background-color: #c4c4c4;
     width: 920px;
-    height: 1050px;
+    height: 1200px;
     position: relative;
     left: 410px;
-    padding: 20px 40px;
+    padding: 45px 80px;
     margin-top: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 0px;
        
   }
 
@@ -190,13 +190,13 @@ article form label{
 
 article form a {
     font-size: 12px;
-    color: #7dffd1;
+    color: #242424;
     margin: 0px;
   }
 
   /* 姓名 */
 article form div.phoMember_divForName{
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius: 15px;
   padding: 5px 20px;
   width: 320px;
@@ -211,7 +211,7 @@ article form div.phoMember_divForName input{
 
   /* 自我介紹 */
 article form div.phoMember_divForIntro{
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius: 15px;
   padding: 5px 20px;
   width: 610px;
@@ -220,7 +220,7 @@ article form div.phoMember_divForIntro{
 }
 
 article form textarea{
-    background-color: #242424;
+    background-color:#c4c4c4;
     border: none;
     margin: 0px 10px;
     font-size: 14px;
@@ -229,7 +229,7 @@ article form textarea{
 
 /* 工作室 */
 article form div.phoMember_divForStu{
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius: 15px;
   padding: 5px 20px;
   width: 320px;
@@ -246,7 +246,7 @@ article form div.phoMember_divForStu input{
 
 /* 工作室地址 */
 article form div.phoMember_divForAdd{
-    border: solid 1px #7dffd1;
+    border: solid 1px #242424;
     border-radius:15px;
     padding: 5px 20px;
     width: 610px;
@@ -256,7 +256,7 @@ article form div.phoMember_divForAdd{
 }
 
 article form div.phoMember_divForAdd select{
-  background-color: #242424;
+  background-color: #c4c4c4;
   color: #ffffff;
   border: none;
   width: 100px;
@@ -273,7 +273,7 @@ article form div.phoMember_divForAdd input{
 
 /* 可接受攝影地區 */
 article form div.phoMember_divForArea{
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius:15px;
   padding: 5px 20px;
   width: 610px;
@@ -298,8 +298,8 @@ article form div.phoMember_divForArea label.chkArea input[type="checkbox"] {
 
 article form div.phoMember_divForArea input[type="checkbox"]:checked + span {
   color: black;
-  border: solid #7dffd1;
-  background-color: #7DFFD1;
+  border: solid #ffffff;
+  background-color: #ffffff;
   border-radius: 20px;
   width: 50px;
   text-align: center;
@@ -309,7 +309,7 @@ article form div.phoMember_divForArea input[type="checkbox"]:checked + span {
 
 /* 網站連結 */
 article form div.phoMember_divForWeb{
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius:15px;
   padding: 5px 20px;
   width: 610px;
@@ -328,11 +328,11 @@ article form div.phoMember_divForWeb svg{
 article form div.phoMember_divForWeb input{
   margin: 5px 20px;
   width: 460px;
-  color: #7dffd1;
+  color: #242424;
 }
 
 
-/* 確認送出 */
+/* 資料修改 */
 article form div.phoMember_divForSub{
   clear: both;
   float: left;
@@ -343,17 +343,17 @@ article form div.phoMember_divForSub img{
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 450px;
+  left: 500px;
   margin: 2px;
 }
 
 article form div.phoMember_divForSub input {
   border: none;
   font-size: 14px;
-  border: solid 1px #7dffd1;
+  border: solid 1px #242424;
   border-radius: 400px;
-  background-color: #7dffd1;
-  color: #242424;
+  background-color: #242424;
+  color: #ffffff;
   padding: 5px 20px;
   margin: 0px 0px 0px 468px;
   width: 140px;
