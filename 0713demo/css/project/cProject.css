@@ -1,0 +1,554 @@
+/* project CSS */
+
+main section.cProject_sec1 img {
+    min-height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: -10px;
+}
+
+main section.cProject_sec1 div.filter {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    min-height: 90vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+main section.cProject_sec1 a {
+    color: black;
+    text-decoration: none;
+    background-color: #7DFFD1;
+    border-radius: 30px;
+    font-size: 2rem;
+    padding: 0.3rem 1rem;
+    z-index: 1;
+    position: absolute;
+    top: 88vh;
+    right: 40vw;
+}
+
+@media screen and (max-width: 1370px) {
+    main section.cProject_sec1 a {
+        font-size: 1rem;
+        position: absolute;
+        top: 80%;
+        right: 30%;
+    }
+}
+
+main form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main form .cProject_conForform1 {
+    background-color: #7DFFD1;
+}
+
+.formbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+main form label.cProject_lblFortxt1 {
+    font-weight: 580;
+    font-size: 1.4rem;
+    margin: 1rem 2rem 1rem 3rem;
+    color: #242424;
+}
+
+main form #cProject_txtId1 {
+    border-radius: 5px;
+    background-color: #cef6e8;
+    border: none;
+    height: 50%;
+    width: 270px;
+    margin-left: -1.5rem;
+}
+
+main form .cProject_conForform2 {
+    background-color: white;
+    width: 85vw;
+    margin: 1rem auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+main form .cProject_conForform2 .cProject_btn2 {
+    margin: 1rem 0 0.5rem 0.5rem;
+}
+
+main form .cProject_conForform2 .cProject_btn2 a.cProject_alink1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #7DFFD1;
+    color: #242424;
+    font-weight: 600;
+    border-radius: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    height: 60px;
+    padding-top: 2px;
+}
+
+main form .cProject_conForform2 .cProject_btn2 a.cProject_alink1 label.cProject_lbl1 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+main form .cProject_conForform2 .cProject_btn2 a.cProject_alink1 label.cProject_lbl2 {
+    font-size: 20px;
+    line-height: 10px;
+}
+
+main form .cProject_conForform2 .cProject_btn2 a.cProject_alink1:hover {
+    cursor: pointer;
+    color: #7DFFD1;
+    background-color: #242424;
+    font-weight: 600;
+}
+
+main form .cProject_conForform2 .cProject_btn2 a.cProject_alink1:active {
+    background-color: #7DFFD1;
+}
+
+main form #cProject_conForformId1 {
+    background-color: #DEEBE7;
+    margin-top: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+main form #cProject_conForformId1 div h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+main form #cProject_conForformId1 input[class="cProject_txt1"] {
+    margin: 0.5rem 0;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form #cProject_conForformId1 input[class="form-control"] {
+    margin: 0.5rem 0;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form .cProject_conForform3 {
+    background-color: white;
+    width: 85vw;
+    margin: 0.7rem auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+main form .form-check {
+    margin-bottom: 10px;
+}
+
+main form .cProject_infocfm {
+    padding-left: 1.25rem;
+    margin-top: 5px;
+    display: flex;
+}
+
+main form .infocfm_login {
+    color: blue;
+    text-decoration: underline;
+}
+
+main form .cProject_conForform3 .cProject_btn2 {
+    margin: 1.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+main form .cProject_conForform3 .cProject_btn2 a.cProject_alink1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #7DFFD1;
+    color: #242424;
+    font-weight: 600;
+    border-radius: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    height: 60px;
+    padding-top: 4px;
+}
+
+main form .cProject_conForform3 .cProject_btn2 a.cProject_alink1 label.cProject_lbl1 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+main form .cProject_conForform3 .cProject_btn2 a.cProject_alink1 label.cProject_lbl2 {
+    font-size: 20px;
+    line-height: 10px;
+}
+
+main form .cProject_conForform3 .cProject_btn2 a.cProject_alink1:hover {
+    cursor: pointer;
+    color: #7DFFD1;
+    background-color: #242424;
+    font-weight: 600;
+}
+
+main form .cProject_conForform3 .cProject_btn2 a.cProject_alink1:active {
+    background-color: #7DFFD1;
+}
+
+main form #cProject_conForformId2 {
+    background-color: #DEEBE7;
+    margin-top: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+main form #cProject_conForformId2 div h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+main form #cProject_conForformId2 input[class="cProject_txt2"] {
+    margin: 0.5rem 0;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup {
+    max-width: auto;
+    height: 40%;
+    padding: 0;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup label.cProject_lbl3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+    letter-spacing: 0.08rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup label.cProject_lbl3 input[type="checkbox"] {
+    border-radius: 30px;
+    display: none;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup label span {
+    width: auto;
+    height: 20px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #7c7c7c;
+    border: solid 1.5px #7c7c7c;
+    font-weight: 600;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup label.cProject_lbl3 input[type="text"] {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+main form #cProject_conForformId2 div.cProject_conForchkgroup input[type="checkbox"]:checked+span {
+    color: #242424;
+    background-color: #7DFFD1;
+    border: solid 1.5px #242424;
+    width: auto;
+    height: 20px;
+    border-radius: 4px;
+    letter-spacing: 0.08rem;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+
+/* step3 */
+
+main form .cProject_conForform4 {
+    background-color: white;
+    width: 85vw;
+    margin: 1rem auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+main form .cProject_conForform4 .cProject_btn2 {
+    margin: 2.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+main form .cProject_conForform4 .cProject_btn2 a.cProject_alink1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #7DFFD1;
+    color: #242424;
+    font-weight: 600;
+    border-radius: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    height: 60px;
+    padding-top: 4px;
+}
+
+main form .cProject_conForform4 .cProject_btn2 a.cProject_alink1 label.cProject_lbl1 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+main form .cProject_conForform4 .cProject_btn2 a.cProject_alink1 label.cProject_lbl2 {
+    font-size: 20px;
+    line-height: 10px;
+}
+
+main form .cProject_conForform4 .cProject_btn2 a.cProject_alink1:hover {
+    cursor: pointer;
+    color: #7DFFD1;
+    background-color: #242424;
+    font-weight: 600;
+}
+
+main form .cProject_conForform4 .cProject_btn2 a.cProject_alink1:active {
+    background-color: #7DFFD1;
+}
+
+main form #cProject_conForformId3 {
+    background-color: #DEEBE7;
+    margin-top: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+main form #cProject_conForformId3 div h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+main form #cProject_conForformId3 input[class="cProject_txt3"] {
+    margin: 0.5rem 15px;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form #cProject_conForformId3 textarea[class="cProject_txtbox1"] {
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 330px;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form #cProject_conForformId3 input[class="cProject_url1"] {
+    margin: 0.5rem 15px 0 0;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+main form #cProject_conForformId3 .conForpic1 {
+    margin: 0.5rem 15px 0 0;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+main form #cProject_conForformId3 .conForpic1 img {
+    margin: 0.2rem;
+    border-radius: 8px;
+    border: solid 2px #9e9e9e;
+}
+
+.submitForm_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn_submit {
+    display: flex;
+    width: 250px;
+    height: 60px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px 10px 0 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7dffd1;
+}
+
+.btn_submit p {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.btn_submit img {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.btn_submit:hover {
+    border: none;
+    background-color: #AEF5DC;
+    color: #242424;
+}
+
+.conForm_addphoto {
+    width: 125px;
+    height: 120px;
+}
+
+@media screen and (max-width: 900px) {
+    main form #cProject_conForformId3 input[class="cProject_txt3"] {
+        margin: 0.25rem 1rem;
+        width: 90%;
+        border: none;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+        border-radius: 8px;
+        outline: none;
+    }
+    main form #cProject_conForformId3 textarea[class="cProject_txtbox1"] {
+        margin: 0.25rem 0;
+        width: 100%;
+        height: 30vh;
+        border: none;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+        border-radius: 8px;
+        outline: none;
+    }
+    main form #cProject_conForformId3 input[class="cProject_url1"] {
+        margin: 0.25rem 0rem;
+        width: 97%;
+        border: none;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+        border-radius: 8px;
+        outline: none;
+    }
+    main form #cProject_conForformId3 .conForpic1 {
+        margin: 0.25rem 0rem;
+        background-color: white;
+        width: 98%;
+        border-radius: 15px;
+        padding: 0.5rem;
+    }
+    main form #cProject_conForformId3 .conForpic1 img {
+        margin: 0.2rem;
+    }
+}
+
+
+/*# sourceMappingURL=cProject.css.map */
