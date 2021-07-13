@@ -130,9 +130,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginAndSignupController.cs" />
+    <Compile Include="Controllers\MemberCenterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Models\ShootShotModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,14 +192,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\arrows.svg" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\indexHeader.css" />
     <Content Include="Content\css\indexOther.css" />
     <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\member.css" />
     <Content Include="Content\css\signup.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\img\AnnaShvets\animal\animal1.jpeg" />
@@ -307,6 +312,7 @@
     <Content Include="Content\img\cottonbro-studio\snow-black\snow-black7.jpeg" />
     <Content Include="Content\img\cottonbro-studio\snow-black\snow-black8.jpeg" />
     <Content Include="Content\img\cottonbro-studio\snow-black\snow-black9.jpeg" />
+    <Content Include="Content\img\google.svg" />
     <Content Include="Content\img\Group79.png" />
     <Content Include="Content\img\indexAblum_1.jpg" />
     <Content Include="Content\img\indexAblum_10.jpg" />
@@ -345,6 +351,7 @@
     <Content Include="Content\img\lisa-ramirez\food\food6.jpg" />
     <Content Include="Content\img\lisa-ramirez\food\food7.jpg" />
     <Content Include="Content\img\lisa-ramirez\Lisa-ramirez-phot.jpg" />
+    <Content Include="Content\img\login_pic.svg" />
     <Content Include="Content\img\logo.PNG" />
     <Content Include="Content\img\lucas-pezeta\cat\cat1.jpeg" />
     <Content Include="Content\img\lucas-pezeta\cat\cat2.jpeg" />
@@ -475,6 +482,8 @@
     <Content Include="Content\img\Mikhail Nilov\sapce\space9.jpeg" />
     <Content Include="Content\img\user.jpg" />
     <Content Include="Content\img\user.png" />
+    <Content Include="Content\js\bootstrap-datetimepicker.js" />
+    <Content Include="Content\js\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="Content\js\index.js" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\main.js" />
@@ -555,6 +564,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\LoginAndSignup\Signup.cshtml" />
     <Content Include="Views\LoginAndSignup\Login.cshtml" />
+    <Content Include="Views\MemberCenter\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

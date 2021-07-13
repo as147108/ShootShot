@@ -1,0 +1,163 @@
+﻿@model ShootShot.Models.tMember
+@{
+    ViewBag.Title = "EditProfile";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/css/member.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css">
+    <script src="~/Content/js/bootstrap-datetimepicker.js"></script>
+    <script src="~/Content/js/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+    <div class="divnavbar"></div>
+    <!-- #article 左側欄按鈕區塊 -->
+    <article id="member_artForbtn" name="member_artForbtn" class="member_artForbtn">
+        <div class="leftbutton">
+
+            <button class="pageone" id="member_btnMInfo" name="member_btnMInfo">
+                <a href="./member.html" id="member_btnPjtManage" name="member_btnPjtManage">會員基本資料</a>
+            </button>
+
+            <button id="member_btnPjtManage" name="member_btnPjtManage">
+                <a href="./prjMgmt.html">專案管理</a>
+            </button>
+
+            <button id="member_btnPOpen" name="member_btnPOpen">
+                <a href="./phoVerif.html" id="member_alinkPOpen" name="member_alinkPOpen">攝影師</a>
+            </button>
+
+            <button id="member_btnBackIndex" name="member_btnBackIndex">
+                <a href="./index.html">回首頁</a>
+            </button>
+        </div>
+
+    </article>
+
+    <!-- #article 右側欄內容：會員資料更新區塊 -->
+    <article class="member_artForform">
+        <div class="editmemberform">
+            <form action="~/MemberCenter/EditProfile" method="post">
+                <!-- 照片區塊 -->
+                <div class="photo">
+                    <label for="">相片</label>
+                    <div class="image">
+                        <img class="pic" src="~/Content/img/login_pic.svg" alt="">
+                    </div>
+                    <a class="image" href="">修改</a>
+                </div>
+                <!-- 姓名生日 -->
+                <div>
+                    <div class="namebirth">
+                        <label for="">姓名 </label>
+                        <input name="name" class="name" type="text" value="@Model.fName" required />
+                        <a href="">修改</a>
+                    </div>
+                    <br>
+                    @*<div class="namebirth">
+                        <label for="">生日 </label>
+                        <input class="date"
+                               type="date"
+                               name="birth"
+                               id="userbirth"
+                               value="@Model.fBday"
+                               required />
+                        <a href="">修改</a>
+                    </div>*@
+                </div>
+                <br>
+                <!-- 電話 -->
+                <div class="phone">
+                    <label for="">電話 </label>
+                    <input type="tel" name="phone" value="@Model.fTel" required />
+                    <a href="">修改</a>
+                </div>
+                <br>
+                <!-- 地區 -->
+                <div class="region">
+                    <label for="">地區 </label>
+                    <select class="city" name="city" id="selCity" required>
+                        <option selected disabled value="" hidden>@Model.fArea</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="台北市">台北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="台中市">台中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="台南市">台南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="台東縣">台東縣</option>
+                    </select>
+                    <a href="">修改</a>
+                </div>
+                <!-- 性別 -->
+                @{ 
+                    string gender = "";
+                    if (@Model.fGender==0)
+                    {
+                        gender = "男";
+                    }
+                    else
+                    {
+                        gender = "女";
+                    }
+                  
+                }
+            <div class="sex">
+                <label for="">性別 </label>
+                <input disabled type="text" value="@gender">
+                <span style="color:red;font-size:0.6rem">@ViewBag.successful</span>
+                @*<select class="sex" name="sex" id="sex">
+            <option selected disabled value="" hidden>請選擇性別</option>
+            <option value="0">男性</option>
+            <option value="1">女性</option>
+            <option value="2">其他</option>
+        </select>*@
+                <a href="">修改</a>
+            </div>
+                <div class="submit">
+                    <img class="submit" src="~/Content/img/arrows.svg" alt="">
+                    <input class="submit" type="submit" value="資料修改">                    
+                </div>
+            </form>
+            <br />
+            <br />
+            <br />
+            <!-- 密碼修改 -->
+            @*<form action="">
+                    <div class="member_divForpass">
+                        <p class="passqord">修改密碼</p>
+
+                        <div class="oldpassword">
+                            <label for="">請輸入舊密碼 </label>
+                            <input class="password" type="password" name="oldPassword" id="userpass" required/>
+                        </div>
+
+                        <div class="newpassword">
+                            <label for="">請輸入新密碼 </label>
+                            <input class="password" type="password" name="newPassword" id="userpass" required/>
+                        </div>
+                        <div class="newpassword2">
+                            <label for="">確認新密碼 </label>
+                            <input class="password" type="password" name="confirmPassword" id="userpass" required/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="submit">
+                        <img class="submit" src="~/Content/img/arrows.svg" alt="">
+                        <input class="submit" type="submit" value="密碼修改">
+                    </div>
+                </form>*@
+        </div>
+
+    </article>
+</body>
