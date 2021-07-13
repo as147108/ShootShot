@@ -1,0 +1,75 @@
+﻿@model ShootShot.Models.tMember
+
+@{
+    ViewBag.Title = "Signup";
+}
+<head>
+    @*~/Content/css/*@
+    <link rel="stylesheet" href="~/Content/css/login.css">
+    <link rel="javascript" href="~/Content/js/signup.js">
+    <link rel="icon" href="~/Content/img/logo.PNG">
+
+    <script>
+        function showPSW() {
+            var x = document.getElementById("mypsw");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function check() {
+            if (document.getElementById("mypsw").value != document.getElementById("cfm_psw").value) {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = '密碼不一致'
+            } else {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = '密碼一致'
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left"></div>
+        <div class="right">
+            <form action="~/LoginAndSignup/Signup" method="post">
+                <div class="joinT">
+                    <h1>Join ShootShot</h1>
+                </div>
+                <div>
+                    <div class="joinT">
+                        <input class="formstyle" minlength="2" maxlength="50" id="myname" type="text" name="name"
+                               required placeholder="姓名" /><br />
+                        <input class="formstyle" id="email" type="email" name="email" required
+                               placeholder="電子郵件" /><br />
+                        <span style="color:red" class="msg">@ViewBag.email</span><br />
+                        <input class="formstyle" id="tele" type="tel" name="tel" required
+                               placeholder="連絡電話" /><br />
+                        <input class="formstyle" id="mypsw" name="password" type="password" required
+                               placeholder="密碼" />
+                        <input class="chkbox" type="checkbox" onclick="showPSW()" /><a class="show">顯示密碼</a><br />
+                        <input class="formstyle" id="cfm_psw" name="confirmPassword" type="password" required onkeyup="check()"
+                               placeholder="確認密碼" />
+                        <span style="color:red" class="msg" id="message">@ViewBag.ConfirmMsg</span><br />
+                        <select class="formstyle" name="selectGender" id="gender" required>
+                            <option selected disabled value="" hidden>請選擇性別</option>
+                            <option value="0">男</option>
+                            <option value="1">女</option>.
+                            <option value="2">不公開</option>
+                        </select><br />
+                        <button class="btn btn-dark" type="submit" value="">註冊</button><br />
+                        <p class="p1">已有帳號?<a class="a1" href="./login.html"> 登入</a></p><br />
+                        <p class="p2">
+                            點擊「註冊」即表示您同意我們的<a href="#" class="a1">《服務條款》</a>、<a href="#"
+                                                                                class="a1">《資料政策》</a>和<a class="a1" href="#">《Cookie 政策》</a>。您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/css/login.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="left"></div>
+        <div class="right">
+            <form action="" method="GET">
+                <div>
+                    <p class="p3">Login</p>
+                </div>
+
+                <div class="col">
+                    <input class="formstyle" id="username" type="email" name="username" required
+                           placeholder="請輸入帳號(電子郵件)" />
+                    <input class="formstyle" id="psw" name="password" type="password" required placeholder="請輸入密碼" />
+                    <input class="formstyle" type="submit" value="登入">
+                </div>
+                <a href="#" class="a2">忘記密碼</a>
+                <p class="p4">沒有帳號嗎?<a href="~/LoginAndSignupController/Signup"> 加入ShootShot</a></p>
+                <hr style="margin-top: 25%;" />
+                <p class="p5">透過下列帳號登入</p>
+                <center><a href="#"><img class="simg" src="./images/google.svg" alt=""></a></center>
+            </form>
+        </div>
+    </div>
+</body>
+
