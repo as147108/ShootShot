@@ -1,11 +1,16 @@
 ﻿@using ShootShot.ViewModels
+
 @model IEnumerable<ShootShot.tProject>
 @{
 	ViewBag.Title = "List";
 	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
 	@Styles.Render("~/Content/css/prjMgmt.css")
-
-
+	//dbShootShotEntities db = new dbShootShotEntities();
+	//IEnumerable<tProject> custprj = null;
+	//var email = "nina1982@gmail.com"; // 登入email
+	//custprj = from p in db.tProject
+	//		  where p.fCEmail.Contains(email)
+	//		  select p;
 }
 
 <!-- #article 右側欄內容：專案卡片carousel效果 end -->
@@ -15,44 +20,114 @@
 </script>
 <!----------------------------------->
 <!-- #article 右側欄內容：專案內容區塊 -->
-@*@foreach (var item in table)
+@*@foreach (var item in Model)
 	{*@
+
+<!--------------------------------------------------->
+<!-- #article 右側欄內容：專案卡片carousel效果 start -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+	<!------------------------------------->
+	<!-- #article 右側欄內容：滑動頁面按鈕 -->
+	<div class="carousel-indicators prjMgmt_divForslide ">
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+	</div>
+
+	<!------------------------------------------------>
+	<!-- #article 右側欄內容：卡片區塊slide區塊 start -->
+	<div class="carousel-inner prjMgmt_divForCard">
+		<div class="carousel-item active" data-bs-interval="10000">
+			@foreach (var item in Model)
+			{
+
+				string photo = item.fPicUpload;
+				<div class="card">
+					<img src="~/Content/@photo" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@item.fPjtTopic</h5>
+						<p class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+
+							@*<br>預約攝影師:@ViewBag.fPName*@
+						</p>
+						@using (Html.BeginForm())
+						{
+							@*<a class="btn btn-outline-secondary"><div style="display:none;">*@<input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">@*</div></a>*@
+						}
+					</div>
+				</div>
+			}
+		</div>
+
+		<div class="carousel-item" data-bs-interval="2000">
+			@foreach (var item in Model)
+			{
+				string photo = item.fPicUpload;
+				<div class="card">
+					<img src="~/Content/@photo" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@item.fPjtTopic</h5>
+						<p class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+							@*<br>預約攝影師:@ViewBag.fPName*@
+						</p>
+						@using (Html.BeginForm())
+						{
+							@*<a href="" class="btn btn-outline-secondary"><div style="display:none;">*@<input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">@*</div>前往專案訊息</a>*@
+						}
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="prjMgmt_divForArrow">
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			<span><img src="~/Content/images/left_arrows.svg" alt=""></span>
+			<span class="visually-hidden"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+			<span><img src="~/Content/images/double-right-arrows.svg" alt=""></span>
+			<span class="visually-hidden"></span>
+		</button>
+	</div>
+</div>
+
 <div class="prjMain">
 	<div class="container">
 		<div class="project">
 			<p>專案主題</p>
-			<h2>@Html.DisplayNameFor(model => model.fOrderNum)</h2> <p class="time">專案建立日期：@Html.DisplayNameFor(model => model.fPjtDate)</p>
-			<p>預約攝影師：Aaron David</p>
+			<h2>@TempData["PjtTopic"]</h2> <p class="time">	專案建立日期：@TempData["PjtDate"]</p>
+			<p>預約攝影師：@TempData["PhotoName"]</p>
 			<br>
 			<p>
-				拍攝日期：2021/06/12 (星期六)<br>
-				拍攝開始時間：10:00am<br>
-				拍攝地點：高雄市/ 高雄市立美術館園區<br>
-				出圖張數：50張<br>
-				拍攝類型：寵物
+				拍攝日期：@TempData["FilmDate"] <br>
+				拍攝開始時間：@TempData["FilmTime"]<br>
+				拍攝地點：@TempData["City"]/ @TempData["Loc"]<br>
+				出圖張數：@TempData["PrintQty"] 張<br>
+				參考連結：@TempData["Style"]
 			</p>
 			<br>
 			<p>
-				指定聯絡人：小Ｂ媽<br>
-				聯絡人電話：0988802265<br>
-				可聯繫時間：平日20:00~22:00pm
+				指定聯絡人：@TempData["Contact"]<br>
+				聯絡人電話：@TempData["ContactTel"]<br>
+				可聯繫時間：平日 @TempData["WkdyTime"] / 假日 @TempData["WkndTime"]
 			</p>
-			<br>
+
+			<br />
 			<p>
 				其他需求描述：<br>
-				希望可以帶寵物在室外攝影但不要使用閃光燈，<br>
-				預約時間若天氣不好希望可以擇她日安排或再與攝影師討論改為室內拍攝，<br>
-				專案是個人收藏用，<br>
-				但希望可以之後用做印刷用途可以輸出高畫質的檔案！
+				@TempData["Req"]
 			</p>
 			<br>
 			<p>風格參考</p>
 			<div class="row picture">
-				<div class="col"><img src="./img/cat01.jpg" alt=""></div>
-				<div class="col"><img src="./img/cat02.jpg" alt=""></div>
-				<div class="col"><img src="./img/cat03.jpg" alt=""></div>
-				<div class="col"><img src="./img/cat04.jpg" alt=""></div>
-				<div class="col"><img src="./img/cat05.jpg" alt=""></div>
+				<div class="col"><img src="~/Content/@TempData["PicUpload"]" alt="" style=""></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
 			</div>
 
 		</div>
@@ -65,35 +140,18 @@
 
 <!--------------------------------->
 <!-- #article 右側欄內容：留言板區塊 -->
-<div class="prjMgmt_divForChat">
-	<p>與攝影師聊聊</p>
-	<div class="prjMgmt_divForText">
-		<img src="./img/login_pic.svg" alt="">
-		<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
-				  aria-valuemax="150">聊聊吧...</textarea>
-		<br>
-		<input type="submit" value="發送">
-	</div>
-</div>
-<br>
-<br>
 
-<div class="prjMgmt_divForChat">
-	<img class="chat" src="./img/chat 1.svg" alt="">
-	<div class="prjMgmt_divForMes">
-		<img src="./img/login_pic.svg" alt="">
-		<p class="memberMes">攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?</p>
-		<p class="mesTime">2021/06/09 13:54:40</p>
 
-	</div>
-</div>
+	@{
+		Html.RenderAction("_MsgPartial");
+	}	
 
 
 <!-- #article 右側欄內容：留言板區塊 -->
 <!--------------------------------->
 @*@foreach (var item in Model)
-{
-	string photo = item.fPicUpload;
-	@Html.DisplayFor(modelItem => item.fOrderNum)
-	@Html.DisplayFor(modelItem => item.fPjtDate)
-}*@
+	{
+		string photo = item.fPicUpload;
+		@Html.DisplayFor(modelItem => item.fOrderNum)
+		@Html.DisplayFor(modelItem => item.fPjtDate)
+	}*@

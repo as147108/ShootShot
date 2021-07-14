@@ -1,12 +1,6 @@
 ﻿
 @{
 	Layout = null;
-	IEnumerable<tProject> custprj = null;
-
-	dbShootShotEntities db = new dbShootShotEntities();
-	var email = "nina1982@gmail.com"; // 登入email
-	custprj =from p in db.tProject where p.fCEmail==email select p;
-	
 
 }
 <!DOCTYPE html>
@@ -87,72 +81,6 @@
 	</article>
 	<article>
 
-		<!--------------------------------------------------->
-		<!-- #article 右側欄內容：專案卡片carousel效果 start -->
-		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-
-			<!------------------------------------->
-			<!-- #article 右側欄內容：滑動頁面按鈕 -->
-			<div class="carousel-indicators prjMgmt_divForslide ">
-				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-						aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			</div>
-
-			<!------------------------------------------------>
-			<!-- #article 右側欄內容：卡片區塊slide區塊 start -->
-			<div class="carousel-inner prjMgmt_divForCard">
-				<div class="carousel-item active" data-bs-interval="10000">
-					@foreach (var item in custprj)
-					{
-						string photo = item.fPicUpload;
-						<div class="card">
-							<img src="~/Content/@photo" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">@item.fPjtTopic</h5>
-								<p class="card-text">
-									建立日期:@item.fPjtDate.ToString().Substring(0, 10)
-
-									<br>預約攝影師:@ViewBag.fPName
-								</p>
-								@using (Html.BeginForm())
-								{
-									<a class="btn btn-outline-secondary"><div style="display:none;"><input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit"></div>前往專案訊息</a>
-								}
-							</div>
-						</div>
-					}
-				</div>
-
-				<div class="carousel-item" data-bs-interval="2000">
-					@foreach (var item in custprj)
-					{
-						string photo = item.fPicUpload;
-						<div class="card">
-							<img src="~/Content/@photo" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">@item.fPjtTopic</h5>
-								<p class="card-text">
-									建立日期:@item.fPjtDate.ToString().Substring(0, 10)
-									<br>預約攝影師:@*@ViewBag.fPName*@
-								</p>
-								<a href="" class="btn btn-outline-secondary"><div style="display:none;"><input type="hidden" value="@item.fOrderNum" name="txtOrderNum"><input type="submit"></div>前往專案訊息</a>
-							</div>
-						</div>
-					}
-				</div>
-			</div>
-			<div class="prjMgmt_divForArrow">
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-					<span><img src="~/Content/images/left_arrows.svg" alt=""></span>
-					<span class="visually-hidden"></span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-					<span><img src="~/Content/images/double-right-arrows.svg" alt=""></span>
-					<span class="visually-hidden"></span>
-				</button>
-			</div>
-		</div>
 		@RenderBody()
 	</article>
 

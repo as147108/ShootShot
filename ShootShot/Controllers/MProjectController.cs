@@ -11,57 +11,64 @@ namespace ShootShot.Controllers
     public class MProjectController : Controller
     {
  
-        public ActionResult _ListData(string orderNo=null) 
+        public ActionResult _MsgPartial() 
         {
-            IEnumerable<tProject> prj;
-
-            string OrderNo = Request.Form["txtOrderNum"];
-            if (orderNo!= null)
-            {
-                prj = (from p in (new dbShootShotEntities()).tProject
-                      where p.fOrderNum == orderNo
-                      select p).Take(1).ToList();
-            }
-            return View("List");
+            ViewBag.ServerVar = "Html.RenderAction is appropriate for dynamic data";
+            return PartialView();
         }
 
         // GET: MProject
         public ActionResult List()
         {
             dbShootShotEntities db = new dbShootShotEntities();
+            IEnumerable<tProject> custprj = null;
+            var email = "nina1982@gmail.com"; // 登入email
+            custprj = from p in db.tProject
+                      where p.fCEmail.Contains(email)
+                      select p;
 
-            IEnumerable<tProject> table = null;
             string OrderNo = Request.Form["txtOrderNum"];
-            if (string.IsNullOrEmpty(OrderNo))
-            {
-                table = null;
+			if (string.IsNullOrEmpty(OrderNo))
+			{
+				
+			}
+			else
+			{
+
+				tProject prj = db.tProject.FirstOrDefault(m => m.fOrderNum == OrderNo);
+
+                //無法轉型
+                var tPrj = db.tProject.Where(t => t.fOrderNum == OrderNo).FirstOrDefault();
+                var tMember = db.tMember.Where(t => t.fEmail == tPrj.fPEmail).FirstOrDefault();
+                string name = tMember.fName.ToString();
+                string pemail = tMember.fEmail.ToString();
+
+                TempData["PjtTopic"] = prj.fPjtTopic;
+                TempData["PjtDate"] = prj.fPjtDate;
+                TempData["FilmDate"] = prj.fFilmDate;
+                TempData["FilmTime"] = prj.fFilmTime;
+                TempData["City"] = prj.fCity;
+                TempData["Loc"] = prj.fLoc;
+                TempData["PrintQty"] = prj.fPrintQty;
+                TempData["Style"] = prj.fStyle;
+                TempData["Contact"] = prj.fContact;
+                TempData["ContactTel"] = prj.fContactTel;
+                TempData["WkdyTime"] = prj.fWkdyTime;
+                TempData["WkndTime"] = prj.fWkndTime;
+                TempData["Req"] = prj.fReq;
+                TempData["PicUpload"] = "未上傳照片.png";
+                TempData["PhotoName"] = name;
+                TempData["PEnail"] = pemail;
+                if (!string.IsNullOrEmpty(prj.fPicUpload))
+                {
+                    TempData["PicUpload"] = prj.fPicUpload.ToString();
+                }
             }
-            else 
-            { 
-                table = from p in (new dbShootShotEntities()).tProject
-                        where p.fOrderNum == OrderNo
-                        select p;
-            }
-            return View();
+			 return View(custprj);
+		}
 
-        }
-
-
-
-		//public ActionResult PrjDetails(string email)
-  //      {
-  //          dbShootShotEntities db = new dbShootShotEntities();
-  //          tProject orderdetail = new tProject();
-  //          string OrderNo = "2021071215";
-  //          //string OrderNo = Request.Form["txtOrderNum"];
-  //          orderdetail = db.tProject.FirstOrDefault(m => m.fOrderNum== OrderNo);
-  //          ViewBag.topic = orderdetail.fPjtTopic;
-            
-  //          return View("List");
-  //      }
-
-        // GET: MProject/Details/5
-        public ActionResult Details(int id)
+		// GET: MProject/Details/5
+		public ActionResult Details(int id)
         {
             return View();
         }

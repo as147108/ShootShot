@@ -32,8 +32,8 @@
 							@*未完成*@
 							@*@Html.DropDownList("List");*@
 							@*@Html.DropDownListFor(m => m.fPEmail, new SelectList(Model.fPEmail,"Value", "Text"),new { name="txtPEmail"})*@
-							@Html.DropDownList("list",ViewData["list"] as SelectList)
-							@*@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1", id = "txtPEmail", name = "txtPEmail" })*@
+							@*@Html.DropDownList("list",ViewData["list"] as SelectList)*@
+							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1", id = "txtPEmail", name = "txtPEmail" })
 							@{
 								Random rnd = new Random();
 								int x = rnd.Next(10, 99);

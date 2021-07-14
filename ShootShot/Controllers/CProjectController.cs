@@ -50,11 +50,11 @@ namespace ShootShot.Controllers
             
             var list = new SelectList(new[]
             {
-             new {ID="1",Name="name1"},
-              new{ID="2",Name="name2"},
-                new{ID="3",Name="name3"},
+             new {Email="mikhail1974@gmail.com",Name="Nilov"},
+              new{Email="lucas1976@gmail.com",Name="Pezeta"},
+                new{Email="olga1986@gmail.com",Name="Olga Dimenshtein"},
                  },
-                "ID", "Name", 1);
+                "Email", "Name", 1);
                  ViewData["list"] = list;
 
 
