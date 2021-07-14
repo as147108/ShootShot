@@ -17,9 +17,8 @@ namespace ShootShot.Controllers
             dbShootShotEntities db = new dbShootShotEntities();
             // 由orderNO & CEmail列出舊有留言
             var email = "nina1982@gmail.com";
-            string OrderNo = Request.Form["txtOrderNum"];
-            // 有問題, 並未將物件參考設定為物件的執行個體。
-            string PfEmail = db.tProject.Where(p => p.fOrderNum == OrderNo).FirstOrDefault().ToString();
+            string OrderNo = Request.Form["txtOrderNum"];           
+            string PfEmail = (from prj in db.tProject where prj.fOrderNum == OrderNo select new { prj.fPEmail }).ToString(); 
             if (string.IsNullOrEmpty(OrderNo))
             {
                 // 無留言
@@ -31,30 +30,29 @@ namespace ShootShot.Controllers
 				// 搜尋特定訂單留言並依據fid排序
 				var tMsgs = db.tMsg.Where(t => t.fOrderNum == OrderNo).OrderBy(t => t.fId).FirstOrDefault();
 				// 攝影師註冊登入照片
-				var tMember = db.tMember.Where(m => m.fEmail == PfEmail).SingleOrDefault();
-				string PhoImg = tMember.fPhoto.ToString();						
-                if (!string.IsNullOrEmpty(tMember.fPhoto))
-                {
-                    TempData["PhoImg"] = tMember.fPhoto.ToString();
-                }
-                else {TempData["PhoImg"] = "未上傳照片.png"; }
+				var PtMember = db.tMember.Where(m => m.fEmail == PfEmail).FirstOrDefault()?.fPhoto?? "未上傳照片.png";					
+                if (!string.IsNullOrEmpty(PtMember))
+                     TempData["PhoImg"] = PtMember.ToString();
 
                 // 客戶註冊登入照片
-				var custimg = db.tMember.Where(m => m.fEmail == tMsgs.fCEmail).FirstOrDefault();
-				string CustImg = custimg.fPhoto.ToString();
-                if (!string.IsNullOrEmpty(custimg.fPhoto))
+                string CfEmail = (from prj in db.tProject where prj.fOrderNum == OrderNo select new { prj.fCEmail }).ToString();
+                var CtMember = db.tMember.Where(m => m.fEmail == CfEmail).FirstOrDefault()?.fPhoto ?? "未上傳照片.png";
+                if (!string.IsNullOrEmpty(CtMember))
                 {
-                    TempData["CustImg"] = custimg.fPhoto.ToString();
+                    TempData["CustImg"] = CtMember.ToString();
                 }
                 else {TempData["CustImg"] = "未上傳照片.png";}
 
-				//foreach列出 , 當states = false & fPMsg != null 產生回覆按鈕點擊後產生textarea,input type = "submit",
-				if (tMsgs.fStates == false)
-				{
-					// 自己留言攝影師未回
+                //foreach列出 , 當states = false & fPMsg != null 產生回覆按鈕點擊後產生textarea,input type = "submit",
 
-					// 攝影師留言自己未回
-					tMsgs.fPMsg += "HTML語法=>對話框及input submit按鈕 送出更新states";
+                var states = db.tMsg.Where(m => m.fOrderNum == OrderNo).FirstOrDefault()?.fStates;
+				if (states!= true)
+				{
+                    // 自己留言攝影師未回
+
+                    // 攝影師留言自己未回
+                    // 未將物件設定為參考執行個體
+                    //TempData["HTML"] = "<div class='prjMgmt_divForMes'>"+"<img src='~/ Content / images / login_pic.svg'>"+"<p class='memberMes'>"+"攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?"+"</p>< p class='mesTime'>"+"2021/06/09 13:54:40</p></div>";
 				}
 				else
 				{
