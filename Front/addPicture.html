@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOOTSHOT</title>
+
+    <!-- Icon -->
+    <link class="fIcon" href="./images/logo_icon.svg" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/addPicture.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h5>新增照片</h5>
+            <a href="" id="closeEPConsole"><img src="./images/cancel.svg" alt=""></a>
+        </div>
+        <div class="addPicture_conForform">
+            <form action="/somewhere/to/upload post" enctype="multipart/form-data">
+                <div>
+                    <input type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png" multiple />
+                </div>
+                <div id="preview_progressbarTW_imgs" style="width:100%; height: 300px;">
+                    <p>請選取您要上傳的圖片檔</p>
+                </div>
+                <div><input type="submit" value="上傳"></div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="./js/addPicture.js"></script>
+
+</html>

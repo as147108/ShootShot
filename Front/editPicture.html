@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOOTSHOT</title>
+
+    <!-- Icon -->
+    <link class="fIcon" href="./images/logo_icon.svg" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/editPicture.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h5>編輯照片</h5>
+            <a href="" id="closeEPConsole"><img src="./images/cancel.svg" alt=""></a>
+        </div>
+        <div class="editAlbum">
+            <form action="">
+                <div>
+                    <input type="text" name="" id="txteditAlbum" placeholder="未命名相片">
+                </div>
+                <div class="discPic">
+                    <h6>作品描述:(100字)</h6>
+                    <textarea name=message wrap=physical onKeyDown="checkMaxInput(this.form)"
+                        onKeyUp="checkMaxInput(this.form)" placeholder="Apple 今天揭曉其年度全球開發者大會的活動內容
+包括 keynote 發表會與 Platforms State of the Union 時程
+並就開發者如何得以了解 iOS、iPadOS、macOS、tvOS 
+與 watchOS的未來，分享更多資訊。所有開發者均
+免額外付費WWDC21 將集結全球 Apple 開發者社群
+並提供他們所仰賴的技術、工具與架構等相關見解。"></textarea>
+                    <br>
+                    剩於<input readonly type=text name=remLen size=3 maxlength=3 value="100"
+                        style="width: 30%;height:26.5px;margin-bottom: 0.3rem;">字
+                    <script src="./js/editPicture.js"></script>
+                </div>
+                <div class="addKeyword">
+                    <label class="lbladdKeyword" for="lbladdKeyword">
+                        <input id="txtaddKeyword" type="text" value="" id="name" placeholder="自訂關鍵字" />
+                        <input id="akeyword1" for="lbladdKeyword" type="button" value="&#9660" for="name">
+                    </label>
+                </div>
+                <div class="btnEnd">
+                    <input type="submit" value="修改">
+                    <input id="closeEPConsole1" type="button" value="取消" for="closeEPConsole">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
