@@ -38,6 +38,7 @@ namespace ShootShot.Controllers
             member.fEmail = Request.Form["email"];
             member.fTel = Request.Form["tel"];
             member.fPassword = Request.Form["confirmPassword"];
+            member.fArea = Request.Form["city"];
             member.fGender = Convert.ToInt32(Request.Form["selectGender"]);
             member.fCode = 0;
             db.tMember.Add(member);

@@ -46,6 +46,28 @@
                         <span style="color:red" class="msg">@ViewBag.email</span><br />
                         <input class="formstyle" id="tele" type="tel" name="tel" required
                                placeholder="連絡電話" /><br />
+                        <select class="formstyle" name="city" id="selCity" required>
+                            <option selected disabled value="" hidden>地區</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="台北市">台北市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="台中市">台中市</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="台南市">台南市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="台東縣">台東縣</option>
+                        </select><br/>
                         <input class="formstyle" id="mypsw" name="password" type="password" required
                                placeholder="密碼" />
                         <input class="chkbox" type="checkbox" onclick="showPSW()" /><a class="show">顯示密碼</a><br />
@@ -61,7 +83,7 @@
                         <p class="p1">已有帳號?<a class="a1" href="./login.html"> 登入</a></p><br />
                         <p class="p2">
                             點擊「註冊」即表示您同意我們的<a href="~/LoginAndSignuo/Login" class="a1">《服務條款》</a>、<a href="#"
-                                                                                class="a1">《資料政策》</a>和<a class="a1" href="#">《Cookie 政策》</a>。您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
+                                                                                                     class="a1">《資料政策》</a>和<a class="a1" href="#">《Cookie 政策》</a>。您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
                         </p>
                     </div>
                 </div>

@@ -47,6 +47,7 @@ namespace ShootShot.Controllers
                 @ViewBag.successful = "修改成功";
             }
             return View(tm);
+            
         }
     }
 }
