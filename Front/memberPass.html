@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region meta請勿更改 -->
+    <meta charset="utf-8">
+    <title>SHOOTSHOT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SHOOTSHOT" name="keywords">
+    <meta content="SHOOTSHOT" name="description">
+    <!-- #endregion -->
+    <!-- #region Icon請勿更改 -->
+    <link href="/img/logo.PNG" rel="icon">
+    <!-- #endregion -->
+    <!-- #region 共用googleFont請勿更改 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- #endregion -->
+    <!-- #region 共用cssLink請勿更改 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/nav/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/memberPass.css">
+    <!-- #endregion -->
+</head>
+
+<body>
+    <!-- #region navbar請勿更改 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto align-items-center">
+                    
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
+                        <img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                            style="width: 70px;height: 70px;border-radius: 50px;">
+                        <div class="dropdown-menu">
+                            <a href="index.html" class="dropdown-item">登入</a>
+                            <a href="./member.html" class="dropdown-item">設定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region 妳的html -->
+    <div class="divnavbar"></div>
+
+    
+    <!-- #article 左側欄按鈕區塊 -->
+    <article id="memberPass_artForbtn" name="memberPass_artForbtn" class="member_artForbtn">
+        <div class="leftbutton">
+            
+        <button class="pageone" id="memberPass_btnMInfo" name="memberPass_btnMInfo">
+          <a href="./member.html" id="memberPass_btnPjtManage" name="memberPass_btnPjtManage">會員基本資料</a>
+        </button>
+        <!-- 會員密碼修改start -->
+        <button class="pagetwo  memberPass" id="memberPass_btnPass" name="memberPass_btnPass">
+          <a href="./memberPass.html" id="memberPass_alinkPOpen" name="memberPass_alinkPOpen">會員密碼修改</a>
+        </button>
+         <!-- 會員密碼修改end -->
+        
+        <button id="memberPass_btnPjtManage" name="memberPass_btnPjtManage">
+          <a href="./prjMgmt.html">專案管理</a>
+        </button>
+        
+        <button id="memberPass_btnPOpen" name="memberPass_btnPOpen">
+          <a href="./phoVerif.html" id="memberPass_alinkPOpen" name="memberPass_alinkPOpen">攝影師</a>
+        </button>
+        
+        <button id="memberPass_btnBackIndex" name="memberPass_btnBackIndex">
+          <a href="./index.html">回首頁</a>
+        </button>
+        </div>
+
+    </article>
+
+    <!-- #article 右側欄內容：會員資料更新區塊 -->
+    <article class="memberPass_artForform">
+        <div id="memberPass_divForForm" name="memberPass_divForForm" class="memberPass_divForForm">
+            <form action="">
+                <!-- 密碼修改 -->
+                <div id="memberPass_divForpass" name="memberPass_divForpass" class="memberPass_divForpass">
+                <p class="passqord">修改密碼</p>
+          
+                <div id="memberPass_divForOld" name="memberPass_divForOld" class="memberPass_divForOld">
+                  <label for="">請輸入舊密碼 </label>
+                  <input class="password" type="password" name="memberPass_passOld" id="memberPass_passOld" />
+                </div>
+
+                <div id="memberPass_divForNew" name="memberPass_divForNew" class="memberPass_divForNew">
+                  <label for="">請輸入新密碼 </label>
+                  <input class="password" type="password" name="memberPass_passNew" id="memberPass_passNew" />
+                  
+                </div>
+                <div id="memberPass_divForNew2" name="memberPass_divForNew2" class="memberPass_divForNew2">
+                  <label for="">確認新密碼 </label>
+                  <input class="password" type="password" name="memberPass_passNew2" id="memberPass_passNew2" />
+                </div>
+
+              </div>
+              <br>
+              <div id="memberPass_divForSubm" name="memberPass_divForSubm" class="memberPass_divForSubm">
+                <img id="memberPass_imgSubm" name="memberPass_imgSubm" class="memberPass_imgSubm" src="./img/arrows.svg" alt="">
+                <input id="memberPass_subm" name="memberPass_subm" class="memberPass_subm" type="submit" value="密碼修改">
+              </div>
+
+
+              
+              </form>
+        </div>
+
+    </article>
+
+    <!-- #region footer請勿更改 -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>保留</h2>
+                        <a href="">保留</a>
+                        <a href="">保留</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">&#169; copyright ©
+        2021 | ShootShot. All Rights Reserved</div>
+    <!-- endregion -->
+    <!-- #region backToUp請勿更改 -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- $endregion -->
+    <!-- #region js請勿更改 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="js/main.js"></script>
+    <!-- #endregion -->
+</body>
+
+</html>
