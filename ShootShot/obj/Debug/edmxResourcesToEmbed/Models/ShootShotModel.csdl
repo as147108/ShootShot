@@ -159,5 +159,6 @@
     <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fGender" Type="Int32" />
     <Property Name="fCode" Type="Int32" />
+    <Property Name="fImgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

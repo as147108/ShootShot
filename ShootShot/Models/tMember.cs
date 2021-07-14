@@ -11,24 +11,19 @@ namespace ShootShot.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tMember
     {
         public int fId { get; set; }
-        [Required(ErrorMessage = "請輸入姓名")]
         public string fName { get; set; }
         public string fPhoto { get; set; }
         public Nullable<System.DateTime> fBday { get; set; }
-        [Required(ErrorMessage = "請輸入電子郵件")]
         public string fEmail { get; set; }
-        [Required(ErrorMessage = "請輸入電話")]
         public string fTel { get; set; }
         public string fArea { get; set; }
-        [Required(ErrorMessage = "請輸入密碼")]
         public string fPassword { get; set; }
-        [Required(ErrorMessage = "請輸入性別")]
-        public Nullable<int> fGender { get; set; } 
+        public Nullable<int> fGender { get; set; }
         public Nullable<int> fCode { get; set; }
+        public string fImgpath { get; set; }
     }
 }
