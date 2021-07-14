@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbShootShotModelStoreContainer" CdmEntityContainer="dbShootShotEntities">
+    <EntitySetMapping Name="tAlbumPhoto">
+      <EntityTypeMapping TypeName="dbShootShotModel.tAlbumPhoto">
+        <MappingFragment StoreEntitySet="tAlbumPhoto">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fAlbId" ColumnName="fAlbId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fDes" ColumnName="fDes" />
+          <ScalarProperty Name="fCover" ColumnName="fCover" />
+          <ScalarProperty Name="fLike" ColumnName="fLike" />
+          <ScalarProperty Name="fView" ColumnName="fView" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tCMsg">
+      <EntityTypeMapping TypeName="dbShootShotModel.tCMsg">
+        <MappingFragment StoreEntitySet="tCMsg">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+          <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
+          <ScalarProperty Name="fMsg" ColumnName="fMsg" />
+          <ScalarProperty Name="fState" ColumnName="fState" />
+          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tKeyword">
+      <EntityTypeMapping TypeName="dbShootShotModel.tKeyword">
+        <MappingFragment StoreEntitySet="tKeyword">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fPhoId" ColumnName="fPhoId" />
+          <ScalarProperty Name="fKeyword" ColumnName="fKeyword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMemberPhot">
+      <EntityTypeMapping TypeName="dbShootShotModel.tMemberPhot">
+        <MappingFragment StoreEntitySet="tMemberPhot">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fIntro" ColumnName="fIntro" />
+          <ScalarProperty Name="fStudioName" ColumnName="fStudioName" />
+          <ScalarProperty Name="fStuidioAdd" ColumnName="fStuidioAdd" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fOther" ColumnName="fOther" />
+          <ScalarProperty Name="fFB" ColumnName="fFB" />
+          <ScalarProperty Name="fIns" ColumnName="fIns" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPhotAlbum">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
+        <MappingFragment StoreEntitySet="tPhotAlbum">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="FState" ColumnName="FState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPhotArea">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPhotArea">
+        <MappingFragment StoreEntitySet="tPhotArea">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fArea" ColumnName="fArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPhotStyle">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPhotStyle">
+        <MappingFragment StoreEntitySet="tPhotStyle">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fStyle" ColumnName="fStyle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPjtDetailType">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailType">
+        <MappingFragment StoreEntitySet="tPjtDetailType">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+          <ScalarProperty Name="fFilmType" ColumnName="fFilmType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPjtDetailUpload">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailUpload">
+        <MappingFragment StoreEntitySet="tPjtDetailUpload">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+          <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPMsg">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPMsg">
+        <MappingFragment StoreEntitySet="tPMsg">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+          <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
+          <ScalarProperty Name="fMsg" ColumnName="fMsg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tProject">
+      <EntityTypeMapping TypeName="dbShootShotModel.tProject">
+        <MappingFragment StoreEntitySet="tProject">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+          <ScalarProperty Name="fPjtDate" ColumnName="fPjtDate" />
+          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+          <ScalarProperty Name="fContact" ColumnName="fContact" />
+          <ScalarProperty Name="fContactTel" ColumnName="fContactTel" />
+          <ScalarProperty Name="fWkdyTime" ColumnName="fWkdyTime" />
+          <ScalarProperty Name="fWkndTime" ColumnName="fWkndTime" />
+          <ScalarProperty Name="fCity" ColumnName="fCity" />
+          <ScalarProperty Name="fLoc" ColumnName="fLoc" />
+          <ScalarProperty Name="fFilmDate" ColumnName="fFilmDate" />
+          <ScalarProperty Name="fFilmTime" ColumnName="fFilmTime" />
+          <ScalarProperty Name="fBudget" ColumnName="fBudget" />
+          <ScalarProperty Name="fPrintQty" ColumnName="fPrintQty" />
+          <ScalarProperty Name="fPjtTopic" ColumnName="fPjtTopic" />
+          <ScalarProperty Name="fReq" ColumnName="fReq" />
+          <ScalarProperty Name="fStyle" ColumnName="fStyle" />
+          <ScalarProperty Name="fPjtState" ColumnName="fPjtState" />
+          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tRoles">
+      <EntityTypeMapping TypeName="dbShootShotModel.tRoles">
+        <MappingFragment StoreEntitySet="tRoles">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fCode" ColumnName="fCode" />
+          <ScalarProperty Name="fRole" ColumnName="fRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMember">
+      <EntityTypeMapping TypeName="dbShootShotModel.tMember">
+        <MappingFragment StoreEntitySet="tMember">
+          <ScalarProperty Name="fImgpath" ColumnName="fImgpath" />
+          <ScalarProperty Name="fCode" ColumnName="fCode" />
+          <ScalarProperty Name="fGender" ColumnName="fGender" />
+          <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+          <ScalarProperty Name="fArea" ColumnName="fArea" />
+          <ScalarProperty Name="fTel" ColumnName="fTel" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fBday" ColumnName="fBday" />
+          <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

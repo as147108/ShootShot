@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbShootShotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tAlbumPhoto">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fAlbId" Type="Int32" />
+    <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fDes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fCover" Type="Boolean" />
+    <Property Name="fLike" Type="Int32" />
+    <Property Name="fView" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tCMsg">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMsgTime" Type="DateTime" Precision="0" />
+    <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fState" Type="Boolean" />
+    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tKeyword">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fPhoId" Type="Int32" />
+    <Property Name="fKeyword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tMemberPhot">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="fIntro" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="fStudioName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fStuidioAdd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fOther" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fFB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fIns" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPhotAlbum">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FState" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tPhotArea">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPhotStyle">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fStyle" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPjtDetailType">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fFilmType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPjtDetailUpload">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPMsg">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMsgTime" Type="DateTime" Precision="0" />
+    <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tProject">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPjtDate" Type="DateTime" Precision="3" />
+    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fContact" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="fContactTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fWkdyTime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fWkndTime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fCity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fLoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fFilmDate" Type="DateTime" Precision="0" />
+    <Property Name="fFilmTime" Type="Time" Precision="0" />
+    <Property Name="fBudget" Type="Int32" />
+    <Property Name="fPrintQty" Type="Int32" />
+    <Property Name="fPjtTopic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fReq" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="fStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fPjtState" Type="Boolean" />
+    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tRoles">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fCode" Type="Int32" />
+    <Property Name="fRole" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
+    <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
+    <EntitySet Name="tKeyword" EntityType="Self.tKeyword" />
+    <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" />
+    <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
+    <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
+    <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
+    <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" />
+    <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" />
+    <EntitySet Name="tPMsg" EntityType="Self.tPMsg" />
+    <EntitySet Name="tProject" EntityType="Self.tProject" />
+    <EntitySet Name="tRoles" EntityType="Self.tRoles" />
+    <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+  </EntityContainer>
+  <EntityType Name="tMember">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fBday" Type="DateTime" Precision="0" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fGender" Type="Int32" />
+    <Property Name="fCode" Type="Int32" />
+    <Property Name="fImgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
