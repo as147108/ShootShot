@@ -23,6 +23,6 @@ namespace ShootShot
         public string fArea { get; set; }
         public string fPassword { get; set; }
         public Nullable<bool> fGender { get; set; }
-        public Nullable<int> fCode { get; set; }
+        public int fCode { get; set; }
     }
 }

@@ -378,9 +378,6 @@
     <Compile Include="tAlbumPhoto.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
-    <Compile Include="tCMsg.cs">
-      <DependentUpon>dbShootShot.tt</DependentUpon>
-    </Compile>
     <Compile Include="tKeyword.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
@@ -390,6 +387,9 @@
     <Compile Include="tMemberPhot.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
+    <Compile Include="tMsg.cs">
+      <DependentUpon>dbShootShot.tt</DependentUpon>
+    </Compile>
     <Compile Include="tPhotAlbum.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
@@ -397,9 +397,6 @@
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
     <Compile Include="tPhotStyle.cs">
-      <DependentUpon>dbShootShot.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tPMsg.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
     </Compile>
     <Compile Include="tProject.cs">

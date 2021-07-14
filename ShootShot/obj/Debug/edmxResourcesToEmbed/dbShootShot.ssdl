@@ -12,18 +12,6 @@
     <Property Name="fLike" Type="int" />
     <Property Name="fView" Type="int" />
   </EntityType>
-  <EntityType Name="tCMsg">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
-    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-    <Property Name="fMsgTime" Type="smalldatetime" />
-    <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
-    <Property Name="fState" Type="bit" />
-    <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
-  </EntityType>
   <EntityType Name="tKeyword">
     <Key>
       <PropertyRef Name="fId" />
@@ -45,7 +33,7 @@
     <Property Name="fArea" Type="nvarchar" MaxLength="10" />
     <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
     <Property Name="fGender" Type="bit" />
-    <Property Name="fCode" Type="int" />
+    <Property Name="fCode" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tMemberPhot">
     <Key>
@@ -60,6 +48,20 @@
     <Property Name="fOther" Type="nvarchar" MaxLength="100" />
     <Property Name="fFB" Type="nvarchar" MaxLength="100" />
     <Property Name="fIns" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tMsg">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fPMsgTime" Type="smalldatetime" />
+    <Property Name="fPMsg" Type="nvarchar" MaxLength="100" />
+    <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCMsgTime" Type="smalldatetime" />
+    <Property Name="fCMsg" Type="nvarchar" MaxLength="100" />
+    <Property Name="fStates" Type="bit" />
   </EntityType>
   <EntityType Name="tPhotAlbum">
     <Key>
@@ -85,17 +87,6 @@
     <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
     <Property Name="fStyle" Type="nvarchar" MaxLength="10" />
-  </EntityType>
-  <EntityType Name="tPMsg">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
-    <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-    <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
-    <Property Name="fMsgTime" Type="smalldatetime" />
-    <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="tProject">
     <Key>
@@ -132,14 +123,13 @@
   </EntityType>
   <EntityContainer Name="dbShootShotModelStoreContainer">
     <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tCMsg" EntityType="Self.tCMsg" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tKeyword" EntityType="Self.tKeyword" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMsg" EntityType="Self.tMsg" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tPMsg" EntityType="Self.tPMsg" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tProject" EntityType="Self.tProject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tRoles" EntityType="Self.tRoles" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

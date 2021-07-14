@@ -35,6 +35,12 @@ namespace ShootShot.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            // 判斷身分
+            //if (Session[Dictionary.USER_ID] == null)
+            //{
+            //    return RedirectToAction("Login", "LoginAndSignup");
+            //}
+
             dbShootShotEntities db = new dbShootShotEntities();
 			//tMember photog = new tMember();
 			var cemail = "nina1982@gmail.com";

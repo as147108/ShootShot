@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="dbShootShotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="tCMsg">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fMsgTime" Type="DateTime" Precision="0" />
-    <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="fState" Type="Boolean" />
-    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="tProject">
     <Key>
       <PropertyRef Name="fId" />
@@ -105,7 +93,6 @@
     <Property Name="fStyle" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
     <EntitySet Name="tProject" EntityType="Self.tProject" />
     <EntitySet Name="tRoles" EntityType="Self.tRoles" />
     <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
@@ -114,20 +101,9 @@
     <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
     <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
     <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
-    <EntitySet Name="tPMsg" EntityType="dbShootShotModel.tPMsg" />
     <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+    <EntitySet Name="tMsg" EntityType="dbShootShotModel.tMsg" />
   </EntityContainer>
-  <EntityType Name="tPMsg">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fMsgTime" Type="DateTime" Precision="0" />
-    <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="tMember">
     <Key>
       <PropertyRef Name="fId" />
@@ -141,6 +117,20 @@
     <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fGender" Type="Boolean" />
-    <Property Name="fCode" Type="Int32" />
+    <Property Name="fCode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMsg">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPMsgTime" Type="DateTime" Precision="0" />
+    <Property Name="fPMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCMsgTime" Type="DateTime" Precision="0" />
+    <Property Name="fCMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fStates" Type="Boolean" />
   </EntityType>
 </Schema>

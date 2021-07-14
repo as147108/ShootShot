@@ -1,23 +1,41 @@
-﻿<div class="prjMgmt_divForChat">
-<input type="hidden" value="@TempData["PEnail"]"/>
-<p>與攝影師聊聊</p>
-<div class="prjMgmt_divForText">
-	<img src="~/Content/images/login_pic.svg" alt="">
-	<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
-			  aria-valuemax="150">聊聊吧...</textarea>
-	<br>
-	<input type="submit" value="發送">
-</div>
+﻿@model ShootShot.tMsg
+@{
+	Layout = null;
+}
+<div class="prjMgmt_divForChat">
+	<input type="hidden" value="@TempData["PEnail"]" />
+	@using (Html.BeginForm())
+	{
+		<input type="hidden" value="@TempData["OrderNum"]" name="txtOrderNum"><input type="submit" value="與攝影師聊聊&#9660" style="border-radius: 12px; margin: 10px 5px; width: 130px; height: 30px; font-size: 16px;  border: none; color: #242424;">
+	}
+	<div class="prjMgmt_divForText">
+		@*客戶留言*@
+		<img src="~/Content/images/@TempData["CustImg"]" alt="">
+		<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
+				  aria-valuemax="150" placeholder="聊聊吧..."></textarea>
+		<br>
+		<input type="submit" value="發送">
+	</div>
 </div>
 <br>
 <br>
 
 <div class="prjMgmt_divForChat">
 	<img class="chat" src="~/Content/images/chat 1.svg" alt="">
+	@*攝影師回覆*@
 	<div class="prjMgmt_divForMes">
 		<img src="~/Content/images/login_pic.svg" alt="">
 		<p class="memberMes">攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?</p>
 		<p class="mesTime">2021/06/09 13:54:40</p>
 
+	</div>
+
+	<div id="PrjMgmt_divForChat2" name="PrjMgmt_divForChat2" class="PrjMgmt_divForChat">
+		<img class="chat" src="~/Content/images/@TempData["CustImg"]" alt="">
+		<div class="PrjMgmt_divForMes">
+			<img src="~/Content/images/@TempData["PhoImg"]" alt="">
+			<p id="PrjMgmt_pMes" class="memberMes">小B媽你好,已收到你的訂單,我會在依您提供的時間撥電話與您討論!</p>
+			<p class="mesTime">2021/06/09 13:54:40</p>
+		</div>
 	</div>
 </div>

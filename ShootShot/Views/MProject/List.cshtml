@@ -5,12 +5,14 @@
 	ViewBag.Title = "List";
 	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
 	@Styles.Render("~/Content/css/prjMgmt.css")
-	//dbShootShotEntities db = new dbShootShotEntities();
-	//IEnumerable<tProject> custprj = null;
-	//var email = "nina1982@gmail.com"; // 登入email
-	//custprj = from p in db.tProject
-	//		  where p.fCEmail.Contains(email)
-	//		  select p;
+
+
+	//var squares = Enumerable.Range(2, 4).Select(i => i * i);
+	//foreach (var num in squares)
+	//{
+	//	Console.WriteLine(num);
+	//}
+	//Console.WriteLine(squares.GetType());
 }
 
 <!-- #article 右側欄內容：專案卡片carousel效果 end -->
@@ -39,6 +41,7 @@
 	<!-- #article 右側欄內容：卡片區塊slide區塊 start -->
 	<div class="carousel-inner prjMgmt_divForCard">
 		<div class="carousel-item active" data-bs-interval="10000">
+			@*skip skipwhile take*@
 			@foreach (var item in Model)
 			{
 
@@ -104,9 +107,9 @@
 			<p>
 				拍攝日期：@TempData["FilmDate"] <br>
 				拍攝開始時間：@TempData["FilmTime"]<br>
-				拍攝地點：@TempData["City"]/ @TempData["Loc"]<br>
+				拍攝地點：@TempData["City"] / @TempData["Loc"]<br>
 				出圖張數：@TempData["PrintQty"] 張<br>
-				參考連結：@TempData["Style"]
+				專案預算：@TempData["Budget"] 元
 			</p>
 			<br>
 			<p>
@@ -121,6 +124,7 @@
 				@TempData["Req"]
 			</p>
 			<br>
+			<p>參考連結：@TempData["Style"]</p>
 			<p>風格參考</p>
 			<div class="row picture">
 				<div class="col"><img src="~/Content/@TempData["PicUpload"]" alt="" style=""></div>

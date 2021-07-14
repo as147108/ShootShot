@@ -12,13 +12,16 @@ namespace ShootShot
     using System;
     using System.Collections.Generic;
     
-    public partial class tPMsg
+    public partial class tMsg
     {
         public int fId { get; set; }
-        public string fPEmail { get; set; }
         public string fOrderNum { get; set; }
+        public string fPEmail { get; set; }
+        public Nullable<System.DateTime> fPMsgTime { get; set; }
+        public string fPMsg { get; set; }
         public string fCEmail { get; set; }
-        public Nullable<System.DateTime> fMsgTime { get; set; }
-        public string fMsg { get; set; }
+        public Nullable<System.DateTime> fCMsgTime { get; set; }
+        public string fCMsg { get; set; }
+        public Nullable<bool> fStates { get; set; }
     }
 }

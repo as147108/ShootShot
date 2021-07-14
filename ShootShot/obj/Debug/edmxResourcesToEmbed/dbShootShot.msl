@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbShootShotModelStoreContainer" CdmEntityContainer="dbShootShotEntities">
-    <EntitySetMapping Name="tCMsg">
-      <EntityTypeMapping TypeName="dbShootShotModel.tCMsg">
-        <MappingFragment StoreEntitySet="tCMsg">
-          <ScalarProperty Name="fId" ColumnName="fId" />
-          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
-          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-          <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
-          <ScalarProperty Name="fMsg" ColumnName="fMsg" />
-          <ScalarProperty Name="fState" ColumnName="fState" />
-          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tProject">
       <EntityTypeMapping TypeName="dbShootShotModel.tProject">
         <MappingFragment StoreEntitySet="tProject">
@@ -114,18 +101,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tPMsg">
-      <EntityTypeMapping TypeName="dbShootShotModel.tPMsg">
-        <MappingFragment StoreEntitySet="tPMsg">
-          <ScalarProperty Name="fMsg" ColumnName="fMsg" />
-          <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
-          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
-          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
-          <ScalarProperty Name="fId" ColumnName="fId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tMember">
       <EntityTypeMapping TypeName="dbShootShotModel.tMember">
         <MappingFragment StoreEntitySet="tMember">
@@ -138,6 +113,21 @@
           <ScalarProperty Name="fBday" ColumnName="fBday" />
           <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
           <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMsg">
+      <EntityTypeMapping TypeName="dbShootShotModel.tMsg">
+        <MappingFragment StoreEntitySet="tMsg">
+          <ScalarProperty Name="fStates" ColumnName="fStates" />
+          <ScalarProperty Name="fCMsg" ColumnName="fCMsg" />
+          <ScalarProperty Name="fCMsgTime" ColumnName="fCMsgTime" />
+          <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+          <ScalarProperty Name="fPMsg" ColumnName="fPMsg" />
+          <ScalarProperty Name="fPMsgTime" ColumnName="fPMsgTime" />
+          <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+          <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
           <ScalarProperty Name="fId" ColumnName="fId" />
         </MappingFragment>
       </EntityTypeMapping>

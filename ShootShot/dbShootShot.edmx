@@ -17,18 +17,6 @@
           <Property Name="fLike" Type="int" />
           <Property Name="fView" Type="int" />
         </EntityType>
-        <EntityType Name="tCMsg">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
-          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-          <Property Name="fMsgTime" Type="smalldatetime" />
-          <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
-          <Property Name="fState" Type="bit" />
-          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="tKeyword">
           <Key>
             <PropertyRef Name="fId" />
@@ -50,7 +38,7 @@
           <Property Name="fArea" Type="nvarchar" MaxLength="10" />
           <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
           <Property Name="fGender" Type="bit" />
-          <Property Name="fCode" Type="int" />
+          <Property Name="fCode" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tMemberPhot">
           <Key>
@@ -65,6 +53,20 @@
           <Property Name="fOther" Type="nvarchar" MaxLength="100" />
           <Property Name="fFB" Type="nvarchar" MaxLength="100" />
           <Property Name="fIns" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPMsgTime" Type="smalldatetime" />
+          <Property Name="fPMsg" Type="nvarchar" MaxLength="100" />
+          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCMsgTime" Type="smalldatetime" />
+          <Property Name="fCMsg" Type="nvarchar" MaxLength="100" />
+          <Property Name="fStates" Type="bit" />
         </EntityType>
         <EntityType Name="tPhotAlbum">
           <Key>
@@ -90,17 +92,6 @@
           <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
           <Property Name="fStyle" Type="nvarchar" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="tPMsg">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
-          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
-          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
-          <Property Name="fMsgTime" Type="smalldatetime" />
-          <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tProject">
           <Key>
@@ -137,14 +128,13 @@
         </EntityType>
         <EntityContainer Name="dbShootShotModelStoreContainer">
           <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tCMsg" EntityType="Self.tCMsg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tKeyword" EntityType="Self.tKeyword" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tMsg" EntityType="Self.tMsg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tPMsg" EntityType="Self.tPMsg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tProject" EntityType="Self.tProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tRoles" EntityType="Self.tRoles" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -152,18 +142,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbShootShotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="tCMsg">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fMsgTime" Type="DateTime" Precision="0" />
-          <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="fState" Type="Boolean" />
-          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="tProject">
           <Key>
             <PropertyRef Name="fId" />
@@ -257,7 +235,6 @@
           <Property Name="fStyle" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
           <EntitySet Name="tProject" EntityType="Self.tProject" />
           <EntitySet Name="tRoles" EntityType="Self.tRoles" />
           <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
@@ -266,20 +243,9 @@
           <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
           <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
           <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
-          <EntitySet Name="tPMsg" EntityType="dbShootShotModel.tPMsg" />
           <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+          <EntitySet Name="tMsg" EntityType="dbShootShotModel.tMsg" />
         </EntityContainer>
-        <EntityType Name="tPMsg">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fMsgTime" Type="DateTime" Precision="0" />
-          <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="tMember">
           <Key>
             <PropertyRef Name="fId" />
@@ -293,7 +259,21 @@
           <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fGender" Type="Boolean" />
-          <Property Name="fCode" Type="Int32" />
+          <Property Name="fCode" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPMsgTime" Type="DateTime" Precision="0" />
+          <Property Name="fPMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCMsgTime" Type="DateTime" Precision="0" />
+          <Property Name="fCMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fStates" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -301,19 +281,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dbShootShotModelStoreContainer" CdmEntityContainer="dbShootShotEntities">
-          <EntitySetMapping Name="tCMsg">
-            <EntityTypeMapping TypeName="dbShootShotModel.tCMsg">
-              <MappingFragment StoreEntitySet="tCMsg">
-                <ScalarProperty Name="fId" ColumnName="fId" />
-                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
-                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-                <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
-                <ScalarProperty Name="fMsg" ColumnName="fMsg" />
-                <ScalarProperty Name="fState" ColumnName="fState" />
-                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tProject">
             <EntityTypeMapping TypeName="dbShootShotModel.tProject">
               <MappingFragment StoreEntitySet="tProject">
@@ -414,18 +381,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tPMsg">
-            <EntityTypeMapping TypeName="dbShootShotModel.tPMsg">
-              <MappingFragment StoreEntitySet="tPMsg">
-                <ScalarProperty Name="fMsg" ColumnName="fMsg" />
-                <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
-                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
-                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
-                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
-                <ScalarProperty Name="fId" ColumnName="fId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tMember">
             <EntityTypeMapping TypeName="dbShootShotModel.tMember">
               <MappingFragment StoreEntitySet="tMember">
@@ -438,6 +393,21 @@
                 <ScalarProperty Name="fBday" ColumnName="fBday" />
                 <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
                 <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMsg">
+            <EntityTypeMapping TypeName="dbShootShotModel.tMsg">
+              <MappingFragment StoreEntitySet="tMsg">
+                <ScalarProperty Name="fStates" ColumnName="fStates" />
+                <ScalarProperty Name="fCMsg" ColumnName="fCMsg" />
+                <ScalarProperty Name="fCMsgTime" ColumnName="fCMsgTime" />
+                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+                <ScalarProperty Name="fPMsg" ColumnName="fPMsg" />
+                <ScalarProperty Name="fPMsgTime" ColumnName="fPMsgTime" />
+                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
               </MappingFragment>
             </EntityTypeMapping>
