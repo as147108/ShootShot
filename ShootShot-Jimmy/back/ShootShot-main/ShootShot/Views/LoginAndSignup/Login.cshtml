@@ -1,0 +1,44 @@
+﻿@model ShootShot.Models.tMember
+@{
+    ViewBag.Title = "Login";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/css/login.css">
+</head>
+<body>
+    <section>
+        <div class="JnL_container">
+            <div class="JnL_leftside ">
+                <img src="~/Content/img/Lside.png" alt="" />
+            </div>
+            <div class="JnL_rightside">
+                <form action="" method="POST">
+                    <div>
+                        <p class="login_p3">Login</p>
+                    </div>
+
+                    <div class="login_form">
+                        <input class="JnL_Form_style" id="username" type="email" name="username" required placeholder="請輸入帳號(電子郵件)" /><br />
+                        <input class="JnL_Form_style" id="psw" name="password" type="password" required placeholder="請輸入密碼" /><br />
+                        <button class="login_btn" type="submit"><a class="FFF">登入</a></button><br />
+                        <div><span style="color:red" class="msg">@ViewBag.LoginMsg</span></div>
+
+                    </div>
+                    <div class="login_detail">
+                        <a href="#" class="login_a2">忘記密碼</a>
+                        <div class="login_p4">
+                            <p>沒有帳號嗎?<a href="./mbrJoin.html"> 加入ShootShot</a></p>
+                        </div>
+                    </div>
+                    <div class="login_otherway">
+                        <box class="login_line"></box>
+                        <p class="login_p5">透過下列帳號登入</p>
+                        <a href="#"><img class="login_otherway_img" src="~/Content/img/google.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
