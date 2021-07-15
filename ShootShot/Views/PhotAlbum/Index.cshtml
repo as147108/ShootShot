@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet"href="~/Content/css/phoAlbum.css" />
+
+</head>
+<body>
+
+    <!-- #region navbar請勿更改 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto align-items-center">
+
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
+                        <img src="./img/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             style="width: 70px;height: 70px;border-radius: 50px;">
+                        <div class="dropdown-menu">
+                            <a href="index.html" class="dropdown-item">登入</a>
+                            <a href="./member.html" class="dropdown-item">設定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+    <!-- #region 妳的html -->
+    <div class="divnavbar"></div>
+    <!-- #article 左側欄按鈕區塊 -->
+    <article id="phoAlbum_artForbtn" name="phoAlbum_artForbtn" class="phoAlbum_artForbtn">
+        <div class="leftbutton">
+
+            <button id="phoAlbum_btnMInfo" name="phoAlbum_btnMInfo">
+                <a href="./member.html" id="phoAlbum_btnPjtMember" name="phoAlbum_btnPjtMember">會員基本資料</a>
+            </button>
+
+            <button id="phoAlbum_btnPjtManage" name="phoAlbum_btnPjtManage">
+                <a href="./prjMgmt.html">專案管理</a>
+            </button>
+
+            <button class="pageone" id="phoAlbum_btnPOpen" name="phoAlbum_btnPOpen">
+                <a href="./phoVerif.html" id="phoAlbum_alinkPOpen" name="phoAlbum_alinkPOpen">攝影師</a>
+            </button>
+
+            <!-- 開通攝影師功能按鈕start -->
+            <button class="photographer" id="phoAlbum_btnPOpen" name="phoAlbum_btnPOpen">
+                <a href="./phoMgmt.html" id="phoAlbum_alinkPOpen" name="phoAlbum_alinkPOpen">攝影師基本資料</a>
+            </button>
+            <button class="pagetwo photographer" id="phoAlbum_btnPOpen" name="phoAlbum_btnPOpen">
+                <a href="./phoAlbum.html" id="phoAlbum_alinkPOpen" name="phoAlbum_alinkPOpen">我的相簿</a>
+            </button>
+            <button class="photographer" id="phoAlbum_btnPOpen" name="phoAlbum_btnPOpen">
+                <a href="./phoPrjMgmt.html" id="phoAlbum_alinkPOpen" name="phoAlbum_alinkPOpen">預約管理</a>
+            </button>
+            <!-- 開通攝影師功能按鈕end -->
+
+            <button id="phoAlbum_btnBackIndex" name="phoAlbum_btnBackIndex">
+                <a href="./index.html">回首頁</a>
+            </button>
+        </div>
+
+    </article>
+
+    <!-- #article 右側欄內容：相簿編輯區塊 -->
+    <article class="phoAlbum_artForAlbum">
+
+        <!--------------------------------------------------->
+        <!-- #article 右側欄內容：相簿卡片carousel效果 start -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+            <!--------------------------------------->
+            <!-- #article 右側欄內容：相簿按鈕 start -->
+            <div class="phoAlbum_divForbtnAlbum">
+                <button>新增相簿</button>
+                <button class="white">編輯</button>
+                <button class="white">隱藏</button>
+                <button class="white">刪除</button>
+            </div>
+
+
+            <!------------------------------------------------>
+            <!-- #article 右側欄內容：卡片區塊slide區塊 start -->
+            <div class="carousel-inner phoAlbum_divForCard">
+                <!-- #article 右側欄內容：卡片區塊slide1 -->
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <!-- #article 右側欄內容：卡片1-1 -->
+                    <div class="card">
+                        <a href="">
+                            <img src="./img/AnnaShvets/animal/animal1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">動物</p>
+                                <p class="card-text">12件作品</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- #article 右側欄內容：卡片1-2 -->
+                    <div class="card">
+                        <a href="">
+                            <img src="./img/AnnaShvets/flowershop/flowershop1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">花店</p>
+                                <p class="card-text">14件作品</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- #article 右側欄內容：卡片1-3 -->
+                    <div class="card">
+                        <a href="">
+                            <img src="./img/AnnaShvets/pizzera/pizzera1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">pizza</p>
+                                <p class="card-text">13件作品</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- #article 右側欄內容：卡片區塊slide2 -->
+                <div class="carousel-item" data-bs-interval="2000">
+                    <!-- #article 右側欄內容：卡片2-1 -->
+                    <div class="card">
+                        <a href="">
+                            <img src="./img/AnnaShvets/surfing/surfing1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">衝浪</p>
+                                <p class="card-text">12件作品</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- #article 右側欄內容：卡片2-2 -->
+                    <div class="card">
+                        <a href="">
+                            <img src="./img/gallery.svg" class="card-img-top noalbum" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">女孩</p>
+                                <p class="card-text">0件作品</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- #article 右側欄內容：卡片2-3 -->
+                    <div class="card" hidden>
+                        <a href=""></a>
+                        <img src="./img/product.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">商品形象照</p>
+                            <p class="card-text">8件作品</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- #article 右側欄內容：卡片區塊slide區塊end -->
+            <!--------------------------------------------->
+            <!-------------------------------------------->
+            <!-- #article 右側欄內容：卡片區塊arrow start -->
+            <div class="phoAlbum_divForArrow">
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span "><img src="./img/arrows.svg" alt=""></span>
+                </button>
+            </div>
+            <!-- #article 右側欄內容：卡片區塊arrow end -->
+            <!------------------------------------------>
+
+
+        </div>
+        <!-- #article 右側欄內容：專案卡片carousel效果 end -->
+        <!------------------------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <br>
+        <!--------------------------------------->
+        <!-- #article 右側欄內容：相片區塊 start -->
+        <div class="phoAlbum_artForPhoto">
+            <!--------------------------------------->
+            <!-- #article 右側欄內容：相片按鈕 start -->
+            <div class="phoAlbum_divForbtnPhoto">
+                <button>新增照片</button>
+                <button class="cover">設為相簿封面</button>
+                <button class="white">編輯</button>
+                <button class="white">刪除</button>
+            </div>
+
+            <!--------------------------------------->
+            <!-- #article 右側欄內容：照片排列 start -->
+            <div>
+                <h1>動物</h1>
+                <br>
+                <div class="row phoAlbum_divForPhoto">
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal1.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal2.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal3.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal4.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal5.jpeg" alt=""></a></div>
+
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal6.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal7.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal8.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal9.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal10.jpeg" alt=""></a></div>
+
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal11.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="./img/AnnaShvets/animal/animal12.jpeg" alt=""></a></div>
+                    <div class="col"><a href=""><img src="" alt="" hidden></a></div>
+                    <div class="col"><a href=""><img src="" alt="" hidden></a></div>
+                    <div class="col"><a href=""><img src="" alt="" hidden></a></div>
+
+                </div>
+                <!-- #article 右側欄內容：照片排列 end -->
+                <!------------------------------------->
+
+            </div>
+            <!-- #article 右側欄內容：相片區塊 end -->
+            <!------------------------------------->
+
+
+
+
+    </article>
+
+
+
+
+    <!-- #region footer請勿更改 -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>保留</h2>
+                        <a href="">保留</a>
+                        <a href="">保留</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p>
+                            <i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">
+        &#169; copyright ©
+        2021 | ShootShot. All Rights Reserved
+    </div>
+    <!-- endregion -->
+    <!-- #region backToUp請勿更改 -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- $endregion -->
+    <!-- #region js請勿更改 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="js/main.js"></script>
+    <!-- #endregion -->
+</body>
+
