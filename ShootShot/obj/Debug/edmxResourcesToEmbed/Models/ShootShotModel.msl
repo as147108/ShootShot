@@ -146,6 +146,7 @@
     <EntitySetMapping Name="tMember">
       <EntityTypeMapping TypeName="dbShootShotModel.tMember">
         <MappingFragment StoreEntitySet="tMember">
+          <ScalarProperty Name="fImgpath" ColumnName="fImgpath" />
           <ScalarProperty Name="fCode" ColumnName="fCode" />
           <ScalarProperty Name="fGender" ColumnName="fGender" />
           <ScalarProperty Name="fPassword" ColumnName="fPassword" />

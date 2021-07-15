@@ -1,4 +1,5 @@
 ﻿using ShootShot.Models;
+using ShootShot.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +24,13 @@ namespace ShootShot.Controllers
             dbShootShotEntities db = new dbShootShotEntities();
             int id = (int)Session[Dictionary.USER_ID];
             tMember member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
-
-            return View(member);
+            vmMember vm = new vmMember();
+            vm.member = member;
+            return View(vm);
         }
 
         [HttpPost]
-        public ActionResult EditProfile(tMember member)
+        public ActionResult EditProfile(vmMember member)
         {
             if (Session[Dictionary.USER_ID] == null)
             {
@@ -39,6 +41,9 @@ namespace ShootShot.Controllers
             tMember tm = db.tMember.Where(t => t.fId == id).FirstOrDefault();
             if (tm != null)
             {
+                string photoName = Guid.NewGuid().ToString() + ".jpg";
+                member.profilePhoto.SaveAs(Server.MapPath("~/Content/img/profile/") + photoName);
+                tm.fImgpath= "/" + photoName;
                 tm.fName = Request.Form["name"];
                 tm.fTel = Request.Form["phone"];
                 tm.fArea = Request.Form["city"];
@@ -46,7 +51,9 @@ namespace ShootShot.Controllers
                 db.SaveChanges();
                 @ViewBag.successful = "修改成功";
             }
-            return View(tm);
+            vmMember vm = new vmMember();
+            vm.member = tm;
+            return View(vm);
             
         }
     }

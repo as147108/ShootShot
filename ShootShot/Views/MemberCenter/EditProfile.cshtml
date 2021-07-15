@@ -1,4 +1,4 @@
-﻿@model ShootShot.Models.tMember
+﻿@model ShootShot.ViewModels.vmMember
 @{
     ViewBag.Title = "EditProfile";
 }
@@ -32,24 +32,27 @@
         </div>
 
     </article>
-
     <!-- #article 右側欄內容：會員資料更新區塊 -->
     <article class="member_artForform">
         <div class="editmemberform">
-            <form action="~/MemberCenter/EditProfile" method="post">
+            <form action="~/MemberCenter/EditProfile" method="post" enctype="multipart/form-data">
                 <!-- 照片區塊 -->
                 <div class="photo">
                     <label for="">相片</label>
                     <div class="image">
-                        <img class="pic" src="~/Content/img/login_pic.svg" alt="">
+                        <img style="border-radius:360px" id="profilephoto" src="~/Content/img/profile/@Model.member.fImgpath" alt="" class="pic">
                     </div>
-                    <a class="image" href="">修改</a>
+                    <label class="btn btn-danger">
+                        修改<input onchange="showImg(this)" id="upload" type="file" name="profilePhoto" class="image" value="修改" accept="image/png, image/jpeg, image/gif, image/jpg" style="width: 0px;height: 0px;overflow: hidden;">
+                    </label>
+                    @*<a class="image" href="">修改</a>*@
+
                 </div>
                 <!-- 姓名生日 -->
                 <div>
                     <div class="namebirth">
                         <label for="">姓名 </label>
-                        <input name="name" class="name" type="text" value="@Model.fName" required />
+                        <input name="name" class="name" type="text" value="@Model.member.fName" required />
                         <a href="">修改</a>
                     </div>
                     <br>
@@ -68,14 +71,20 @@
                 <!-- 電話 -->
                 <div class="phone">
                     <label for="">電話 </label>
-                    <input type="tel" name="phone" value="@Model.fTel" required />
+                    <input type="tel" name="phone" value="@Model.member.fTel" required />
+                    <a href="">修改</a>
+                </div>
+                <br>
+                <div class="phone">
+                    <label for="">Email </label>
+                    <input disabled type="email" name="phone" value="@Model.member.fEmail" required />
                     <a href="">修改</a>
                 </div>
                 <br>
                 <!-- 地區 -->
                 <div class="region">
                     <label for="">地區 </label>
-                    <input disabled type="tel" name="phone" value="@Model.fArea" required />
+                    <input disabled type="tel" name="phone" value="@Model.member.fArea" required />
                     @*<select class="city" name="city" id="selCity" required>
                             <option selected disabled value="" hidden>@Model.fArea</option>
                             <option value="基隆市">基隆市</option>
@@ -103,7 +112,7 @@
                 <!-- 性別 -->
                 @{
                     string gender = "";
-                    if (@Model.fGender == 0)
+                    if (@Model.member.fGender == 0)
                     {
                         gender = "男";
                     }
@@ -162,3 +171,18 @@
 
     </article>
 </body>
+<script>
+    function showImg(thisimg) {
+        var file = thisimg.files[0];
+        if (window.FileReader) {
+            var fr = new FileReader();
+
+            var showimg = document.getElementById('profilephoto');
+            fr.onloadend = function (e) {
+                showimg.src = e.target.result;
+            };
+            fr.readAsDataURL(file);
+            showimg.style.display = 'block';
+        }
+    }
+</script>
