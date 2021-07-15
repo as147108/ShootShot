@@ -40,7 +40,7 @@
                 <div class="photo">
                     <label for="">相片</label>
                     <div class="image">
-                        <img id="profilephoto" src="~/Content/img/profile/@Model.member.fImgpath" alt="" class="pic">
+                        <img id="profilephoto" src="~/Content/img/profile/@Model.member.fImgpath" alt="" class="pic" >
                     </div>
                     <label class="btn btn-outline-danger" style="height:30px; width:50px; border-radius:15px; font-size:12px; padding-top:0px; margin-top:5px;">
                         修改<input onchange="showImg(this)" id="upload" type="file" name="profilePhoto" class="image" value="修改" accept="image/png, image/jpeg, image/gif, image/jpg" style="width: 0px;height: 0px;overflow: hidden;">
@@ -125,7 +125,6 @@
                 <div class="sex" style="background-color:lavender">
                     <label for="">性別 </label>
                     <input style="background-color:lavender" disabled type="text" value="@gender">
-                    <span style="color:red;font-size:0.6rem">@ViewBag.successful</span>
                     @*<select class="sex" name="sex" id="sex">
                 <option selected disabled value="" hidden>請選擇性別</option>
                 <option value="0">男性</option>
@@ -134,12 +133,15 @@
             </select>*@
 
                 </div>
-                <br>
-                <br>
+
                 <div class="submit">
+                    <span style="color:red;font-size:0.6rem">@ViewBag.successful</span>
+                    <br>
                     <img class="submit" src="~/Content/img/arrows.svg" alt="">
                     <input class="submit" type="submit" value="資料修改">
                 </div>
+                <br>
+                
             </form>
             <br />
             <br />

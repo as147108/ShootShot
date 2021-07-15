@@ -300,80 +300,8 @@ article form input.submit {
   
 }
 
-/* 密碼 */
-form div.member_divForpass{
-  border: solid #7dffd1;
-  background-color: #7dffd1;
-  border-radius: 15px;
-  width: 624px;
-  height: 200px;
-}
-
-form div.member_divForpass p{
-  padding: 10px 20px 0px 20px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-form div.oldpassword {
-  padding: 10px 20px;
-  height: 52px;
-  vertical-align: middle;
-}
-
-form div.oldpassword label{
-  padding: 0px;
-  margin: 0px;
-}
-
-form div.oldpassword input{
-  width: 185px;
-  border-radius: 10px;
-  height: 30px;
-  margin: 0px 5px;
-}
-
-form div.newpassword {
-  padding: 10px 20px;
-  height: 52px;
-  vertical-align: middle;
-  float: left;
-}
-
-form div.newpassword label{
-  padding: 0px;
-  margin: 0px;
-}
-
-form div.newpassword input{
-  width: 185px;
-  border-radius: 10px;
-  height: 30px;
-  margin: 0px 5px;
-}
-form div.newpassword2 {
-  padding: 10px 20px;
-  height: 52px;
-  vertical-align: middle;
-  float: left;
-}
-
-form div.newpassword2 label{
-  padding: 0px;
-  margin: 0px;
-}
-
-form div.newpassword2 input{
-  width: 185px;
-  border-radius: 10px;
-  height: 30px;
-  margin: 0px 5px;
-}
-
-
-
 @media screen and (max-width: 1135px) {
-  article div.editmemberform {
+    article div.editmemberform {
     /* border: solid black; */
     width: 900px;
     height: 800px;
