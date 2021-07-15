@@ -29,11 +29,11 @@ namespace ShootShot.Controllers
             {
                 ViewBag.Error = false;
                 var temp = db.tPhotAlbum.Where(m => m.fEmail == album.fEmail).FirstOrDefault();
-                if (temp != null)
-                {
-                    ViewBag.Error = true;
-                    return View(album);
-                }
+                //if (temp != null)
+                //{
+                //    ViewBag.Error = true;
+                //    return View(album);
+                //}
                 db.tPhotAlbum.Add(album);
                 db.SaveChanges();
                 return RedirectToAction("Index");
