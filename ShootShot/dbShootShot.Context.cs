@@ -28,12 +28,12 @@ namespace ShootShot
         public virtual DbSet<tProject> tProject { get; set; }
         public virtual DbSet<tRoles> tRoles { get; set; }
         public virtual DbSet<tAlbumPhoto> tAlbumPhoto { get; set; }
-        public virtual DbSet<tKeyword> tKeyword { get; set; }
         public virtual DbSet<tMemberPhot> tMemberPhot { get; set; }
         public virtual DbSet<tPhotAlbum> tPhotAlbum { get; set; }
         public virtual DbSet<tPhotArea> tPhotArea { get; set; }
         public virtual DbSet<tPhotStyle> tPhotStyle { get; set; }
-        public virtual DbSet<tMember> tMember { get; set; }
         public virtual DbSet<tMsg> tMsg { get; set; }
+        public virtual DbSet<tKeyword> tKeyword { get; set; }
+        public virtual DbSet<tMember> tMember { get; set; }
     }
 }

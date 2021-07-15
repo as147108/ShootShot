@@ -22,7 +22,8 @@ namespace ShootShot
         public string fTel { get; set; }
         public string fArea { get; set; }
         public string fPassword { get; set; }
-        public Nullable<bool> fGender { get; set; }
+        public int fGender { get; set; }
         public int fCode { get; set; }
+        public string fImgpath { get; set; }
     }
 }

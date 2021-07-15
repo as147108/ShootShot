@@ -16,7 +16,10 @@ namespace ShootShot.Controllers
 
             dbShootShotEntities db = new dbShootShotEntities();
             // 由orderNO & CEmail列出舊有留言
-            var email = "nina1982@gmail.com";
+            int id = 4;
+            //int id = (int)Session[Dictionary.USER_ID];
+            var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+            string cemail = member.fEmail.ToString();
             string OrderNo = Request.Form["txtOrderNum"];           
             string PfEmail = (from prj in db.tProject where prj.fOrderNum == OrderNo select new { prj.fPEmail }).ToString(); 
             if (string.IsNullOrEmpty(OrderNo))
@@ -26,27 +29,28 @@ namespace ShootShot.Controllers
             else
             {
 				// 列出客戶所有訂單留言
-				tMsg custMsg = db.tMsg.OrderBy(m => m.fId).FirstOrDefault(m => m.fCEmail == email);
+				tMsg custMsg = db.tMsg.OrderBy(m => m.fId).FirstOrDefault(m => m.fCEmail == cemail);
 				// 搜尋特定訂單留言並依據fid排序
 				var tMsgs = db.tMsg.Where(t => t.fOrderNum == OrderNo).OrderBy(t => t.fId).FirstOrDefault();
 				// 攝影師註冊登入照片
-				var PtMember = db.tMember.Where(m => m.fEmail == PfEmail).FirstOrDefault()?.fPhoto?? "未上傳照片.png";					
+				var PtMember = db.tMember.Where(m => m.fEmail == PfEmail).FirstOrDefault()?.fPhoto?? "login_pic.svg";					
                 if (!string.IsNullOrEmpty(PtMember))
                      TempData["PhoImg"] = PtMember.ToString();
 
                 // 客戶註冊登入照片
                 string CfEmail = (from prj in db.tProject where prj.fOrderNum == OrderNo select new { prj.fCEmail }).ToString();
-                var CtMember = db.tMember.Where(m => m.fEmail == CfEmail).FirstOrDefault()?.fPhoto ?? "未上傳照片.png";
+                var CtMember = db.tMember.Where(m => m.fEmail == CfEmail).FirstOrDefault()?.fPhoto ?? "login_pic.svg";
                 if (!string.IsNullOrEmpty(CtMember))
                 {
                     TempData["CustImg"] = CtMember.ToString();
                 }
-                else {TempData["CustImg"] = "未上傳照片.png";}
+                else {TempData["CustImg"] = "login_pic.svg";}
 
                 //foreach列出 , 當states = false & fPMsg != null 產生回覆按鈕點擊後產生textarea,input type = "submit",
 
                 var states = db.tMsg.Where(m => m.fOrderNum == OrderNo).FirstOrDefault()?.fStates;
-				if (states!= true)
+                var pmsg = db.tMsg.Where(m => m.fStates == false).FirstOrDefault()?.fPMsg;
+				if (pmsg != null)
 				{
                     // 自己留言攝影師未回
 
@@ -56,8 +60,9 @@ namespace ShootShot.Controllers
 				}
 				else
 				{
+                    ViewBag.IsAutoHidden = "none";
 
-				}
+                }
 
 
 				//foreach列出 ,視窗最後產生textarea,input type = "submit"=>在最上方
@@ -65,24 +70,40 @@ namespace ShootShot.Controllers
 			//return View();
 			return PartialView();
 		}
-        //[HttpPost]
-        //public ActionResult _MsgPartial()
-        //{
-        //    ModelState.Clear();
-        //    return RedirectToAction("_MsgPartial");
-        //}
+		//[HttpPost]
+  //      public ActionResult List()
+		//{
+		//	dbShootShotEntities db = new dbShootShotEntities();
+		//	tMsg msg = new tMsg();
+		//	int id = 4;
+		//	//int id = (int)Session[Dictionary.USER_ID];
+		//	var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+		//	string cemail = member.fEmail.ToString();
+		//	msg.fCMsg = Request.Form["chattext"];
+		//	msg.fCMsgTime = DateTime.Now;
+		//	msg.fCEmail = cemail;
+		//	if (msg.fPMsg == null)
+		//		msg.fStates = false;
+		//	else { msg.fStates = true; }
+		//	db.tMsg.Add(msg);
+		//	db.SaveChanges();
+		//	ModelState.Clear();
+  //          return View("List");
+  //      }
 
-        // GET: MProject
-        public ActionResult List()
+		// GET: MProject
+		public ActionResult List()
         {
             dbShootShotEntities db = new dbShootShotEntities();
             // 列出客戶所有專案
-            IEnumerable<tProject> custprj = null;
-            var email = "nina1982@gmail.com"; // 登入email
-            custprj = from p in db.tProject
-                      where p.fCEmail.Contains(email)
-                      select p;
-
+            IEnumerable<tProject> project = null;
+            int id = 4;
+            //int id = (int)Session[Dictionary.USER_ID];
+            var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+            string cemail = member.fEmail.ToString();
+            project = from p in db.tProject where p.fCEmail.Contains(cemail) select p;
+            //MProjectViewModel mcprj = new MProjectViewModel();
+            //mcprj.project = (tProject)project;
             // 詳細專案訊息
             string OrderNo = Request.Form["txtOrderNum"];
 			if (string.IsNullOrEmpty(OrderNo))
@@ -119,20 +140,46 @@ namespace ShootShot.Controllers
                 {
                     TempData["PicUpload"] = prj.fPicUpload.ToString();
                 }
+                // 攝影師註冊登入照片
+                var PtMember = db.tMember.Where(m => m.fEmail == pemail).FirstOrDefault()?.fPhoto ?? "login_pic.svg";
+                if (!string.IsNullOrEmpty(PtMember))
+                    TempData["PhoImg"] = PtMember.ToString();
+
+                // 客戶註冊登入照片
+                var CPhoto = db.tMember.Where(m => m.fEmail == cemail).FirstOrDefault()?.fPhoto ?? "login_pic.svg";
+                if (!string.IsNullOrEmpty(CPhoto))
+                {
+                    TempData["CustImg"] = CPhoto.ToString();
+                }
+                else { TempData["CustImg"] = "login_pic.svg"; }
+
+
             }
-			 return View(custprj);
+			 return View(project);
 		}
 
 		// GET: MProject/Details/5
-		public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // GET: MProject/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-    }
+
+		// GET: MProject/Create
+		//[HttpPost]
+		//public ActionResult List()
+		//{
+		//	dbShootShotEntities db = new dbShootShotEntities();
+		//	tMsg msg = new tMsg();
+  //          int id = 4;
+  //          //int id = (int)Session[Dictionary.USER_ID];
+  //          var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+  //          string cemail = member.fEmail.ToString();
+  //          msg.fCMsg = Request.Form["chattext"];
+		//	msg.fCMsgTime = DateTime.Now;
+		//	msg.fCEmail = cemail;
+		//	if (msg.fPMsg == null)
+		//		msg.fStates = false;
+		//	else { msg.fStates = true; }
+		//	db.tMsg.Add(msg);
+		//	db.SaveChanges();
+		//	return RedirectToAction("List");
+		//}
+	}
 }

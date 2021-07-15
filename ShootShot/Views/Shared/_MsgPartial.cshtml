@@ -1,41 +1,69 @@
-﻿@model ShootShot.tMsg
+﻿@model IEnumerable<ShootShot.tMsg>
 @{
 	Layout = null;
+	dbShootShotEntities db = new dbShootShotEntities();
+	var email = "nina1982@gmail.com";
+	string OrderNo = Request.Form["txtOrderNum"];
+	// 列出客戶所有訂單留言
+	tMsg custMsg = db.tMsg.OrderBy(m => m.fId).FirstOrDefault(m => m.fCEmail == email);
+	// 搜尋特定訂單留言並依據fid排序
+	IEnumerable<tMsg> msg = null;
+	msg = from m in db.tMsg where m.fCEmail.Contains(email) & m.fOrderNum.Contains(OrderNo) select m;
+	//var tMsgs = db.tMsg.Where(t => t.fOrderNum == TempData["OrderNum"]).OrderBy(t => t.fId).FirstOrDefault();
+
 }
-<div class="prjMgmt_divForChat">
-	<input type="hidden" value="@TempData["PEnail"]" />
-	@using (Html.BeginForm())
+
+@{
+	//foreach列出 , 當states = false & fPMsg != null 產生回覆按鈕點擊後產生textarea,input type = "submit",
+	var states = from m in db.tMsg where m.fOrderNum == TempData["OrderNum"] select m.fStates;
+
+	var pmsg = db.tMsg.Where(m => m.fStates == false).FirstOrDefault();
+	if (pmsg != null)
 	{
-		<input type="hidden" value="@TempData["OrderNum"]" name="txtOrderNum"><input type="submit" value="與攝影師聊聊&#9660" style="border-radius: 12px; margin: 10px 5px; width: 130px; height: 30px; font-size: 16px;  border: none; color: #242424;">
+		// 自己留言攝影師未回
+
+		// 攝影師留言自己未回
+		ViewBag.IsAutoHidden = "";
+		// 未將物件設定為參考執行個體
+		//TempData["HTML"] = "<div class='prjMgmt_divForMes'>"+"<img src='~/ Content / images / login_pic.svg'>"+"<p class='memberMes'>"+"攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?"+"</p>< p class='mesTime'>"+"2021/06/09 13:54:40</p></div>";
 	}
-	<div class="prjMgmt_divForText">
-		@*客戶留言*@
-		<img src="~/Content/images/@TempData["CustImg"]" alt="">
-		<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
-				  aria-valuemax="150" placeholder="聊聊吧..."></textarea>
-		<br>
-		<input type="submit" value="發送">
-	</div>
-</div>
-<br>
-<br>
+	else
+	{
+		ViewBag.IsAutoHidden = "none";
+
+	}
+}
+<!--------------------------------->
+<!-- #article 右側欄內容：留言板區塊 -->
+
 
 <div class="prjMgmt_divForChat">
 	<img class="chat" src="~/Content/images/chat 1.svg" alt="">
 	@*攝影師回覆*@
 	<div class="prjMgmt_divForMes">
-		<img src="~/Content/images/login_pic.svg" alt="">
-		<p class="memberMes">攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?</p>
-		<p class="mesTime">2021/06/09 13:54:40</p>
-
+		<img src="~/Content/images/@TempData["CustImg"]" alt="">
+		@foreach (var item in msg)
+		{<p class="memberMes">@item.fCMsg</p>
+		<p class="mesTime">@item.fCMsgTime</p>
+	}
 	</div>
-	<% TempData["HTML"] %>
-	<div id="PrjMgmt_divForChat2" name="PrjMgmt_divForChat2" class="PrjMgmt_divForChat">
-		<img class="chat" src="~/Content/images/@TempData["CustImg"]" alt="">
+
+
+	<div id="PrjMgmt_divForChat2" name="PrjMgmt_divForChat2" class="PrjMgmt_divForChat" style="display:" @ViewBag.IsAutoHidden ">
 		<div class="PrjMgmt_divForMes">
-			<img src="~/Content/images/@TempData["PhoImg"]" alt="">
-			<p id="PrjMgmt_pMes" class="memberMes">小B媽你好,已收到你的訂單,我會在依您提供的時間撥電話與您討論!</p>
-			<p class="mesTime">2021/06/09 13:54:40</p>
+			<img src="~/Content/images/@TempData[" PhoImg"]" alt="">
+			@foreach (var item in msg)
+			{
+
+				<p id="memberMes" class="memberMes">@item.fPMsg</p>
+				<p class="mesTime">@item.fPMsgTime</p>
+
+				<div class="prjMgmt_divForText">
+					<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2" aria-valuemax="150" placeholder="回覆去..."></textarea>
+					<br>
+					<input type="submit" value="回覆">
+				</div>
+			}
 		</div>
 	</div>
 </div>

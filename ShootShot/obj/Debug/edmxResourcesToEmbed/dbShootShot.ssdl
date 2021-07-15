@@ -32,8 +32,9 @@
     <Property Name="fTel" Type="nvarchar" MaxLength="20" />
     <Property Name="fArea" Type="nvarchar" MaxLength="10" />
     <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
-    <Property Name="fGender" Type="bit" />
-    <Property Name="fCode" Type="int" Nullable="false" />
+    <Property Name="fGender" Type="int" />
+    <Property Name="fCode" Type="int" />
+    <Property Name="fImgpath" Type="nchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tMemberPhot">
     <Key>

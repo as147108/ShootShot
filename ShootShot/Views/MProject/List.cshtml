@@ -1,8 +1,8 @@
-﻿@using ShootShot.ViewModels
-
-@model IEnumerable<ShootShot.tProject>
+﻿
+@model IEnumerable<tProject>
 @{
 	ViewBag.Title = "List";
+
 	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
 	@Styles.Render("~/Content/css/prjMgmt.css")
 
@@ -68,6 +68,7 @@
 			@foreach (var item in Model)
 			{
 				string photo = item.fPicUpload;
+				<input type="hidden" name="txtcemail" value="@item.fCEmail" />
 				<div class="card">
 					<img src="~/Content/@photo" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -141,9 +142,23 @@
 <!-- #article 右側欄內容：專案內容區塊 -->
 <!----------------------------------->
 @*</div>*@
-
-<!--------------------------------->
-<!-- #article 右側欄內容：留言板區塊 -->
+<div class="prjMgmt_divForChat">
+	@*<input type="hidden" value="@TempData["PEnail"]" />*@
+	<p>與攝影師聊聊</p>
+	<div class="prjMgmt_divForText">
+		@*客戶留言*@
+		<img src="~/Content/images/@TempData["CustImg"]" alt="">
+		@using (Html.BeginForm())
+		{
+			<form>
+				<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
+						  aria-valuemax="150" placeholder="聊聊吧..."></textarea>
+				<br>
+				<input type="submit" value="發送" />
+			</form>
+		}
+	</div>
+</div>
 
 
 	@{
