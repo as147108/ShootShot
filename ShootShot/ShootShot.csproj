@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FEE0533B-577B-4668-AAA4-A481B51A7D29}</ProjectGuid>
+    <ProjectGuid>{6F79EC46-BE0C-4469-A2CE-5A1967C913A7}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44333</IISExpressSSLPort>
+    <IISExpressSSLPort>44322</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,18 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -129,414 +121,22 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginAndSignupController.cs" />
-    <Compile Include="Controllers\MemberCenterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Dictionary.cs" />
-    <Compile Include="Models\ShootShotModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShootShotModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ShootShotModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ShootShotModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShootShotModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tAlbumPhoto.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tCMsg.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tKeyword.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tMember.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tMemberPhot.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPhotAlbum.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPhotArea.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPhotStyle.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPjtDetailType.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPjtDetailUpload.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tPMsg.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tProject.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tRoles.cs">
-      <DependentUpon>ShootShotModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\img\arrows.svg" />
-    <Content Include="Content\css\index.css" />
-    <Content Include="Content\css\indexHeader.css" />
-    <Content Include="Content\css\indexOther.css" />
-    <Content Include="Content\css\login.css" />
-    <Content Include="Content\css\member.css" />
-    <Content Include="Content\css\signup.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\img\AnnaShvets\animal\animal1.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal10.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal11.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal12.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal2.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal3.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal4.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal5.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal6.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal7.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal8.jpeg" />
-    <Content Include="Content\img\AnnaShvets\animal\animal9.jpeg" />
-    <Content Include="Content\img\AnnaShvets\AnnaShvets.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop1.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop10.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop11.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop12.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop13.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop14.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop2.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop3.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop4.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop5.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop6.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop7.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop8.jpeg" />
-    <Content Include="Content\img\AnnaShvets\flowershop\flowershop9.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera1.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera10.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera11.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera12.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera13.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera2.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera3.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera4.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera5.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera6.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera7.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera8.jpeg" />
-    <Content Include="Content\img\AnnaShvets\pizzera\pizzera9.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing1.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing10.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing11.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing12.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing2.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing3.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing4.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing5.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing6.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing7.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing8.jpeg" />
-    <Content Include="Content\img\AnnaShvets\surfing\surfing9.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day1.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day10.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day2.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day3.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day4.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day5.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day6.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day7.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day8.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\bad-day\bad-day9.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\cottonbro-studio-user.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band1.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band10.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band11.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band12.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band13.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band2.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band3.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band4.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band5.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band6.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band7.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band8.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\music-band\music-band9.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city1.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city10.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city11.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city12.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city13.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city14.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city15.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city16.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city2.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city3.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city4.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city5.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city6.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city7.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city8.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\night-city\night-city9.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black1.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black10.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black11.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black12.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black13.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black14.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black15.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black2.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black3.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black4.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black5.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black6.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black7.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black8.jpeg" />
-    <Content Include="Content\img\cottonbro-studio\snow-black\snow-black9.jpeg" />
-    <Content Include="Content\img\google.svg" />
-    <Content Include="Content\img\Group79.png" />
-    <Content Include="Content\img\indexAblum_1.jpg" />
-    <Content Include="Content\img\indexAblum_10.jpg" />
-    <Content Include="Content\img\indexAblum_11.jpg" />
-    <Content Include="Content\img\indexAblum_12.jpg" />
-    <Content Include="Content\img\indexAblum_13.jpg" />
-    <Content Include="Content\img\indexAblum_17.jpg" />
-    <Content Include="Content\img\indexAblum_18.jpg" />
-    <Content Include="Content\img\indexAblum_2.jpg" />
-    <Content Include="Content\img\indexAblum_3.jpg" />
-    <Content Include="Content\img\indexAblum_4.jpg" />
-    <Content Include="Content\img\indexAblum_5.jpg" />
-    <Content Include="Content\img\indexAblum_6.jpg" />
-    <Content Include="Content\img\indexAblum_7.jpg" />
-    <Content Include="Content\img\indexAblum_8.jpg" />
-    <Content Include="Content\img\indexAblum_9.jpg" />
-    <Content Include="Content\img\index_group.png" />
-    <Content Include="Content\img\index_joinus.png" />
-    <Content Include="Content\img\index_phopographer.png" />
-    <Content Include="Content\img\index_userInHeader.png" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7026637.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7247471.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7247742.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7353305.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7631686.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7790583.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7918256.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-7955434.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-8076037.jpg" />
-    <Content Include="Content\img\lisa-ramirez\flower\pexels-lisa-8076040.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food1.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food2.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food3.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food4.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food5.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food6.jpg" />
-    <Content Include="Content\img\lisa-ramirez\food\food7.jpg" />
-    <Content Include="Content\img\lisa-ramirez\Lisa-ramirez-phot.jpg" />
-    <Content Include="Content\img\login_pic.svg" />
-    <Content Include="Content\img\logo.PNG" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat1.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat2.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat3.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat4.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat5.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat6.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat7.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat8.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\cat\cat9.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk1.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk10.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk11.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk12.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk13.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk2.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk3.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk4.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk5.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk6.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk7.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk8.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk9.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown1.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown10.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown11.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown12.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown2.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown3.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown4.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown5.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown6.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown7.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown8.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\hometown\hometown9.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\lucas-pezeta-user.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky1.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky10.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky11.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky12.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky13.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky14.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky15.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky2.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky3.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky4.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky5.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky6.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky7.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky8.jpeg" />
-    <Content Include="Content\img\lucas-pezeta\sky\sky9.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model1.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model10.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model11.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model12.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model13.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model14.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model15.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model2.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model3.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model4.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model5.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model6.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model7.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model8.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\black-model\black-model9.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk1.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk10.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk11.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk12.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk13.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk14.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk15.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk16.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk17.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk18.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk2.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk3.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk4.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk5.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk6.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk7.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk8.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\cyberpunk\cyberpunk9.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS1.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS10.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS11.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS12.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS13.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS14.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS15.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS16.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS17.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS2.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS3.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS4.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS5.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS6.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS7.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS8.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\DIA-DE-LOS-MUERTOS\DIA-DE-LOS-MUERTOS9.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming1.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming10.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming11.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming2.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming3.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming4.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming5.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming6.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming7.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming8.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\gaming\gaming9.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\mikhail-nilov-user.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space1.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space10.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space11.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space12.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space13.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space14.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space15.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space2.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space3.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space4.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space5.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space6.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space7.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space8.jpeg" />
-    <Content Include="Content\img\Mikhail Nilov\sapce\space9.jpeg" />
-    <Content Include="Content\img\user.jpg" />
-    <Content Include="Content\img\user.png" />
-    <Content Include="Content\js\bootstrap-datetimepicker.js" />
-    <Content Include="Content\js\bootstrap-datetimepicker.zh-CN.js" />
-    <Content Include="Content\js\index.js" />
-    <Content Include="Content\js\jquery.js" />
-    <Content Include="Content\js\main.js" />
-    <Content Include="Content\js\signup.js" />
-    <Content Include="Content\lib\animate\animate.css" />
-    <Content Include="Content\lib\animate\animate.min.css" />
-    <Content Include="Content\lib\easing\easing.js" />
-    <Content Include="Content\lib\easing\easing.min.js" />
-    <Content Include="Content\lib\isotope\isotope.pkgd.js" />
-    <Content Include="Content\lib\isotope\isotope.pkgd.min.js" />
-    <Content Include="Content\lib\lightbox\css\lightbox.css" />
-    <Content Include="Content\lib\lightbox\css\lightbox.min.css" />
-    <Content Include="Content\lib\lightbox\images\close.png" />
-    <Content Include="Content\lib\lightbox\images\loading.gif" />
-    <Content Include="Content\lib\lightbox\images\next.png" />
-    <Content Include="Content\lib\lightbox\images\prev.png" />
-    <Content Include="Content\lib\lightbox\js\lightbox.js" />
-    <Content Include="Content\lib\lightbox\js\lightbox.min.js" />
-    <Content Include="Content\lib\lightbox\links.php" />
-    <Content Include="Content\lib\owlcarousel\assets\ajax-loader.gif" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.carousel.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.carousel.min.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.theme.default.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.theme.default.min.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.theme.green.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.theme.green.min.css" />
-    <Content Include="Content\lib\owlcarousel\assets\owl.video.play.png" />
-    <Content Include="Content\lib\owlcarousel\owl.carousel.js" />
-    <Content Include="Content\lib\owlcarousel\owl.carousel.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\ShootShotModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ShootShotModel.Context.cs</LastGenOutput>
-      <DependentUpon>ShootShotModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ShootShotModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShootShotModel.edmx</DependentUpon>
-      <LastGenOutput>ShootShotModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\lib\owlcarousel\LICENSE" />
-    <EntityDeploy Include="Models\ShootShotModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShootShotModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ShootShotModel.edmx.diagram">
-      <DependentUpon>ShootShotModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -562,13 +162,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\LoginAndSignup\Signup.cshtml" />
-    <Content Include="Views\LoginAndSignup\Login.cshtml" />
-    <Content Include="Views\MemberCenter\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\NewFolder1 - 複製 - 複製\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -582,9 +179,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -602,9 +196,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>11888</DevelopmentServerPort>
+          <DevelopmentServerPort>8313</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44333/</IISUrl>
+          <IISUrl>https://localhost:44322/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
