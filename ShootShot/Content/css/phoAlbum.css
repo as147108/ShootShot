@@ -1,0 +1,848 @@
+body {
+    color: #242424;
+    background: #ffffff;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  /* navbar空白div */
+  .divnavbar {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+  }
+  
+  /* *********************** */
+  /* *********************** */
+  /* article 左側欄按鈕區塊css */
+  /* *********************** */
+  /* *********************** */
+  
+  
+  article div.leftbutton {
+    width: 410px;
+    padding: 45px 0px;
+    position: fixed;
+  }
+  
+  article button.pageone {
+    background-color: #7dffd1;
+  }
+
+  article button {
+    border: solid 1px #7dffd1;
+    border-radius: 30px;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    margin: 22px 80px;
+    color: #242424;
+  }
+  
+  article button:hover {
+    background-color: #7dffd1;
+  }
+  
+  article button a {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #242424;
+    font-size: 12px;
+  }
+
+  /* 開通攝影師功能按鈕start */
+  article button.photographer{
+    border: solid 1px #c4c4c4;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    margin: 5px 125px;
+    color: #242424;
+  }
+
+  article button.photographer:hover {
+    background-color:#c4c4c4;
+  }
+
+  article button.pagetwo {
+    background-color: #c4c4c4;
+  }
+   /* 開通攝影師功能按鈕 end */
+  
+  @media screen and (max-width: 990px) {
+   
+  .divnavbar {
+      background-color: white;
+      width: 100%;
+      height: 0px;
+    }
+    
+  article div.leftbutton {
+    width: 300px;
+    padding: 35px 0px;
+    position: fixed;
+    
+  }
+  
+  article button.pageone {
+    background-color: #7dffd1;
+  }
+  
+  article button {
+    border: solid 1px #7dffd1;
+    border-radius: 30px;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    margin: 10px 10px;
+    color: #242424;
+  }
+  
+  article button:hover {
+    background-color: #7dffd1;
+  }
+  
+  article button a {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #242424;
+    font-size: 12px;
+  }
+
+  /* 開通攝影師功能按鈕start */
+  article button.photographer{
+    border: solid 1px #c4c4c4;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    margin: 5px 110px;
+    color: #242424;
+  }
+
+  article button.photographer:hover {
+    background-color:#c4c4c4;
+  }
+
+  article button.photographer a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #242424;
+    font-size: 12px;
+  }
+
+  article button.pagetwo {
+    background-color: #c4c4c4;
+  }
+   /* 開通攝影師功能按鈕 end */
+  }
+  @media screen and (max-width:770px) {
+    
+  .divnavbar {
+    background-color: white;
+    width: 100%;
+    height: 0px;
+  }
+  
+  article div.leftbutton {
+  width: 100%;
+  height: 220px;
+  padding: 10px;
+  position: relative;
+  background-color: #d4d4d4;
+  
+  }
+  
+  article button.pageone {
+  background-color: #7dffd1;
+  }
+  
+  article button {
+  border: none;
+  border-radius: 30px;
+  width: 178px;
+  height: 40px;
+  background-color: white;
+  margin: 5px ;
+  color: #242424;
+  
+  }
+  
+  article button:hover {
+  background-color: #7dffd1;
+  }
+  
+  article button a {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #242424;
+  font-size: 12px;
+  }
+
+  /* 開通攝影師功能按鈕start */
+  article button.photographer{
+    border: solid 1px #c4c4c4;
+    border-radius: 30px;
+    width: 120px;
+    height: 40px;
+    background-color:#c4c4c4;
+    margin: 5px 34px;
+    color: #242424;
+    
+  }
+
+  article button.photographer:hover {
+    background-color:#242424;
+    color: #ffffff;
+    
+  }
+
+  article button.photographer a {
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  article button.pagetwo {
+    background-color: #242424;
+  }
+
+   /* 開通攝影師功能按鈕 end */
+  }
+  
+  /* ************************************ */
+/* ************************************ */
+/* article 右側文章區塊：專案管理css */
+/* ************************************ */
+/* ************************************ */
+
+article.phoAlbum_artForAlbum {
+    /* border: solid black; */
+    width: 948px;
+    height: 1500px;
+    position: relative;
+    left: 400px;
+    padding: 20px 0px;
+    margin-top: 20px;
+    background-color:#c4c4c4;
+  }
+
+
+  /* ******************************* */
+  /* article 右側文章區塊：相簿卡片css */
+  /* ******************************* */
+ 
+
+  /* ****************************** */
+  /* article 右側欄內容：相簿按鈕區塊 */
+  article div.phoAlbum_divForbtnAlbum{
+    position: relative;
+    left: 0px;
+    margin-top: 25px;
+  }
+
+  article div.phoAlbum_divForbtnAlbum button{
+    background-color: #242424;
+    border: 0px;
+    color: #ffffff;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 20px;
+  }
+
+  article div.phoAlbum_divForbtnAlbum button.white{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 60px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  
+  /* article 右側欄內容：卡片區塊slide */
+ 
+article div.carousel-inner{
+  
+  width: 920px;
+  height: 280px;
+  padding: 10px 10px;
+}
+
+article div.card-body{
+  padding: 5px 15px;
+  
+}
+
+  article div.card{
+    float: left;
+    margin: 8px ;
+    width: 17rem;
+    height: 240px;
+    background-color: #242424;
+  }
+
+article div.card a{
+  padding: 0px 10px;
+  border: none;
+}
+
+article div.card a:hover{
+  background-color:#7dffd1;  
+  
+}
+
+  
+  article div.slide{
+    width: 920px;
+    left: 20px;
+    
+  }
+  
+  article img.card-img-top{
+    margin: 0px auto;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    width: 250px;
+    height:180px;
+    object-fit:cover;
+  }
+
+  article img.noalbum{
+    margin: 44px 74px;
+    width: 100px;
+    height:100px;
+    object-fit:cover;
+  }
+
+  article div p.card-title{
+    font-size: 16px;
+    margin-bottom: 0rem;
+    color: #ffffff;
+  }
+  
+  article div p.card-text{
+    font-size: 12px;
+    color: #d4d4d4;
+  }
+  
+  /* article 右側欄內容：卡片區塊arrow */
+ 
+  article button.carousel-control-next{
+    width: 0px;
+    height: 0px;
+    border: none;   
+    background-color: #c4c4c4;
+    margin: 0px 15px;
+  }
+  
+  article button.carousel-control-next img{
+    width: 30px;
+    height: 30px;
+    margin-top: 360px;
+    
+  }
+    
+   /* ******************************* */
+  /* article 右側文章區塊：相片區塊css */
+  /* ******************************* */
+  article.phoAlbum_artForPhoto {
+    border: solid black;
+    
+  }
+
+   /* ****************************** */
+  /* article 右側欄內容：相簿按鈕區塊 */
+  article div.phoAlbum_divForbtnPhoto{
+    position: relative;
+    left: 20px;
+    margin-top: 25px;
+    float: left;
+  }
+
+  article div.phoAlbum_divForbtnPhoto button{
+    background-color: #242424;
+    border: 0px;
+    color: #ffffff;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 20px;
+    float: left;
+  }
+
+  article div.phoAlbum_divForbtnPhoto button.cover{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+    float: left;
+
+  }
+
+  article div.phoAlbum_divForbtnPhoto button.white{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 60px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+    float: left;
+
+  }
+
+  article div.phoAlbum_artForPhoto h1{
+    margin-left: 800px;
+    margin-top: 40px;
+    color: #ffffff;
+    
+  }
+  article div.phoAlbum_divForPhoto{
+   padding: 10px 30px;
+  }
+
+  article div.phoAlbum_divForPhoto div.col{
+    width: 150px;
+    margin: 12px;
+    flex-grow: 0;
+  }
+
+  article div.phoAlbum_divForPhoto img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover; 
+  }
+
+  @media screen and (max-width: 990px) {
+      /* ************************************ */
+/* ************************************ */
+/* article 右側文章區塊：專案管理css */
+/* ************************************ */
+/* ************************************ */
+
+article.phoAlbum_artForAlbum {
+    /* border: solid black; */
+    width: 693px;
+    height: 100%;
+    position: relative;
+    left: 280px;
+    padding: 20px 0px;
+    margin-top: 0px;
+    background-color:#c4c4c4;
+  }
+
+
+  /* ******************************* */
+  /* article 右側文章區塊：相簿卡片css */
+  /* ******************************* */
+ 
+
+  /* ****************************** */
+  /* article 右側欄內容：相簿按鈕區塊 */
+  article div.phoAlbum_divForbtnAlbum{
+    position: relative;
+    left: 0px;
+    margin-top: 25px;
+  }
+
+  article div.phoAlbum_divForbtnAlbum button{
+    background-color: #242424;
+    border: 0px;
+    color: #ffffff;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 20px;
+  }
+
+  article div.phoAlbum_divForbtnAlbum button.white{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 60px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  
+  /* article 右側欄內容：卡片區塊slide */
+ 
+article div.carousel-inner{
+  width: 694px;
+  height: 280px;
+  padding: 10px 10px;
+}
+
+article div.card-body{
+  padding: 3px 3px;
+  
+}
+
+  article div.card{
+    float: left;
+    margin: 8px ;
+    width: 12rem;
+    height: 240px;
+    background-color: #242424;
+  }
+
+article div.card a{
+  padding: 0px 10px;
+  border: none;
+}
+
+article div.card a:hover{
+  background-color:#7dffd1;  
+  
+}
+
+  
+  article div.slide{
+    width: 660px;
+    left: 20px;
+    
+  }
+  
+  article img.card-img-top{
+    margin: 0px auto;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    width: 170px;
+    height:180px;
+    object-fit:cover;
+  }
+
+  article img.noalbum{
+    margin: 44px 35px;
+    width: 100px;
+    height:100px;
+    object-fit:cover;
+  }
+
+  article div p.card-title{
+    font-size: 16px;
+    margin-bottom: 0rem;
+    color: #ffffff;
+  }
+  
+  article div p.card-text{
+    font-size: 12px;
+    color: #d4d4d4;
+  }
+  
+  /* article 右側欄內容：卡片區塊arrow */
+ 
+  article button.carousel-control-next{
+    width: 0px;
+    height: 0px;
+    border: none;   
+    background-color: #c4c4c4;
+    margin: 0px 0px;
+  }
+  
+  article button.carousel-control-next img{
+    width: 30px;
+    height: 30px;
+    margin-top: 360px;
+    
+  }
+    
+   /* ******************************* */
+  /* article 右側文章區塊：相片區塊css */
+  /* ******************************* */
+  article.phoAlbum_artForPhoto {
+    border: solid black;
+    
+  }
+
+   /* ****************************** */
+  /* article 右側欄內容：相簿按鈕區塊 */
+  article div.phoAlbum_divForbtnPhoto{
+    position: relative;
+    left: 20px;
+    margin-top: 0px;
+    float: left;
+  }
+
+  article div.phoAlbum_divForbtnPhoto button{
+    background-color: #242424;
+    border: 0px;
+    color: #ffffff;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 20px;
+    float: left;
+  }
+
+  article div.phoAlbum_divForbtnPhoto button.cover{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+    float: left;
+
+  }
+
+  article div.phoAlbum_divForbtnPhoto button.white{
+    background-color: #ffffff;
+    border: 0px;
+    color: #242424;
+    width: 60px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+    float: left;
+
+  }
+
+  article div.phoAlbum_artForPhoto h1{
+    margin-left: 560px;
+    margin-top: 40px;
+    color: #ffffff;
+    
+  }
+  article div.phoAlbum_divForPhoto{
+   padding: 5px 45px;
+  }
+
+  article div.phoAlbum_divForPhoto div.col{
+    width: 150px;
+    margin: 5px;
+    flex-grow: 0;
+    padding: 0px;
+  }
+
+  article div.phoAlbum_divForPhoto img{
+    width: 115px;
+    height: 115px;
+    object-fit: cover; 
+  }
+  }
+
+  @media screen and (max-width: 770px) {
+    /* ************************************ */
+/* ************************************ */
+/* article 右側文章區塊：專案管理css */
+/* ************************************ */
+/* ************************************ */
+
+article.phoAlbum_artForAlbum {
+  /* border: solid black; */
+  width: 693px;
+  height: 100%;
+  position: relative;
+  left: 0px;
+  padding: 20px 0px;
+  margin-top: 0px;
+  background-color:#c4c4c4;
+}
+
+
+/* ******************************* */
+/* article 右側文章區塊：相簿卡片css */
+/* ******************************* */
+
+
+/* ****************************** */
+/* article 右側欄內容：相簿按鈕區塊 */
+article div.phoAlbum_divForbtnAlbum{
+  position: relative;
+  left: 0px;
+  margin-top: 10px;
+}
+
+article div.phoAlbum_divForbtnAlbum button{
+  background-color: #242424;
+  border: 0px;
+  color: #ffffff;
+  width: 120px;
+  height: 35px;
+  font-size: 12px;
+ 
+}
+
+article div.phoAlbum_divForbtnAlbum button.white{
+  background-color: #ffffff;
+  border: 0px;
+  color: #242424;
+  width: 60px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+/* article 右側欄內容：卡片區塊slide */
+
+article div.carousel-inner{
+width: 414px;
+height: 200px;
+padding: 5px 0px;
+}
+
+article div.card-body{
+padding: 5px 0px;
+
+}
+
+article div.card{
+  float: left;
+  margin: 5px ;
+  width: 7.8rem;
+  height: 180px;
+  background-color: #242424;
+}
+
+article div.card a{
+padding: 0px 5px;
+border: none;
+}
+
+article div.card a:hover{
+background-color:#7dffd1;  
+
+}
+
+
+article div.slide{
+  width: 420px;
+  left: 5px;
+  
+}
+
+article img.card-img-top{
+  margin: 0px auto;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  width: 110px;
+  height:110px;
+  object-fit:cover;
+}
+
+article img.noalbum{
+  margin: 32px 30px;
+  width: 60px;
+  height:60px;
+  object-fit:cover;
+}
+
+article div p.card-title{
+  font-size: 16px;
+  margin-bottom: 0rem;
+  color: #ffffff;
+}
+
+article div p.card-text{
+  font-size: 12px;
+  color: #d4d4d4;
+}
+
+/* article 右側欄內容：卡片區塊arrow */
+
+article button.carousel-control-next{
+  width: 0px;
+  height: 0px;
+  border: none;   
+  background-color: #c4c4c4;
+  margin: 0px 0px;
+}
+
+article button.carousel-control-next img{
+  width: 30px;
+  height: 30px;
+  margin-top: 260px;
+  
+}
+  
+ /* ******************************* */
+/* article 右側文章區塊：相片區塊css */
+/* ******************************* */
+article.phoAlbum_artForPhoto {
+  border: solid black;  
+}
+
+ /* ****************************** */
+/* article 右側欄內容：相簿按鈕區塊 */
+article div.phoAlbum_divForbtnPhoto{
+  position: relative;
+  left: 2px;
+  margin-top: 0px;
+  float: left;
+}
+
+article div.phoAlbum_divForbtnPhoto button{
+  background-color: #242424;
+  border: 0px;
+  color: #ffffff;
+  width: 120px;
+  height: 35px;
+  font-size: 12px;
+  margin: 0px;
+  margin-left: 10px;
+  float: left;
+}
+
+article div.phoAlbum_divForbtnPhoto button.cover{
+  background-color: #ffffff;
+  border: 0px;
+  color: #242424;
+  width: 120px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 10px;
+  float: left;
+
+}
+
+article div.phoAlbum_divForbtnPhoto button.white{
+  background-color: #ffffff;
+  border: 0px;
+  color: #242424;
+  width: 60px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 10px;
+  float: left;
+
+}
+
+article div.phoAlbum_artForPhoto h1{
+  margin-left: 2px;
+  margin-top: 40px;
+  color: #c4c4c4;
+  
+}
+article div.phoAlbum_divForPhoto{
+ padding: 3px 3px;
+ margin: 0px 1px;
+}
+
+article div.phoAlbum_divForPhoto div.col{
+  width: 150px;
+  margin: 1px 2px;
+  flex-grow: 0;
+  padding: 0px 1px;
+}
+
+article div.phoAlbum_divForPhoto img{
+  width: 75px;
+  height: 75px;
+  object-fit: cover; 
+}
+}

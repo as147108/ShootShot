@@ -1,0 +1,396 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region meta請勿更改 -->
+    <meta charset="utf-8">
+    <title>SHOOTSHOT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SHOOTSHOT" name="keywords">
+    <meta content="SHOOTSHOT" name="description">
+    <base target="_self" />
+    <!-- #endregion -->
+    <!-- #region Icon請勿更改 -->
+    <link href="/images/" rel="icon">
+    <!-- #endregion -->
+    <!-- #region 共用googleFont請勿更改 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet">
+    <!-- #endregion -->
+    <!-- #region 共用cssLink請勿更改 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/nav/style.css" rel="stylesheet">
+    <!-- #endregion -->
+    <link rel="stylesheet" href="./css/phoAlbum.css">
+</head>
+
+<body>
+    <!-- #region navbar請勿更改 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto align-items-center">
+                    <!-- <a href="index.html" class="nav-item nav-link active">首頁</a>
+                    <a href="index2.html" class="nav-item nav-link">搜尋圖片</a>
+                    <a href="index.html" class="nav-item nav-link">預約專案</a>
+                    <a href="index.html" class="nav-item nav-link">地圖搜尋</a> -->
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
+                        <img src="/img/user.jpg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             style="width: 80px;height: 80px;border-radius: 50px;">
+                        <div class="dropdown-menu">
+                            <a href="index.html" class="dropdown-item">登入</a>
+                            <a href="member.html" class="dropdown-item">會員基本資料</a>
+                            <a href="./member.html" class="dropdown-item">設定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+    <!-- #region 妳的html -->
+    <!-- main start -->
+    <main>
+        <!-- section-button -->
+        <section class="phoAlbum_sec1">
+            <div class="phoAlbum_conForalink1">
+                <a href="member.html">會員基本資料</a>
+            </div>
+            <div class="phoAlbum_conForalink1">
+                <a href="prjMgmt.html">專案管理</a>
+            </div>
+
+            <div class="phoAlbum_conForalink2">
+                <div class="btn-group" role="group">
+                    <a class="active" id="phoMgmt_btn1" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        攝影師&#9660
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="phoMgmt.html">基本資料</a></li>
+                        <li><a class="dropdown-item active" href="#">我的相簿</a></li>
+                        <li><a class="dropdown-item" href="phoPrjmgmt.html">預約管理</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="phoAlbum_conForalink1">
+                <a href="./index.html">回首頁</a>
+            </div>
+        </section>
+
+        <!-- section-from -->
+        <section class="phoAlbum_sec2">
+            <!-- 新增相簿按鈕處#1 -->
+            <div class="container phoAlbum_conForalink">
+                <div>
+                    <a class="nav-link active" aria-current="page" href="addAlbum.html" style="background-color: black;
+                    color: white;">&#10010新增相簿</a>
+                </div>
+                <div>
+                    <a class="nav-link" href="editAlbum.html" style="background-color: white;
+                    color: black;">編輯</a>
+                </div>
+                <div>
+                    <a class="nav-link" href="#" style="background-color: white;
+                    color: black;">隱藏</a>
+                </div>
+            </div>
+            <!-- 相簿輪播#2 -->
+            <div class="container">
+                <div class="col-sm">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/7.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>抽象</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dolore.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/9.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>抽象-1</h5>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/8.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>抽象-2</h5>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/1.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>貓咪</h5>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>貓咪-l</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, id.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>貓咪-2</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, id.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/6.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>粉紅女孩</h5>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/4.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>粉紅女孩-1</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, maxime!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/5.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>粉紅女孩-2</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, maxime!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- 新增照片按鈕處#3 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="addPicture.html" style="background-color: black;
+                                color: white;">&#10010新增照相</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="background-color: white;
+                                color: black;">設為相簿封面</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="editPicture.html" style="background-color: white;
+                                color: black;">編輯</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <label for="">抽象</label>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 相片顯示處#4 -->
+            <div class="container">
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/200" class="img-thumbnail" alt="...">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- #endregion -->
+    <!-- #region footer請勿更改 -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>保留</h2>
+                        <a href="">保留</a>
+                        <a href="">保留</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p>
+                            <i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">
+        &#169; copyright ©
+        2021 | ShootShot. All Rights Reserved
+    </div>
+    <!-- endregion -->
+    <!-- #region backToUp請勿更改 -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- $endregion -->
+    <!-- #region js請勿更改 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="js/main.js"></script>
+    <!-- #endregion -->
+</body>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</html>
+
