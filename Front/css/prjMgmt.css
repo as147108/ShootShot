@@ -143,10 +143,11 @@ body {
 article.prjMgmt_artForPro {
     /* border: solid black; */
     width: 890px;
-    height: 2000px;
+    height: 100%;
     position: relative;
     left: 20px;
     padding: 40px 0px;
+   
   }
   
   /* ************************************ */
@@ -199,9 +200,7 @@ article div.carousel-inner{
     background-color: #7dffd1;
     border: none;
     color: #242424;
-  }
-
-  
+  } 
   
   article img.card-img-top{
     border-radius: 20px;
@@ -293,6 +292,9 @@ article button.carousel-control-prev{
     margin: 18px 17px;
     clear: both;
     float: left;
+    object-fit:cover;
+    border-radius: 50px;
+    border: solid #7dffd1 2px;
   }
   
   article div textarea.chattext {
@@ -316,17 +318,25 @@ article button.carousel-control-prev{
     margin: 0px 5px;
   }
   
-  article div.prjMgmt_divForChat img.chat{
+  
+  /* 會員留言內容 */
+  article div.prjMgmt_divForMem {
+    position: relative;
+    left: 430px;
+    width: 900px;
+  }
+
+  article div.prjMgmt_divForMem img.chat{
     width: 38px;
     height: 38px;
     padding: 5px;
+    object-fit:cover;
   }
 
-
-  /* 會員留言內容 */
   article div.prjMgmt_divForMes{
     border: solid #d4d4d4 1px;
     border-radius: 15px;
+    background-color: #d4d4d4;
     width: 820px;
     height: 80px;
   }
@@ -337,6 +347,9 @@ article button.carousel-control-prev{
     margin: 10px 10px;
     clear: both;
     float: left;
+    object-fit:cover;
+    border-radius: 60px;
+    border: solid #7dffd1 2px;
   }
 
   article div p.memberMes {
@@ -344,11 +357,44 @@ article button.carousel-control-prev{
     vertical-align: super;
   }
 
-  article div p.mesTime {
+  article div p.memberTime {
     font-size: 10px;
-    color: #7dffd1;
+    color: #242424;
     margin-left: 680px;
   }
+
+/* 攝影師回覆內容 */
+article div.prjMgmt_divForPho{
+  position: relative;
+  border: solid #d4d4d4 1px;
+  border-radius: 15px;
+  background-color: #242424;
+  width: 820px;
+  height: 80px;
+}
+
+article div.prjMgmt_divForPho img{
+  width: 60px;
+  height: 60px;
+  margin: 10px 10px;
+  clear: both;
+  float: left;
+  object-fit:cover;
+  border-radius: 60px;
+  border: solid #7dffd1 2px;
+}
+
+article div p.PhoMes {
+  margin: 28px 0px 0px 100px;
+  vertical-align: super;
+  color: #ffffff;
+}
+
+article div p.PhoTime {
+  font-size: 10px;
+  color: #ffffff;
+  margin-left: 680px;
+}
 
   @media screen and (max-width: 990px){
       /* ************************************ */
@@ -544,9 +590,23 @@ article div.prjMgmt_divForChat img.chat{
 
 
 /* 會員留言內容 */
+article div.prjMgmt_divForMem {
+  position: relative;
+  left: 290px;
+  width: 640px;
+}
+
+article div.prjMgmt_divForMem img.chat{
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+  object-fit:cover;
+}
+
 article div.prjMgmt_divForMes{
   border: solid #d4d4d4 1px;
   border-radius: 15px;
+  background-color: #d4d4d4;
   width: 640px;
   height: 80px;
 }
@@ -557,17 +617,53 @@ article div.prjMgmt_divForMes img{
   margin: 10px 10px;
   clear: both;
   float: left;
+  object-fit:cover;
+  border-radius: 60px;
+  border: solid #7dffd1 2px;
 }
 
 article div p.memberMes {
-  margin: 28px 0px 0px 100px;
+  margin: 28px 0px 0px 80px;
   vertical-align: super;
 }
 
-article div p.mesTime {
+article div p.memberTime {
   font-size: 10px;
-  color: #7dffd1;
+  color: #242424;
   margin-left: 500px;
+}
+
+/* 攝影師回覆內容 */
+article div.prjMgmt_divForPho{
+position: relative;
+border: solid #d4d4d4 1px;
+border-radius: 15px;
+background-color: #242424;
+width: 640px;
+height: 80px;
+}
+
+article div.prjMgmt_divForPho img{
+width: 60px;
+height: 60px;
+margin: 10px 10px;
+clear: both;
+float: left;
+object-fit:cover;
+border-radius: 60px;
+border: solid #7dffd1 2px;
+}
+
+article div p.PhoMes {
+margin: 28px 0px 0px 80px;
+vertical-align: super;
+color: #ffffff;
+}
+
+article div p.PhoTime {
+font-size: 10px;
+color: #ffffff;
+margin-left: 500px;
 }
   }
 
@@ -781,32 +877,80 @@ height: 38px;
 padding: 5px;
 }
 
-
 /* 會員留言內容 */
+article div.prjMgmt_divForMem {
+  position: relative;
+  left: 10px;
+  width: 400px;
+}
+
+article div.prjMgmt_divForMem img.chat{
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+  object-fit:cover;
+}
+
 article div.prjMgmt_divForMes{
-border: solid #d4d4d4 1px;
-border-radius: 15px;
-width: 400px;
-height: 110px;
+  border: solid #d4d4d4 1px;
+  border-radius: 15px;
+  background-color: #d4d4d4;
+  width: 400px;
+  height: 100px;
 }
 
 article div.prjMgmt_divForMes img{
-width: 60px;
-height: 60px;
-margin: 20px 8px;
-clear: both;
-float: left;
+  width: 60px;
+  height: 60px;
+  margin: 20px 10px;
+  clear: both;
+  float: left;
+  object-fit:cover;
+  border-radius: 60px;
+  border: solid #7dffd1 2px;
 }
 
 article div p.memberMes {
-margin: 28px 0px 0px 80px;
-vertical-align: super;
-width: 280px;
+  margin: 28px 0px 0px 80px;
+  vertical-align: super;
 }
 
-article div p.mesTime {
+article div p.memberTime {
+  font-size: 10px;
+  color: #242424;
+  margin-left: 265px;
+}
+
+/* 攝影師回覆內容 */
+article div.prjMgmt_divForPho{
+position: relative;
+border: solid #d4d4d4 1px;
+border-radius: 15px;
+background-color: #242424;
+width: 400px;
+height: 80px;
+}
+
+article div.prjMgmt_divForPho img{
+width: 60px;
+height: 60px;
+margin: 10px 10px;
+clear: both;
+float: left;
+object-fit:cover;
+border-radius: 60px;
+border: solid #7dffd1 2px;
+}
+
+article div p.PhoMes {
+margin: 28px 0px 0px 80px;
+vertical-align: super;
+color: #ffffff;
+}
+
+article div p.PhoTime {
 font-size: 10px;
-color: #7dffd1;
-margin-left: 500px;
+color: #ffffff;
+margin-left: 265px;
 }
 }
