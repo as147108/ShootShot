@@ -141,10 +141,10 @@ article button {
 article.prjMgmt_artForPro {
 	/* border: solid black; */
 	width: 890px;
-	height: 2000px;
+	height: 100%;
 	position: relative;
 	left: 20px;
-	padding: 20px 0px;
+	padding: 40px 0px;
 }
 
 /* ************************************ */
@@ -165,22 +165,25 @@ article div.prjMgmt_divForslide button {
 /* article 右側欄內容：卡片區塊slide */
 
 article div.carousel-inner {
-	width: 1200px;
+	width: 900px;
 	height: 440px;
-	margin: 55px 120px;
+	margin: 15px 15px;
+	padding: 0px;
 }
 
 article div.card {
 	float: left;
-	margin: 15px;
+	margin: 22px;
 	width: 16rem;
 	height: 400px;
 	border-radius: 20px;
 }
 
 article div.slide {
-	width: 1100px;
-	left: 300px;
+	width: 940px;
+	height: 450px;
+	left: 400px;
+	margin-top: 40px;
 }
 
 article a.btn {
@@ -193,8 +196,6 @@ article a.btn {
 	border: none;
 	color: #242424;
 }
-
-
 
 article img.card-img-top {
 	border-radius: 20px;
@@ -215,6 +216,7 @@ article button.carousel-control-prev {
 	width: 0px;
 	height: 0px;
 	border: none;
+	margin-left: 10px;
 }
 
 	article button.carousel-control-prev img {
@@ -227,6 +229,7 @@ article button.carousel-control-next {
 	width: 0px;
 	height: 0px;
 	border: none;
+	margin-right: 10px;
 }
 
 	article button.carousel-control-next img {
@@ -242,6 +245,7 @@ article div.prjMain {
 	position: relative;
 	left: 420px;
 	width: 850px;
+	margin-top: 20px;
 }
 
 article div.project {
@@ -281,6 +285,9 @@ article div.prjMgmt_divForText {
 		margin: 18px 17px;
 		clear: both;
 		float: left;
+		object-fit: cover;
+		border-radius: 50px;
+		border: solid #7dffd1 2px;
 	}
 
 article div textarea.chattext {
@@ -290,6 +297,7 @@ article div textarea.chattext {
 
 article div.prjMgmt_divForText input {
 	margin-left: 720px;
+	margin-top: 20px;
 	width: 100px;
 	height: 30px;
 	border: solid #7dffd1;
@@ -302,17 +310,25 @@ article div.prjMgmt_divForText a {
 	margin: 0px 5px;
 }
 
-article div.prjMgmt_divForChat img.chat {
-	width: 38px;
-	height: 38px;
-	padding: 5px;
-}
-
 
 /* 會員留言內容 */
+article div.prjMgmt_divForMem {
+	position: relative;
+	left: 430px;
+	width: 900px;
+}
+
+	article div.prjMgmt_divForMem img.chat {
+		width: 38px;
+		height: 38px;
+		padding: 5px;
+		object-fit: cover;
+	}
+
 article div.prjMgmt_divForMes {
 	border: solid #d4d4d4 1px;
 	border-radius: 15px;
+	background-color: #d4d4d4;
 	width: 820px;
 	height: 80px;
 }
@@ -323,15 +339,603 @@ article div.prjMgmt_divForMes {
 		margin: 10px 10px;
 		clear: both;
 		float: left;
+		object-fit: cover;
+		border-radius: 60px;
+		border: solid #7dffd1 2px;
 	}
 
 article div p.memberMes {
-	margin-top: 28px;
-	margin-left: 20px;
+	margin: 28px 0px 0px 100px;
 	vertical-align: super;
 }
 
-article div p.mesTime {
+article div p.memberTime {
 	font-size: 10px;
-	color: #7dffd1;
+	color: #242424;
+	margin-left: 680px;
+}
+
+/* 攝影師回覆內容 */
+article div.prjMgmt_divForPho {
+	position: relative;
+	border: solid #d4d4d4 1px;
+	border-radius: 15px;
+	background-color: #242424;
+	width: 820px;
+	height: 80px;
+}
+
+	article div.prjMgmt_divForPho img {
+		width: 60px;
+		height: 60px;
+		margin: 10px 10px;
+		clear: both;
+		float: left;
+		object-fit: cover;
+		border-radius: 60px;
+		border: solid #7dffd1 2px;
+	}
+
+article div p.PhoMes {
+	margin: 28px 0px 0px 100px;
+	vertical-align: super;
+	color: #ffffff;
+}
+
+article div p.PhoTime {
+	font-size: 10px;
+	color: #ffffff;
+	margin-left: 680px;
+}
+
+@media screen and (max-width: 990px) {
+	/* ************************************ */
+	/* ************************************ */
+	/* article 右側文章區塊：專案管理css */
+	/* ************************************ */
+	/* ************************************ */
+
+	article.prjMgmt_artForPro {
+		/* border: solid black; */
+		width: 400px;
+		height: 2000px;
+		position: relative;
+		left: 00px;
+		padding: 20px 0px;
+	}
+
+	/* ************************************ */
+	/* article 右側文章區塊：專案卡片css */
+	/* ************************************ */
+
+	/* article 右側欄內容：滑動頁面按鈕 */
+	article div.prjMgmt_divForslide button {
+		width: 30px;
+		height: 5px;
+		background-color: #7dffd1;
+		border: #7dffd1;
+		border-radius: 3px;
+		margin: 0px 5px;
+	}
+
+
+	/* article 右側欄內容：卡片區塊slide */
+
+
+	article div.carousel-inner {
+		width: 680px;
+		height: 360px;
+		margin: 40px 00px;
+	}
+
+	article div.card {
+		float: left;
+		margin: 8px;
+		width: 12.5rem;
+		height: 340px;
+		border-radius: 20px;
+	}
+
+	article div.slide {
+		width: 660px;
+		height: 370px;
+		left: 300px;
+		margin-top: 40px;
+	}
+
+	article a.btn {
+		border-radius: 20px;
+		margin: 0px 50px;
+		width: 100px;
+		height: 30px;
+		font-size: 12px;
+		background-color: #7dffd1;
+		border: none;
+		color: #242424;
+	}
+
+
+
+	article img.card-img-top {
+		border-radius: 20px;
+		margin: 0px auto;
+		margin-top: 10px;
+		width: 180px;
+		height: 180px;
+		object-fit: cover;
+	}
+
+	article div p.card-text {
+		font-size: 12px;
+		margin-bottom: none;
+	}
+
+	/* article 右側欄內容：卡片區塊arrow */
+	article button.carousel-control-prev {
+		width: 0px;
+		height: 0px;
+		border: none;
+	}
+
+		article button.carousel-control-prev img {
+			width: 30px;
+			height: 30px;
+			margin-top: 380px;
+		}
+
+	article button.carousel-control-next {
+		width: 0px;
+		height: 0px;
+		border: none;
+	}
+
+		article button.carousel-control-next img {
+			width: 30px;
+			height: 30px;
+			margin-top: 380px;
+		}
+
+	/* ************************************ */
+	/* article 右側文章區塊：專案內容css */
+	/* ************************************ */
+	article div.prjMain {
+		position: relative;
+		left: 290px;
+		width: 660px;
+	}
+
+	article div.project {
+		height: 870px;
+		background-color: white;
+	}
+
+	article div p.time {
+		text-align: right;
+	}
+
+	article div.col {
+		flex-grow: 0;
+		padding: 0px 3px;
+	}
+
+	article div.picture img {
+		width: 115px;
+		height: 115px;
+		object-fit: cover;
+		margin-left: 10px;
+	}
+
+	/* ************************************ */
+	/* article 右側文章區塊：留言板css */
+	/* ************************************ */
+	article div.prjMgmt_divForChat {
+		position: relative;
+		left: 290px;
+		width: 600px;
+	}
+
+	article div.prjMgmt_divForText {
+		border: solid #7dffd1 1px;
+		border-radius: 15px;
+		width: 640px;
+		height: 100px;
+	}
+
+		article div.prjMgmt_divForText img {
+			width: 60px;
+			height: 60px;
+			margin: 18px 17px;
+			clear: both;
+			float: left;
+		}
+
+	article div textarea.chattext {
+		border: none;
+		margin: 20px 10px;
+		width: 500px;
+		height: 60px;
+	}
+
+	article div.prjMgmt_divForText input {
+		margin-left: 540px;
+		margin-top: 20px;
+		width: 100px;
+		height: 30px;
+		border: solid #7dffd1;
+		border-radius: 15px;
+		background-color: #7dffd1;
+		color: #242424;
+	}
+
+	article div.prjMgmt_divForText a {
+		margin: 0px 5px;
+	}
+
+	article div.prjMgmt_divForChat img.chat {
+		width: 38px;
+		height: 38px;
+		padding: 5px;
+	}
+
+
+	/* 會員留言內容 */
+	article div.prjMgmt_divForMem {
+		position: relative;
+		left: 290px;
+		width: 640px;
+	}
+
+		article div.prjMgmt_divForMem img.chat {
+			width: 38px;
+			height: 38px;
+			padding: 5px;
+			object-fit: cover;
+		}
+
+	article div.prjMgmt_divForMes {
+		border: solid #d4d4d4 1px;
+		border-radius: 15px;
+		background-color: #d4d4d4;
+		width: 640px;
+		height: 80px;
+	}
+
+		article div.prjMgmt_divForMes img {
+			width: 60px;
+			height: 60px;
+			margin: 10px 10px;
+			clear: both;
+			float: left;
+			object-fit: cover;
+			border-radius: 60px;
+			border: solid #7dffd1 2px;
+		}
+
+	article div p.memberMes {
+		margin: 28px 0px 0px 80px;
+		vertical-align: super;
+	}
+
+	article div p.memberTime {
+		font-size: 10px;
+		color: #242424;
+		margin-left: 500px;
+	}
+
+	/* 攝影師回覆內容 */
+	article div.prjMgmt_divForPho {
+		position: relative;
+		border: solid #d4d4d4 1px;
+		border-radius: 15px;
+		background-color: #242424;
+		width: 640px;
+		height: 80px;
+	}
+
+		article div.prjMgmt_divForPho img {
+			width: 60px;
+			height: 60px;
+			margin: 10px 10px;
+			clear: both;
+			float: left;
+			object-fit: cover;
+			border-radius: 60px;
+			border: solid #7dffd1 2px;
+		}
+
+	article div p.PhoMes {
+		margin: 28px 0px 0px 80px;
+		vertical-align: super;
+		color: #ffffff;
+	}
+
+	article div p.PhoTime {
+		font-size: 10px;
+		color: #ffffff;
+		margin-left: 500px;
+	}
+}
+
+
+@media screen and (max-width: 770px) {
+	/* ************************************ */
+	/* ************************************ */
+	/* article 右側文章區塊：專案管理css */
+	/* ************************************ */
+	/* ************************************ */
+
+	article.prjMgmt_artForPro {
+		/* border: solid black; */
+		width: 414px;
+		height: 100%;
+		position: relative;
+		left: 0px;
+		padding: 20px 0px;
+	}
+
+	/* ************************************ */
+	/* article 右側文章區塊：專案卡片css */
+	/* ************************************ */
+
+	/* article 右側欄內容：滑動頁面按鈕 */
+	article div.prjMgmt_divForslide button {
+		width: 30px;
+		height: 5px;
+		background-color: #7dffd1;
+		border: #7dffd1;
+		border-radius: 3px;
+		margin: 0px 5px;
+	}
+
+
+	/* article 右側欄內容：卡片區塊slide */
+
+
+	article div.carousel-inner {
+		width: 414px;
+		height: 800px;
+		margin: 0px 0px;
+	}
+
+	article div.card {
+		float: left;
+		margin: 5px 30px;
+		width: 21rem;
+		height: 250px;
+		border-radius: 20px;
+	}
+
+	article div.card-body {
+		z-index: 1;
+		position: absolute;
+		padding: 10px;
+	}
+
+	article div.slide {
+		width: 400px;
+		height: 790px;
+		left: 5px;
+		margin-top: 10px;
+	}
+
+	article a.btn {
+		border-radius: 20px;
+		margin: 0px 100px;
+		width: 100px;
+		height: 30px;
+		font-size: 12px;
+		background-color: #7dffd1;
+		border: none;
+		color: #242424;
+	}
+
+
+
+	article img.card-img-top {
+		border-radius: 18px;
+		margin: 4px auto;
+		width: 325px;
+		height: 240px;
+		object-fit: cover;
+	}
+
+	article div h5.card-title {
+		color: #ffffff;
+		margin-top: 20px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 36px;
+	}
+
+	article div p.card-text {
+		font-size: 16px;
+		margin: 40px 56px;
+		text-align: center;
+		z-index: 1;
+		color: #ffffff;
+	}
+
+	/* article 右側欄內容：卡片區塊arrow */
+	article button.carousel-control-prev {
+		width: 0px;
+		height: 0px;
+		border: none;
+	}
+
+		article button.carousel-control-prev img {
+			width: 30px;
+			height: 30px;
+			margin-top: 800px;
+		}
+
+	article button.carousel-control-next {
+		width: 0px;
+		height: 0px;
+		border: none;
+	}
+
+		article button.carousel-control-next img {
+			width: 30px;
+			height: 30px;
+			margin-top: 800px;
+		}
+
+	/* ************************************ */
+	/* article 右側文章區塊：專案內容css */
+	/* ************************************ */
+	article div.prjMain {
+		position: relative;
+		left: 0px;
+		width: 414px;
+	}
+
+	article div.project {
+		height: 1000px;
+		background-color: white;
+	}
+
+	article div p.time {
+		text-align: right;
+	}
+
+	article div.col {
+		flex-grow: 0;
+		padding: 0px 3px;
+	}
+
+	article div.picture img {
+		width: 115px;
+		height: 115px;
+		object-fit: cover;
+		margin: 10px 3px;
+	}
+
+	/* ************************************ */
+	/* article 右側文章區塊：留言板css */
+	/* ************************************ */
+	article div.prjMgmt_divForChat {
+		position: relative;
+		left: 5px;
+		width: 414px;
+	}
+
+	article div.prjMgmt_divForText {
+		border: solid #7dffd1 1px;
+		border-radius: 15px;
+		width: 400px;
+		height: 150px;
+	}
+
+		article div.prjMgmt_divForText img {
+			width: 60px;
+			height: 60px;
+			margin: 18px 17px;
+			clear: both;
+			float: left;
+		}
+
+	article div textarea.chattext {
+		border: none;
+		margin: 20px 10px;
+		width: 260px;
+		height: 105px;
+	}
+
+	article div.prjMgmt_divForText input {
+		margin-left: 300px;
+		margin-top: 20px;
+		width: 100px;
+		height: 30px;
+		border: solid #7dffd1;
+		border-radius: 15px;
+		background-color: #7dffd1;
+		color: #242424;
+	}
+
+	article div.prjMgmt_divForText a {
+		margin: 0px 5px;
+	}
+
+	article div.prjMgmt_divForChat img.chat {
+		width: 38px;
+		height: 38px;
+		padding: 5px;
+	}
+
+	/* 會員留言內容 */
+	article div.prjMgmt_divForMem {
+		position: relative;
+		left: 10px;
+		width: 400px;
+	}
+
+		article div.prjMgmt_divForMem img.chat {
+			width: 38px;
+			height: 38px;
+			padding: 5px;
+			object-fit: cover;
+		}
+
+	article div.prjMgmt_divForMes {
+		border: solid #d4d4d4 1px;
+		border-radius: 15px;
+		background-color: #d4d4d4;
+		width: 400px;
+		height: 100px;
+	}
+
+		article div.prjMgmt_divForMes img {
+			width: 60px;
+			height: 60px;
+			margin: 20px 10px;
+			clear: both;
+			float: left;
+			object-fit: cover;
+			border-radius: 60px;
+			border: solid #7dffd1 2px;
+		}
+
+	article div p.memberMes {
+		margin: 28px 0px 0px 80px;
+		vertical-align: super;
+	}
+
+	article div p.memberTime {
+		font-size: 10px;
+		color: #242424;
+		margin-left: 265px;
+	}
+
+	/* 攝影師回覆內容 */
+article div.prjMgmt_divForPho {
+		position: relative;
+		border: solid #d4d4d4 1px;
+		border-radius: 15px;
+		background-color: #242424;
+		width: 400px;
+		height: 80px;
+	}
+
+article div.prjMgmt_divForPho img {
+			width: 60px;
+			height: 60px;
+			margin: 10px 10px;
+			clear: both;
+			float: left;
+			object-fit: cover;
+			border-radius: 60px;
+			border: solid #7dffd1 2px;
+		}
+
+article div p.PhoMes {
+		margin: 28px 0px 0px 80px;
+		vertical-align: super;
+		color: #ffffff;
+	}
+
+article div p.PhoTime {
+		font-size: 10px;
+		color: #ffffff;
+		margin-left: 265px;
+	}
 }

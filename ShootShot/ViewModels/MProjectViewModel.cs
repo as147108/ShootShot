@@ -12,6 +12,7 @@ namespace ShootShot.ViewModels
 		public tMember member { get; set; }
 		public tMsg msg { get; set; }
 		public IEnumerable<tProject> projects { get; set; }
+		//public IEnumerable<tMsg> msg { get; set; }
 		public HttpPostedFileBase photo { get; set; }
 	}
 }

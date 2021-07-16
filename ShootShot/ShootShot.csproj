@@ -355,7 +355,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CProjectController.cs" />
-    <Compile Include="Controllers\MProjectController.cs" />
+    <Compile Include="Controllers\PhoPrjMgmtController.cs" />
+    <Compile Include="Controllers\PrjMgmtController.cs" />
     <Compile Include="dbShootShot.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -413,6 +414,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\phoPrjMgmt.css" />
     <Content Include="Content\css\prjMgmt.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\pexels-jonathan-borba-2878764.jpg" />
@@ -447,10 +449,12 @@
     <Content Include="Views\CProject\Create.cshtml" />
     <Content Include="Views\CProject\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutForPrj.cshtml" />
-    <Content Include="Views\MProject\List.cshtml" />
+    <Content Include="Views\PrjMgmt\List.cshtml" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\Shared\_MsgPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutForPhotoPrj.cshtml" />
+    <Content Include="Views\PhoPrjMgmt\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,193 @@
+﻿
+@model ShootShot.ViewModels.MProjectViewModel
+@Styles.Render("~/Content/css/prjMgmt.css")
+@{
+	ViewBag.Title = "List";
+	ViewBag.Title = "Create";
+
+	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
+
+	IEnumerable<tProject> projects = null;
+	dbShootShotEntities db = new dbShootShotEntities();
+	int id = 4;
+	var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+	string cemail = member.fEmail.ToString();
+	projects = from p in db.tProject where p.fCEmail.Contains(cemail) select p;
+}
+
+<!-- #article 右側欄內容：專案卡片carousel效果 end -->
+<!------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+<!----------------------------------->
+<!-- #article 右側欄內容：專案內容區塊 -->
+
+
+<!--------------------------------------------------->
+<!-- #article 右側欄內容：專案卡片carousel效果 start -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+	<!------------------------------------->
+	<!-- #article 右側欄內容：滑動頁面按鈕 -->
+	<div class="carousel-indicators prjMgmt_divForslide ">
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+	</div>
+
+	<!------------------------------------------------>
+	<!-- #article 右側欄內容：卡片區塊slide區塊 start -->
+	<div class="carousel-inner prjMgmt_divForCard">
+		<div class="carousel-item active" data-bs-interval="10000">
+			@*skip skipwhile take*@
+			@foreach (var item in projects.Take(3))
+			{
+				string photo = item.fPicUpload;
+				<div class="card">
+					<img src="~/Content/@photo" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@item.fPjtTopic</h5>
+						<p class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+
+							@*<br>預約攝影師:@ViewBag.fPName*@
+						</p>
+						@using (Html.BeginForm())
+						{
+							@*<a class="btn btn-outline-secondary"><div style="display:none;">*@<input type="hidden" value="@item.fOrderNum" name="txtOrderNum" for="msgOrderNo"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">@*</div></a>*@
+						}
+					</div>
+				</div>
+			}
+		</div>
+
+		<div class="carousel-item" data-bs-interval="2000">
+			@foreach (var item in projects.Skip(3))
+			{
+				string photo = item.fPicUpload;
+				<input type="hidden" name="txtcemail" value="@item.fCEmail" />
+				<div class="card">
+					<img src="~/Content/@photo" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@item.fPjtTopic</h5>
+						<p class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)
+							@*<br>預約攝影師:@ViewBag.fPName*@
+						</p>
+						@using (Html.BeginForm())
+						{
+							@*<a href="" class="btn btn-outline-secondary"><div style="display:none;">*@<input type="hidden" value="@item.fOrderNum" name="txtOrderNum" for="msgOrderNo"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">@*</div>前往專案訊息</a>*@
+						}
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="prjMgmt_divForArrow">
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			<span><img src="~/Content/img//left_arrows.svg" alt=""></span>
+			<span class="visually-hidden"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+			<span><img src="~/Content/img//double-right-arrows.svg" alt=""></span>
+			<span class="visually-hidden"></span>
+		</button>
+	</div>
+</div>
+
+<div class="prjMain">
+	<div class="container">
+		<div class="project">
+			<p>專案主題</p>
+			<h2>@TempData["PjtTopic"]</h2> <p class="time">	專案建立日期：@TempData["PjtDate"]</p>
+			<p>預約攝影師：@TempData["PhotoName"]</p>
+			<br>
+			<p>
+				拍攝日期：@TempData["FilmDate"] <br>
+				拍攝開始時間：@TempData["FilmTime"]<br>
+				拍攝地點：@TempData["City"] / @TempData["Loc"]<br>
+				出圖張數：@TempData["PrintQty"] 張<br>
+				專案預算：@TempData["Budget"] 元
+			</p>
+			<br>
+			<p>
+				指定聯絡人：@TempData["Contact"]<br>
+				聯絡人電話：@TempData["ContactTel"]<br>
+				可聯繫時間：平日 @TempData["WkdyTime"] / 假日 @TempData["WkndTime"]
+			</p>
+
+			<br />
+			<p>
+				其他需求描述：<br>
+				@TempData["Req"]
+			</p>
+			<br>
+			<p>參考連結：@TempData["Style"]</p>
+			<p>風格參考</p>
+			<div class="row picture">
+				<div class="col"><img src="~/Content/@TempData["PicUpload"]" alt="" style=""></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+				<div class="col"><img src="" alt="" style="display:none;"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+@*}*@
+<!-- #article 右側欄內容：專案內容區塊 -->
+<!----------------------------------->
+
+
+<div class="prjMgmt_divForChat">
+	<p>與攝影師聊聊</p>
+	<div class="prjMgmt_divForText">
+		<img src="~/Content/img/@TempData["CustImg"]" alt="">
+		@using (Html.BeginForm("Create", "MProject", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		{
+			<form>
+				<input type="hidden" name="msgOrderNo" value="@TempData["OrderNum"]" />
+				<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
+						  aria-valuemax="150" placeholder="聊聊吧..."></textarea>
+				<br>
+				<input type="submit" value="發送" />
+			</form>
+		}
+	</div>
+</div>
+<br>
+<br>
+@{
+
+	//string msgid = Msg.ToString();
+
+	//if (string.IsNullOrEmpty(msgid))
+	//{
+	//	// 無留言
+	//	ViewBag.Hidden = "'none'";
+	//	ViewBag.Photo = "'none'";
+	//}
+	//else
+	//{
+	//	//有留言
+
+	//	// 搜尋特定訂單留言並依據fid排序
+	//	var tMsgs = db.tMsg.Where(t => t.fOrderNum == OrderNo).OrderBy(t => t.fId).FirstOrDefault();
+	//	var CMsg = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fCMsg ?? "您的留言尚未被回覆";
+	//	var CMsgTime = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fCMsgTime.ToString() ?? "尚未回覆";
+	//	var PMsg = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fPMsg ?? "您有留言尚未回覆";
+	//	var PMsgTime = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fPMsgTime.ToString() ?? "尚未回覆";
+	//	for (var i = 0; i < tMsgs.fId; i++)
+	//	{
+	//		msg.fPMsg += PMsg[i];
+	//		//msg.fPMsgTime+= Convert.ToString(PMsgTime[i]);
+	//		msg.fCMsg += CMsg[i];
+	//		//msg.fCMsgTime += CMsgTime[i];
+
+	//	}
+	//}
+	Html.RenderAction("_MsgPartial");
+}
+
