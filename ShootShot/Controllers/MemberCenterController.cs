@@ -42,8 +42,11 @@ namespace ShootShot.Controllers
             if (tm != null)
             {
                 string photoName = Guid.NewGuid().ToString() + ".jpg";
-                member.profilePhoto.SaveAs(Server.MapPath("~/Content/img/profile/") + photoName);
-                tm.fImgpath= "/" + photoName;
+                if (member.profilePhoto!=null)
+                {
+                    member.profilePhoto.SaveAs(Server.MapPath("~/Content/img/profile/") + photoName);
+                    tm.fImgpath = "/" + photoName;
+                }
                 tm.fName = Request.Form["name"];
                 tm.fTel = Request.Form["phone"];
                 tm.fArea = Request.Form["city"];
@@ -54,7 +57,54 @@ namespace ShootShot.Controllers
             vmMember vm = new vmMember();
             vm.member = tm;
             return View(vm);
-            
+        }
+        public ActionResult UpdatePassword()
+        {
+            if (Session[Dictionary.USER_ID] == null)
+            {
+                return RedirectToAction("Login", "LoginAndSignup");
+            }
+            return View();
+        }
+        [HttpPost]
+        public ActionResult UpdatePassword(tMember pMember)
+        {
+            if (Session[Dictionary.USER_ID] == null)
+            {
+                return RedirectToAction("Login", "LoginAndSignup");
+            }
+            dbShootShotEntities db = new dbShootShotEntities();
+            string email = Session[Dictionary.USERE_MAIL].ToString();
+            string oldPassword = Request.Form["oldPassword"];
+            string newPassword = Request.Form["newPassword"];
+            string confirmPassword = Request.Form["confirmPassword"];
+            tMember oldMember = db.tMember.Where(t => t.fEmail == email).FirstOrDefault();
+            if (oldPassword!=oldMember.fPassword)
+            {
+                @ViewBag.msg = "密碼錯誤";
+                return View();
+            }
+            else if(newPassword!=confirmPassword)
+            {
+                @ViewBag.msg = "新密碼輸入不一致";
+                return View();
+            }
+            else if (oldPassword == confirmPassword)
+            {
+                @ViewBag.msg = "新舊密碼一樣";
+                return View();
+            }
+            else
+            {
+                oldMember.fPassword = confirmPassword;
+                db.SaveChanges();
+            }
+            return RedirectToAction("UpdatePasswordSucessfull");
+        }
+        public ActionResult UpdatePasswordSucessfull(tMember pMember)
+        {
+            Session.Abandon();
+            return View();
         }
     }
 }

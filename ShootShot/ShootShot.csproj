@@ -198,6 +198,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\memberPass.css" />
     <Content Include="Content\img\arrows.svg" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\indexHeader.css" />
@@ -566,6 +567,8 @@
     <Content Include="Views\LoginAndSignup\Signup.cshtml" />
     <Content Include="Views\LoginAndSignup\Login.cshtml" />
     <Content Include="Views\MemberCenter\EditProfile.cshtml" />
+    <Content Include="Views\MemberCenter\UpdatePassword.cshtml" />
+    <Content Include="Views\MemberCenter\UpdatePasswordSucessfull.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
