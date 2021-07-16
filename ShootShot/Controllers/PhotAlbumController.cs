@@ -40,5 +40,12 @@ namespace ShootShot.Controllers
             }
             return View(album);
         }
+        public ActionResult Delete(string fEmail)
+        {
+            var alb = db.tPhotAlbum.Where(m => m.fEmail == fEmail).FirstOrDefault();
+            db.tPhotAlbum.Remove(alb);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
