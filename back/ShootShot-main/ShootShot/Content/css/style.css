@@ -155,26 +155,25 @@ a {
 
 @font-face {
     font-family: 'Navbar';
-    src: url('~/Content/lib/fonts/TAIPEISANSTCBETA-REGULAR.woff') format("woff");        
+    src: url('~/Content/lib/fonts/TAIPEISANSTCBETA-REGULAR.woff') format("woff");
 }
 
 .navbar {
-    
     position: relative;
     transition: .5s;
     z-index: 999;
 }
 
-.navbar navbarfonts a{
-    font-family: Navbar;    
-}
+    .navbar navbarfonts a {
+        font-family: Navbar;
+    }
 
-.navbar.nav-sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-}
+    .navbar.nav-sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    }
 
     .navbar .navbar-brand {
         margin: 0;
@@ -272,31 +271,28 @@ a {
         color: #242424;
     }
 
-@media (min-width: 992px) {
-    .navbar {        
-        width: 100%;
-        top: 0px;
-        padding: 5px 60px;
+@media (min-width: 1136px) {
+    .navbar {
         background: #7dffd1 !important;
-        z-index: 9;
     }
 
         .navbar.nav-sticky {
-            padding: 5px 60px;
             background: #1d2434 !important;
-        }
-
-        .navbar a.nav-link {
-            padding: 8px 15px;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
         }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1135px) {
     .navbar {
-        padding: 15px;
+        background: #7dffd1 !important;
+    }
+
+        .navbar.nav-sticky {
+            background: #1d2434 !important;
+        }
+}
+
+@media (max-width: 990px) {
+    .navbar {
         background: #1d2434 !important;
     }
 
@@ -307,7 +303,34 @@ a {
         .navbar .dropdown-menu {
             box-shadow: none;
         }
+
+        .navbar .navbar-brand {
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #7dffd1;
+        }
+
+            .navbar .navbar-brand img {
+                max-width: 30px;
+                max-height: 30px;
+            }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: #7dffd1;
+    }
 }
+
+@media (max-width: 770px) {
+    .navbar .navbar-brand {
+        font-size: 25px;
+    }
+}
+
+
 
 
 /*******************************/

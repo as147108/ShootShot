@@ -34,9 +34,9 @@
         $(document).scroll(function () {
             scroll_pos = $(this).scrollTop();
             if (scroll_pos > 0) {
-                $("#nav a").css('color', '#7DFFD1');
+                $("#nav navbar-nav").css('color', '#7DFFD1');
             } else {
-                $("#nav a").css('color', '#115A44');
+                $("#nav navbar-nav").css('color', '#115A44');
             }
         });
     });
