@@ -95,8 +95,37 @@ namespace ShootShot.Controllers
 			return RedirectToAction("List");
 		}
 
-        // partial view 留言內容列表
+        public ActionResult ReplyMsg(int id)
+        {
+            dbShootShotEntities db = new dbShootShotEntities();
+            tMsg msgs = null;
+            msgs = db.tMsg.Where(g => g.fId == id).FirstOrDefault();
+            MProjectViewModel msg = new MProjectViewModel();
+            msg.msg = msgs;
+            if (msgs == null)
+                return RedirectToAction("List");
+            return View(msg);
+        }
+        [HttpPost]
+        public ActionResult ReplyMsg(tMsg m)
+        {
+            dbShootShotEntities db = new dbShootShotEntities();
+            tMsg msgs = null;
+            msgs = db.tMsg.Where(g => g.fId == m.fId).FirstOrDefault();
+            MProjectViewModel msg = new MProjectViewModel();
+            msg.msg = msgs;
+            if (msgs != null)
+            {
+                msgs.fCMsg = m.fCMsg;
+                msgs.fCMsgTime = DateTime.Now;
+                msgs.fStates = true;
+                db.SaveChanges();
+            }
+            return RedirectToAction("List");
+        }
 
+
+        // partial view 留言內容列表
         public ActionResult _MsgPartial() 
         {
             string OrderNo= Request.Form["txtOrderNum"];

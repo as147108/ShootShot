@@ -3,40 +3,49 @@
 	Layout = null;
 	ViewBag.Title = "Create";
 }
-
-@foreach (var item in Model)
-{
-	string CMsg = item.fCMsg;
-	if (CMsg == null)
-	{ CMsg = "您的留言尚未被回覆"; }
-	string PMsg = item.fPMsg;
-	if (PMsg == null)
-	{
-		string ReplyMsg = "";
-		PMsg = "您有留言尚未回覆"; }
 <div class="prjMgmt_divForMem">
 	<img class="chat" src="~/Content/img/chat 1.svg" alt="">
-	<div class="prjMgmt_divForMes">
-		<img src="~/Content/img/@TempData["CustImg"]" alt="">
-		<p class="memberMes">@CMsg</p>
-		<p class="memberTime">@item.fCMsgTime</p>
-	</div>
-	<br>
-	<div class="prjMgmt_divForPho">
-		<img src="~/Content/img/@TempData["PhoImg"]" alt="">
-		<p class="PhoMes">@PMsg</p>
-		<p class="PhoTime">@item.fPMsgTime</p>
-		<a href='#phoPrjMgmt_texboxChat' οnclick='getkey(this)' style="border-radius: 10px; margin-left:80%; width: 150px; height: 50px; font-size: 20px; background-color: #7dffd1; border: none; color: #242424;right:10px;" for="fixkey"><input id='textkey' type='hidden' name='textkey' for="fixkey" value="@item.fId">回覆</a>@*<div><span></span></div>*@
-	</div>
-</div>
-}
+	@foreach (var item in Model)
+	{
+		string CMsg = item.fCMsg;
+		if (CMsg == null)
+		{ CMsg = "您的留言尚未被回覆"; 
+		}
+		string PMsg = item.fPMsg;
+		if (PMsg == null)
+		{
+			PMsg = "您有留言尚未回覆";
+			string action = "true";
+		}
 
+		<div class="prjMgmt_divForMes">
+			<img src="~/Content/img/@TempData["CustImg"]" alt="">
+			<p class="memberMes">@CMsg</p>
+			<p class="memberTime">@item.fCMsgTime</p>
+		</div>
+		<br>
+		<div class="prjMgmt_divForPho">
+			<img src="~/Content/img/@TempData["PhoImg"]" alt="">
+			<p class="PhoMes">@PMsg</p>
+			<p class="PhoTime">@item.fPMsgTime</p>
+			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
+			<div v-show="false">@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })</div>
 
+			@*@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })*@
+			@*<input type="submit" value="回覆" style="border-radius: 20px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424; margin-right: 10px;" />*@
 
-
-<script type="text/javascript">
-	function getkey(a) {
-		var pms = 'Key=' + document.getElementById("textkey").value;
-		a.href = 'tsSearch.aspx?' + pms;
+			@*<a href='#phoPrjMgmt_texboxChat' οnclick='getkey(this)' style="border-radius: 10px; margin-left:80%; width: 150px; height: 50px; font-size: 20px; background-color: #7dffd1; border: none; color: #242424;right:10px;" for="fixkey"><input id='textkey' type='hidden' name='textkey' for="fixkey" value="@item.fId">回覆</a><div><span></span></div>*@
+		</div>
+		<br />
 	}
-</script>
+	</div>
+
+
+
+
+	@*<script type="text/javascript">
+			function getkey(a) {
+				var pms = 'Key=' + document.getElementById("textkey").value;
+				a.href = 'tsSearch.aspx?' + pms;
+			}
+		</script>*@

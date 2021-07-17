@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<ShootShot.tMsg>
 @{
 	Layout = null;
+	ViewBag.Title = "Create";
 	//dbShootShotEntities db = new dbShootShotEntities();
 	//int id = 4;
 	//var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
@@ -15,7 +16,8 @@
 {
 	string CMsg = item.fCMsg;
 	if (CMsg == null)
-	{ CMsg = "您有留言尚未回覆"; }
+	{ CMsg = "您有留言尚未回覆";
+		string action = "true";}
 	string PMsg = item.fPMsg;
 	if (PMsg == null)
 	{ PMsg = "您的留言尚未被回覆"; }
@@ -23,8 +25,10 @@
 		<img class="chat" src="./img/chat 1.svg" alt="">
 		<div class="prjMgmt_divForMes">
 			<img src="~/Content/img/@TempData["CustImg"]" alt="">
-				<p class="memberMes">@CMsg</p>
-				<p class="memberTime">@item.fCMsgTime</p>
+			<p class="memberMes">@CMsg</p>
+			<p class="memberTime">@item.fCMsgTime</p>
+			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
+			<div v-show="false">@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })</div>
 		</div>
 		<br>
 		<div class="prjMgmt_divForPho">

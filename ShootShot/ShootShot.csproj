@@ -457,6 +457,8 @@
     <Content Include="Views\Shared\_LayoutForPhotoPrj.cshtml" />
     <Content Include="Views\PhoPrjMgmt\List.cshtml" />
     <Content Include="Views\Shared\_PhoMsgPartial.cshtml" />
+    <Content Include="Views\PhoPrjMgmt\ReplyCustMsg.cshtml" />
+    <Content Include="Views\PrjMgmt\ReplyMsg.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

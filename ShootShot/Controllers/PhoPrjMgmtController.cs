@@ -74,9 +74,9 @@ namespace ShootShot.Controllers
         }
         public ActionResult Create()
         {
-            string key = Request.QueryString["Key"];
-            TempData["fixkey"] = key;
-            return View(key);
+            string MsgId = Request.Form["textkey"];
+            TempData["fixkey"] = MsgId;
+            return View();
         }
 
 
@@ -90,7 +90,7 @@ namespace ShootShot.Controllers
             var member = db.tMember.Where(t => t.fId == id & t.fCode == 1).FirstOrDefault();
 
             string pemail = member.fEmail.ToString();
-
+            string MsgId = Request.Form["textkey"];
             string OrderNo = Request.Form["msgOrderNo"];
             var tPrj = db.tProject.Where(t => t.fOrderNum == OrderNo).FirstOrDefault();
             var tMember = db.tMember.Where(t => t.fEmail == tPrj.fCEmail).FirstOrDefault();
@@ -127,24 +127,35 @@ namespace ShootShot.Controllers
 
         // 把replymsg create 寫成if 
 
-
-        [HttpPost]
-        public ActionResult ReplyMsg(tMsg m)
+        public ActionResult ReplyCustMsg(int id)
         {
             dbShootShotEntities db = new dbShootShotEntities();
-            string key = Request.QueryString["Key"];
-            int ikey = Convert.ToInt32(key); 
-            tMsg msg = db.tMsg.FirstOrDefault(g => g.fId== ikey);
-            if (msg != null) 
+           tMsg msgs = null;
+            msgs = db.tMsg.Where(g=>g.fId==id).FirstOrDefault();
+            MProjectViewModel msg = new MProjectViewModel();
+            msg.msg = msgs;
+            if (msgs == null)
+                return RedirectToAction("List");
+            return View(msg);
+        }
+        [HttpPost]
+        public ActionResult ReplyCustMsg(tMsg m)
+        {
+			dbShootShotEntities db = new dbShootShotEntities();
+            tMsg msgs = null;
+            msgs = db.tMsg.Where(g => g.fId == m.fId).FirstOrDefault();
+            MProjectViewModel msg = new MProjectViewModel();
+            msg.msg = msgs;
+            if (msgs != null)
             {
-                
-                m.fPMsg = Request.Form["phoPrjMgmt_texboxChat"];
-                m.fPMsgTime = DateTime.Now;
-                m.fStates = true;
+                msgs.fPMsg = m.fPMsg;
+                msgs.fPMsgTime = DateTime.Now;
+                msgs.fStates = true;
                 db.SaveChanges();
             }
+
             return RedirectToAction("List");
-        }
+		}
 
         public ActionResult _PhoMsgPartial()
         {
