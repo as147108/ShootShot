@@ -69,7 +69,9 @@
     <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
     <Property Name="fName" Type="nvarchar" MaxLength="20" />
-    <Property Name="FState" Type="bit" />
+    <Property Name="fState" Type="bit" />
+    <Property Name="fCoverPath" Type="nvarchar" MaxLength="50" />
+    <Property Name="fKeyword" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tPhotArea">
     <Key>
@@ -137,6 +139,7 @@
     <Property Name="fStyle" Type="nvarchar" MaxLength="100" />
     <Property Name="fPjtState" Type="bit" />
     <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tRoles">
     <Key>
