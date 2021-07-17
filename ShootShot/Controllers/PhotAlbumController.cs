@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ShootShot.Models;
 using System.Data;
 using System.Data.SqlClient;
+using ShootShot.ViewModels;
 
 namespace ShootShot.Controllers
 {
@@ -39,6 +40,38 @@ namespace ShootShot.Controllers
                 return RedirectToAction("Index");
             }
             return View(album);
+        }
+        public ActionResult EditAlbum()
+        {
+            //if (Session[Dictionary.USER_ID] == null)
+            //{
+            //    return RedirectToAction("Login", "LoginAndSignup");
+            //}
+            dbShootShotEntities db = new dbShootShotEntities();
+            string email = (string)Session[Dictionary.USERE_MAIL];
+            tPhotAlbum album = db.tPhotAlbum.Where(m => m.fEmail == email).FirstOrDefault();
+            AlbumViewModel avm = new AlbumViewModel();
+            avm.album = album;
+            return View(avm);
+        }
+        [HttpPost]
+        public ActionResult EditAlbum(AlbumViewModel album)
+        {
+            //if (Session[Dictionary.USER_ID] == null)
+            //{
+            //    return RedirectToAction("Login", "LoginAndSignup");
+            //}
+            dbShootShotEntities db = new dbShootShotEntities();
+            string email = (string)Session[Dictionary.USERE_MAIL];
+            tPhotAlbum alb = db.tPhotAlbum.Where(m => m.fEmail == email).FirstOrDefault();
+            if (alb!=null)
+            {
+                alb.fName = Request.Form["name"];
+                db.SaveChanges();
+            }
+            AlbumViewModel avm = new AlbumViewModel();
+            avm.album = alb;
+            return View(avm);
         }
         public ActionResult Delete(string fEmail)
         {

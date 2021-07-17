@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "EditAlbum";
+}
+
+<head>
+    <link rel="stylesheet"href="~/Content/css/editAlbum.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h6>編輯相簿</h6>
+            <a href="" id="closeEConsole"><img src="./images/cancel.svg" alt=""></a>
+        </div>
+        <div class="editAlbum">
+            <form action=""method="post">
+                <div>
+                    <input type="text" name="fName" id="fName" value="@Model.album.fName" placeholder="e.g.:抽象">
+                </div>
+                <div>
+                    <input type="submit" value="修改">
+                    <input type="button" value="取消" for="closeEConsole">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
