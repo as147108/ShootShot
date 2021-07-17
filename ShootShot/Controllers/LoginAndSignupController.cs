@@ -14,8 +14,18 @@ namespace ShootShot.Controllers
         {
             if (Session[Dictionary.USER_ID] != null)
             {
+                Session[Dictionary.NAVLINK_HIDDEN] = "";
+                Session[Dictionary.LOGIN_HIDDEN] = "hidden";
+                Session[Dictionary.LOGOUT_HIDDEN] = "";
                 return RedirectToAction("Index", "Home");
             }
+            else
+            {
+                Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
+                Session[Dictionary.LOGIN_HIDDEN] = "";
+                Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
+            }
+
             return View();
         }
         [HttpPost]
@@ -47,9 +57,18 @@ namespace ShootShot.Controllers
         }
         public ActionResult Login()
         {
-            if (Session[Dictionary.USER_ID]!=null)
+            if (Session[Dictionary.USER_ID] != null)
             {
+                Session[Dictionary.NAVLINK_HIDDEN] = "";
+                Session[Dictionary.LOGIN_HIDDEN] = "hidden";
+                Session[Dictionary.LOGOUT_HIDDEN] = "";
                 return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
+                Session[Dictionary.LOGIN_HIDDEN] = "";
+                Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
             }
             return View();
         }
@@ -75,10 +94,16 @@ namespace ShootShot.Controllers
             Session[Dictionary.USER_ID] = account.fId;
             Session[Dictionary.USERE_MAIL] = account.fEmail;
             Session[Dictionary.USER_ROLES] = account.fCode;
+            Session[Dictionary.NAVLINK_HIDDEN] = "";
+            Session[Dictionary.LOGIN_HIDDEN] = "hidden";
+            Session[Dictionary.LOGOUT_HIDDEN] = "";
             return RedirectToAction("Index", "Home");
         }        
         public ActionResult Logout()
         {
+            Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
+            Session[Dictionary.LOGIN_HIDDEN] = "";
+            Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }

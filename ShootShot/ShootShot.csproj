@@ -199,6 +199,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\member.css" />
     <Content Include="Content\css\memberPass.css" />
     <Content Include="Content\img\Album\car1.jpg" />
     <Content Include="Content\img\Album\car10.jpg" />
@@ -300,8 +302,6 @@
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\indexHeader.css" />
     <Content Include="Content\css\indexOther.css" />
-    <Content Include="Content\css\login.css" />
-    <Content Include="Content\css\member.css" />
     <Content Include="Content\css\signup.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\img\AnnaShvets\animal\animal1.jpeg" />
@@ -450,6 +450,7 @@
     <Content Include="Content\img\lisa-ramirez\food\food6.jpg" />
     <Content Include="Content\img\lisa-ramirez\food\food7.jpg" />
     <Content Include="Content\img\lisa-ramirez\Lisa-ramirez-phot.jpg" />
+    <Content Include="Content\img\Lside.png" />
     <Content Include="Content\img\profile\login_pic.svg" />
     <Content Include="Content\img\logo.PNG" />
     <Content Include="Content\img\lucas-pezeta\cat\cat1.jpeg" />

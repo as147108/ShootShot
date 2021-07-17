@@ -19,7 +19,16 @@ namespace ShootShot.Controllers
         {
             if (Session[Dictionary.USER_ID] == null)
             {
+                Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
+                Session[Dictionary.LOGIN_HIDDEN] = "";
+                Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
                 return RedirectToAction("Login", "LoginAndSignup");
+            }
+            else
+            {
+                Session[Dictionary.NAVLINK_HIDDEN] = "";
+                Session[Dictionary.LOGIN_HIDDEN] = "hidden";
+                Session[Dictionary.LOGOUT_HIDDEN] = "";
             }
             dbShootShotEntities db = new dbShootShotEntities();
             int id = (int)Session[Dictionary.USER_ID];
@@ -49,7 +58,7 @@ namespace ShootShot.Controllers
                 }
                 tm.fName = Request.Form["name"];
                 tm.fTel = Request.Form["phone"];
-                tm.fArea = Request.Form["city"];
+                //tm.fArea = Request.Form["city"];
 
                 db.SaveChanges();
                 @ViewBag.successful = "修改成功";
@@ -62,7 +71,16 @@ namespace ShootShot.Controllers
         {
             if (Session[Dictionary.USER_ID] == null)
             {
+                Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
+                Session[Dictionary.LOGIN_HIDDEN] = "";
+                Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
                 return RedirectToAction("Login", "LoginAndSignup");
+            }
+            else
+            {
+                Session[Dictionary.NAVLINK_HIDDEN] = "";
+                Session[Dictionary.LOGIN_HIDDEN] = "hidden";
+                Session[Dictionary.LOGOUT_HIDDEN] = "";
             }
             return View();
         }
@@ -103,6 +121,10 @@ namespace ShootShot.Controllers
         }
         public ActionResult UpdatePasswordSucessfull(tMember pMember)
         {
+            if (Session[Dictionary.USER_ID] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             Session.Abandon();
             return View();
         }

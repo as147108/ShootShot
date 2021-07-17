@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ShootShot.Models
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,26 +24,52 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
-        <div class="container-fluid">
+        <div class="container-fluid" style="max-width:100%">
             <a href="~/Home/Index" class="navbar-brand">SHOOTSHOT</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-between navbarfonts" id="navbarCollapse">
                 <div class="navbar-nav ml-auto align-items-center">
-                    <a href="~/Home/Index" class="nav-item nav-link active">首頁</a>
-                    <a href="#" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
-                    <a href="~/MemberCenter/EditProfile" class="nav-item nav-link">預約專案</a>
-                    <a href="~/LoginAndSignup/Login" class="nav-item nav-link">登入</a>
-                    <div class="nav-item dropdown">
-                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
-                        <img src="~/Content/img/user.jpg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                             style="width: 80px;height: 80px;border-radius: 50px;">
-                        <div class="dropdown-menu">
-                            <a href="index.html" class="dropdown-item">登入</a>
-                            <a href="~/MemberCenter/EditProfile" class="dropdown-item">設定</a>
-                        </div>
-                    </div>
+                    <a href="~/Views/Home/Index.cshtml" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+                    <!--link to cproject-->
+                    <a @Session[Dictionary.LOGIN_HIDDEN] href="/LoginAndSignup/Login" class="nav-item nav-link">登入</a>
+                    <a @Session[Dictionary.NAVLINK_HIDDEN] href="/MemberCenter/EditProfile" class="nav-item nav-link">帳號管理</a>
+                    <a @Session[Dictionary.NAVLINK_HIDDEN] href="" class="nav-item nav-link">預約專案</a>
+                    <a @Session[Dictionary.NAVLINK_HIDDEN] href="" class="nav-item nav-link">專案管理</a>
+                    <a @Session[Dictionary.LOGOUT_HIDDEN] href="/LoginAndSignup/Logout" class="nav-item nav-link">登出</a>
+                    <!--userdropdown-->
+                    <!--<div class="nav-item dropdown" id="dropImg" onclick="navfocus()">
+                    <img id="dropdownMenuButton" src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <div class="dropdown_form" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown_formheader">-->
+                    <!--link to userinfo-->
+                    <!--<a href=""><img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
+                                        <div class="formheader_username">
+                                            <p>Lucas-Pezeta</p>
+                                            <p>useremail@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown_formbody">
+                                        <button class="formbody_btn">
+                                            <a href="~/Views/MemberCenter/EditProfile.cshtml">管理我的帳號</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="~/MemberCenter/EditProfile">專案管理</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="">協助與支援</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="">登出</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -55,9 +82,9 @@
             <div class="row">
                 <div class="col-md-4 text-center">
                     <div class="footer-link">
-                        <h2>保留</h2>
-                        <a href="">保留</a>
-                        <a href="">保留</a>
+                        <h2>About</h2>
+                        <a href="">關於我們</a>
+                        <a href="">聯絡我們</a>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
@@ -76,7 +103,8 @@
                     <div class="footer-contact">
                         <h2>Contact Us !</h2>
                         <p>
-                            <i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                            <i class="fa fa-map-marker-alt"></i>
+                            701 臺南市東區大學路1號<br>
                         </p>
                         <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
                         <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
