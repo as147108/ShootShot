@@ -46,15 +46,6 @@
     <Property Name="fFB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="fIns" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="tPhotAlbum">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="FState" Type="Boolean" />
-  </EntityType>
   <EntityType Name="tPhotArea">
     <Key>
       <PropertyRef Name="fId" />
@@ -121,6 +112,7 @@
     <Property Name="fStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="fPjtState" Type="Boolean" />
     <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tRoles">
     <Key>
@@ -135,7 +127,6 @@
     <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
     <EntitySet Name="tKeyword" EntityType="Self.tKeyword" />
     <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" />
-    <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
     <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
     <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
     <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" />
@@ -144,6 +135,7 @@
     <EntitySet Name="tProject" EntityType="Self.tProject" />
     <EntitySet Name="tRoles" EntityType="Self.tRoles" />
     <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+    <EntitySet Name="tPhotAlbum" EntityType="dbShootShotModel.tPhotAlbum" />
   </EntityContainer>
   <EntityType Name="tMember">
     <Key>
@@ -160,5 +152,16 @@
     <Property Name="fGender" Type="Int32" />
     <Property Name="fCode" Type="Int32" />
     <Property Name="fImgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPhotAlbum">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fState" Type="Boolean" />
+    <Property Name="fCoverPath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fKeyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
