@@ -145,7 +145,7 @@
 	<p>與攝影師聊聊</p>
 	<div class="prjMgmt_divForText">
 		<img src="~/Content/img/@TempData["CustImg"]" alt="">
-		@using (Html.BeginForm("Create", "MProject", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		@using (Html.BeginForm("Create", "PrjMgmt", FormMethod.Post, new { enctype = "multipart/form-data" }))
 		{
 			<form>
 				<input type="hidden" name="msgOrderNo" value="@TempData["OrderNum"]" />
@@ -160,34 +160,6 @@
 <br>
 <br>
 @{
-
-	//string msgid = Msg.ToString();
-
-	//if (string.IsNullOrEmpty(msgid))
-	//{
-	//	// 無留言
-	//	ViewBag.Hidden = "'none'";
-	//	ViewBag.Photo = "'none'";
-	//}
-	//else
-	//{
-	//	//有留言
-
-	//	// 搜尋特定訂單留言並依據fid排序
-	//	var tMsgs = db.tMsg.Where(t => t.fOrderNum == OrderNo).OrderBy(t => t.fId).FirstOrDefault();
-	//	var CMsg = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fCMsg ?? "您的留言尚未被回覆";
-	//	var CMsgTime = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fCMsgTime.ToString() ?? "尚未回覆";
-	//	var PMsg = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fPMsg ?? "您有留言尚未回覆";
-	//	var PMsgTime = db.tMsg.Where(m => m.fOrderNum == OrderNo).OrderBy(m => m.fId).FirstOrDefault()?.fPMsgTime.ToString() ?? "尚未回覆";
-	//	for (var i = 0; i < tMsgs.fId; i++)
-	//	{
-	//		msg.fPMsg += PMsg[i];
-	//		//msg.fPMsgTime+= Convert.ToString(PMsgTime[i]);
-	//		msg.fCMsg += CMsg[i];
-	//		//msg.fCMsgTime += CMsgTime[i];
-
-	//	}
-	//}
 	Html.RenderAction("_MsgPartial");
 }
 

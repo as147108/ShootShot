@@ -1,20 +1,18 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@ViewBag.Title SHOOTSHOT</title>
-	@Styles.Render("~/Content/css")
-	@Styles.Render("~/Content")
-	@Scripts.Render("~/bundles/modernizr")
+	<!-- #region meta請勿更改 -->
+	<meta charset="utf-8">
+	<title>建立專案</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="SHOOTSHOT" name="keywords">
 	<meta name="description" content="SHOOTSHOT | 我們提供攝影平台供攝影師上傳作品 管理預約客戶的訂單 消費者可搜尋喜好風格並預約消費">
 	<meta name="robots" content="index,follow">
 	<base target="_self" />
 	<!-- #endregion -->
 	<!-- #region Icon請勿更改 -->
-	<link href="~/Content/images/logo_icon.svg" rel="icon">
+	<link href="~/Content/img/logo.PNG" rel="icon">
 	<!-- #endregion -->
 	<!-- #region 共用googleFont請勿更改 -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
@@ -23,34 +21,62 @@
 	<!-- #region 共用cssLink請勿更改 -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-	<link href="css/nav/style.css" rel="stylesheet">
+	<link href="~/Content/lib/animate/animate.min.css" rel="stylesheet">
+	<link href="~/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="~/Content/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+	<link href="~/Content/css/nav/style.css" rel="stylesheet">
 	<!-- #endregion -->
-	<link href="~/Content/css/cProject.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="~/Content/css/cProject.css">
 </head>
 <body>
 	<!-- #region navbar請勿更改 -->
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
 		<div class="container-fluid">
-			<a href="index.html" class="navbar-brand">SHOOTSHOT</a>
+			<a href="indexV3.html" class="navbar-brand">SHOOTSHOT</a>
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 				<div class="navbar-nav ml-auto align-items-center">
-					<a href="index.html" class="nav-item nav-link">@Html.ActionLink("首頁", "Index", "Home")</a>
-					<a href="index2.html" class="nav-item nav-link">@Html.ActionLink("搜尋", "About", "Home")</a>
-					<a href="cProject.html" class="nav-item nav-link active">@Html.ActionLink("預約專案", "About", "Home")</a>
+
+					<a href="#" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+					<a href="./cProject.html" class="nav-item nav-link">預約專案</a>
+
 					<div class="nav-item dropdown">
-						<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>  -->
-						<img src="~/Content/images/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
-							 style="width: 80px;height: 80px;border-radius: 50px;">
-						<div class="dropdown-menu">
-							<a href="index.html" class="dropdown-item">登入</a>
-							<a href="./member.html" class="dropdown-item">設定</a>
-						</div>
+						<img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"
+							 class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown">
+						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+							<li>
+								<div class="dropdown_form">
+									<div class="dropdown_formheader">
+										<a href="./photographerinfoV4.html">
+											<img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user">
+										</a>
+										<div class="formheader_username">
+											<p>Lucas-Pezeta</p>
+											<p>useremail@gmail.com</p>
+										</div>
+									</div>
+									<div class="dropdown_formbody">
+										<button class="formbody_btn">
+											<a href="">管理我的帳號</a>
+										</button>
+										<button class="formbody_btn" type="submit">
+											<a href="">專案管理</a>
+										</button>
+										<button class="formbody_btn" type="submit">
+											<a href="">協助與支援</a>
+										</button>
+										<button class="formbody_btn" type="submit">
+											<a href="./indexV3 logout.html">登出</a>
+										</button>
+
+									</div>
+								</div>
+							</li>
+
+						</ul>
 					</div>
 				</div>
 			</div>

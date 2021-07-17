@@ -199,4 +199,3 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Net.Http.Heade
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Newtonsoft.Json.Bson.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Text.Encodings.Web.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.AssemblyReference.cache

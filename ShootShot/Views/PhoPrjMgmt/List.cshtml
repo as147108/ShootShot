@@ -2,15 +2,10 @@
 @Styles.Render("~/Content/css/phoPrjMgmt.css")
 @{
 	ViewBag.Title = "List";
+	ViewBag.Title = "Create";
 	Layout = "~/Views/Shared/_LayoutForPhotoPrj.cshtml";
 
-	IEnumerable<tProject> projects = null;
-	dbShootShotEntities db = new dbShootShotEntities();
-	int id = 6;
-	//int id = (int)Session[Dictionary.USER_ID];
-	var member = db.tMember.Where(t => t.fId == id & t.fCode==1).FirstOrDefault();
-	string pemail = member.fEmail.ToString();
-	projects = from p in db.tProject where p.fCEmail.Contains(pemail) select p;
+
 }
 
 <!--------------------------------------------------->
@@ -33,85 +28,48 @@
 		<!-- #article 右側欄內容：卡片區塊slide1 -->
 		<div class="carousel-item active" data-bs-interval="10000">
 			<!-- #article 右側欄內容：卡片1-1 -->
-			<div id="phoPrjMgmt_divForCard1" name="phoPrjMgmt_divForCard1" class="card">
-				<img id="phoPrjMgmt_imgCard1" name="phoPrjMgmt_imgCard1" src="./img/cat05.jpg" class="card-img-top"
-					 alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard1" name="phoPrjMgmt_hCard1" class="card-title">小B沙龍照</h5>
-					<p id="phoPrjMgmt_pCard1" name="phoPrjMgmt_pCard1" class="card-text">
-						建立日期:2021/05/19<br>指定聯絡人:Jack Cheng
-					</p>
-					<a id="phoPrjMgmt_alinkCard1" name="phoPrjMgmt_alinkCard1" href="#"
-					   class="btn btn-outline-secondary">更多</a>
+			@foreach (var item in Model.projects.Take(3))
+			{
+				string photo = item.fPicUpload;
+				<div id="phoPrjMgmt_divForCard1" name="phoPrjMgmt_divForCard1" class="card">
+					<img id="phoPrjMgmt_imgCard1" name="phoPrjMgmt_imgCard1" src="~/Content/@photo" class="card-img-top"
+						 alt="...">
+					<div class="card-body">
+						<h5 id="phoPrjMgmt_hCard1" name="phoPrjMgmt_hCard1" class="card-title">@item.fPjtTopic</h5>
+						<p id="phoPrjMgmt_pCard1" name="phoPrjMgmt_pCard1" class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)<br>
+							指定聯絡人:@item.fContact
+						</p>
+						@using (Html.BeginForm())
+						{
+							<input type="hidden" value="@item.fOrderNum" name="txtOrderNum" for="msgOrderNo"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">
+						}
+					</div>
 				</div>
-			</div>
-
-			<!-- #article 右側欄內容：卡片1-2 -->
-			<div id="phoPrjMgmt_divForCard2" name="phoPrjMgmt_divForCard2" class="card">
-				<img id="phoPrjMgmt_imgCard2" name="phoPrjMgmt_imgCard2" src="./img/food5.jpg" class="card-img-top"
-					 alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard2" name="phoPrjMgmt_hCard2" class="card-title">小食光形象照</h5>
-					<p id="phoPrjMgmt_pCard2" name="phoPrjMgmt_pCard2" class="card-text">建立日期:2021/06/11<br>指定聯絡人:Ema Fu</p>
-					<a id="phoPrjMgmt_alinkCard2" name="phoPrjMgmt_alinkCard2" href="#"
-					   class="btn btn-outline-secondary">更多</a>
-				</div>
-			</div>
-
-			<!-- #article 右側欄內容：卡片1-3 -->
-			<div id="phoPrjMgmt_divForCard3" name="phoPrjMgmt_divForCard3" class="card">
-				<img id="phoPrjMgmt_imgCard3" name="phoPrjMgmt_imgCard3" src="./img/light.jpg" class="card-img-top"
-					 alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard3" name="phoPrjMgmt_hCard3" class="card-title">花藝工作坊</h5>
-					<p id="phoPrjMgmt_pCard3" name="phoPrjMgmt_pCard3" class="card-text">建立日期:2021/06/18<br>指定聯絡人:Ema Fu</p>
-					<a id="phoPrjMgmt_alinkCard3" name="phoPrjMgmt_alinkCard3" href="#"
-					   class="btn btn-outline-secondary">更多</a>
-				</div>
-			</div>
-
+			}
 		</div>
 
 		<!-- #article 右側欄內容：卡片區塊slide2 -->
 		<div class="carousel-item" data-bs-interval="2000">
-			<!-- #article 右側欄內容：卡片2-1 -->
-			<div id="phoPrjMgmt_divForCard4" name="phoPrjMgmt_divForCard4" class="card">
-				<img src="~/Content/img/baby.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard4" name="phoPrjMgmt_hCard4" class="card-title">Luke滿月照</h5>
-					<p id="phoPrjMgmt_pCard4" name="phoPrjMgmt_pCard4" class="card-text">
-						建立日期:2021/06/22<br>指定聯絡人:Dammy Wang
-					</p>
-					<a id="phoPrjMgmt_alinkCard4" name="phoPrjMgmt_alinkCard4" href="#"
-					   class="btn btn-outline-secondary">更多</a>
+			@foreach (var item in Model.projects.Skip(3))
+			{
+				string photo = item.fPicUpload;
+				@*<input type="hidden" name="txtpemail" value="@item.fCEmail" />*@
+				<div id="phoPrjMgmt_divForCard4" name="phoPrjMgmt_divForCard4" class="card">
+					<img src="~/Content/@photo" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 id="phoPrjMgmt_hCard4" name="phoPrjMgmt_hCard4" class="card-title">@item.fPjtTopic</h5>
+						<p id="phoPrjMgmt_pCard4" name="phoPrjMgmt_pCard4" class="card-text">
+							建立日期:@item.fPjtDate.ToString().Substring(0, 10)<br>
+							指定聯絡人:@item.fContact
+						</p>
+						@using (Html.BeginForm())
+						{
+							<input type="hidden" value="@item.fOrderNum" name="txtOrderNum" for="msgOrderNo"><input type="submit" value="前往專案訊息" style="border-radius: 20px; margin: 0px 50px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424;">
+						}
+					</div>
 				</div>
-			</div>
-
-			<!-- #article 右側欄內容：卡片2-2 -->
-			<div id="phoPrjMgmt_divForCard5" name="phoPrjMgmt_divForCard5" class="card">
-				<img src="~/Content/img/man.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard5" name="phoPrjMgmt_hCard5" class="card-title">服飾品牌形象照</h5>
-					<p id="phoPrjMgmt_pCard5" name="phoPrjMgmt_pCard5" class="card-text">
-						建立日期:2021/06/30<br>指定聯絡人:Dammy Wang
-					</p>
-					<a id="phoPrjMgmt_alinkCard5" name="phoPrjMgmt_alinkCard5" href="#"
-					   class="btn btn-outline-secondary">更多</a>
-				</div>
-			</div>
-
-			<!-- #article 右側欄內容：卡片2-3 -->
-			<div id="phoPrjMgmt_divForCard6" name="phoPrjMgmt_divForCard6" class="card">
-				<img src="~/Content/img/product.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 id="phoPrjMgmt_hCard6" name="phoPrjMgmt_hCard6" class="card-title">商品形象照</h5>
-					<p id="phoPrjMgmt_pCard6" name="phoPrjMgmt_pCard6" class="card-text">
-						建立日期:2021/07/02<br>指定聯絡人:Nina Evans
-					</p>
-					<a id="phoPrjMgmt_alinkCard6" name="phoPrjMgmt_alinkCard6" href="#"
-					   class="btn btn-outline-secondary">更多</a>
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 	<!-- #article 右側欄內容：卡片區塊slide區塊end -->
@@ -147,37 +105,33 @@
 	<div class="container">
 		<div class="project">
 			<p id="phoPrjMgmt_pTitle" name="phoPrjMgmt_pTitle">專案主題</p>
-			<h2 id="phoPrjMgmt_hDate" name="phoPrjMgmt_hDate">小Ｂ沙龍照</h2>
-			<p class="time">專案建立日期：2021/06/08</p>
-			<p id="phoPrjMgmt_phoName" name="phoPrjMgmt_phoName">預約攝影師：Lucas Pezeta</p>
+			<h2 id="phoPrjMgmt_hDate" name="phoPrjMgmt_hDate">@TempData["PjtTopic"]</h2>
+			<p class="time">專案建立日期：@TempData["PjtDate"]</p>
+			<p id="phoPrjMgmt_phoName" name="phoPrjMgmt_phoName">預約攝影師：@TempData["PhotoName"]</p>
 			<br>
 			<p id="phoPrjMgmt_pDetail" name="phoPrjMgmt_pDetail">
-				拍攝日期：2021/06/12 (星期六)<br>
-				拍攝開始時間：10:00am<br>
-				拍攝地點：高雄市/ 高雄市立美術館園區<br>
-				出圖張數：50張<br>
-				拍攝類型：寵物
+				拍攝日期：@TempData["FilmDate"] <br>
+				拍攝開始時間：@TempData["FilmTime"]<br>
+				拍攝地點：@TempData["City"] / @TempData["Loc"]<br>
+				出圖張數：@TempData["PrintQty"] 張<br>
+				專案預算：@TempData["Budget"] 元
 			</p>
 			<br>
 			<p id="phoPrjMgmt_pContect" name="phoPrjMgmt_pContect">
-				指定聯絡人：小Ｂ媽<br>
-				聯絡人電話：0988802265<br>
-				可聯繫時間：平日20:00~22:00pm
+				指定聯絡人：@TempData["Contact"]<br>
+				聯絡人電話：@TempData["ContactTel"]<br>
+				可聯繫時間：平日 @TempData["WkdyTime"] / 假日 @TempData["WkndTime"]
 			</p>
 			<br>
 			<p id="phoPrjMgmt_pDescribe" name="phoPrjMgmt_pDescribe">
 				其他需求描述：<br>
-				希望可以帶寵物在室外攝影但不要使用閃光燈，<br>
-				預約時間若天氣不好希望可以擇她日安排或再與攝影師討論改為室內拍攝，<br>
-				專案是個人收藏用，<br>
-				但希望可以之後用做印刷用途可以輸出高畫質的檔案！
+				@TempData["Req"]
 			</p>
 			<br>
+			<p>參考連結：@TempData["Style"]</p>
 			<p>風格參考</p>
 			<div id="phoPrjMgmt_dicForImgStyle" name="phoPrjMgmt_dicForImgStyle" class="row picture">
-				<div class="col">
-					<img id="phoPrjMgmt_ImgStyle" name="phoPrjMgmt_ImgStyle" src="~/Content/img/cat01.jpg" alt="">
-				</div>
+				<div class="col"><img id="phoPrjMgmt_ImgStyle" name="phoPrjMgmt_ImgStyle" src="~/Content/@TempData["PicUpload"]" alt=""></div>
 				<div class="col"><img src="" alt="" style="display:none;"></div>
 				<div class="col"><img src="" alt="" style="display:none;"></div>
 				<div class="col"><img src="" alt="" style="display:none;"></div>
@@ -189,39 +143,33 @@
 </div>
 <!-- #article 右側欄內容：專案內容區塊 -->
 <!----------------------------------->
-		</div>
+
 
 <!--------------------------------->
 <!-- #article 右側欄內容：留言板區塊start -->
 <div id="phoPrjMgmt_divForChat1" name="phoPrjMgmt_divForChat1" class="phoPrjMgmt_divForChat">
 	<p>與聯絡人聊聊</p>
 	<div id="phoPrjMgmt_divForText" name="phoPrjMgmt_divForText" class="phoPrjMgmt_divForText">
-		<img id="phoPrjMgmt_imgPho" name="phoPrjMgmt_imgPho" src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="">
-		<textarea class="chattext" name="phoPrjMgmt_texboxChat" id="phoPrjMgmt_texboxChat" cols="80" rows="2"
-				  aria-valuemax="150">聊聊吧...</textarea>
-		<input id="phoPrjMgmt_submChat" name="phoPrjMgmt_submChat" type="submit" value="發送"></input>
+		<img id="phoPrjMgmt_imgPho" name="phoPrjMgmt_imgPho" src="~/Content/img/@TempData["PhoImg"]" alt="">
+
+		@using (Html.BeginForm("Create", "PhoPrjMgmt", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		{
+			try
+			{
+				string key = Request.QueryString["Key"];
+				<input type="hidden" id="fixkey" name="fixkey" value="@key" />
+			}
+			catch (Exception ex) { throw; }
+			
+			<input type="hidden" name="msgOrderNo" value="@TempData["OrderNum"]" />
+			<textarea class="chattext" name="phoPrjMgmt_texboxChat" id="phoPrjMgmt_texboxChat" cols="80" rows="2" aria-valuemax="150" placeholder="聊聊吧..."></textarea>
+			<input id="phoPrjMgmt_submChat" name="phoPrjMgmt_submChat" type="submit" value="發送" for="pmsgfix">
+		}
+
 	</div>
 </div>
 <br>
 <br>
-
-<!--------------------------------->
-<!-- #article 右側欄內容：留言板區塊 -->
-
-<div class="prjMgmt_divForMem">
-	<img class="chat" src="~/Content/img/chat 1.svg" alt="">
-	<div class="prjMgmt_divForMes">
-		<img src="~/Content/img/member/dammy-wang-user.jpg" alt="">
-		<p class="memberMes">攝影師你好,因為氣象預報週六天氣可能會下雨,請問可以直接改期嗎?</p>
-		<p class="memberTime">2021/06/09 13:54:40</p>
-	</div>
-	<br>
-	<div class="prjMgmt_divForPho">
-		<img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="">
-		<p class="PhoMes">Dammy你好, 沒問題! 我們在討論其他時間!</p>
-		<p class="PhoTime">2021/06/09 13:54:40</p>
-	</div>
-</div>
-
-<!-- #article 右側欄內容：留言板區塊end -->
-<!--------------------------------->
+@{
+	Html.RenderAction("_PhoMsgPartial");
+}

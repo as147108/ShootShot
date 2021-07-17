@@ -414,6 +414,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\cProject.css" />
     <Content Include="Content\css\phoPrjMgmt.css" />
     <Content Include="Content\css\prjMgmt.css" />
     <Content Include="Content\css\style.css" />
@@ -455,6 +456,7 @@
     <Content Include="Views\Shared\_MsgPartial.cshtml" />
     <Content Include="Views\Shared\_LayoutForPhotoPrj.cshtml" />
     <Content Include="Views\PhoPrjMgmt\List.cshtml" />
+    <Content Include="Views\Shared\_PhoMsgPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

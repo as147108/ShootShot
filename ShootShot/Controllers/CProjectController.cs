@@ -43,8 +43,12 @@ namespace ShootShot.Controllers
 
             dbShootShotEntities db = new dbShootShotEntities();
 			//tMember photog = new tMember();
-			var cemail = "nina1982@gmail.com";
+            
+            int id = 4;
+            var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+            string cemail = member.fEmail.ToString();
             tMember cust = db.tMember.FirstOrDefault(m => m.fEmail == cemail);
+
             if (cust != null)
             {
                 ViewBag.txtCEmail = cemail;
