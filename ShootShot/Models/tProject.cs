@@ -33,6 +33,5 @@ namespace ShootShot.Models
         public string fStyle { get; set; }
         public Nullable<bool> fPjtState { get; set; }
         public string fPEmail { get; set; }
-        public string fPicUpload { get; set; }
     }
 }
