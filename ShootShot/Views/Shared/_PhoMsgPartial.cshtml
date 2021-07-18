@@ -9,13 +9,13 @@
 	{
 		string CMsg = item.fCMsg;
 		if (CMsg == null)
-		{ CMsg = "您的留言尚未被回覆"; 
+		{
+			CMsg = "您的留言尚未被回覆";
 		}
 		string PMsg = item.fPMsg;
 		if (PMsg == null)
 		{
 			PMsg = "您有留言尚未回覆";
-			string action = "true";
 		}
 
 		<div class="prjMgmt_divForMes">
@@ -29,7 +29,13 @@
 			<p class="PhoMes">@PMsg</p>
 			<p class="PhoTime">@item.fPMsgTime</p>
 			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
-			<div v-show="false">@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })</div>
+			@if (item.fId.ToString() != null)
+			{
+			<div id="app">
+				@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })
+			</div>}
+			<br />
+			<br />
 
 			@*@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })*@
 			@*<input type="submit" value="回覆" style="border-radius: 20px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424; margin-right: 10px;" />*@
@@ -38,7 +44,7 @@
 		</div>
 		<br />
 	}
-	</div>
+</div>
 
 
 

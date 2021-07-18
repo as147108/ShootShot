@@ -2,43 +2,47 @@
 
 @{
 	ViewBag.Title = "ReplyMsg";
-	//Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
+	Layout = "~/Views/Shared/_LayoutForPrj.cshtml";
 }
+<article>
+	<div class="prjMain">
+		<div class="container">
+			<h2 style="margin:auto 50px;">回覆留言</h2>
 
-<h2 style="margin:auto 50px;">回覆留言</h2>
+			<form method="post" action="~/PrjMgmt/ReplyMsg">
+				<p>
+					<input type="hidden" name="fId" value="@Model.msg.fId" style="margin:auto 50px;" />
+					<input type="hidden" name="fCEmail" value="@Model.msg.fCEmail" style="margin:auto 50px;" />
+				</p>
 
-<form method="post" action="~/PrjMgmt/ReplyMsg">
-	<p>
-		<input type="hidden" name="fId" value="@Model.msg.fId" style="margin:auto 50px;" />
-	</p>
-	<input type="hidden" name="fCEmail" value="@Model.msg.fCEmail" style="margin:auto 50px;" />
-	</p>
-
-	<div class="mb-3">
-		<label for="formGroupExampleInput2" class="form-label">攝影師留言</label>
-		<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fPMsg" value="@Model.msg.fPMsg" readonly></textarea>
-		@*<input >*@
+				<div class="mb-3">
+					<label for="formGroupExampleInput2" class="form-label">攝影師留言</label>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" name="fPMsg" value="@Model.msg.fPMsg" readonly>@Model.msg.fPMsg</textarea>
+					@*<input >*@
+				</div>
+				<div class="mb-3">
+					<label for="formGroupExampleInput" class="form-label">您的留言</label>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fCMsg" value="@Model.msg.fCMsg"></textarea>
+				</div>
+				<div class="mb-3">
+					<input type="hidden" class="form-control" id="formGroupExampleInput2" name="fPMsgTime" value="@Model.msg.fPMsgTime " readonly>
+				</div>
+				<div class="mb-3">
+					<label for="formGroupExampleInput2" class="form-label">時間</label>
+					<input type="datetime" class="form-control" id="formGroupExampleInput2" name="fCMsgTime" value="@DateTime.Now" maxlength="50" readonly>
+				</div>
+				<p>
+					<input type="hidden" name="fOrderNum" value="@Model.msg.fOrderNum" style="margin:auto 50px;" />
+				</p>
+				<p>
+					<input type="hidden" name="fPEmail" value="@Model.msg.fPEmail" style="margin:auto 50px;" />
+				</p>
+				<p>
+					狀態<br />
+					<input type="hidden" name="fStates" value="@Model.msg.fStates @true" style="margin:auto 50px;" />
+				</p>
+				<input type="submit" value="回覆" />
+			</form>
+		</div>
 	</div>
-	<div class="mb-3">
-		<label for="formGroupExampleInput" class="form-label">顧客留言</label>
-		<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fPMsg" value="@Model.msg.fCMsg"></textarea>
-	</div>
-	<div class="mb-3">
-		<input type="hidden" class="form-control" id="formGroupExampleInput2" name="fPMsgTime" value="@Model.msg.fPMsgTime @DateTime.Now " readonly>
-	</div>
-	<div class="mb-3">
-		<label for="formGroupExampleInput2" class="form-label">時間</label>
-		<input type="text" class="form-control" id="formGroupExampleInput2" name="fCMsgTime" value="@Model.msg.fCMsgTime" @DateTime.Now ">
-	</div>
-	<p>
-		<input type="hidden" name="fOrderNum" value="@Model.msg.fOrderNum" style="margin:auto 50px;" />
-	</p>
-	<p>
-		<input type="hidden" name="fPEmail" value="@Model.msg.fPEmail" style="margin:auto 50px;" />
-	</p>
-	<p>
-		狀態<br />
-		<input type="hidden" name="fStates" value="@Model.msg.fStates @true" style="margin:auto 50px;" />
-	</p>
-	<input type="submit" value="回覆" />
-</form>
+</article>

@@ -148,7 +148,7 @@ namespace ShootShot.Controllers
             msg.msg = msgs;
             if (msgs != null)
             {
-                msgs.fPMsg = m.fPMsg;
+                msgs.fPMsg = Request.Form["fPMsg"];
                 msgs.fPMsgTime = DateTime.Now;
                 msgs.fStates = true;
                 db.SaveChanges();

@@ -116,7 +116,7 @@ namespace ShootShot.Controllers
             msg.msg = msgs;
             if (msgs != null)
             {
-                msgs.fCMsg = m.fCMsg;
+                msgs.fCMsg = Request.Form["fCMsg"];
                 msgs.fCMsgTime = DateTime.Now;
                 msgs.fStates = true;
                 db.SaveChanges();

@@ -1,4 +1,3 @@
-C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Net.Http.Headers.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.dll.config
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.pdb
@@ -97,6 +96,7 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.Obj
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.Options.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Net.Http.Headers.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Win32.Registry.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\MvcPaging.dll
