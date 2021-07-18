@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbShootShotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tAlbumPhoto">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fAlbId" Type="int" />
+          <Property Name="fName" Type="nvarchar" MaxLength="20" />
+          <Property Name="fDes" Type="nvarchar" MaxLength="100" />
+          <Property Name="fCover" Type="bit" />
+          <Property Name="fLike" Type="int" />
+          <Property Name="fView" Type="int" />
+        </EntityType>
+        <EntityType Name="tCMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fMsgTime" Type="smalldatetime" />
+          <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
+          <Property Name="fState" Type="bit" />
+          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tKeyword">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fPhoId" Type="int" />
+          <Property Name="fKeyword" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tMember">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fName" Type="nvarchar" MaxLength="30" />
+          <Property Name="fPhoto" Type="nvarchar" MaxLength="50" />
+          <Property Name="fBday" Type="date" />
+          <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fTel" Type="nvarchar" MaxLength="20" />
+          <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+          <Property Name="fPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="fGender" Type="int" />
+          <Property Name="fCode" Type="int" />
+          <Property Name="fImgpath" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tMemberPhot">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fName" Type="nvarchar" MaxLength="30" />
+          <Property Name="fIntro" Type="nvarchar" MaxLength="1024" />
+          <Property Name="fStudioName" Type="nvarchar" MaxLength="20" />
+          <Property Name="fStuidioAdd" Type="nvarchar" MaxLength="100" />
+          <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fOther" Type="nvarchar" MaxLength="100" />
+          <Property Name="fFB" Type="nvarchar" MaxLength="100" />
+          <Property Name="fIns" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tPhotAlbum">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fName" Type="nvarchar" MaxLength="20" />
+          <Property Name="fState" Type="bit" />
+          <Property Name="fCoverPath" Type="nvarchar" MaxLength="50" />
+          <Property Name="fKeyword" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tPhotArea">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tPhotStyle">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fStyle" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tPjtDetailType">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fFilmType" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tPjtDetailUpload">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tPMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fMsgTime" Type="smalldatetime" />
+          <Property Name="fMsg" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tProject">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fOrderNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPjtDate" Type="datetime" />
+          <Property Name="fCEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fContact" Type="nvarchar" MaxLength="30" />
+          <Property Name="fContactTel" Type="nvarchar" MaxLength="20" />
+          <Property Name="fWkdyTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="fWkndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="fCity" Type="nvarchar" MaxLength="10" />
+          <Property Name="fLoc" Type="nvarchar" MaxLength="10" />
+          <Property Name="fFilmDate" Type="date" />
+          <Property Name="fFilmTime" Type="time" Precision="0" />
+          <Property Name="fBudget" Type="int" />
+          <Property Name="fPrintQty" Type="int" />
+          <Property Name="fPjtTopic" Type="nvarchar" MaxLength="20" />
+          <Property Name="fReq" Type="nvarchar" MaxLength="1024" />
+          <Property Name="fStyle" Type="nvarchar" MaxLength="100" />
+          <Property Name="fPjtState" Type="bit" />
+          <Property Name="fPEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fPicUpload" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tRoles">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fCode" Type="int" />
+          <Property Name="fRole" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="dbShootShotModelStoreContainer">
+          <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tCMsg" EntityType="Self.tCMsg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tKeyword" EntityType="Self.tKeyword" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPMsg" EntityType="Self.tPMsg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tProject" EntityType="Self.tProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tRoles" EntityType="Self.tRoles" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbShootShotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tAlbumPhoto">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fAlbId" Type="Int32" />
+          <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fDes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fCover" Type="Boolean" />
+          <Property Name="fLike" Type="Int32" />
+          <Property Name="fView" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tCMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fMsgTime" Type="DateTime" Precision="0" />
+          <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fState" Type="Boolean" />
+          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tKeyword">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fPhoId" Type="Int32" />
+          <Property Name="fKeyword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tMemberPhot">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="fIntro" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="fStudioName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fStuidioAdd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fOther" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fFB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fIns" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPhotArea">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPhotStyle">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fStyle" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPjtDetailType">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fFilmType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPjtDetailUpload">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPMsg">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fMsgTime" Type="DateTime" Precision="0" />
+          <Property Name="fMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tProject">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fOrderNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPjtDate" Type="DateTime" Precision="3" />
+          <Property Name="fCEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fContact" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="fContactTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fWkdyTime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fWkndTime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fCity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fLoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fFilmDate" Type="DateTime" Precision="0" />
+          <Property Name="fFilmTime" Type="Time" Precision="0" />
+          <Property Name="fBudget" Type="Int32" />
+          <Property Name="fPrintQty" Type="Int32" />
+          <Property Name="fPjtTopic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fReq" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="fStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fPjtState" Type="Boolean" />
+          <Property Name="fPEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fPicUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tRoles">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fCode" Type="Int32" />
+          <Property Name="fRole" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dbShootShotEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
+          <EntitySet Name="tCMsg" EntityType="Self.tCMsg" />
+          <EntitySet Name="tKeyword" EntityType="Self.tKeyword" />
+          <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" />
+          <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
+          <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
+          <EntitySet Name="tPjtDetailType" EntityType="Self.tPjtDetailType" />
+          <EntitySet Name="tPjtDetailUpload" EntityType="Self.tPjtDetailUpload" />
+          <EntitySet Name="tPMsg" EntityType="Self.tPMsg" />
+          <EntitySet Name="tProject" EntityType="Self.tProject" />
+          <EntitySet Name="tRoles" EntityType="Self.tRoles" />
+          <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+          <EntitySet Name="tPhotAlbum" EntityType="dbShootShotModel.tPhotAlbum" />
+        </EntityContainer>
+        <EntityType Name="tMember">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="fPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fBday" Type="DateTime" Precision="0" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fGender" Type="Int32" />
+          <Property Name="fCode" Type="Int32" />
+          <Property Name="fImgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPhotAlbum">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fState" Type="Boolean" />
+          <Property Name="fCoverPath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fKeyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbShootShotModelStoreContainer" CdmEntityContainer="dbShootShotEntities">
+          <EntitySetMapping Name="tAlbumPhoto">
+            <EntityTypeMapping TypeName="dbShootShotModel.tAlbumPhoto">
+              <MappingFragment StoreEntitySet="tAlbumPhoto">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fAlbId" ColumnName="fAlbId" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fDes" ColumnName="fDes" />
+                <ScalarProperty Name="fCover" ColumnName="fCover" />
+                <ScalarProperty Name="fLike" ColumnName="fLike" />
+                <ScalarProperty Name="fView" ColumnName="fView" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tCMsg">
+            <EntityTypeMapping TypeName="dbShootShotModel.tCMsg">
+              <MappingFragment StoreEntitySet="tCMsg">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+                <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
+                <ScalarProperty Name="fMsg" ColumnName="fMsg" />
+                <ScalarProperty Name="fState" ColumnName="fState" />
+                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tKeyword">
+            <EntityTypeMapping TypeName="dbShootShotModel.tKeyword">
+              <MappingFragment StoreEntitySet="tKeyword">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fPhoId" ColumnName="fPhoId" />
+                <ScalarProperty Name="fKeyword" ColumnName="fKeyword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMemberPhot">
+            <EntityTypeMapping TypeName="dbShootShotModel.tMemberPhot">
+              <MappingFragment StoreEntitySet="tMemberPhot">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fIntro" ColumnName="fIntro" />
+                <ScalarProperty Name="fStudioName" ColumnName="fStudioName" />
+                <ScalarProperty Name="fStuidioAdd" ColumnName="fStuidioAdd" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fOther" ColumnName="fOther" />
+                <ScalarProperty Name="fFB" ColumnName="fFB" />
+                <ScalarProperty Name="fIns" ColumnName="fIns" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhotArea">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPhotArea">
+              <MappingFragment StoreEntitySet="tPhotArea">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fArea" ColumnName="fArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhotStyle">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPhotStyle">
+              <MappingFragment StoreEntitySet="tPhotStyle">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fStyle" ColumnName="fStyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPjtDetailType">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailType">
+              <MappingFragment StoreEntitySet="tPjtDetailType">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+                <ScalarProperty Name="fFilmType" ColumnName="fFilmType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPjtDetailUpload">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPjtDetailUpload">
+              <MappingFragment StoreEntitySet="tPjtDetailUpload">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+                <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPMsg">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPMsg">
+              <MappingFragment StoreEntitySet="tPMsg">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+                <ScalarProperty Name="fMsgTime" ColumnName="fMsgTime" />
+                <ScalarProperty Name="fMsg" ColumnName="fMsg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tProject">
+            <EntityTypeMapping TypeName="dbShootShotModel.tProject">
+              <MappingFragment StoreEntitySet="tProject">
+                <ScalarProperty Name="fPicUpload" ColumnName="fPicUpload" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fOrderNum" ColumnName="fOrderNum" />
+                <ScalarProperty Name="fPjtDate" ColumnName="fPjtDate" />
+                <ScalarProperty Name="fCEmail" ColumnName="fCEmail" />
+                <ScalarProperty Name="fContact" ColumnName="fContact" />
+                <ScalarProperty Name="fContactTel" ColumnName="fContactTel" />
+                <ScalarProperty Name="fWkdyTime" ColumnName="fWkdyTime" />
+                <ScalarProperty Name="fWkndTime" ColumnName="fWkndTime" />
+                <ScalarProperty Name="fCity" ColumnName="fCity" />
+                <ScalarProperty Name="fLoc" ColumnName="fLoc" />
+                <ScalarProperty Name="fFilmDate" ColumnName="fFilmDate" />
+                <ScalarProperty Name="fFilmTime" ColumnName="fFilmTime" />
+                <ScalarProperty Name="fBudget" ColumnName="fBudget" />
+                <ScalarProperty Name="fPrintQty" ColumnName="fPrintQty" />
+                <ScalarProperty Name="fPjtTopic" ColumnName="fPjtTopic" />
+                <ScalarProperty Name="fReq" ColumnName="fReq" />
+                <ScalarProperty Name="fStyle" ColumnName="fStyle" />
+                <ScalarProperty Name="fPjtState" ColumnName="fPjtState" />
+                <ScalarProperty Name="fPEmail" ColumnName="fPEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tRoles">
+            <EntityTypeMapping TypeName="dbShootShotModel.tRoles">
+              <MappingFragment StoreEntitySet="tRoles">
+                <ScalarProperty Name="fId" ColumnName="fId" />
+                <ScalarProperty Name="fCode" ColumnName="fCode" />
+                <ScalarProperty Name="fRole" ColumnName="fRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMember">
+            <EntityTypeMapping TypeName="dbShootShotModel.tMember">
+              <MappingFragment StoreEntitySet="tMember">
+                <ScalarProperty Name="fImgpath" ColumnName="fImgpath" />
+                <ScalarProperty Name="fCode" ColumnName="fCode" />
+                <ScalarProperty Name="fGender" ColumnName="fGender" />
+                <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+                <ScalarProperty Name="fArea" ColumnName="fArea" />
+                <ScalarProperty Name="fTel" ColumnName="fTel" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fBday" ColumnName="fBday" />
+                <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhotAlbum">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
+              <MappingFragment StoreEntitySet="tPhotAlbum">
+                <ScalarProperty Name="fKeyword" ColumnName="fKeyword" />
+                <ScalarProperty Name="fCoverPath" ColumnName="fCoverPath" />
+                <ScalarProperty Name="fState" ColumnName="fState" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

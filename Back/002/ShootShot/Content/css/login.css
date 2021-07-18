@@ -1,0 +1,470 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', Arial, Arial, Helvetica, sans-serif;
+}
+
+
+/* share CSS*/
+
+@media (min-width: 1136px) {
+    .JnL_container h1 {
+        color: #242424;
+    }
+
+    .JnL_container {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .JnL_leftside {
+        background-color: #ffffff;
+        width: 50%;
+        height: 100vh;
+    }
+
+        .JnL_leftside img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+    .JnL_rightside {
+        margin-top: 120px;
+        background-color: #ffffff;
+        width: 50%;
+        height: 100vh;
+    }
+
+    .join_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .joinForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .JnL_Form_style {
+        border: solid 1px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        width: 350px;
+        height: 40px;
+    }
+
+    .joinForm_password_container {
+        align-items: center;
+    }
+
+    .joinForm_password_chkbox,
+    .joinForm_password_show {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .join_btn {
+        margin-top: 30px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 350px;
+    }
+
+        .join_btn:hover {
+            background-color: #535353;
+            color: #7dffd1;
+        }
+
+    .join_a1 {
+        color: blue;
+    }
+
+    .join_p2 {
+        font-size: 5px;
+    }
+
+
+    /* login */
+
+    .login_p3 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 250px;
+        color: #242424;
+    }
+
+    .login_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login_btn {
+        margin-top: 30px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 350px;
+    }
+
+        .login_btn:hover {
+            background-color: #535353;
+            color: #7dffd1;
+        }
+
+    .login_detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .login_a2 {
+        color: blue;
+    }
+
+    .login_p4 {
+        margin-top: 10px;
+    }
+
+        .login_p4 a {
+            text-decoration: underline;
+            color: blue;
+        }
+
+    .login_otherway {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login_line {
+        margin: 30px 0 30px;
+        height: 1px;
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login_p5 {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .login_otherway_img {
+        width: 30px;
+    }
+}
+
+
+
+@media screen and (max-width:1135px) {
+    .JnL_container h1 {
+        color: #242424;
+        font-size: 40px
+    }
+
+    .JnL_container {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .JnL_leftside {
+        background-color: #ffffff;
+        width: 50%;
+        height: 100%;
+    }
+
+        .JnL_leftside img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .JnL_rightside {
+        margin-top: 20px;
+        background-color: #ffffff;
+        width: 50%;
+        height: 100%;
+    }
+
+
+
+    .JnL_Form_style {
+        border: solid 1px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        width: 300px;
+        height: 40px;
+    }
+
+    .join_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .joinForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .joinForm_password_container {
+    }
+
+    .joinForm_password_chkbox,
+    .joinForm_password_show {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+    .join_btn {
+        margin-top: 20px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 300px;
+    }
+
+        .join_btn:hover {
+            background-color: #535353;
+            color: #7dffd1;
+        }
+
+
+    .join_p1 {
+        font-size: 10px;
+    }
+
+    .join_a1 {
+        color: blue;
+        font-size: 10px;
+    }
+
+    .join_p2 {
+        font-size: 5px;
+        margin: 0;
+    }
+
+
+
+
+    /* login */
+
+    .login_p3 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 250px;
+        color: #242424;
+    }
+
+    .login_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login_btn {
+        margin-top: 30px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 300px;
+    }
+
+        .login_btn:hover {
+            background-color: #535353;
+            color: #7dffd1;
+        }
+
+    .login_detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .login_a2 {
+        color: blue;
+    }
+
+    .login_p4 {
+        margin-top: 10px;
+    }
+
+        .login_p4 a {
+            text-decoration: underline;
+            color: blue;
+        }
+
+    .login_otherway {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login_line {
+        margin: 30px 0 30px;
+        height: 1px;
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login_p5 {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .login_otherway_img {
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width:990px) {
+
+    .JnL_container h1 {
+        font-size: 35px
+    }
+
+    .JnL_container {
+        height: 700px;
+    }
+
+    .JnL_leftside {
+        width: 0%;
+    }
+
+        .JnL_leftside img {
+            width: 0px;
+            height: 0px;
+        }
+
+    .JnL_rightside {
+        margin-top: 20px;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .JnL_Form_style {
+        width: 250px;
+    }
+
+
+
+    .joinForm_password_chkbox,
+    .joinForm_password_show {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+    .join_btn {
+        width: 250px;
+    }
+
+
+
+    /* login */
+
+
+
+    .login_btn {
+        margin-top: 20px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 250px;
+    }
+
+
+
+    .login_detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .login_a2 {
+        color: blue;
+    }
+
+    .login_p4 {
+        margin-top: 5px;
+    }
+
+        .login_p4 a {
+            text-decoration: underline;
+            color: blue;
+        }
+
+    .login_otherway {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login_line {
+        margin: 15px 0px;
+        height: 1px;
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login_p5 {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .login_otherway_img {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width:770px) {
+}

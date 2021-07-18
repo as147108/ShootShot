@@ -1,0 +1,103 @@
+(1)EditProfile.cshtml
+64:姓名下面<br>要拿掉
+
+(2)member.css
+103:
+article div.leftbutton {
+height: 170px;
+}
+
+230-232:
+form div.phone input{
+    width:210px;
+}
+
+392-394:
+form div.phone input {
+        width: 200px;
+}
+
+(3)memberPass.css
+155:
+article div.leftbutton {
+   height: 170px;
+}
+
+255:
+form div label {
+  padding: 0px;
+}
+
+265:
+form div.memberPass_divForpass{
+  height: 170px;
+}
+
+268:
+form div.memberPass_divForpass p{
+  padding: 0px 20px 0px 20px;
+}
+
+275:
+form div.memberPass_divForOld {
+  padding: 0px 20px;
+}
+
+293:
+form div.memberPass_divForNew {
+  padding: 0px 20px;
+}
+
+311:
+form div.memberPass_divForNew2 {
+  padding: 0px 20px;
+}
+
+429:
+form div.memberPass_divForpass p{
+    padding: 0px 20px 0px 20px;
+}
+
+435:
+form div.memberPass_divForOld {
+    padding: 0px 20px;
+}
+
+453:
+form div.memberPass_divForNew {
+    padding: 0px 20px;
+}
+
+472:
+form div.memberPass_divForNew2 {
+    padding: 0px 20px;
+
+570:
+ form div.memberPass_divForpass p{
+    padding: 0px 20px 0px 20px;
+}
+ 
+576: 
+form div.memberPass_divForOld {
+    padding: 0px 20px;
+}
+
+594:
+ form div.memberPass_divForNew {
+    padding: 0px 20px;
+}
+
+613:
+form div.memberPass_divForNew2 {
+    padding: 0px 20px;
+}
+
+705:
+form div.memberPass_divForpass{
+    height: 270px;
+}
+
+711:
+form div.memberPass_divForpass p{
+    padding-top: 0px;
+}
