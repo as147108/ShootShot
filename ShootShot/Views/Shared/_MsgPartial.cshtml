@@ -12,23 +12,28 @@
 }
 <!--------------------------------->
 <!-- #article 右側欄內容：留言板區塊 -->
-@foreach (var item in Model)
-{
-	string CMsg = item.fCMsg;
-	if (CMsg == null)
-	{ CMsg = "您有留言尚未回覆";
-		string action = "true";}
-	string PMsg = item.fPMsg;
-	if (PMsg == null)
-	{ PMsg = "您的留言尚未被回覆"; }
-	<div class="prjMgmt_divForMem">
-		<img class="chat" src="./img/chat 1.svg" alt="">
+<div class="prjMgmt_divForMem">
+	<img class="chat" src="~/Content/img/chat 1.svg" alt="">
+	@foreach (var item in Model)
+	{
+		string CMsg = item.fCMsg;
+		if (CMsg == null)
+		{
+			CMsg = "您有留言尚未回覆";
+			string action = "true";
+		}
+		string PMsg = item.fPMsg;
+		if (PMsg == null)
+		{ PMsg = "您的留言尚未被回覆"; }
+
 		<div class="prjMgmt_divForMes">
 			<img src="~/Content/img/@TempData["CustImg"]" alt="">
 			<p class="memberMes">@CMsg</p>
 			<p class="memberTime">@item.fCMsgTime</p>
 			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
-			<div v-show="false">@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })</div>
+			@if (item.fCMsg == null)
+			{
+				<div>@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })</div>}
 		</div>
 		<br />
 		<br />
@@ -37,5 +42,6 @@
 			<p class="PhoMes">@PMsg</p>
 			<p class="PhoTime">@item.fPMsgTime</p>
 		</div>
+		}
 	</div>
-}
+

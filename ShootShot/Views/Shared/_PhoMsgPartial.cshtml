@@ -29,7 +29,7 @@
 			<p class="PhoMes">@PMsg</p>
 			<p class="PhoTime">@item.fPMsgTime</p>
 			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
-			@if (item.fId.ToString() != null)
+			@if (item.fPMsg== null)
 			{
 			<div id="app">
 				@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })
