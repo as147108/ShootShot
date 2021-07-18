@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>API_Controller</RootNamespace>
+  </PropertyGroup>
+ public ActionResult Test()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Javascript取得id_token，透過Ajax發送至這個Action，後端 ASP.net MVC 把 id_token 轉成 user_id
+        /// </summary>
+        /// <param name="id_token"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<ActionResult> Test(string id_token)
+        { 
+            string msg = "ok";
+            GoogleJsonWebSignature.Payload payload = null;
+            try
+            {
+                payload = await GoogleJsonWebSignature.ValidateAsync(id_token, new GoogleJsonWebSignature.ValidationSettings()
+                {
+                    Audience = new List<string>() { WebConfigurationManager.AppSettings["Google_clientId_forLogin"] }//要驗證的client id，把自己申請的Client ID填進去
+                }); 
+            }
+            catch (Google.Apis.Auth.InvalidJwtException ex)
+            {
+                msg = ex.Message;
+            }
+            catch (Newtonsoft.Json.JsonReaderException ex)
+            {
+                msg = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                msg = ex.Message;
+            }
+             
+            if (msg=="ok" && payload!=null)
+            {//都成功
+                string user_id = payload.Subject;//取得user_id
+                msg = $@"您的 user_id :{user_id}";
+            }
+             
+            return Content(msg);
+        }
+</Project>
