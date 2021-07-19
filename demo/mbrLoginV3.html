@@ -30,24 +30,25 @@
 <body>
     <!-- #region navbar請勿更改 -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
-        <div class="container-fluid">
-            <a href="indexV3.html" class="navbar-brand">SHOOTSHOT</a>
+        <div class="container-fluid" style="max-width:100%">
+            <a href="~/Home/Index" class="navbar-brand">SHOOTSHOT</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between navbarfonts" id="navbarCollapse">
                 <div class="navbar-nav ml-auto align-items-center">
-
-                    <a href="#" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
-                    <a href="./cProject.html" class="nav-item nav-link">預約專案</a>
-
+                    <a href="~/Views/Home/Index.cshtml" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+                    <!--link to cproject-->
+                    <a href="" class="nav-item nav-link">預約專案</a>
+                    <!--userdropdown-->
                     <div class="nav-item dropdown">
-                        <img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown">
+                        <img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class=" dropdown-toggle nav_userphoto" data-toggle="dropdown">
                         <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
                             <li>
                                 <div class="dropdown_form">
                                     <div class="dropdown_formheader">
-                                        <a href="./photographerinfoV4.html"><img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
+                                        <!--link to userinfo-->
+                                        <a href=""><img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
                                         <div class="formheader_username">
                                             <p>Lucas-Pezeta</p>
                                             <p>useremail@gmail.com</p>
@@ -55,7 +56,7 @@
                                     </div>
                                     <div class="dropdown_formbody">
                                         <button class="formbody_btn">
-                                            <a href="">管理我的帳號</a>
+                                            <a href="~/Views/MemberCenter/EditProfile.cshtml">管理我的帳號</a>
                                         </button>
                                         <button class="formbody_btn" type="submit">
                                             <a href="">專案管理</a>
@@ -64,7 +65,7 @@
                                             <a href="">協助與支援</a>
                                         </button>
                                         <button class="formbody_btn" type="submit">
-                                            <a href="./indexV3 logout.html">登出</a>
+                                            <a href="">登出</a>
                                         </button>
 
                                     </div>
@@ -82,7 +83,9 @@
     <!-- #region 妳的html -->
     <section>
         <div class="JnL_container">
-            <div class="JnL_leftside "></div>
+            <div class="JnL_leftside ">
+                <img src="./image/L.jpg" alt="" />
+            </div>
             <div class="JnL_rightside">
                 <form action="" method="POST">
                     <div>
@@ -90,9 +93,10 @@
                     </div>
 
                     <div class="login_form">
-                        <input class="JnL_Form_style" id="username" type="email" name="username" required placeholder="請輸入帳號(電子郵件)" /><br/>
-                        <input class="JnL_Form_style" id="psw" name="password" type="password" required placeholder="請輸入密碼" /><br/>
-                        <button class="login_btn" type="submit"><a class="FFF">登入</a></button><br/>
+                        <input class="JnL_Form_style" id="username" type="email" name="username" required placeholder="請輸入帳號(電子郵件)" /><br />
+                        <input class="JnL_Form_style" id="psw" name="password" type="password" required placeholder="請輸入密碼" /><br />
+                        <button class="login_btn" type="submit"><a class="FFF">登入</a></button><br />
+                        <div><span style="color:red" class="msg">@ViewBag.LoginMsg</span></div>
 
                     </div>
                     <div class="login_detail">
@@ -104,7 +108,7 @@
                     <div class="login_otherway">
                         <box class="login_line"></box>
                         <p class="login_p5">透過下列帳號登入</p>
-                        <a href="#"><img class="login_otherway_img" src="./image/svg/google.svg" alt=""></a>
+                        <a href="#"><img class="login_otherway_img" src="~/Content/img/google.svg" alt=""></a>
                     </div>
                 </form>
             </div>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region meta請勿更改 -->
+    <meta charset="utf-8">
+    <title>SHOOTSHOT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SHOOTSHOT" name="keywords">
+    <meta content="SHOOTSHOT" name="description">
+    <!-- #endregion -->
+    <!-- #region Icon請勿更改 -->
+    <link href="./image/logo.PNG" rel="icon">
+    <!-- #endregion -->
+    <!-- #region 共用googleFont請勿更改 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- #endregion -->
+    <!-- #region 共用cssLink請勿更改 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="./css/nav/style.css" rel="stylesheet">
+    <link href="./css/join&login/join&login.css" rel="stylesheet">
+    <!-- #endregion -->
+</head>
+
+<body>
+    <!-- #region navbar請勿更改 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
+        <div class="container-fluid">
+            <a href="indexV3.html" class="navbar-brand">SHOOTSHOT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto align-items-center">
+
+                    <a href="#" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+                    <a href="./cProject.html" class="nav-item nav-link">預約專案</a>
+
+                    <div class="nav-item dropdown">
+                        <img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown">
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                            <li>
+                                <div class="dropdown_form">
+                                    <div class="dropdown_formheader">
+                                        <a href="./photographerinfoV4.html"><img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
+                                        <div class="formheader_username">
+                                            <p>Lucas-Pezeta</p>
+                                            <p>useremail@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown_formbody">
+                                        <button class="formbody_btn">
+                                            <a href="">管理我的帳號</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="">專案管理</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="">協助與支援</a>
+                                        </button>
+                                        <button class="formbody_btn" type="submit">
+                                            <a href="./indexV3 logout.html">登出</a>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region 妳的html -->
+    <section>
+        <div class="JnL_container">
+
+            <div class="JnL_leftside"></div>
+            <div class="JnL_rightside">
+                <form action="" method="POST">
+                    <div class="join_container">
+                        <h1>Join ShootShot</h1>
+                    </div>
+                    <div>
+                        <div class="joinForm">
+                            <input class="JnL_Form_style" minlength="2" maxlength="50" id="myname" type="text" name="InputName" required placeholder="姓名" /><br/>
+                            <input class="JnL_Form_style" id="birthdate" type="date" name="birthdate" required placeholder="生日" /><br/>
+                            <input class="JnL_Form_style" id="email" type="email" name="email" required placeholder="電子郵件" /><br/>
+                            <span style="color:red" class="msg">@ViewBag.email</span><br />
+                            <input class="JnL_Form_style" id="tele" type="text" name="telephone" required placeholder="連絡電話" /><br/>
+                            <div class="joinForm_password_container">
+                                <input class="JnL_Form_style" id="mypsw" name="psw" type="password" onkeyup="check()" required placeholder="密碼" />
+                                <input class="joinForm_password_chkbox" type="checkbox" onclick="showPSW()" /><a class="joinForm_password_show">顯示密碼</a><br/>
+                            </div>
+                            <input class="JnL_Form_style" id="cfm_psw" name="cfm_psw" type="password" required onkeyup="check()" placeholder="確認密碼" />
+                            <span style="color:red" class="msg" id="message">@ViewBag.ConfirmMsg</span><br />
+                            <input class="JnL_Form_style" list="areaList" type="text" name="area" id="area" placeholder="城市" required />
+                            <datalist id="areaList">
+                            <option value="台北">台北</option>
+                            <option value="新北">新北</option>
+                            <option value="基隆">基隆</option>
+                            <option value="桃園">桃園</option>
+                            <option value="新竹">新竹</option>
+                            <option value="苗栗">苗栗</option>
+                            <option value="台中">台中</option>
+                            <option value="彰化">彰化</option>
+                            <option value="南投">南投</option>
+                            <option value="雲林">雲林</option>
+                            <option value="嘉義">嘉義</option>
+                            <option value="台南">台南</option>
+                            <option value="高雄">高雄</option>
+                            <option value="屏東">屏東</option>
+                            <option value="宜蘭">宜蘭</option>
+                            <option value="花蓮">花蓮</option>
+                            <option value="台東">台東</option>
+                            <option value="澎湖">澎湖</option>
+                            <option value="金門">金門</option>
+                            <option value="連江">連江</option>
+                        </datalist><br />
+                            <select class="JnL_Form_style" name="gender" id="gender" required>
+                            <option>性別</option>
+                            <option value="0">男性</option>
+                            <option value="1">女性</option>
+                            
+                        </select><br />
+                            <button class="join_btn" type="submit"><a class="FFF">註冊</a></button><br/>
+                            <p class="join_p1">已有帳號?<a class="join_a1" href="./mbrLoginV2.html"> 登入</a></p><br/>
+                            <p class="join_p2">點擊「註冊」即表示您同意我們的<a href="#" class="join_a1">《服務條款》</a>、<a href="#" class="join_a1">《資料政策》</a>和<a class="join_a1" href="#">《Cookie 政策》</a>。<br/>您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
+                            </p>
+                        </div>
+
+                    </div>
+            </div>
+            </form>
+        </div>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region footer請勿更改 -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>About</h2>
+                        <a href="">關於我們</a>
+                        <a href="">聯絡我們</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">&#169; copyright © 2021 | ShootShot. All Rights Reserved</div>
+    <!-- endregion -->
+    <!-- #region backToUp請勿更改 -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- $endregion -->
+    <!-- #region js請勿更改 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- #endregion -->
+</body>
+
+</html>

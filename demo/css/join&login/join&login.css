@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', Arial, Arial, Helvetica, sans-serif;
+}
+
+
+/* share CSS*/
+
+@media (min-width: 1136px) {
+    .JnL_container h1 {
+        color: #242424;
+    }
+    .JnL_container {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .JnL_leftside {
+        background-color: #ffffff;
+        width: 50%;
+        height: auto;
+    }
+    .JnL_leftside img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .JnL_rightside {
+        margin-top: 120px;
+        background-color: azure;
+        width: 50%;
+        height: 100vh;
+    }
+    .join_container {
+        display: flex;
+        justify-content: center;
+    }
+    .joinForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .JnL_Form_style {
+        border: solid 1px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 15px;
+        width: 450px;
+        height: 40px;
+    }
+    .joinForm_password_container {
+        align-items: center;
+        margin: 0 0px 23px 98px;
+    }
+    .joinForm_password_chkbox,
+    .joinForm_password_show {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .join_btn {
+        margin-top: 10px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 450px;
+    }
+    .join_btn:hover {
+        background-color: #535353;
+        color: #7dffd1;
+    }
+    .join_a1 {
+        color: blue;
+    }
+    .join_p2 {
+        font-size: 5px;
+    }
+    /* login */
+    .login_p3 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 250px;
+        color: #242424;
+    }
+    .login_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .login_btn {
+        margin-top: 10px;
+        background-color: #383838;
+        color: #7dffd1;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+        width: 450px;
+    }
+    .login_btn:hover {
+        background-color: #535353;
+        color: #7dffd1;
+    }
+    .login_detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .login_a2 {
+        color: blue;
+    }
+    .login_p4 {
+        margin-top: 10px;
+    }
+    .login_p4 a {
+        text-decoration: underline;
+        color: blue;
+    }
+    .login_otherway {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .login_line {
+        margin: 30px 0 30px;
+        height: 1px;
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+        text-align: center;
+    }
+    .login_p5 {
+        text-align: center;
+        padding-top: 5px;
+    }
+    .login_otherway_img {
+        width: 30px;
+    }
+}

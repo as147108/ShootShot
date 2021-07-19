@@ -21,6 +21,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="./css/nav/style.css" rel="stylesheet">
     <link href="./css/join&login/join&login.css" rel="stylesheet">
     <!-- #endregion -->
@@ -82,62 +83,67 @@
     <section>
         <div class="JnL_container">
 
-            <div class="JnL_leftside"></div>
-            <div class="JnL_rightside">
+            <div class="JnL_leftside">
+                <img src="~/Content/img/Lside.png" alt="" />
+            </div>
+            <div class="JnL_rightside" style="margin-top: 30px;">
                 <form action="" method="POST">
                     <div class="join_container">
                         <h1>Join ShootShot</h1>
                     </div>
                     <div>
                         <div class="joinForm">
-                            <input class="JnL_Form_style" minlength="2" maxlength="50" id="myname" type="text" name="InputName" required placeholder="姓名" /><br/>
-                            <input class="JnL_Form_style" id="birthdate" type="date" name="birthdate" required placeholder="生日" /><br/>
-                            <input class="JnL_Form_style" id="email" type="email" name="email" required placeholder="電子郵件" /><br/>
-                            <input class="JnL_Form_style" id="tele" type="text" name="telephone" required placeholder="連絡電話" /><br/>
+                            <input class="JnL_Form_style" minlength="2" maxlength="50" id="myname" type="text" name="InputName" required placeholder="姓名" /><br />
+                            <input class="JnL_Form_style" id="birthdate" type="date" name="birthdate" required placeholder="生日" /><br />
+                            <input class="JnL_Form_style" id="email" type="email" name="email" required placeholder="電子郵件" /><br />
+                            <span style="color:red" class="msg">@ViewBag.email</span>
                             <div class="joinForm_password_container">
                                 <input class="JnL_Form_style" id="mypsw" name="psw" type="password" onkeyup="check()" required placeholder="密碼" />
-                                <input class="joinForm_password_chkbox" type="checkbox" onclick="showPSW()" /><a class="joinForm_password_show">顯示密碼</a><br/>
+                                <input class="joinForm_password_chkbox" type="checkbox" onclick="showPSW()" /><a class="joinForm_password_show">顯示密碼</a><br />
                             </div>
                             <input class="JnL_Form_style" id="cfm_psw" name="cfm_psw" type="password" required onkeyup="check()" placeholder="確認密碼" />
-                            <span class="msg" id="message"></span><br/>
-                            <input class="JnL_Form_style" list="areaList" type="text" name="area" id="area" placeholder="城市" required />
-                            <datalist id="areaList">
-                            <option value="台北">台北</option>
-                            <option value="新北">新北</option>
-                            <option value="基隆">基隆</option>
-                            <option value="桃園">桃園</option>
-                            <option value="新竹">新竹</option>
-                            <option value="苗栗">苗栗</option>
-                            <option value="台中">台中</option>
-                            <option value="彰化">彰化</option>
-                            <option value="南投">南投</option>
-                            <option value="雲林">雲林</option>
-                            <option value="嘉義">嘉義</option>
-                            <option value="台南">台南</option>
-                            <option value="高雄">高雄</option>
-                            <option value="屏東">屏東</option>
-                            <option value="宜蘭">宜蘭</option>
-                            <option value="花蓮">花蓮</option>
-                            <option value="台東">台東</option>
-                            <option value="澎湖">澎湖</option>
-                            <option value="金門">金門</option>
-                            <option value="連江">連江</option>
-                        </datalist><br />
+                            <span style="color:red" class="msg" id="message">@ViewBag.ConfirmMsg</span><br />
+                            <input class="JnL_Form_style" id="tele" type="text" name="telephone" required placeholder="連絡電話" /><br />
+                            <select class="JnL_Form_style" name="gender" id="arealist" required>
+                                <option value="台北">台北</option>
+                                <option value="新北">新北</option>
+                                <option value="基隆">基隆</option>
+                                <option value="桃園">桃園</option>
+                                <option value="新竹">新竹</option>
+                                <option value="苗栗">苗栗</option>
+                                <option value="台中">台中</option>
+                                <option value="彰化">彰化</option>
+                                <option value="南投">南投</option>
+                                <option value="雲林">雲林</option>
+                                <option value="嘉義">嘉義</option>
+                                <option value="台南">台南</option>
+                                <option value="高雄">高雄</option>
+                                <option value="屏東">屏東</option>
+                                <option value="宜蘭">宜蘭</option>
+                                <option value="花蓮">花蓮</option>
+                                <option value="台東">台東</option>
+                                <option value="澎湖">澎湖</option>
+                                <option value="金門">金門</option>
+                                <option value="連江">連江</option>
+                            </select><br />
                             <select class="JnL_Form_style" name="gender" id="gender" required>
-                            <option>性別</option>
-                            <option value="male">男性</option>
-                            <option value="female">女性</option>
-                            <option value="other">其他</option>
-                        </select><br />
-                            <button class="join_btn" type="submit"><a class="FFF">註冊</a></button><br/>
-                            <p class="join_p1">已有帳號?<a class="join_a1" href="./mbrLoginV2.html"> 登入</a></p><br/>
-                            <p class="join_p2">點擊「註冊」即表示您同意我們的<a href="#" class="join_a1">《服務條款》</a>、<a href="#" class="join_a1">《資料政策》</a>和<a class="join_a1" href="#">《Cookie 政策》</a>。<br/>您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
+                                    <option>性別</option>
+                                    <option value="0">男性</option>
+                                    <option value="1">女性</option>
+    
+                                </select>
+                            <br />
+                            <button class="join_btn" type="submit"><a class="FFF">註冊</a></button>
+                            <br />
+                            <p class="join_p1">已有帳號?<a class="join_a1" href="~/Views/LoginAndSignup/Login.cshtml"> 登入</a></p>
+                            <br />
+                            <p class="join_p2">
+                                點擊「註冊」即表示您同意我們的<a href="#" class="join_a1">《服務條款》</a>、<a href="#" class="join_a1">《資料政策》</a>和<a class="join_a1" href="#">《Cookie 政策》</a>。<br />您可能會收到我們的簡訊通知，而且可以隨時選擇停止接收。
                             </p>
                         </div>
-
                     </div>
+                </form>
             </div>
-            </form>
         </div>
     </section>
     <!-- #endregion -->

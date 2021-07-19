@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+    <!-- #region meta -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SHOOTSHOT" name="keywords">
+    <meta content="SHOOTSHOT" name="description">
+    <meta property="og:title" content="index">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <meta name="generator" content="idx 3.17.5, idx.com">
+    <!-- #endregion -->
+    <!-- #region navcss -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/nav/style.css" rel="stylesheet">
+    <!-- Icon -->
+    <link href="./image/logo.PNG" rel="icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Suwannaphum:400">
+    <!-- #endregion -->
+    <!--#region indexcss -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/indexHeader.css" media="screen">
+    <link rel="stylesheet" href="./css/indexOther.css" media="screen">
+    <!-- #endregion -->
+    <!-- #region script -->
+    <script class="u-script" type="text/javascript" src="./js/jquery.js" defer=""></script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Site1",
+            "logo": "images/default-logo.png"
+        }
+    </script>
+    <!-- #endregion script -->
+    <title>SHOOTSHOT</title>
+    <style>
+        body {
+            font-family: 'Tw Cen MT';
+        }
+    </style>
+</head>
+<!-- #region navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
+    <div class="container-fluid" style="max-width:100%">
+        <a href="~/Home/Index" class="navbar-brand">SHOOTSHOT</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between navbarfonts" id="navbarCollapse">
+            <div class="navbar-nav ml-auto align-items-center">
+                <a href="~/Views/Home/Index.cshtml" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+                <!--link to cproject-->
+                <a href="" class="nav-item nav-link">預約專案</a>
+                <!--userdropdown-->
+                <div class="nav-item dropdown">
+                    <img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class=" dropdown-toggle nav_userphoto" data-toggle="dropdown">
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <div class="dropdown_form">
+                                <div class="dropdown_formheader">
+                                    <!--link to userinfo-->
+                                    <a href=""><img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
+                                    <div class="formheader_username">
+                                        <p>Lucas-Pezeta</p>
+                                        <p>useremail@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown_formbody">
+                                    <button class="formbody_btn">
+                                        <a href="~/Views/MemberCenter/EditProfile.cshtml">管理我的帳號</a>
+                                    </button>
+                                    <button class="formbody_btn" type="submit">
+                                        <a href="">專案管理</a>
+                                    </button>
+                                    <button class="formbody_btn" type="submit">
+                                        <a href="">協助與支援</a>
+                                    </button>
+                                    <button class="formbody_btn" type="submit">
+                                        <a href="">登出</a>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- #endregion -->
+
+<body data-home-page="index.html" data-home-page-title="index" class="u-body">
+    <!-- #region header -->
+    <div id="header"></div>
+    <section id="header">
+        <div style="height: 300px;"></div>
+        <div id="drag-container">
+            <div id="spin-container">
+                <img src="./image/index_joinus.png" alt="">
+                <a id="index_alinkIdUserInHeader" name="index_alinkNameUserInHeader" target="_blank" href="./register.html">
+                    <img src="./image/index_userInHeader.png" alt="">
+                </a>
+                <img src="./image/index_joinus.png" alt="">
+                <a id="index_alinkIdPhotographerInHeader" name="index_alinkNamePhotographerInHeader" target="_blank" href="./register.html">
+                    <img src="./image/index_phopographer.png" alt="">
+                </a>
+                <p style="text-align: center;font-size: 2rem;font-family: Tw Cen MT;color:#242424 ;">SHOOT<br />SHOT</p>
+            </div>
+            <div id="ground"></div>
+        </div>
+        <div id="music-container"></div>
+        <div style="height: 250px;"></div>
+    </section>
+    <div id="explore"></div>
+    <!-- #endregion -->
+    <section class="u-align-center u-clearfix u-custom-color-1 u-section-1" id="carousel_2ab6">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-custom-font u-font-montserrat u-text u-text-white u-text-1">Explore</h1>
+            <div class="u-form u-form-1">
+                <form id="index_formIdExplore" name="index_formNameExplore" action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" style="padding: 10px" source="custom" name="form">
+                    <div class="u-form-group u-form-group-1">
+                        <input onclick="sfocus()" type="text" style="outline:0;" placeholder="Search for photo" id="index_btnIdSearchbar" name="index_btnNameSearchbar" class="u-border-4 u-border-white u-input u-input-rectangle u-radius-50 u-white" required="required">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                        <a id="index_btnIdSubmitSearch" name="index_btnNameSubmitSearch" href="#" class="u-active-grey-90 u-border-4 u-border-active-grey-90 u-border-grey-75 u-border-hover-grey-90 u-btn u-btn-round u-btn-submit u-button-style u-grey-75 u-hover-grey-90 u-radius-50 u-btn-1">
+              Search</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"></div>
+                    <div class="u-form-send-error u-form-send-message"></div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                </form>
+            </div>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-2">女生</a>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-3">男生</a>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-4">動物</a>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-5">婚禮</a>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-6">復古</a>
+            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-7">自然</a>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-gradient u-valign-middle u-section-2" id="carousel_c869">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+            <div class="u-gallery-inner u-gallery-inner-1" style="grid-template-columns: repeat(4, auto);">
+                <div id="index_divIdAblum1" name="index_divNameAblum1" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-1" src="./image/lucas-pezeta/sky/sky14.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum2" name="index_divNameAblum2" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-2" src="./image/lisa-ramirez/flower/pexels-lisa-7353305.jpg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum3" name="index_divNameAblum3" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1067">
+                        <img class="u-back-image u-expanded u-back-image-3" src="./image/cottonbro-studio/bad-day/bad-day8.jpeg" alt="Chill in bed">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum4" name="index_divNameAblum4" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/AnnaShvets/pizzera/pizzera13.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum5" name="index_divNameAblum5" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/AnnaShvets/surfing/surfing7.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum6" name="index_divNameAblum6" class="u-effect-fade u-gallery-item" data-image-width="1067" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-back-image-6" src="./image/lisa-ramirez/wedding/wedding1.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum7" name="index_divNameAblum7" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-7" src="./image/Mikhail Nilov/sapce/space4.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum8" name="index_divNameAblum8" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1068">
+                        <img class="u-back-image u-expanded" src="./image/lucas-pezeta/hometown/hometown12.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum9" name="index_divNameAblum9" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/Mikhail Nilov/gaming/gaming6.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum10" name="index_divNameAblum10" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/lisa-ramirez/nature/nature11.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum11" name="index_divNameAblum11" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1067">
+                        <img class="u-back-image u-expanded" src="./image/cottonbro-studio/music-band/music-band13.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum12" name="index_divNameAblum12" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/cottonbro-studio/snow-black/snow-black13.jpeg" alt="#">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-align-left u-clearfix u-custom-color-1 u-section-3" id="sec-4987">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h4 class="u-align-left u-custom-font u-font-lato u-text u-text-1">Professional photo and video shoots without the agency fees. Our creative team will take care of your production from start to finish.</h4>
+            <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-opacity u-opacity-85 u-radius-50 u-shape-round u-white u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h4 class="u-align-left u-custom-font u-text u-text-2">
+                        <span style="font-weight: 700;">找不到喜歡的風格？<br>快來創建自<span style="font-weight: 700;"></span>己的專案吧
+                        </span>
+                        <span style="font-weight: 700;">！</span>
+                    </h4>
+                    <a id="index_btnIdMore" name="index_btnNameMore" href="./cProject.html" class="u-btn u-btn-round u-button-style u-grey-75 u-hover-black u-radius-50 u-btn-1">瞭 解 更
+            多</a><span class="u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 298.678 298.678">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cad9"></use>
+            </svg><svg class="u-svg-content" viewBox="0 0 298.678 298.678" x="0px" y="0px" id="svg-cad9"
+              style="enable-background:new 0 0 298.678 298.678;">
+              <g>
+                <polygon points="59.421,0.839 0,0.839 118.842,148.439 0,297.839 59.421,297.839 178.263,148.439  ">
+                </polygon>
+                <polygon
+                  points="179.836,0.839 120.415,0.839 239.257,148.439 120.415,297.839 179.836,297.839 298.678,148.439  ">
+                </polygon>
+              </g>
+            </svg></span>
+                    <img class="u-image u-image-default u-image-1" src="./image/index_group.png" alt="" data-image-width="326" data-image-height="443">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-gradient u-section-4" id="sec-6e52">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+            <div class="u-gallery-inner u-gallery-inner-1" style="grid-template-columns: repeat(4, auto);">
+                <div id="index_divIdAblum1" name="index_divNameAblum1" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-1" src="./image/cottonbro-studio/night-city/night-city2.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum2" name="index_divNameAblum2" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-2" src="./image/lisa-ramirez/nature/nature12.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum3" name="index_divNameAblum3" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1067">
+                        <img class="u-back-image u-expanded u-back-image-3" src="./image/Mikhail Nilov/DIA-DE-LOS-MUERTOS/DIA-DE-LOS-MUERTOS12.jpeg" alt="Chill in bed">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum4" name="index_divNameAblum4" class="u-effect-fade u-gallery-item" data-image-width="1280" data-image-height="865">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/Mikhail Nilov/black-model/black-model3.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum5" name="index_divNameAblum5" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/Mikhail Nilov/cyberpunk/cyberpunk4.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum6" name="index_divNameAblum6" class="u-effect-fade u-gallery-item" data-image-width="1067" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-back-image-6" src="./image/lucas-pezeta/hometown/hometown8.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum7" name="index_divNameAblum7" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded u-back-image-7" src="./image/lucas-pezeta/sky/sky7.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum8" name="index_divNameAblum8" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1068">
+                        <img class="u-back-image u-expanded" src="./image/lisa-ramirez/festival/festival1.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum9" name="index_divNameAblum9" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/lisa-ramirez/food/food3.jpg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum10" name="index_divNameAblum10" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/Mikhail Nilov/sapce/space1.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum11" name="index_divNameAblum11" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1067">
+                        <img class="u-back-image u-expanded" src="./image/AnnaShvets/surfing/surfing2.jpeg" alt="#">
+                    </div>
+
+                </div>
+                <div id="index_divIdAblum12" name="index_divNameAblum12" class="u-effect-fade u-gallery-item">
+                    <div class="u-back-slide" data-image-width="1200" data-image-height="1600">
+                        <img class="u-back-image u-expanded" src="./image/cottonbro-studio/bad-day/bad-day2.jpeg" alt="#">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Start -->
+    <div class="footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="footer-link">
+                        <h2>About</h2>
+                        <a href="">關於我們</a>
+                        <a href="">聯絡我們</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-newsletter">
+                        <h2>Give it a shot !</h2>
+                        <a>拍一張照 ・ 分享一張照片</a>
+
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-contact">
+                        <h2>Contact Us !</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+                        </p>
+                        <p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
+                        <p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">&#169; copyright © 2021 | ShootShot. All Rights Reserved</div>
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        var radius = 200;
+        var autoRotate = true;
+        var rotateSpeed = -60;
+        var imgWidth = 300;
+        var imgHeight = 400;
+
+        var bgMusicURL = null;
+        var bgMusicControls = false
+
+        setTimeout(init, 1000);
+        var search = document.getElementById("index_btnIdSearchbar");
+        var odrag = document.getElementById("drag-container");
+        var ospin = document.getElementById("spin-container");
+        var aImg = ospin.getElementsByTagName("img");
+        var aVid = ospin.getElementsByTagName("video");
+        var aEle = [...aImg, ...aVid];
+
+        //相片大小
+        ospin.style.width = imgWidth + "px";
+        ospin.style.height = imgHeight + "px";
+
+        // 地面大小
+        var ground = document.getElementById("ground");
+        ground.style.width = radius * 3 + "px";
+        ground.style.height = radius * 3 + "px";
+
+        function init(delayTime) {
+            for (var i = 0; i < aEle.length; i++) {
+                aEle[i].style.transform =
+                    "rotateY(" +
+                    i * (360 / aEle.length) +
+                    "deg) translateZ(" +
+                    radius +
+                    "px)";
+                aEle[i].style.transition = "transform 1s";
+                aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+            }
+        }
+
+        function sfocus() {
+            document.getElementById("index_btnIdSearchbar").focus();
+        }
+
+        function applyTranform(obj) {
+            // 控制角度
+            if (tY > 180) tY = 180;
+            if (tY < 0) tY = 0;
+
+            // 預設角度
+            obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+        }
+
+        function playSpin(yes) {
+            ospin.style.animationPlayState = yes ? "running" : "paused";
+        }
+
+        var sX,
+            sY,
+            nX,
+            nY,
+            desX = 0,
+            desY = 0,
+            tX = 0,
+            tY = 10;
+
+        if (autoRotate) {
+            var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+            ospin.style.animation = `${animationName} ${Math.abs(
+      rotateSpeed
+    )}s infinite linear`;
+        }
+        if (bgMusicURL) {
+            document.getElementById("music-container").innerHTML += `
+  <audio src="${bgMusicURL}" ${
+      bgMusicControls ? "controls" : ""
+    } autoplay loop>    
+  </audio>
+  `;
+        }
+
+        // 事件處理器
+        document.onpointerdown = function(e) {
+            clearInterval(odrag.timer);
+            e = e || window.event;
+            var sX = e.clientX,
+                sY = e.clientY;
+
+            this.onpointermove = function(e) {
+                e = e || window.event;
+                var nX = e.clientX,
+                    nY = e.clientY;
+                desX = nX - sX;
+                desY = nY - sY;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+                applyTranform(odrag);
+                sX = nX;
+                sY = nY;
+            };
+
+            this.onpointerup = function(e) {
+                odrag.timer = setInterval(function() {
+                    desX *= 0.95;
+                    desY *= 0.95;
+                    tX += desX * 0.1;
+                    tY += desY * 0.1;
+                    applyTranform(odrag);
+                    playSpin(false);
+                    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+                        clearInterval(odrag.timer);
+                        playSpin(true);
+                    }
+                }, 17);
+                this.onpointermove = this.onpointerup = null;
+            };
+            return false;
+        };
+    </script>
+
+    <style>
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+    </style>
+</body>
+
+</html>
