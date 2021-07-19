@@ -23,26 +23,26 @@
 			<p class="memberMes">@CMsg</p>
 			<p class="memberTime">@item.fCMsgTime</p>
 		</div>
-		<br>
+		<br />
 		<div class="prjMgmt_divForPho">
-			<img src="~/Content/img/@TempData["PhoImg"]" alt="">
+			<img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="">
 			<p class="PhoMes">@PMsg</p>
 			<p class="PhoTime">@item.fPMsgTime</p>
 			<input id='textkey' type='hidden' name='textkey' value="@item.fId">
-			@if (item.fPMsg== null)
+			@if (item.fPMsg == null)
 			{
-			<div id="app">
-				@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })
-			</div>}
+				<div id="app">
+					@Html.ActionLink("回覆", "ReplyCustMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })
+				</div>}
 			<br />
-			<br />
-
+			
 			@*@Html.ActionLink("回覆", "ReplyMsg", new { id = item.fId }, new { @class = "btn btn-outline-secondary", style = "margin-left:5px" })*@
 			@*<input type="submit" value="回覆" style="border-radius: 20px; width: 100px; height: 30px; font-size: 12px; background-color: #7dffd1; border: none; color: #242424; margin-right: 10px;" />*@
 
 			@*<a href='#phoPrjMgmt_texboxChat' οnclick='getkey(this)' style="border-radius: 10px; margin-left:80%; width: 150px; height: 50px; font-size: 20px; background-color: #7dffd1; border: none; color: #242424;right:10px;" for="fixkey"><input id='textkey' type='hidden' name='textkey' for="fixkey" value="@item.fId">回覆</a><div><span></span></div>*@
 		</div>
 		<br />
+	<br />
 	}
 </div>
 

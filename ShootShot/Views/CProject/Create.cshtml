@@ -1,5 +1,5 @@
 ﻿@model ShootShot.ViewModels.CProjectViewModel
-
+@using SelectListItem = System.Web.Mvc.SelectListItem;
 @{
 	ViewBag.Title = "Create";
 	Layout = "~/Views/Shared/_Layout.cshtml";
@@ -35,8 +35,15 @@
 							@*未完成*@
 							@*@Html.DropDownList("List");*@
 							@*@Html.DropDownListFor(m => m.fPEmail, new SelectList(Model.fPEmail,"Value", "Text"),new { name="txtPEmail"})*@
-							@*@Html.DropDownList("list",ViewData["list"] as SelectList)*@
-							@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1", id = "txtPEmail", name = "txtPEmail" })
+							@*@Html.DropDownList("items", (SelectList)ViewBag.PhotogList, new { @id= "PhotogList" })*@
+							@*@Html.TextBoxFor(m => m.fPEmail, new { @class = "cProject_lblFortxt1", id = "txtPEmail", name = "txtPEmail" })*@
+						<select class="cProject_lblFortxt1" name="txtPEmail" id="txtPEmail" required>
+							<option value="">請選擇攝影師</option>
+							<option value="mikhail1974@gmail.com">Nilov</option>
+							<option value="lucas1976@gmail.com">Pezeta</option>
+							<option value="olga1986@gmail.com">Olga Dimenshtein</option>
+						</select>
+
 						</div>
 						@{
 							Random rnd = new Random();
@@ -180,18 +187,17 @@
 									</div>
 									<div class="row">
 										@Html.TextBoxFor(m => m.fPjtState, new { type = "hidden", @Value = false })
-										@Html.TextBoxFor(m => m.fPjtTopic, null, new{@class = "cProject_txt3",placeholder = "專案主題",type = "text",id = "prjName",name = "txtPjtTopic",required = "required"})
+										@Html.TextBoxFor(m => m.fPjtTopic, null, new { @class = "cProject_txt3", placeholder = "專案主題", type = "text", id = "prjName", name = "txtPjtTopic", required = "required", style = "margin: 0.5rem auto; width: 96%;border: none;font-size: 1rem;padding: 10px 15px 10px 15px;border-radius: 8px;outline: none;" })
 									</div>
 									<div class="row">
 										<div class="col-md-6">
-											@Html.TextAreaFor(m => m.fReq, new { @class = "cProject_txtbox1 cProject_txt2", placeholder = "需求描述(協助攝影師更加精準掌握您的需求)# 室內# 戶外# 網路用途# 電商用途# 個人收藏# 印刷用途", name = "txtReq", required = "required" })
+											@Html.TextAreaFor(m => m.fReq, new { @class = "cProject_txtbox1 cProject_txt2", placeholder = "需求描述(協助攝影師更加精準掌握您的需求)# 室內# 戶外# 網路用途# 電商用途# 個人收藏# 印刷用途", name = "txtReq", required = "required", style = "margin: 0.5rem auto; width: 100%;border: none;font-size: 1rem;padding: 10px 15px 10px 15px;border-radius: 8px;outline: none;height:20vh" })
 										</div>
 										<div class="col-md-6">
-											@Html.TextBoxFor(m => m.fStyle, null, new { @class = "cProject_url1 cProject_txt2", placeholder = "風格參考（請提供參考網址）", id = "style", name = "txtStyle", type = "url" })
-											<div class="conForpic1">
-												<input id="picUpload" type="file" name="photo" class="" accept="image/gif,image/jpeg,image/png" />
+											@Html.TextBoxFor(m => m.fStyle, null, new { @class = "cProject_url1 cProject_txt2", placeholder = "風格參考（請提供參考網址）", id = "style", name = "txtStyle", type = "url", style = "margin: 0.5rem auto; width: 100%;border: none;font-size: 1rem;padding: 10px 15px 10px 15px;border-radius: 8px;outline: none;" })
+											<div class="conForpic1"style="margin: 0.5rem auto; width: 100%;border: none;font-size: 1rem;padding: 10px 15px 10px 15px;border-radius: 8px;outline: none;background-color:white;color:#242424">						
+												<input id="picUpload" type="file" name="photo" class="" accept="image/gif,image/jpeg,image/png"/>
 												<img id="previewPicUpload" src="" />
-
 											</div>
 										</div>
 									</div>
@@ -204,30 +210,33 @@
 				<!-- 表格傳送資料按鈕 -->
 				<div class="submitForm_container">
 
-					<button type="submit" class="btn_submit">
-						<img src="/project/img/SVG/contact-form.svg" alt="">
-						<p> 建立專案</p>
+					<button type="submit" class="btn_submit" style="font-size:1.8rem; color:#242424;">
+						@*<img src="/project/img/SVG/contact-form.svg" alt="">*@
+						 建立專案
 					</button>
 				</div>
 			</form>}
-		</section>
-	</main>
+	</section>
+</main>
 
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#PhotogList').change(function () {
+			alert($('#PhotogList').val());
+		});
+	})
+</script>
 
-@*<script>
-		$(function)(){
-			$("#picUpload").on("change", function () {
-				var file = this.files[0];
-				if (this.files && file) {
-					var reader = new FileReader();
-					reader.onload = function (e) {
-						$('#previewPicUpload').attr('src', e.target.result);
-					}
-					reader.readAsDataURL(file);
-				}
-			});
-		}
-	</script>*@
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#selector').change(function () {
+			alert($('#selector').val());
+		});
+	})
+</script>*@
+
 @*@section Scripts {
 		@Scripts.Render("~/bundles/jqueryval")
 	}*@

@@ -17,6 +17,8 @@ namespace ShootShot
         public int fId { get; set; }
         public string fEmail { get; set; }
         public string fName { get; set; }
-        public Nullable<bool> FState { get; set; }
+        public Nullable<bool> fState { get; set; }
+        public string fCoverPath { get; set; }
+        public string fKeyword { get; set; }
     }
 }

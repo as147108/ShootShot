@@ -21,5 +21,6 @@ namespace ShootShot
         public Nullable<bool> fCover { get; set; }
         public Nullable<int> fLike { get; set; }
         public Nullable<int> fView { get; set; }
+        public string fKeyword { get; set; }
     }
 }

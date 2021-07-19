@@ -1,3 +1,8 @@
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CoreCompileInputs.cache
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\grpc_csharp_ext.x86.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\grpc_csharp_ext.x64.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\libgrpc_csharp_ext.x64.so
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\libgrpc_csharp_ext.x64.dylib
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.dll.config
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\ShootShot.pdb
@@ -51,9 +56,12 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\roslyn\vbc.rsp
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\roslyn\VBCSCompiler.exe
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Antlr3.Runtime.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Azure.Core.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Elasticsearch.Net.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\EntityFramework.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\EntityFramework.SqlServer.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.Api.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Authentication.Core.dll
@@ -81,6 +89,7 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Rou
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Routing.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Azure.Amqp.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -106,6 +115,7 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Newtonsoft.Json.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Buffers.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.ComponentModel.Annotations.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Memory.Data.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Memory.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Numerics.Vectors.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Runtime.CompilerServices.Unsafe.dll
@@ -114,7 +124,9 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Security.Cryptogr
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Security.Permissions.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Security.Principal.Windows.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Text.Encodings.Web.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Text.Json.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.ValueTuple.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Helpers.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Mvc.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Optimization.dll
@@ -123,10 +135,15 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.WebPages.Depl
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.WebPages.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.WebPages.Razor.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\WebGrease.dll
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Azure.Core.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Elasticsearch.Net.pdb
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Elasticsearch.Net.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\EntityFramework.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\EntityFramework.SqlServer.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.pdb
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.Api.pdb
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Grpc.Core.Api.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Antiforgery.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Authentication.Core.xml
@@ -153,6 +170,7 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Res
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Routing.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.Configuration.Abstractions.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.DependencyInjection.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
@@ -173,10 +191,13 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\Newtonsoft.Json.Bson.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Buffers.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Memory.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Memory.Data.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Numerics.Vectors.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Text.Encodings.Web.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Text.Json.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.ValueTuple.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Helpers.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Mvc.xml
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\System.Web.Razor.xml
@@ -195,7 +216,6 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPa
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.Optimization.resources.dll
-C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CoreCompileInputs.cache
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CopyComplete
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.pdb

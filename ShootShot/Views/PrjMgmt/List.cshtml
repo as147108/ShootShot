@@ -9,7 +9,7 @@
 
 	IEnumerable<tProject> projects = null;
 	dbShootShotEntities db = new dbShootShotEntities();
-	int id = 4;
+	int id = ViewBag.loginId;
 	var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
 	string cemail = member.fEmail.ToString();
 	projects = from p in db.tProject where p.fCEmail.Contains(cemail) select p;
@@ -144,7 +144,7 @@
 <div class="prjMgmt_divForChat">
 	<p>與攝影師聊聊</p>
 	<div class="prjMgmt_divForText">
-		<img src="~/Content/img/@TempData["CustImg"]" alt="">
+		<img src="~/Content/img/cat123.jpg" alt="">
 		@using (Html.BeginForm("Create", "PrjMgmt", FormMethod.Post, new { enctype = "multipart/form-data" }))
 		{
 			<form>

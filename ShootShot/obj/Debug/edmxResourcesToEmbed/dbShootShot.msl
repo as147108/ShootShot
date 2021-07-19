@@ -39,6 +39,7 @@
     <EntitySetMapping Name="tAlbumPhoto">
       <EntityTypeMapping TypeName="dbShootShotModel.tAlbumPhoto">
         <MappingFragment StoreEntitySet="tAlbumPhoto">
+          <ScalarProperty Name="fKeyword" ColumnName="fKeyword" />
           <ScalarProperty Name="fId" ColumnName="fId" />
           <ScalarProperty Name="fAlbId" ColumnName="fAlbId" />
           <ScalarProperty Name="fName" ColumnName="fName" />
@@ -61,16 +62,6 @@
           <ScalarProperty Name="fOther" ColumnName="fOther" />
           <ScalarProperty Name="fFB" ColumnName="fFB" />
           <ScalarProperty Name="fIns" ColumnName="fIns" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tPhotAlbum">
-      <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
-        <MappingFragment StoreEntitySet="tPhotAlbum">
-          <ScalarProperty Name="fId" ColumnName="fId" />
-          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
-          <ScalarProperty Name="fName" ColumnName="fName" />
-          <ScalarProperty Name="FState" ColumnName="FState" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -129,6 +120,16 @@
           <ScalarProperty Name="fBday" ColumnName="fBday" />
           <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
           <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPhotAlbum">
+      <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
+        <MappingFragment StoreEntitySet="tPhotAlbum">
+          <ScalarProperty Name="fState" ColumnName="fState" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
           <ScalarProperty Name="fId" ColumnName="fId" />
         </MappingFragment>
       </EntityTypeMapping>

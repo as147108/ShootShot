@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.16.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.16.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
       <HintPath>..\packages\Elasticsearch.Net.7.13.1\lib\net461\Elasticsearch.Net.dll</HintPath>
     </Reference>
@@ -53,6 +56,12 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.38.1\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.38.1\lib\net45\Grpc.Core.Api.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNetCore.Antiforgery, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNetCore.Antiforgery.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Antiforgery.dll</HintPath>
@@ -134,6 +143,9 @@
     </Reference>
     <Reference Include="Microsoft.Azure.Amqp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Azure.Amqp.2.4.13\lib\net45\Microsoft.Azure.Amqp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -221,6 +233,9 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.WebSockets, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.WebSockets.4.0.0\lib\net46\System.Net.WebSockets.dll</HintPath>
@@ -289,13 +304,19 @@
       <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -355,7 +376,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CProjectController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginAndSignupController.cs" />
+    <Compile Include="Controllers\MemberCenterController.cs" />
     <Compile Include="Controllers\PhoPrjMgmtController.cs" />
+    <Compile Include="Controllers\PhotAlbumController.cs" />
     <Compile Include="Controllers\PrjMgmtController.cs" />
     <Compile Include="dbShootShot.Context.cs">
       <AutoGen>True</AutoGen>
@@ -375,6 +400,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAlbumPhoto.cs">
       <DependentUpon>dbShootShot.tt</DependentUpon>
@@ -408,16 +434,217 @@
     </Compile>
     <Compile Include="ViewModels\CProjectViewModel.cs" />
     <Compile Include="ViewModels\MProjectViewModel.cs" />
+    <Compile Include="ViewModels\PhotAlbumViewModel.cs" />
+    <Compile Include="ViewModels\vmMember.cs" />
+    <Compile Include="ViewModels\vmSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\addAlbum.css" />
     <Content Include="Content\css\cProject.css" />
+    <Content Include="Content\css\editAlbum.css" />
+    <Content Include="Content\css\index.css" />
+    <Content Include="Content\css\indexHeader.css" />
+    <Content Include="Content\css\indexOther.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\phoAlbum.css" />
     <Content Include="Content\css\phoPrjMgmt.css" />
     <Content Include="Content\css\prjMgmt.css" />
+    <Content Include="Content\css\signup.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\1.jpg" />
+    <Content Include="Content\img\10.jpg" />
+    <Content Include="Content\img\11.jpg" />
+    <Content Include="Content\img\12.jpg" />
+    <Content Include="Content\img\13.jpg" />
+    <Content Include="Content\img\17.jpg" />
+    <Content Include="Content\img\18.jpg" />
+    <Content Include="Content\img\2.jpg" />
+    <Content Include="Content\img\3.jpg" />
+    <Content Include="Content\img\4.jpg" />
+    <Content Include="Content\img\5.jpg" />
+    <Content Include="Content\img\6.jpg" />
+    <Content Include="Content\img\7.jpg" />
+    <Content Include="Content\img\8.jpg" />
+    <Content Include="Content\img\9.jpg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal1.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal10.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal11.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal12.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal2.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal3.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal4.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal5.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal6.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal7.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal8.jpeg" />
+    <Content Include="Content\img\AnnaShvets\animal\animal9.jpeg" />
+    <Content Include="Content\img\AnnaShvets\AnnaShvets-user.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop1.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop10.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop11.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop12.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop13.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop14.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop2.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop3.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop4.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop5.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop6.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop7.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop8.jpeg" />
+    <Content Include="Content\img\AnnaShvets\flowershop\flowershop9.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera1.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera10.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera11.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera12.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera13.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera2.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera3.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera4.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera5.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera6.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera7.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera8.jpeg" />
+    <Content Include="Content\img\AnnaShvets\pizzera\pizzera9.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing1.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing10.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing11.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing12.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing2.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing3.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing4.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing5.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing6.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing7.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing8.jpeg" />
+    <Content Include="Content\img\AnnaShvets\surfing\surfing9.jpeg" />
+    <Content Include="Content\img\arrows.svg" />
+    <Content Include="Content\img\baby.jpg" />
+    <Content Include="Content\img\cancel.svg" />
+    <Content Include="Content\img\cat01.jpg" />
+    <Content Include="Content\img\cat02.jpg" />
+    <Content Include="Content\img\cat03.jpg" />
+    <Content Include="Content\img\cat04.jpg" />
+    <Content Include="Content\img\cat05.jpg" />
+    <Content Include="Content\img\chat 1.svg" />
+    <Content Include="Content\img\double-right-arrows black.svg" />
+    <Content Include="Content\img\double-right-arrows.svg" />
+    <Content Include="Content\img\email.svg" />
+    <Content Include="Content\img\facebook.svg" />
+    <Content Include="Content\img\food5.jpg" />
+    <Content Include="Content\img\gallery.svg" />
+    <Content Include="Content\img\girl.jpg" />
+    <Content Include="Content\img\Group79.png" />
+    <Content Include="Content\img\Group9.png" />
+    <Content Include="Content\img\cat123.jpg" />
+    <Content Include="Content\img\indexAblum_6.jpg" />
+    <Content Include="Content\img\indexAblum_7.jpg" />
+    <Content Include="Content\img\indexAblum_8.jpg" />
+    <Content Include="Content\img\indexAblum_9.jpg" />
+    <Content Include="Content\img\instagram.svg" />
+    <Content Include="Content\img\left_arrows.svg" />
+    <Content Include="Content\img\light.jpg" />
+    <Content Include="Content\img\login_pic.svg" />
+    <Content Include="Content\img\logo-02.svg" />
+    <Content Include="Content\img\logo.PNG" />
+    <Content Include="Content\img\logo_icon.svg" />
+    <Content Include="Content\img\Lside.png" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat1.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat2.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat3.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat4.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat5.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat6.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat7.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat8.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\cat\cat9.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk1.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk10.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk11.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk12.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk13.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk2.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk3.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk4.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk5.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk6.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk7.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk8.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\city-walk\city-walk9.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown1.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown10.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown11.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown12.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown2.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown3.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown4.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown5.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown6.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown7.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown8.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\hometown\hometown9.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\lucas-pezeta-user.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky1.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky10.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky11.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky12.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky13.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky14.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky15.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky2.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky3.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky4.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky5.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky6.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky7.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky8.jpeg" />
+    <Content Include="Content\img\lucas-pezeta\sky\sky9.jpeg" />
+    <Content Include="Content\img\man.jpg" />
+    <Content Include="Content\img\pin.svg" />
+    <Content Include="Content\img\product.jpg" />
+    <Content Include="Content\img\project default picture.jpg" />
+    <Content Include="Content\img\street.jpg" />
+    <Content Include="Content\img\user.jpg" />
+    <Content Include="Content\img\user.png" />
+    <Content Include="Content\img\Vector.svg" />
+    <Content Include="Content\img\whatsapp.svg" />
+    <Content Include="Content\img\youtube.svg" />
+    <Content Include="Content\img\未上傳照片.png" />
+    <Content Include="Content\img\預約專案形象圖.png" />
+    <Content Include="Content\js\idx.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\member.js" />
+    <Content Include="Content\js\phoVerif.js" />
+    <Content Include="Content\lib\animate\animate.css" />
+    <Content Include="Content\lib\animate\animate.min.css" />
+    <Content Include="Content\lib\easing\easing.js" />
+    <Content Include="Content\lib\easing\easing.min.js" />
+    <Content Include="Content\lib\isotope\isotope.pkgd.js" />
+    <Content Include="Content\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="Content\lib\lightbox\css\lightbox.css" />
+    <Content Include="Content\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="Content\lib\lightbox\images\close.png" />
+    <Content Include="Content\lib\lightbox\images\loading.gif" />
+    <Content Include="Content\lib\lightbox\images\next.png" />
+    <Content Include="Content\lib\lightbox\images\prev.png" />
+    <Content Include="Content\lib\lightbox\js\lightbox.js" />
+    <Content Include="Content\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="Content\lib\lightbox\links.php" />
+    <Content Include="Content\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Content\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Content\lib\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\pexels-jonathan-borba-2878764.jpg" />
     <Content Include="Content\project default picture.jpg" />
     <Content Include="Content\逢甲美食-1-825x510.jpg" />
@@ -437,6 +664,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\img\.DS_Store" />
+    <Content Include="Content\lib\.DS_Store" />
+    <Content Include="Content\lib\owlcarousel\LICENSE" />
+    <Content Include="Content\.vscode\settings.json" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -459,6 +690,12 @@
     <Content Include="Views\Shared\_PhoMsgPartial.cshtml" />
     <Content Include="Views\PhoPrjMgmt\ReplyCustMsg.cshtml" />
     <Content Include="Views\PrjMgmt\ReplyMsg.cshtml" />
+    <Content Include="Views\PhotAlbum\Index.cshtml" />
+    <Content Include="Views\LoginAndSignup\Login.cshtml" />
+    <Content Include="Views\LoginAndSignup\Signup.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -493,7 +730,6 @@
     <Folder Include="Areas\ShowPrjDeatil\Controllers\" />
     <Folder Include="Areas\ShowPrjDeatil\Data\" />
     <Folder Include="Areas\ShowPrjDeatil\Views\Shared\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -544,8 +780,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.38.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.38.1\build\net45\Grpc.Core.targets'))" />
   </Target>
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Grpc.Core.2.38.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.38.1\build\net45\Grpc.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

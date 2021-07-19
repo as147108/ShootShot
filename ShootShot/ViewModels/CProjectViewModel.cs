@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web;
+using System.Web.WebPages.Html;
 
 namespace ShootShot.ViewModels
 {
@@ -12,9 +13,23 @@ namespace ShootShot.ViewModels
 		{
 			this.project = new tProject();
 			this.member = new tMember();
+			//this.memberphoto= new tMemberPhot();
+			//this.SelectListItem= new SelectListItem();
 		}
+		//public SelectListItem SelectListItem { get; set; }
+		//public string fEmail
+		//{
+		//	get { return this.memberphoto.fEmail; }
+		//	set { this.SelectListItem.Value = value; }
+		//}
+		//public string fName
+		//{
+		//	get { return this.memberphoto.fName; }
+		//	set { this.SelectListItem.Text = value; }
+		//}
 		public tProject project { get; set; }
 		public tMember member { get; set; }
+		//public tMemberPhot memberphoto { get; set; }
 		public int fId
 		{
 			get { return this.project.fId; }

@@ -7,7 +7,7 @@
 <article>
 	<div class="prjMain">
 		<div class="container">
-			<h2 style="margin:auto 50px;">回覆留言</h2>
+			<h3 style="margin: 60px 0px 0px 0px;">回覆留言</h3>
 
 			<form method="post" action="~/PrjMgmt/ReplyMsg">
 				<p>
@@ -17,19 +17,19 @@
 
 				<div class="mb-3">
 					<label for="formGroupExampleInput2" class="form-label">攝影師留言</label>
-					<textarea type="text" class="form-control" id="formGroupExampleInput2" name="fPMsg" value="@Model.msg.fPMsg" readonly>@Model.msg.fPMsg</textarea>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" name="fPMsg" value="@Model.msg.fPMsg" readonly style="border-radius:15px;" type="text" class="form-control" id="formGroupExampleInput2" maxlength="50">@Model.msg.fPMsg</textarea>
 					@*<input >*@
 				</div>
 				<div class="mb-3">
 					<label for="formGroupExampleInput" class="form-label">您的留言</label>
-					<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fCMsg" value="@Model.msg.fCMsg"></textarea>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fCMsg" value="@Model.msg.fCMsg" style="border-radius:15px;" type="text" class="form-control" id="formGroupExampleInput2" maxlength="50"></textarea>
 				</div>
 				<div class="mb-3">
 					<input type="hidden" class="form-control" id="formGroupExampleInput2" name="fPMsgTime" value="@Model.msg.fPMsgTime " readonly>
 				</div>
 				<div class="mb-3">
 					<label for="formGroupExampleInput2" class="form-label">時間</label>
-					<input type="datetime" class="form-control" id="formGroupExampleInput2" name="fCMsgTime" value="@DateTime.Now" maxlength="50" readonly>
+					<input type="datetime" class="form-control" id="formGroupExampleInput2" name="fCMsgTime" value="@DateTime.Now" maxlength="50" readonly style="border-radius:15px;">
 				</div>
 				<p>
 					<input type="hidden" name="fOrderNum" value="@Model.msg.fOrderNum" style="margin:auto 50px;" />
@@ -40,7 +40,7 @@
 				<p>
 					<input type="hidden" name="fStates" value="@Model.msg.fStates @true" style="margin:auto 50px;" />
 				</p>
-				<input type="submit" value="回覆" />
+				<input type="submit" value="回覆" style="border: solid aquamarine;border-radius: 15px;background-color: aquamarine;width: 70px;height: 32px; font-size:14px;padding:3px 4px;"/>
 			</form>
 		</div>
 	</div>

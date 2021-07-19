@@ -11,6 +11,7 @@
     <Property Name="fCover" Type="bit" />
     <Property Name="fLike" Type="int" />
     <Property Name="fView" Type="int" />
+    <Property Name="fKeyword" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tKeyword">
     <Key>
@@ -71,7 +72,7 @@
     <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
     <Property Name="fName" Type="nvarchar" MaxLength="20" />
-    <Property Name="FState" Type="bit" />
+    <Property Name="fState" Type="bit" />
   </EntityType>
   <EntityType Name="tPhotArea">
     <Key>

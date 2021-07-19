@@ -1,4 +1,7 @@
-﻿using ShootShot.ViewModels;
+﻿using Azure.Core;
+using Grpc.Core;
+using ShootShot.Models;
+using ShootShot.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,8 +9,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.WebPages.Html;
-using static System.Net.Mime.MediaTypeNames;
-
+using SelectListItem = System.Web.WebPages.Html.SelectListItem;
 
 namespace ShootShot.Controllers
 {
@@ -19,33 +21,25 @@ namespace ShootShot.Controllers
             return View();
         }
 
-        // GET: CProject/Details/5
 
-        //public ActionResult fileUploadDemo()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public ActionResult fileUploadDemo(HttpPostedFileBase photo)
-        //{
-        //    photo.SaveAs(@"C:\Users\Yulin\Desktop\ShootShot\ShootShot\Content\photo.jpg");
-        //    return View();
-        //}
-        // GET: CProject/Create
         [HttpGet]
         public ActionResult Create()
         {
-            // 判斷身分
-            //if (Session[Dictionary.USER_ID] == null)
-            //{
-            //    return RedirectToAction("Login", "LoginAndSignup");
-            //}
-
             dbShootShotEntities db = new dbShootShotEntities();
+
+
+
+			// 判斷身分
+			if (Session[Dictionary.USER_ID] == null)
+			{
+				return RedirectToAction("Login", "LoginAndSignup");
+			}
+
+
 			//tMember photog = new tMember();
-            
-            int id = 4;
-            var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+
+			int id = (int)Session[Dictionary.USER_ID];
+			var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
             string cemail = member.fEmail.ToString();
             tMember cust = db.tMember.FirstOrDefault(m => m.fEmail == cemail);
 
@@ -57,51 +51,50 @@ namespace ShootShot.Controllers
             };
             //int code = 1;
             //tMember photog = from g in db.tMember where g.fCode == code select new { g.fEmail,g.fName};
-            
-            var list = new SelectList(new[]
-            {
-             new {Email="mikhail1974@gmail.com",Name="Nilov"},
-              new{Email="lucas1976@gmail.com",Name="Pezeta"},
-                new{Email="olga1986@gmail.com",Name="Olga Dimenshtein"},
-                 },
-                "Email", "Name", 1);
-                 ViewData["list"] = list;
 
+            // 匯入攝影師資訊
+            ////	var photogs = from m in db.tMember where m.fCode.Equals(1) orderby m.fId select m;
+            ////	var photogs = db.tMember.Where(m => m.fCode.Equals(1)).OrderBy(m => m.fId).ToString();
+            ////	List<SelectList> photogs = new List<SelectList>()
+            ////	{
+            ////		ViewBag.PhotogList = new SelectList(
+            ////		items: photogs,
+            ////		dataTextField: "fName",
+            ////		dataValueField: "fEmail"
+            ////		);
+            ////};
+            //var x = 1;
+            //var photos = from m in db.tMember where m.fCode.Equals(x) orderby m.fId select m;
+            //List<SelectList> items = new List<SelectList>();
+            //foreach (var photo in photos)
+            //{
+            //    items.Add(new SelectList()
+            //    {
+            //        DataTextField = photo.fName.ToString(),
+            //        DataValueField = photo.fEmail
 
+            //    });
+            //    //    // 攝影師連結直接選定攝影師
+            //    //    //items.Where(q => q.Value == cemail).First().Selected = true;
+            //    //}
+            //    ViewBag.PhotoItems = items;
+            //}
 
-   //         var code = 1;
-			//static photog =from g in db.tMember where g.fCode == code select new { g.fEmail,g.fName };
-			//if (photog != null)
-			//{
-			//	var list = new List<SelectListItem>();
+    //        var selectList = new List<System.Web.Mvc.SelectListItem>()
+    //        {
+    //            new System.Web.Mvc.SelectListItem {Text="text-1", Value="value-1" },
+    //            new System.Web.Mvc.SelectListItem {Text="text-2", Value="value-2" },
+				//new System.Web.Mvc.SelectListItem {Text="text-3", Value="value-3" },
+    //        };
 
-			//	list.Add(new SelectListItem
-			//	{
-			//		Text = photog.fName,
-			//		Value = photog.fEmail
-			//	});
-			//	ViewBag.List = new SelectList(list);
-			//};
-			//tMember cust = db.tMember.Where(t=>t.fEmail.ToString()==cemail).FirstOrDefault();
+    //        //預設選擇哪一筆
+    //        selectList.Where(q => q.Value == "value-2").First().Selected = true;
 
-			//CProjectViewModel cprj = new CProjectViewModel();
-			//cprj.fCName = cust.fName;
+    //        ViewBag.SelectList = selectList;
 
-			//var photoglist = from m in db.tMemberPhot select m;
-			//ViewBag.SelPhotog = new SelectList(photoglist, "fName").ToList();
-			//攝影師清單由資料庫產生及拍攝地點
+            return View();
 
-			//var data = from g in (new dbShootShotEntities()).tMemberPhot select g; //假設從資料庫撈出資料。
-			//tMemberPhot item = new tMemberPhot();
-
-			//預約者姓名電話email帶入
-
-			//return RedirectToAction("Create");
-
-
-			return View();
         }
-
         // POST: CProject/Create
         [HttpPost]
 		public ActionResult Create(CProjectViewModel p)
@@ -114,15 +107,14 @@ namespace ShootShot.Controllers
 			Random rnd = new Random();
             int x = rnd.Next(10, 99);
             p.fOrderNum = DateTime.Now.ToString("yyyyMMdd") + x.ToString();
+            p.fPEmail = Request.Form["txtPEmail"];
             dbShootShotEntities db = new dbShootShotEntities();
             db.tProject.Add(p.project);
             db.SaveChanges();
-            ModelState.Clear();
+		    ModelState.Clear();
             return View();
 
-
-
-
         }
+
     }
 }

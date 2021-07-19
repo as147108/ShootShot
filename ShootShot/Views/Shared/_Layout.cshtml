@@ -1,58 +1,55 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
+﻿
+@using ShootShot.Models
+<!DOCTYPE html>
+<html>
 <head>
-	<!-- #region meta請勿更改 -->
-	<meta charset="utf-8">
-	<title>建立專案</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ShootShot @ViewBag.Title</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="SHOOTSHOT" name="keywords">
-	<meta name="description" content="SHOOTSHOT | 我們提供攝影平台供攝影師上傳作品 管理預約客戶的訂單 消費者可搜尋喜好風格並預約消費">
-	<meta name="robots" content="index,follow">
-	<base target="_self" />
-	<!-- #endregion -->
-	<!-- #region Icon請勿更改 -->
+	<meta content="SHOOTSHOT" name="description">
 	<link href="~/Content/img/logo.PNG" rel="icon">
-	<!-- #endregion -->
-	<!-- #region 共用googleFont請勿更改 -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
 		  rel="stylesheet">
-	<!-- #endregion -->
-	<!-- #region 共用cssLink請勿更改 -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 	<link href="~/Content/lib/animate/animate.min.css" rel="stylesheet">
 	<link href="~/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="~/Content/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-	<link href="~/Content/css/nav/style.css" rel="stylesheet">
-	<!-- #endregion -->
-
+	<link href="~/Content/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="~/Content/css/index.css">
+	<link rel="stylesheet" href="~/Content/css/indexHeader.css" media="screen">
+	<link rel="stylesheet" href="~/Content/css/indexOther.css" media="screen">
 	<link rel="stylesheet" href="~/Content/css/cProject.css">
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'>
 </head>
 <body>
-	<!-- #region navbar請勿更改 -->
 	<nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav">
-		<div class="container-fluid">
-			<a href="indexV3.html" class="navbar-brand">SHOOTSHOT</a>
+		<div class="container-fluid" style="max-width:100%">
+			<a href="~/Home/Index" class="navbar-brand">SHOOTSHOT</a>
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+			<div class="collapse navbar-collapse justify-content-between navbarfonts" id="navbarCollapse">
 				<div class="navbar-nav ml-auto align-items-center">
-
-					<a href="#" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
-					<a href="./cProject.html" class="nav-item nav-link">預約專案</a>
-
-					<div class="nav-item dropdown">
-						<img src="./image/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"
-							 class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown">
-						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-							<li>
-								<div class="dropdown_form">
-									<div class="dropdown_formheader">
-										<a href="./photographerinfoV4.html">
-											<img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user">
-										</a>
+					<a href="~/Views/Home/Index.cshtml" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+					<!--link to cproject-->
+					<a @Session[Dictionary.LOGIN_HIDDEN] href="/LoginAndSignup/Login" class="nav-item nav-link">登入</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="/MemberCenter/EditProfile" class="nav-item nav-link">帳號管理</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="/CProject/Create" class="nav-item nav-link">預約專案</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="/PrjMgmt/List" class="nav-item nav-link">專案管理</a>
+					<a @Session[Dictionary.LOGOUT_HIDDEN] href="/LoginAndSignup/Logout" class="nav-item nav-link">登出</a>
+					<!--userdropdown-->
+					<!--<div class="nav-item dropdown" id="dropImg" onclick="navfocus()">
+					<img id="dropdownMenuButton" src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user" class="nav-link dropdown-toggle nav_userphoto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+						<li>
+							<div class="dropdown_form" aria-labelledby="dropdownMenuButton">
+								<div class="dropdown_formheader">-->
+					<!--link to userinfo-->
+					<!--<a href=""><img src="~/Content/img/lucas-pezeta/lucas-pezeta-user.jpeg" alt="user"></a>
 										<div class="formheader_username">
 											<p>Lucas-Pezeta</p>
 											<p>useremail@gmail.com</p>
@@ -60,40 +57,37 @@
 									</div>
 									<div class="dropdown_formbody">
 										<button class="formbody_btn">
-											<a href="">管理我的帳號</a>
+											<a href="~/Views/MemberCenter/EditProfile.cshtml">管理我的帳號</a>
 										</button>
 										<button class="formbody_btn" type="submit">
-											<a href="">專案管理</a>
+											<a href="~/MemberCenter/EditProfile">專案管理</a>
 										</button>
 										<button class="formbody_btn" type="submit">
 											<a href="">協助與支援</a>
 										</button>
 										<button class="formbody_btn" type="submit">
-											<a href="./indexV3 logout.html">登出</a>
+											<a href="">登出</a>
 										</button>
-
 									</div>
 								</div>
 							</li>
-
 						</ul>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
 	</nav>
-	<!-- #endregion -->
 
 	@RenderBody()
-	<hr />
-	<div class="footer ">
+
+	<footer class="footer ">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
 					<div class="footer-link">
-						<h2>保留</h2>
-						<a href="">保留</a>
-						<a href="">保留</a>
+						<h2>About</h2>
+						<a href="">關於我們</a>
+						<a href="">聯絡我們</a>
 					</div>
 				</div>
 				<div class="col-md-4 text-center">
@@ -112,7 +106,8 @@
 					<div class="footer-contact">
 						<h2>Contact Us !</h2>
 						<p>
-							<i class="fa fa-map-marker-alt"></i>701 臺南市東區大學路1號<br>
+							<i class="fa fa-map-marker-alt"></i>
+							701 臺南市東區大學路1號<br>
 						</p>
 						<p><i class="fa fa-phone-alt"></i>+886-6-7166166</p>
 						<p><i class="fa fa-envelope"></i>shootshot@gmail.com</p>
@@ -120,31 +115,22 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 	<div class="text-center py-2" style="background-color: black; color: #FFFFFF; font-weight: 300;">
 		&#169; copyright ©
-		2021 | ShootShot. All Rights Reserved
+		@DateTime.Now.Year | ShootShot. All Rights Reserved
 	</div>
-	<!-- endregion -->
-	<!-- #region backToUp請勿更改 -->
-	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-	<!-- $endregion -->
-	@*</div>*@
-
-	@Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/bundles/bootstrap")
-
-	@RenderSection("scripts", required: false)
-	<!-- #region backToUp請勿更改 -->
-	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-	<!-- $endregion -->
-	<!-- #region js請勿更改 -->
+	@*<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>*@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-	@Scripts.Render("~/Content/lib")
+	<script src="~/Content/lib/easing/easing.min.js"></script>
+	<script src="~/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="~/Content/lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="~/Content/lib/lightbox/js/lightbox.min.js"></script>
 	<script src="mail/jqBootstrapValidation.min.js"></script>
 	<script src="mail/contact.js"></script>
-	<script src="js/main.js"></script>
-	<!-- #endregion -->
+	<script src="~/Content/js/main.js"></script>
+	@Scripts.Render("~/bundles/jquery")
+	@RenderSection("scripts", required: false)
 </body>
 </html>

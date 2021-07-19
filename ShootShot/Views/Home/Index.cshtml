@@ -1,0 +1,297 @@
+﻿@model  List<IEnumerable<ShootShot.tPhotAlbum>>
+@{
+    ViewBag.Title = "首頁";
+}
+<head>
+    @*~/Content/css/*@
+
+    <link rel="stylesheet" href="~/Content/css/index.css">
+    <link rel="stylesheet" href="~/Content/css/indexHeader.css" media="screen">
+    <link rel="stylesheet" href="~/Content/css/indexOther.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/Content/js/jquery.js" defer=""></script>
+    <style>
+        body {
+            font-family: 'Tw Cen MT';
+        }
+    </style>
+</head>
+<body data-home-page="index.html" data-home-page-title="index" class="u-body">
+    <div id="header"></div>
+    <section id="header">
+        <div style="height: 300px;"></div>
+        <div id="drag-container">
+            <div id="spin-container">
+                <img src="~/Content/img/index_joinus.png" alt="">
+                <a id="index_alinkIdUserInHeader" name="index_alinkNameUserInHeader" target="_blank" href="./register.html">
+                    <img src="~/Content/img/index_userInHeader.png" alt="">
+                </a>
+                <img src="~/Content/img/index_joinus.png" alt="">
+                <a id="index_alinkIdPhotographerInHeader" name="index_alinkNamePhotographerInHeader" target="_blank" href="./register.html">
+                    <img src="~/Content/img/index_phopographer.png" alt="">
+                </a>
+                <p style="text-align: center;font-size: 2rem;font-family: Tw Cen MT;color:#242424 ;">SHOOT<br />SHOT</p>
+            </div>
+            <div id="ground"></div>
+        </div>
+        <div id="music-container"></div>
+        <div style="height: 250px;"></div>
+    </section>
+    <div id="explore"></div>
+    <section class="u-align-center u-clearfix u-custom-color-1 u-section-1" id="carousel_2ab6">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-custom-font u-font-montserrat u-text u-text-white u-text-1">Explore</h1>
+            <div class="u-form u-form-1">
+                <form id="index_formIdExplore" name="index_formNameExplore" action="~/Home/Index" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" style="padding: 10px" source="custom">
+                    <div class="u-form-group u-form-group-1">
+                        <input onclick="sfocus()" type="text" style="outline:0;" placeholder="Search for photo" id="index_btnIdSearchbar" name="keyword" class="u-border-4 u-border-white u-input u-input-rectangle u-radius-50 u-white" required="required">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                        <input id="btnSearch" type="submit" value="Search" class="u-active-grey-90 u-border-4 u-border-active-grey-90 u-border-grey-75 u-border-hover-grey-90 u-btn u-btn-round u-btn-submit u-button-style u-grey-75 u-hover-grey-90 u-radius-50 u-btn-1">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"></div>
+                    <div class="u-form-send-error u-form-send-message"></div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                </form>
+            </div>
+            <a href="#" id="btnKeyword" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-2">寵物</a>
+            <a href="#" id="btnKeyword2" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-3">婚禮</a>
+            <a href="#" id="btnKeyword3" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-4">汽車</a>
+            <a href="#" id="btnKeyword4" class="u-btn u-btn-round u-button-style u-custom-color-7 u-hover-custom-color-8 u-radius-50 u-text-custom-color-3 u-btn-5">自然</a>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-gradient u-section-4" id="sec-6e52">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+            <div class="u-gallery-inner u-gallery-inner-1">
+                @{
+                    foreach (var item in Model[0])
+                    {
+
+                        <div id="index_divIdAblum13" name="index_divNameAblum13" class="u-effect-fade u-gallery-item">
+                            <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                                <img class="u-back-image u-expanded u-back-image-1" src="~/Content/img/Album/@item.fCoverPath" alt="@item.fName">
+                            </div>
+                            <div id="index_divIdAblumSlide13" name="index_divNameAblumSlide13" class="u-over-slide u-shading u-valign-middle u-over-slide-1">
+                                <h3 class="u-gallery-heading" style="text-transform: uppercase;">@item.fName</h3>
+                                <p class="u-gallery-text">&gt;&gt;更多</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+    <section class="u-align-left u-clearfix u-custom-color-1 u-section-3" id="sec-4987">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h4 class="u-align-left u-custom-font u-font-lato u-text u-text-1">Professional photo and video shoots without the agency fees. Our creative team will take care of your production from start to finish.</h4>
+            <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-opacity u-opacity-85 u-radius-50 u-shape-round u-white u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h4 class="u-align-left u-custom-font u-text u-text-2">
+                        <span style="font-weight: 700;">
+                            找不到喜歡的風格？<br>快來創建自<span style="font-weight: 700;"></span>己的專案吧
+                        </span>
+                        <span style="font-weight: 700;">！</span>
+                    </h4>
+                    <a id="index_btnIdMore" name="index_btnNameMore" href="./cProject.html" class="u-btn u-btn-round u-button-style u-grey-75 u-hover-black u-radius-50 u-btn-1">
+                        瞭 解 更
+                        多
+                    </a><span class="u-icon u-icon-circle u-text-black u-icon-1">
+                        <svg class="u-svg-link"
+                             preserveAspectRatio="xMidYMin slice" viewBox="0 0 298.678 298.678">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cad9"></use>
+                        </svg><svg class="u-svg-content" viewBox="0 0 298.678 298.678" x="0px" y="0px" id="svg-cad9"
+                                   style="enable-background:new 0 0 298 298;">
+                            <g>
+                                <polygon points="59.421,0.839 0,0.839 118.842,148.439 0,297.839 59.421,297.839 178.263,148.439  ">
+                                </polygon>
+                                <polygon points="179.836,0.839 120.415,0.839 239.257,148.439 120.415,297.839 179.836,297.839 298.678,148.439  ">
+                                </polygon>
+                            </g>
+                        </svg>
+                    </span>
+                    <img class="u-image u-image-default u-image-1" src="~/Content/img/index_group.png" alt="" data-image-width="326" data-image-height="443">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-gradient u-section-4" id="sec-6e52">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+            <div class="u-gallery-inner u-gallery-inner-1">
+                @{
+                    foreach (var item in Model[1])
+                    {
+                        <div id="index_divIdAblum13" name="index_divNameAblum13" class="u-effect-fade u-gallery-item">
+                            <div class="u-back-slide" data-image-width="1067" data-image-height="1600">
+                                <img class="u-back-image u-expanded u-back-image-1" src="~/Content/img/Album/@item.fCoverPath" alt="@item.fName">
+                            </div>
+                            <div id="index_divIdAblumSlide13" name="index_divNameAblumSlide13" class="u-over-slide u-shading u-valign-middle u-over-slide-1">
+                                <h3 class="u-gallery-heading" style="text-transform: uppercase;">@item.fName</h3>
+                                <p class="u-gallery-text">&gt;&gt;更多</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/lib/easing/easing.min.js"></script>
+    <script src="~/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Content/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="~/Content/js/main.js"></script>
+
+    <script>
+        var radius = 200;
+        var autoRotate = true;
+        var rotateSpeed = -60;
+        var imgWidth = 300;
+        var imgHeight = 400;
+
+        var bgMusicURL = null;
+        var bgMusicControls = false
+
+        setTimeout(init, 1000);
+        var search = document.getElementById("index_btnIdSearchbar");
+        var odrag = document.getElementById("drag-container");
+        var ospin = document.getElementById("spin-container");
+        var aImg = ospin.getElementsByTagName("img");
+        var aVid = ospin.getElementsByTagName("video");
+        var aEle = [...aImg, ...aVid];
+
+        //相片大小
+        ospin.style.width = imgWidth + "px";
+        ospin.style.height = imgHeight + "px";
+
+        // 地面大小
+        var ground = document.getElementById("ground");
+        ground.style.width = radius * 3 + "px";
+        ground.style.height = radius * 3 + "px";
+
+        function init(delayTime) {
+            for (var i = 0; i < aEle.length; i++) {
+                aEle[i].style.transform =
+                    "rotateY(" +
+                    i * (360 / aEle.length) +
+                    "deg) translateZ(" +
+                    radius +
+                    "px)";
+                aEle[i].style.transition = "transform 1s";
+                aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+            }
+        }
+        //focus
+        function sfocus() {
+            document.getElementById("index_btnIdSearchbar").focus();
+        }
+        function applyTranform(obj) {
+            // 控制角度
+            if (tY > 180) tY = 180;
+            if (tY < 0) tY = 0;
+
+            // 預設角度
+            obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+        }
+
+        function playSpin(yes) {
+            ospin.style.animationPlayState = yes ? "running" : "paused";
+        }
+
+        var sX,
+            sY,
+            nX,
+            nY,
+            desX = 0,
+            desY = 0,
+            tX = 0,
+            tY = 10;
+
+        if (autoRotate) {
+            var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+            ospin.style.animation = `${animationName} ${Math.abs(
+                rotateSpeed
+            )}s infinite linear`;
+        }
+        if (bgMusicURL) {
+            document.getElementById("music-container").innerHTML += `
+                                          <audio src="${bgMusicURL}" ${bgMusicControls ? "controls" : ""
+                } autoplay loop>
+                                          </audio>
+                                          `;
+        }
+
+        // 事件處理器
+        document.onpointerdown = function (e) {
+            clearInterval(odrag.timer);
+            e = e || window.event;
+            var sX = e.clientX,
+                sY = e.clientY;
+
+            this.onpointermove = function (e) {
+                e = e || window.event;
+                var nX = e.clientX,
+                    nY = e.clientY;
+                desX = nX - sX;
+                desY = nY - sY;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+                applyTranform(odrag);
+                sX = nX;
+                sY = nY;
+            };
+
+            this.onpointerup = function (e) {
+                odrag.timer = setInterval(function () {
+                    desX *= 0.95;
+                    desY *= 0.95;
+                    tX += desX * 0.1;
+                    tY += desY * 0.1;
+                    applyTranform(odrag);
+                    playSpin(false);
+                    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+                        clearInterval(odrag.timer);
+                        playSpin(true);
+                    }
+                }, 17);
+                this.onpointermove = this.onpointerup = null;
+            };
+            return false;
+        };
+        $("#btnKeyword").click(function () {
+            $("#index_btnIdSearchbar").val("寵物");
+            $("#index_formIdExplore").submit();
+        })
+        $("#btnKeyword2").click(function () {
+            $("#index_btnIdSearchbar").val("婚禮");
+            $("#index_formIdExplore").submit();
+        })
+        $("#btnKeyword3").click(function () {
+            $("#index_btnIdSearchbar").val("車");
+            $("#index_formIdExplore").submit();
+        })
+        $("#btnKeyword4").click(function () {
+            $("#index_btnIdSearchbar").val("自然");
+            $("#index_formIdExplore").submit();
+        })
+    </script>
+
+    <style>
+        @@keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+    </style>
+</body>

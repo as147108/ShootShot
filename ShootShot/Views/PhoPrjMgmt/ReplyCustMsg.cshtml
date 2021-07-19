@@ -8,7 +8,7 @@
 	<div class="phoPrjMgmt_divForMain" id="phoPrjMgmt_divForMain">
 		<div class="container">
 			<div class="project">
-			<h2 style="margin:auto 50px;">回覆留言</h2>
+			<h3 style="margin: 60px 0px 0px 0px;">回覆留言</h3>
 			<form method="post" action="~/PhoPrjMgmt/ReplyCustMsg">
 				<p>
 					<input type="hidden" name="fId" value="@Model.msg.fId" style="margin:auto 50px;" />
@@ -16,16 +16,16 @@
 				</p>
 				<div class="mb-3">
 					<label for="formGroupExampleInput" class="form-label">顧客留言</label>
-					<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fCMsg" value="@Model.msg.fCMsg" readonly>@Model.msg.fCMsg</textarea>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="50" name="fCMsg" value="@Model.msg.fCMsg" readonly style="border-radius:15px;">@Model.msg.fCMsg</textarea>
 				</div>
 				<div class="mb-3">
 					<label for="formGroupExampleInput2" class="form-label">您的留言</label>
-					<textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder="請回覆您的訊息" maxlength="50" name="fPMsg" value="@Model.msg.fPMsg"></textarea>
+					<textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder="請回覆您的訊息" maxlength="50" name="fPMsg" value="@Model.msg.fPMsg" style="border-radius:15px;"></textarea>
 					@*<input >*@
 				</div>
 				<div class="mb-3">
 					<label for="formGroupExampleInput2" class="form-label">時間</label>
-					<input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="fPMsgTime" value="@DateTime.Now " readonly>
+					<input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="fPMsgTime" value="@DateTime.Now " readonly style="border-radius:15px;">
 				</div>
 				<p>
 					<input type="hidden" name="fCMsgTime" value="@Model.msg.fCMsgTime" style="margin:auto 50px;" />
@@ -39,7 +39,7 @@
 				<p>
 					<input type="hidden" name="fStates" value="@Model.msg.fStates @true" style="margin:auto 50px;" />
 				</p>
-				<input type="submit" value="回覆" />
+				<input type="submit" value="回覆"  style="border: solid aquamarine;border-radius: 15px;background-color: aquamarine;width: 70px;height: 32px; font-size:14px;padding:3px 4px;"/>
 			</form>
 			</div>
 		</div>

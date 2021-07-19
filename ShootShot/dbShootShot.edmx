@@ -16,6 +16,7 @@
           <Property Name="fCover" Type="bit" />
           <Property Name="fLike" Type="int" />
           <Property Name="fView" Type="int" />
+          <Property Name="fKeyword" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tKeyword">
           <Key>
@@ -76,7 +77,7 @@
           <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
           <Property Name="fName" Type="nvarchar" MaxLength="20" />
-          <Property Name="FState" Type="bit" />
+          <Property Name="fState" Type="bit" />
         </EntityType>
         <EntityType Name="tPhotArea">
           <Key>
@@ -187,6 +188,7 @@
           <Property Name="fCover" Type="Boolean" />
           <Property Name="fLike" Type="Int32" />
           <Property Name="fView" Type="Int32" />
+          <Property Name="fKeyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tMemberPhot">
           <Key>
@@ -201,15 +203,6 @@
           <Property Name="fOther" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="fFB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="fIns" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="tPhotAlbum">
-          <Key>
-            <PropertyRef Name="fId" />
-          </Key>
-          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="FState" Type="Boolean" />
         </EntityType>
         <EntityType Name="tPhotArea">
           <Key>
@@ -232,12 +225,12 @@
           <EntitySet Name="tRoles" EntityType="Self.tRoles" />
           <EntitySet Name="tAlbumPhoto" EntityType="Self.tAlbumPhoto" />
           <EntitySet Name="tMemberPhot" EntityType="Self.tMemberPhot" />
-          <EntitySet Name="tPhotAlbum" EntityType="Self.tPhotAlbum" />
           <EntitySet Name="tPhotArea" EntityType="Self.tPhotArea" />
           <EntitySet Name="tPhotStyle" EntityType="Self.tPhotStyle" />
           <EntitySet Name="tMsg" EntityType="dbShootShotModel.tMsg" />
           <EntitySet Name="tKeyword" EntityType="dbShootShotModel.tKeyword" />
           <EntitySet Name="tMember" EntityType="dbShootShotModel.tMember" />
+          <EntitySet Name="tPhotAlbum" EntityType="dbShootShotModel.tPhotAlbum" />
         </EntityContainer>
         <EntityType Name="tMsg">
           <Key>
@@ -276,6 +269,15 @@
           <Property Name="fGender" Type="Int32" />
           <Property Name="fCode" Type="Int32" />
           <Property Name="fImgpath" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tPhotAlbum">
+          <Key>
+            <PropertyRef Name="fId" />
+          </Key>
+          <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fState" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -321,6 +323,7 @@
           <EntitySetMapping Name="tAlbumPhoto">
             <EntityTypeMapping TypeName="dbShootShotModel.tAlbumPhoto">
               <MappingFragment StoreEntitySet="tAlbumPhoto">
+                <ScalarProperty Name="fKeyword" ColumnName="fKeyword" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
                 <ScalarProperty Name="fAlbId" ColumnName="fAlbId" />
                 <ScalarProperty Name="fName" ColumnName="fName" />
@@ -343,16 +346,6 @@
                 <ScalarProperty Name="fOther" ColumnName="fOther" />
                 <ScalarProperty Name="fFB" ColumnName="fFB" />
                 <ScalarProperty Name="fIns" ColumnName="fIns" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tPhotAlbum">
-            <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
-              <MappingFragment StoreEntitySet="tPhotAlbum">
-                <ScalarProperty Name="fId" ColumnName="fId" />
-                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
-                <ScalarProperty Name="fName" ColumnName="fName" />
-                <ScalarProperty Name="FState" ColumnName="FState" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -411,6 +404,16 @@
                 <ScalarProperty Name="fBday" ColumnName="fBday" />
                 <ScalarProperty Name="fPhoto" ColumnName="fPhoto" />
                 <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fId" ColumnName="fId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhotAlbum">
+            <EntityTypeMapping TypeName="dbShootShotModel.tPhotAlbum">
+              <MappingFragment StoreEntitySet="tPhotAlbum">
+                <ScalarProperty Name="fState" ColumnName="fState" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="fEmail" ColumnName="fEmail" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.WebPages.Html;
+using ShootShot.Models;
 
 namespace ShootShot.Controllers
 {
@@ -15,18 +19,19 @@ namespace ShootShot.Controllers
 		public ActionResult List()
         {
             dbShootShotEntities db = new dbShootShotEntities();
-			// 列出客戶所有專案
-			//IEnumerable<tProject> projects = null;
-			int id = 4;
-			//int id = (int)Session[Dictionary.USER_ID];
-			var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
+            // 列出客戶所有專案
+            //IEnumerable<tProject> projects = null;
+            int id = (int)Session[Dictionary.USER_ID];
+            //int id = (int)Session[Dictionary.USER_ID];
+            var member = db.tMember.Where(t => t.fId == id).FirstOrDefault();
 			string cemail = member.fEmail.ToString();
 			//tProject project = db.tProject.Where(p => p.fCEmail == cemail).FirstOrDefault();
 			//project = from p in db.tProject where p.fCEmail.Contains(cemail) select p;
 			//MProjectViewModel mcprj = new MProjectViewModel();
 			//mcprj.project = project;
 			// 詳細專案訊息
-			string OrderNo = Request.Form["txtOrderNum"];
+            ViewBag.loginId= (int)Session[Dictionary.USER_ID];
+            string OrderNo = Request.Form["txtOrderNum"];
 			if (string.IsNullOrEmpty(OrderNo))
 			{
 				// 不列出
@@ -69,8 +74,8 @@ namespace ShootShot.Controllers
         [HttpPost]
 		public ActionResult Create(tMsg g)
 		{
-		    int id = 4;
-			//	//int id = (int)Session[Dictionary.USER_ID];
+			//int id = 4;
+			int id = (int)Session[Dictionary.USER_ID];
 			var member = (new dbShootShotEntities()).tMember.Where(t => t.fId == id).FirstOrDefault();
             
             string cemail = member.fEmail.ToString();

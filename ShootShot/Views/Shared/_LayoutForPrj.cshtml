@@ -1,4 +1,4 @@
-﻿
+﻿@using ShootShot.Models
 @{
 	Layout = null;
 
@@ -25,6 +25,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="~/Content/css/prjMgmt.css">
+	@*<link rel="stylesheet" href="~/Content/css/phoPrjMgmt.css">*@
 	@Styles.Render("~/Content/lib/animate/animate.min.css")
 	@Styles.Render("~/Content/lib/owlcarousel/assets/owl.carousel.min.css")
 	@Styles.Render("~/Content/lib/lightbox/css/lightbox.min.css")
@@ -42,15 +43,13 @@
 			</button>
 			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 				<div class="navbar-nav ml-auto align-items-center">
-
-					<div class="nav-item dropdown">
-						<img src="~/Content/images/login_pic.svg" alt="user" class="nav-link dropdown-toggle" data-toggle="dropdown"
-							 style="width: 70px;height: 70px;border-radius: 50px;">
-						<div class="dropdown-menu">
-							<a href="index.html" class="dropdown-item">登入</a>
-							<a href="./member.html" class="dropdown-item">設定</a>
-						</div>
-					</div>
+					<a href="~/Views/Home/Index.cshtml" id="scroll-to-search" class="nav-item nav-link">搜尋圖片</a>
+					<!--link to cproject-->
+					<a @Session[Dictionary.LOGIN_HIDDEN] href="/LoginAndSignup/Login" class="nav-item nav-link">登入</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="/MemberCenter/EditProfile" class="nav-item nav-link">帳號管理</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="" class="nav-item nav-link">預約專案</a>
+					<a @Session[Dictionary.NAVLINK_HIDDEN] href="" class="nav-item nav-link">專案管理</a>
+					<a @Session[Dictionary.LOGOUT_HIDDEN] href="/LoginAndSignup/Logout" class="nav-item nav-link">登出</a>
 				</div>
 			</div>
 		</div>
