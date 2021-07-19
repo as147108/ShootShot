@@ -285,7 +285,7 @@ article div.prjMgmt_divForText {
 		margin: 18px 17px;
 		clear: both;
 		float: left;
-		object-fit: cover;
+		/*object-fit: cover;*/
 		border-radius: 50px;
 		border: solid #7dffd1 2px;
 	}

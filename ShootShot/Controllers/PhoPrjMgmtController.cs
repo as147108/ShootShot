@@ -20,7 +20,7 @@ namespace ShootShot.Controllers
 
             IEnumerable<tProject> projects = null;
             ;
-            int id = 6;
+            int id = 7;
             //int id = (int)Session[Dictionary.USER_ID];
             var member = db.tMember.Where(t => t.fId == id & t.fCode == 1).FirstOrDefault();
             string pemail = member.fEmail.ToString();
@@ -89,7 +89,7 @@ namespace ShootShot.Controllers
         public ActionResult Create(tMsg g)
         {
             dbShootShotEntities db = new dbShootShotEntities();
-            int id = 6;
+            int id = 7;
             //	//int id = (int)Session[Dictionary.USER_ID];
             var member = db.tMember.Where(t => t.fId == id & t.fCode == 1).FirstOrDefault();
 
@@ -165,7 +165,7 @@ namespace ShootShot.Controllers
         {
             string OrderNo = Request.Form["txtOrderNum"];
             dbShootShotEntities db = new dbShootShotEntities();
-            int id = 6;
+            int id = 7;
             var member = db.tMember.Where(t => t.fId == id & t.fCode == 1).FirstOrDefault();
             string pemail = member.fEmail.ToString();
 

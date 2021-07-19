@@ -219,3 +219,4 @@ C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\bin\zh-Hant\System.Web.Optim
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.CopyComplete
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.dll
 C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.pdb
+C:\Users\Yulin\Documents\GitHub\ShootShot\ShootShot\obj\Debug\ShootShot.csproj.AssemblyReference.cache

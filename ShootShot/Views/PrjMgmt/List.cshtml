@@ -22,8 +22,6 @@
 </script>
 <!----------------------------------->
 <!-- #article 右側欄內容：專案內容區塊 -->
-
-
 <!--------------------------------------------------->
 <!-- #article 右側欄內容：專案卡片carousel效果 start -->
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -135,6 +133,7 @@
 
 		</div>
 	</div>
+
 </div>
 @*}*@
 <!-- #article 右側欄內容：專案內容區塊 -->
@@ -144,14 +143,15 @@
 <div class="prjMgmt_divForChat">
 	<p>與攝影師聊聊</p>
 	<div class="prjMgmt_divForText">
-		<img src="~/Content/img/cat123.jpg" alt="">
+		<img src="~/Content/img/cat123.jpg" loading="lazy"/>
+		@*<img src="~/Content/img/cat123.jpg" alt="">*@
 		@using (Html.BeginForm("Create", "PrjMgmt", FormMethod.Post, new { enctype = "multipart/form-data" }))
 		{
 			<form>
 				<input type="hidden" name="msgOrderNo" value="@TempData["OrderNum"]" />
 				<textarea class="chattext" name="chattext" id="chattext" cols="80" rows="2"
 						  aria-valuemax="150" placeholder="聊聊吧..."></textarea>
-				<br>
+				<br />
 				<input type="submit" value="發送" />
 			</form>
 		}
@@ -159,6 +159,7 @@
 </div>
 <br>
 <br>
+
 @{
 	Html.RenderAction("_MsgPartial");
 }
