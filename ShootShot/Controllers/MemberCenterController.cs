@@ -17,6 +17,9 @@ namespace ShootShot.Controllers
         }
         public ActionResult EditProfile()
         {
+            ViewBag.scroll = "";
+            Session[Dictionary.INDEX_HIDDEN] = "";
+            Session[Dictionary.SEARCH_HIDDEN] = "hidden";
             if (Session[Dictionary.USER_ID] == null)
             {
                 Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
@@ -58,8 +61,7 @@ namespace ShootShot.Controllers
                 }
                 tm.fName = Request.Form["name"];
                 tm.fTel = Request.Form["phone"];
-                //tm.fArea = Request.Form["city"];
-
+                tm.fArea = Request.Form["city"];
                 db.SaveChanges();
                 @ViewBag.successful = "修改成功";
             }
@@ -69,6 +71,9 @@ namespace ShootShot.Controllers
         }
         public ActionResult UpdatePassword()
         {
+            ViewBag.scroll = "";
+            Session[Dictionary.INDEX_HIDDEN] = "";
+            Session[Dictionary.SEARCH_HIDDEN] = "hidden";
             if (Session[Dictionary.USER_ID] == null)
             {
                 Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
@@ -121,6 +126,9 @@ namespace ShootShot.Controllers
         }
         public ActionResult UpdatePasswordSucessfull(tMember pMember)
         {
+            ViewBag.scroll = "";
+            Session[Dictionary.INDEX_HIDDEN] = "";
+            Session[Dictionary.SEARCH_HIDDEN] = "hidden";
             if (Session[Dictionary.USER_ID] == null)
             {
                 return RedirectToAction("Index", "Home");

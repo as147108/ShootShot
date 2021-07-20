@@ -53,6 +53,7 @@
     <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fIscheck" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tPhotStyle">
     <Key>

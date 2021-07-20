@@ -85,6 +85,7 @@
           <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
           <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+          <Property Name="fIscheck" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tPhotStyle">
           <Key>
@@ -226,6 +227,7 @@
           <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="fEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fIscheck" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tPhotStyle">
           <Key>
@@ -396,6 +398,7 @@
           <EntitySetMapping Name="tPhotArea">
             <EntityTypeMapping TypeName="dbShootShotModel.tPhotArea">
               <MappingFragment StoreEntitySet="tPhotArea">
+                <ScalarProperty Name="fIscheck" ColumnName="fIscheck" />
                 <ScalarProperty Name="fId" ColumnName="fId" />
                 <ScalarProperty Name="fEmail" ColumnName="fEmail" />
                 <ScalarProperty Name="fArea" ColumnName="fArea" />

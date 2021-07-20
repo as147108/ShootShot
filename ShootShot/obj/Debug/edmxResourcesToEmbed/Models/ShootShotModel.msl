@@ -54,6 +54,7 @@
     <EntitySetMapping Name="tPhotArea">
       <EntityTypeMapping TypeName="dbShootShotModel.tPhotArea">
         <MappingFragment StoreEntitySet="tPhotArea">
+          <ScalarProperty Name="fIscheck" ColumnName="fIscheck" />
           <ScalarProperty Name="fId" ColumnName="fId" />
           <ScalarProperty Name="fEmail" ColumnName="fEmail" />
           <ScalarProperty Name="fArea" ColumnName="fArea" />

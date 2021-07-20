@@ -80,6 +80,7 @@
     <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
     <Property Name="fArea" Type="nvarchar" MaxLength="10" />
+    <Property Name="fIscheck" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tPhotStyle">
     <Key>

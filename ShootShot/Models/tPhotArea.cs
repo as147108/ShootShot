@@ -17,5 +17,6 @@ namespace ShootShot.Models
         public int fId { get; set; }
         public string fEmail { get; set; }
         public string fArea { get; set; }
+        public string fIscheck { get; set; }
     }
 }

@@ -12,6 +12,9 @@ namespace ShootShot.Controllers
         // GET: LoginAndSignup
         public ActionResult Signup()
         {
+            ViewBag.scroll = "";
+            Session[Dictionary.INDEX_HIDDEN] = "";
+            Session[Dictionary.SEARCH_HIDDEN] = "hidden";
             if (Session[Dictionary.USER_ID] != null)
             {
                 Session[Dictionary.NAVLINK_HIDDEN] = "";
@@ -53,10 +56,17 @@ namespace ShootShot.Controllers
             member.fCode = 0;
             db.tMember.Add(member);
             db.SaveChanges();
-            return RedirectToAction("Login");
+            return RedirectToAction("SignupSucessfull");
+        }
+        public ActionResult SignupSucessfull(tMember member)
+        {
+            return View();
         }
         public ActionResult Login()
         {
+            ViewBag.scroll = "";
+            Session[Dictionary.INDEX_HIDDEN] = "";
+            Session[Dictionary.SEARCH_HIDDEN] = "hidden";
             if (Session[Dictionary.USER_ID] != null)
             {
                 Session[Dictionary.NAVLINK_HIDDEN] = "";
@@ -101,6 +111,7 @@ namespace ShootShot.Controllers
         }        
         public ActionResult Logout()
         {
+            ViewBag.scroll = "";
             Session[Dictionary.NAVLINK_HIDDEN] = "hidden";
             Session[Dictionary.LOGIN_HIDDEN] = "";
             Session[Dictionary.LOGOUT_HIDDEN] = "hidden";
